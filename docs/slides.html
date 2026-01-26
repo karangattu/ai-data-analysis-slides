@@ -6,10 +6,11 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ce4278342a015d016477ed09bce942c5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-98f33259cc9912f9b44620857d989c8f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.17">
 
-  <title>Multiplex Demo</title>
+  <meta name="author" content="Your Name">
+  <title>Gemini for Data Analysis — 4‑Hour Workshop</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,32 +130,179 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Multiplex Demo</h1>
+  <h1 class="title">Gemini for Data Analysis — 4‑Hour Workshop</h1>
+  <p class="subtitle">From fundamentals to production‑ready workflows</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Your Name 
+</div>
+</div>
 </div>
 
 </section>
-<section id="welcome" class="slide level2">
+<section id="welcome" class="slide level2 center">
 <h2>Welcome</h2>
-<p>This is the <strong>viewer</strong> slide deck.<br>
-Everyone in the audience should open the viewer URL.</p>
+<p><strong>Today’s goal:</strong> become confident using Gemini to accelerate data analysis.</p>
+<p><strong>What we’ll do (4 hours):</strong> - Foundations of how AI works - Gemini capabilities + tokens + pricing basics - Prompting patterns for analysis - Hands‑on labs with CSVs and notebooks - Building reusable analysis workflows</p>
 </section>
-<section id="slide-2" class="slide level2">
-<h2>Slide 2</h2>
-<p>If multiplex is working, when I go to Slide 3,<br>
-your screen should also change automatically.</p>
+<section id="workshop-agenda-4-hours" class="slide level2 center">
+<h2>Workshop Agenda (4 Hours)</h2>
+<ol type="1">
+<li class="fragment"><strong>Hour 1 — Foundations</strong></li>
+</ol>
+<ul>
+<li class="fragment">AI/LLM basics, tokens, context windows</li>
+<li class="fragment">Gemini model family and safety</li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment"><strong>Hour 2 — Prompting for Analysis</strong></li>
+</ol>
+<ul>
+<li class="fragment">Data understanding, EDA prompts</li>
+<li class="fragment">Asking for charts, summaries, and insights</li>
+</ul>
+<ol start="3" type="1">
+<li class="fragment"><strong>Hour 3 — Tooling + Workflows</strong></li>
+</ol>
+<ul>
+<li class="fragment">CSV + notebook workflows</li>
+<li class="fragment">Iterative refinement and validation</li>
+</ul>
+<ol start="4" type="1">
+<li class="fragment"><strong>Hour 4 — Capstone + Q&amp;A</strong></li>
+</ol>
+<ul>
+<li class="fragment">Mini‑project and best practices</li>
+<li class="fragment">Pitfalls, governance, next steps</li>
+</ul>
 </section>
-<section id="slide-3" class="slide level2">
-<h2>Slide 3</h2>
-<p>Success! Everyone should now see this slide.</p>
+<section id="learning-outcomes" class="slide level2 center">
+<h2>Learning Outcomes</h2>
+<p>By the end, you will: - Explain what tokens and context windows are - Craft high‑quality prompts for analysis tasks - Build a repeatable analysis workflow with Gemini - Validate outputs and reduce hallucinations</p>
+</section>
+<section id="what-is-gemini" class="slide level2 center">
+<h2>What is Gemini?</h2>
+<p>Gemini is Google’s family of <strong>multimodal</strong> AI models that can reason over text, code, and structured data (and more).</p>
+<p>Key strengths for analysts: - Summarization - Pattern detection - Code generation - Narrative storytelling</p>
+</section>
+<section id="how-ai-works-highlevel" class="slide level2 center">
+<h2>How AI Works (High‑Level)</h2>
+<p>LLMs are trained to predict the next token in a sequence.</p>
+<p>They learn statistical patterns from large corpora to generate useful outputs.</p>
+<p><strong>You provide:</strong> instructions + data + constraints<br>
+<strong>Model returns:</strong> a best‑guess completion</p>
+</section>
+<section id="tokens-context-and-cost" class="slide level2 center">
+<h2>Tokens, Context, and Cost</h2>
+<ul>
+<li class="fragment"><strong>Token</strong> ≈ a chunk of text (word piece)</li>
+<li class="fragment"><strong>Context window</strong> = max tokens a model can see at once</li>
+<li class="fragment"><strong>Costs</strong> scale with input + output tokens</li>
+</ul>
+<p>Rule of thumb: <span class="math display">\[\text{Cost} \propto \text{input tokens} + \text{output tokens}\]</span></p>
+</section>
+<section id="prompting-basics" class="slide level2 center">
+<h2>Prompting Basics</h2>
+<p>Great prompts include: - <strong>Role</strong> (who the model is) - <strong>Task</strong> (what to do) - <strong>Data</strong> (input) - <strong>Constraints</strong> (format, length, method) - <strong>Examples</strong> (optional but powerful)</p>
+</section>
+<section id="prompt-template-reusable" class="slide level2 center">
+<h2>Prompt Template (Reusable)</h2>
+<p><strong>Role:</strong> You are a data analyst.<br>
+<strong>Task:</strong> Summarize key trends in the dataset.<br>
+<strong>Data:</strong> <paste csv="" or="" description=""><br>
+<strong>Constraints:</strong> Provide 5 bullet insights + 2 chart ideas.</paste></p>
+</section>
+<section id="hour-1-foundations-minilab" class="slide level2 center">
+<h2>Hour 1 — Foundations (Mini‑Lab)</h2>
+<p><strong>Exercise:</strong> Token intuition</p>
+<p>Prompt: &gt; Estimate how many tokens are in this paragraph and explain your reasoning.</p>
+<p>Goal: build a feel for token usage and length control.</p>
+</section>
+<section id="gemini-model-options-overview" class="slide level2 center">
+<h2>Gemini Model Options (Overview)</h2>
+<p>Choose based on: - <strong>Latency</strong> (speed) - <strong>Context length</strong> (how much data fits) - <strong>Cost</strong> (budget) - <strong>Quality</strong> (reasoning depth)</p>
+</section>
+<section id="hour-2-prompting-for-eda" class="slide level2 center">
+<h2>Hour 2 — Prompting for EDA</h2>
+<p>Tasks Gemini can help with: - Column summaries - Missing value analysis - Outlier detection ideas - Hypothesis generation</p>
+</section>
+<section id="example-eda-prompt" class="slide level2 center">
+<h2>Example: EDA Prompt</h2>
+<p><strong>Prompt:</strong> “You are a data analyst. Given this dataset, list key summary stats, detect missing values, and propose 3 visualization ideas. Output as bullets.”</p>
+</section>
+<section id="turn-insights-into-visuals" class="slide level2 center">
+<h2>Turn Insights into Visuals</h2>
+<p>Ask for: - Chart type + rationale - Axis mappings - Key annotations</p>
+</section>
+<section id="hour-2-handson-lab" class="slide level2 center">
+<h2>Hour 2 — Hands‑On Lab</h2>
+<p><strong>Dataset:</strong> sample sales CSV</p>
+<p>Tasks: 1. Summarize the dataset 2. Identify 3 anomalies 3. Propose 2 next steps</p>
+</section>
+<section id="prompting-patterns" class="slide level2 center">
+<h2>Prompting Patterns</h2>
+<ul>
+<li class="fragment"><strong>Decompose:</strong> “First summarize, then analyze trends.”</li>
+<li class="fragment"><strong>Constrain:</strong> “Use 5 bullets, max 12 words each.”</li>
+<li class="fragment"><strong>Verify:</strong> “List assumptions and uncertainties.”</li>
+</ul>
+</section>
+<section id="hour-3-tooling-workflows" class="slide level2 center">
+<h2>Hour 3 — Tooling + Workflows</h2>
+<p>Typical workflow: 1. Load data in a notebook 2. Use Gemini for hypotheses 3. Validate with code 4. Iterate</p>
+</section>
+<section id="safe-and-reliable-use" class="slide level2 center">
+<h2>Safe and Reliable Use</h2>
+<p>Always: - Cross‑check claims with data - Keep prompts specific - Ask for sources or rationale - Use small, testable steps</p>
+</section>
+<section id="handling-hallucinations" class="slide level2 center">
+<h2>Handling Hallucinations</h2>
+<p>Mitigation strategies: - Provide the data explicitly - Ask for uncertainty - Request calculations or code - Validate with a quick script</p>
+</section>
+<section id="hour-3-minilab" class="slide level2 center">
+<h2>Hour 3 — Mini‑Lab</h2>
+<p><strong>Task:</strong> Convert a narrative prompt into a checklist prompt.</p>
+<p>Example: “Analyze customer churn” → 1) Define churn metric<br>
+2) Summarize churn rate<br>
+3) Segment by cohort</p>
+</section>
+<section id="hour-4-capstone-project" class="slide level2 center">
+<h2>Hour 4 — Capstone Project</h2>
+<p>Pick one: - Sales performance dashboard outline - Marketing campaign analysis - Customer segmentation summary</p>
+<p>Deliverables: - Prompt set - Findings summary - Next‑step recommendations</p>
+</section>
+<section id="prompt-engineering-cheatsheet" class="slide level2 center">
+<h2>Prompt Engineering Cheatsheet</h2>
+<p><strong>Clarity &gt; cleverness</strong></p>
+<ul>
+<li class="fragment">State the desired format</li>
+<li class="fragment">Provide necessary data</li>
+<li class="fragment">Specify time period and scope</li>
+<li class="fragment">Ask for confidence / assumptions</li>
+</ul>
+</section>
+<section id="governance-and-ethics" class="slide level2 center">
+<h2>Governance and Ethics</h2>
+<ul>
+<li class="fragment">Avoid sensitive data in prompts</li>
+<li class="fragment">Follow org policies</li>
+<li class="fragment">Document model usage</li>
+<li class="fragment">Keep a human in the loop</li>
+</ul>
+</section>
+<section id="closing-resources" class="slide level2 center">
+<h2>Closing + Resources</h2>
+<p><strong>Next steps:</strong> - Practice on your own datasets - Build a prompt library - Share learnings with your team</p>
+<p>Thanks!</p>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p>Gemini for Data Analysis Workshop</p>
 </div>
 </div></div>
 
@@ -189,7 +337,7 @@ your screen should also change automatically.</p>
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":null,"id":"60a699005b990c6c25f72dd195eb4ba4a2b5fc865e38a363806a90e0180e5e82","url":"https://multiplex.up.railway.app/"},
+'multiplex': {"secret":null,"id":"ceadc10f5467c026dbc710c2517887e297fd61046c4be39d3efee7da0b6bc73a","url":"https://multiplex.up.railway.app/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -210,7 +358,7 @@ your screen should also change automatically.</p>
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -239,7 +387,7 @@ your screen should also change automatically.</p>
         disableLayout: false,
 
         // Vertical centering of slides
-        center: false,
+        center: true,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -315,14 +463,14 @@ your screen should also change automatically.</p>
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,

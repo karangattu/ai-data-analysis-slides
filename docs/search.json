@@ -2,22 +2,162 @@
   {
     "objectID": "slides.html#welcome",
     "href": "slides.html#welcome",
-    "title": "Multiplex Demo",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
     "section": "Welcome",
-    "text": "Welcome\nThis is the viewer slide deck.\nEveryone in the audience should open the viewer URL."
+    "text": "Welcome\nToday’s goal: become confident using Gemini to accelerate data analysis.\nWhat we’ll do (4 hours): - Foundations of how AI works - Gemini capabilities + tokens + pricing basics - Prompting patterns for analysis - Hands‑on labs with CSVs and notebooks - Building reusable analysis workflows"
   },
   {
-    "objectID": "slides.html#slide-2",
-    "href": "slides.html#slide-2",
-    "title": "Multiplex Demo",
-    "section": "Slide 2",
-    "text": "Slide 2\nIf multiplex is working, when I go to Slide 3,\nyour screen should also change automatically."
+    "objectID": "slides.html#workshop-agenda-4-hours",
+    "href": "slides.html#workshop-agenda-4-hours",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Workshop Agenda (4 Hours)",
+    "text": "Workshop Agenda (4 Hours)\n\nHour 1 — Foundations\n\n\nAI/LLM basics, tokens, context windows\nGemini model family and safety\n\n\nHour 2 — Prompting for Analysis\n\n\nData understanding, EDA prompts\nAsking for charts, summaries, and insights\n\n\nHour 3 — Tooling + Workflows\n\n\nCSV + notebook workflows\nIterative refinement and validation\n\n\nHour 4 — Capstone + Q&A\n\n\nMini‑project and best practices\nPitfalls, governance, next steps"
   },
   {
-    "objectID": "slides.html#slide-3",
-    "href": "slides.html#slide-3",
-    "title": "Multiplex Demo",
-    "section": "Slide 3",
-    "text": "Slide 3\nSuccess! Everyone should now see this slide."
+    "objectID": "slides.html#learning-outcomes",
+    "href": "slides.html#learning-outcomes",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nBy the end, you will: - Explain what tokens and context windows are - Craft high‑quality prompts for analysis tasks - Build a repeatable analysis workflow with Gemini - Validate outputs and reduce hallucinations"
+  },
+  {
+    "objectID": "slides.html#what-is-gemini",
+    "href": "slides.html#what-is-gemini",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "What is Gemini?",
+    "text": "What is Gemini?\nGemini is Google’s family of multimodal AI models that can reason over text, code, and structured data (and more).\nKey strengths for analysts: - Summarization - Pattern detection - Code generation - Narrative storytelling"
+  },
+  {
+    "objectID": "slides.html#how-ai-works-highlevel",
+    "href": "slides.html#how-ai-works-highlevel",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "How AI Works (High‑Level)",
+    "text": "How AI Works (High‑Level)\nLLMs are trained to predict the next token in a sequence.\nThey learn statistical patterns from large corpora to generate useful outputs.\nYou provide: instructions + data + constraints\nModel returns: a best‑guess completion"
+  },
+  {
+    "objectID": "slides.html#tokens-context-and-cost",
+    "href": "slides.html#tokens-context-and-cost",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Tokens, Context, and Cost",
+    "text": "Tokens, Context, and Cost\n\nToken ≈ a chunk of text (word piece)\nContext window = max tokens a model can see at once\nCosts scale with input + output tokens\n\nRule of thumb: \\[\\text{Cost} \\propto \\text{input tokens} + \\text{output tokens}\\]"
+  },
+  {
+    "objectID": "slides.html#prompting-basics",
+    "href": "slides.html#prompting-basics",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Prompting Basics",
+    "text": "Prompting Basics\nGreat prompts include: - Role (who the model is) - Task (what to do) - Data (input) - Constraints (format, length, method) - Examples (optional but powerful)"
+  },
+  {
+    "objectID": "slides.html#prompt-template-reusable",
+    "href": "slides.html#prompt-template-reusable",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Prompt Template (Reusable)",
+    "text": "Prompt Template (Reusable)\nRole: You are a data analyst.\nTask: Summarize key trends in the dataset.\nData: \nConstraints: Provide 5 bullet insights + 2 chart ideas."
+  },
+  {
+    "objectID": "slides.html#hour-1-foundations-minilab",
+    "href": "slides.html#hour-1-foundations-minilab",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Hour 1 — Foundations (Mini‑Lab)",
+    "text": "Hour 1 — Foundations (Mini‑Lab)\nExercise: Token intuition\nPrompt: &gt; Estimate how many tokens are in this paragraph and explain your reasoning.\nGoal: build a feel for token usage and length control."
+  },
+  {
+    "objectID": "slides.html#gemini-model-options-overview",
+    "href": "slides.html#gemini-model-options-overview",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Gemini Model Options (Overview)",
+    "text": "Gemini Model Options (Overview)\nChoose based on: - Latency (speed) - Context length (how much data fits) - Cost (budget) - Quality (reasoning depth)"
+  },
+  {
+    "objectID": "slides.html#hour-2-prompting-for-eda",
+    "href": "slides.html#hour-2-prompting-for-eda",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Hour 2 — Prompting for EDA",
+    "text": "Hour 2 — Prompting for EDA\nTasks Gemini can help with: - Column summaries - Missing value analysis - Outlier detection ideas - Hypothesis generation"
+  },
+  {
+    "objectID": "slides.html#example-eda-prompt",
+    "href": "slides.html#example-eda-prompt",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Example: EDA Prompt",
+    "text": "Example: EDA Prompt\nPrompt: “You are a data analyst. Given this dataset, list key summary stats, detect missing values, and propose 3 visualization ideas. Output as bullets.”"
+  },
+  {
+    "objectID": "slides.html#turn-insights-into-visuals",
+    "href": "slides.html#turn-insights-into-visuals",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Turn Insights into Visuals",
+    "text": "Turn Insights into Visuals\nAsk for: - Chart type + rationale - Axis mappings - Key annotations"
+  },
+  {
+    "objectID": "slides.html#hour-2-handson-lab",
+    "href": "slides.html#hour-2-handson-lab",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Hour 2 — Hands‑On Lab",
+    "text": "Hour 2 — Hands‑On Lab\nDataset: sample sales CSV\nTasks: 1. Summarize the dataset 2. Identify 3 anomalies 3. Propose 2 next steps"
+  },
+  {
+    "objectID": "slides.html#prompting-patterns",
+    "href": "slides.html#prompting-patterns",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Prompting Patterns",
+    "text": "Prompting Patterns\n\nDecompose: “First summarize, then analyze trends.”\nConstrain: “Use 5 bullets, max 12 words each.”\nVerify: “List assumptions and uncertainties.”"
+  },
+  {
+    "objectID": "slides.html#hour-3-tooling-workflows",
+    "href": "slides.html#hour-3-tooling-workflows",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Hour 3 — Tooling + Workflows",
+    "text": "Hour 3 — Tooling + Workflows\nTypical workflow: 1. Load data in a notebook 2. Use Gemini for hypotheses 3. Validate with code 4. Iterate"
+  },
+  {
+    "objectID": "slides.html#safe-and-reliable-use",
+    "href": "slides.html#safe-and-reliable-use",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Safe and Reliable Use",
+    "text": "Safe and Reliable Use\nAlways: - Cross‑check claims with data - Keep prompts specific - Ask for sources or rationale - Use small, testable steps"
+  },
+  {
+    "objectID": "slides.html#handling-hallucinations",
+    "href": "slides.html#handling-hallucinations",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Handling Hallucinations",
+    "text": "Handling Hallucinations\nMitigation strategies: - Provide the data explicitly - Ask for uncertainty - Request calculations or code - Validate with a quick script"
+  },
+  {
+    "objectID": "slides.html#hour-3-minilab",
+    "href": "slides.html#hour-3-minilab",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Hour 3 — Mini‑Lab",
+    "text": "Hour 3 — Mini‑Lab\nTask: Convert a narrative prompt into a checklist prompt.\nExample: “Analyze customer churn” → 1) Define churn metric\n2) Summarize churn rate\n3) Segment by cohort"
+  },
+  {
+    "objectID": "slides.html#hour-4-capstone-project",
+    "href": "slides.html#hour-4-capstone-project",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Hour 4 — Capstone Project",
+    "text": "Hour 4 — Capstone Project\nPick one: - Sales performance dashboard outline - Marketing campaign analysis - Customer segmentation summary\nDeliverables: - Prompt set - Findings summary - Next‑step recommendations"
+  },
+  {
+    "objectID": "slides.html#prompt-engineering-cheatsheet",
+    "href": "slides.html#prompt-engineering-cheatsheet",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Prompt Engineering Cheatsheet",
+    "text": "Prompt Engineering Cheatsheet\nClarity &gt; cleverness\n\nState the desired format\nProvide necessary data\nSpecify time period and scope\nAsk for confidence / assumptions"
+  },
+  {
+    "objectID": "slides.html#governance-and-ethics",
+    "href": "slides.html#governance-and-ethics",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Governance and Ethics",
+    "text": "Governance and Ethics\n\nAvoid sensitive data in prompts\nFollow org policies\nDocument model usage\nKeep a human in the loop"
+  },
+  {
+    "objectID": "slides.html#closing-resources",
+    "href": "slides.html#closing-resources",
+    "title": "Gemini for Data Analysis — 4‑Hour Workshop",
+    "section": "Closing + Resources",
+    "text": "Closing + Resources\nNext steps: - Practice on your own datasets - Build a prompt library - Share learnings with your team\nThanks!"
   }
 ]

@@ -1,24 +1,264 @@
 ---
-title: "Multiplex Demo"
+title: "Gemini for Data Analysis — 4‑Hour Workshop"
+subtitle: "From fundamentals to production‑ready workflows"
+author: "Your Name"
 format:
   revealjs:
-    multiplex: true
+   transition: slide
+   background-transition: fade
+   slide-number: true
+   incremental: true
+   center: true
+   navigation-mode: linear
+   code-line-numbers: true
+   highlight-style: github
+   multiplex: true
+   footer: "Gemini for Data Analysis Workshop"
 ---
 
 ## Welcome
 
-This is the **viewer** slide deck.  
-Everyone in the audience should open the viewer URL.
+**Today’s goal:** become confident using Gemini to accelerate data analysis.
+
+**What we’ll do (4 hours):**
+- Foundations of how AI works
+- Gemini capabilities + tokens + pricing basics
+- Prompting patterns for analysis
+- Hands‑on labs with CSVs and notebooks
+- Building reusable analysis workflows
 
 ---
 
-## Slide 2
+## Workshop Agenda (4 Hours)
 
-If multiplex is working, when I go to Slide 3,  
-your screen should also change automatically.
+1. **Hour 1 — Foundations**
+  - AI/LLM basics, tokens, context windows
+  - Gemini model family and safety
+2. **Hour 2 — Prompting for Analysis**
+  - Data understanding, EDA prompts
+  - Asking for charts, summaries, and insights
+3. **Hour 3 — Tooling + Workflows**
+  - CSV + notebook workflows
+  - Iterative refinement and validation
+4. **Hour 4 — Capstone + Q&A**
+  - Mini‑project and best practices
+  - Pitfalls, governance, next steps
 
 ---
 
-## Slide 3
+## Learning Outcomes
 
-Success! Everyone should now see this slide.
+By the end, you will:
+- Explain what tokens and context windows are
+- Craft high‑quality prompts for analysis tasks
+- Build a repeatable analysis workflow with Gemini
+- Validate outputs and reduce hallucinations
+
+---
+
+## What is Gemini?
+
+Gemini is Google’s family of **multimodal** AI models that can reason over
+text, code, and structured data (and more).
+
+Key strengths for analysts:
+- Summarization
+- Pattern detection
+- Code generation
+- Narrative storytelling
+
+---
+
+## How AI Works (High‑Level)
+
+LLMs are trained to predict the next token in a sequence.
+
+They learn statistical patterns from large corpora to generate useful outputs.
+
+**You provide:** instructions + data + constraints  
+**Model returns:** a best‑guess completion
+
+---
+
+## Tokens, Context, and Cost
+
+- **Token** ≈ a chunk of text (word piece)
+- **Context window** = max tokens a model can see at once
+- **Costs** scale with input + output tokens
+
+Rule of thumb:
+$$\text{Cost} \propto \text{input tokens} + \text{output tokens}$$
+
+---
+
+## Prompting Basics
+
+Great prompts include:
+- **Role** (who the model is)
+- **Task** (what to do)
+- **Data** (input)
+- **Constraints** (format, length, method)
+- **Examples** (optional but powerful)
+
+---
+
+## Prompt Template (Reusable)
+
+**Role:** You are a data analyst.  
+**Task:** Summarize key trends in the dataset.  
+**Data:** <paste CSV or description>  
+**Constraints:** Provide 5 bullet insights + 2 chart ideas.
+
+---
+
+## Hour 1 — Foundations (Mini‑Lab)
+
+**Exercise:** Token intuition
+
+Prompt:
+> Estimate how many tokens are in this paragraph and explain your reasoning.
+
+Goal: build a feel for token usage and length control.
+
+---
+
+## Gemini Model Options (Overview)
+
+Choose based on:
+- **Latency** (speed)
+- **Context length** (how much data fits)
+- **Cost** (budget)
+- **Quality** (reasoning depth)
+
+---
+
+## Hour 2 — Prompting for EDA
+
+Tasks Gemini can help with:
+- Column summaries
+- Missing value analysis
+- Outlier detection ideas
+- Hypothesis generation
+
+---
+
+## Example: EDA Prompt
+
+**Prompt:**
+"You are a data analyst. Given this dataset, list key summary stats, detect
+missing values, and propose 3 visualization ideas. Output as bullets."
+
+---
+
+## Turn Insights into Visuals
+
+Ask for:
+- Chart type + rationale
+- Axis mappings
+- Key annotations
+
+---
+
+## Hour 2 — Hands‑On Lab
+
+**Dataset:** sample sales CSV
+
+Tasks:
+1. Summarize the dataset
+2. Identify 3 anomalies
+3. Propose 2 next steps
+
+---
+
+## Prompting Patterns
+
+- **Decompose:** “First summarize, then analyze trends.”
+- **Constrain:** “Use 5 bullets, max 12 words each.”
+- **Verify:** “List assumptions and uncertainties.”
+
+---
+
+## Hour 3 — Tooling + Workflows
+
+Typical workflow:
+1. Load data in a notebook
+2. Use Gemini for hypotheses
+3. Validate with code
+4. Iterate
+
+---
+
+## Safe and Reliable Use
+
+Always:
+- Cross‑check claims with data
+- Keep prompts specific
+- Ask for sources or rationale
+- Use small, testable steps
+
+---
+
+## Handling Hallucinations
+
+Mitigation strategies:
+- Provide the data explicitly
+- Ask for uncertainty
+- Request calculations or code
+- Validate with a quick script
+
+---
+
+## Hour 3 — Mini‑Lab
+
+**Task:** Convert a narrative prompt into a checklist prompt.
+
+Example:
+“Analyze customer churn” →
+1) Define churn metric  
+2) Summarize churn rate  
+3) Segment by cohort
+
+---
+
+## Hour 4 — Capstone Project
+
+Pick one:
+- Sales performance dashboard outline
+- Marketing campaign analysis
+- Customer segmentation summary
+
+Deliverables:
+- Prompt set
+- Findings summary
+- Next‑step recommendations
+
+---
+
+## Prompt Engineering Cheatsheet
+
+**Clarity > cleverness**
+
+- State the desired format
+- Provide necessary data
+- Specify time period and scope
+- Ask for confidence / assumptions
+
+---
+
+## Governance and Ethics
+
+- Avoid sensitive data in prompts
+- Follow org policies
+- Document model usage
+- Keep a human in the loop
+
+---
+
+## Closing + Resources
+
+**Next steps:**
+- Practice on your own datasets
+- Build a prompt library
+- Share learnings with your team
+
+Thanks!
