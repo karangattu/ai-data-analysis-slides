@@ -1,0 +1,24 @@
+---
+title: "Multiplex Demo"
+format:
+  revealjs:
+    multiplex: true
+---
+
+## Welcome
+
+This is the **viewer** slide deck.  
+Everyone in the audience should open the viewer URL.
+
+---
+
+## Slide 2
+
+If multiplex is working, when I go to Slide 3,  
+your screen should also change automatically.
+
+---
+
+## Slide 3
+
+Success! Everyone should now see this slide.

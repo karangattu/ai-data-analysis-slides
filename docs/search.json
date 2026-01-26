@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "slides.html#welcome",
+    "href": "slides.html#welcome",
+    "title": "Multiplex Demo",
+    "section": "Welcome",
+    "text": "Welcome\nThis is the viewer slide deck.\nEveryone in the audience should open the viewer URL."
+  },
+  {
+    "objectID": "slides.html#slide-2",
+    "href": "slides.html#slide-2",
+    "title": "Multiplex Demo",
+    "section": "Slide 2",
+    "text": "Slide 2\nIf multiplex is working, when I go to Slide 3,\nyour screen should also change automatically."
+  },
+  {
+    "objectID": "slides.html#slide-3",
+    "href": "slides.html#slide-3",
+    "title": "Multiplex Demo",
+    "section": "Slide 3",
+    "text": "Slide 3\nSuccess! Everyone should now see this slide."
+  }
+]
