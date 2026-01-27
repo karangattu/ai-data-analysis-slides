@@ -1,7 +1,7 @@
 ---
-title: "Gemini for Data Analysis — 4‑Hour Workshop"
-subtitle: "From fundamentals to production‑ready workflows"
-author: "San Francisco Bay Bird Observatory (SFBBO)"
+title: "AI for Data Analysis"
+subtitle: "San Francisco Bay Bird Observatory (SFBBO)"
+author: "Karan Gathani"
 format:
   revealjs:
     transition: slide
@@ -13,15 +13,165 @@ format:
     code-line-numbers: true
     highlight-style: github
     multiplex: true
-    footer: "Gemini for Data Analysis Workshop | SFBBO"
+    footer: "AI for Data Analysis Workshop | SFBBO"
     code-copy: true
     theme: default
+include-in-header: 
+  - text: |
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <style>
+        .poll-container {
+          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+          border-radius: 12px;
+          padding: 20px;
+          margin: 10px auto;
+          max-width: 550px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+          overflow: hidden;
+        }
+        
+        .poll-question {
+          font-size: 1.1em;
+          font-weight: bold;
+          margin-bottom: 15px;
+          color: #333;
+          text-align: center;
+        }
+        
+        .poll-options {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        
+        .poll-option {
+          background: white;
+          border: 2px solid #007bff;
+          border-radius: 8px;
+          padding: 12px 15px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: 0.95em;
+          font-weight: 500;
+          text-align: center;
+          color: #007bff;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
+        .poll-option:hover {
+          background: #f0f8ff;
+          transform: scale(1.02);
+          box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+        }
+        
+        .poll-option.selected {
+          background: #007bff;
+          color: white;
+          box-shadow: 0 4px 12px rgba(0,123,255,0.4);
+        }
+        
+        .poll-results {
+          margin-top: 15px;
+          padding-top: 15px;
+          border-top: 2px solid #ddd;
+          font-size: 0.85em;
+        }
+        
+        .poll-result-item {
+          margin-bottom: 8px;
+          text-align: left;
+        }
+        
+        .poll-result-label {
+          font-weight: 600;
+          margin-bottom: 4px;
+          color: #333;
+          font-size: 0.9em;
+        }
+        
+        .poll-result-bar {
+          background: linear-gradient(90deg, #007bff, #0056b3);
+          border-radius: 4px;
+          height: 20px;
+          min-width: 20px;
+          display: flex;
+          align-items: center;
+          padding: 0 8px;
+          color: white;
+          font-weight: bold;
+          font-size: 0.8em;
+          transition: width 0.3s ease;
+        }
+        
+        .poll-footer {
+          font-size: 0.8em;
+          margin-top: 10px;
+        }
+        .poll-footer {
+          text-align: center;
+          margin-top: 15px;
+          font-size: 0.9em;
+          color: #666;
+          font-style: italic;
+        }
+      </style>
+      <script>
+        // Poll tracking object
+        window.pollData = {};
+        
+        function initPoll(pollId, options) {
+          if (!window.pollData[pollId]) {
+            window.pollData[pollId] = {};
+            options.forEach(opt => {
+              window.pollData[pollId][opt] = 0;
+            });
+          }
+        }
+        
+        function recordVote(pollId, option) {
+          if (window.pollData[pollId]) {
+            window.pollData[pollId][option]++;
+            updatePollDisplay(pollId);
+            
+            // Visual feedback
+            const btn = event.target;
+            btn.classList.add('selected');
+            setTimeout(() => btn.classList.remove('selected'), 800);
+          }
+        }
+        
+        function updatePollDisplay(pollId) {
+          const results = window.pollData[pollId];
+          const total = Object.values(results).reduce((a, b) => a + b, 0);
+          const resultsDiv = document.getElementById(`poll-results-${pollId}`);
+          
+          if (resultsDiv && total > 0) {
+            let html = '<div class="poll-results"><strong>Live Results:</strong>';
+            
+            Object.keys(results).forEach(option => {
+              const count = results[option];
+              const percentage = Math.round((count / total) * 100);
+              html += `
+                <div class="poll-result-item">
+                  <div class="poll-result-label">${option}: ${count} vote${count !== 1 ? 's' : ''} (${percentage}%)</div>
+                  <div class="poll-result-bar" style="width: ${percentage}%;">${percentage}%</div>
+                </div>
+              `;
+            });
+            
+            html += '</div>';
+            resultsDiv.innerHTML = html;
+          }
+        }
+      </script>
 ---
 
 ## Welcome {.center}
 
 :::{.r-fit-text}
-**Today's goal:** become confident using Gemini to accelerate bird data analysis.
+**Today's goal:** become confident using AI to accelerate data analysis.
 :::
 
 . . .
@@ -94,6 +244,25 @@ By the end, you will:
 
 ---
 
+## Quick Poll: Your AI Experience {.center}
+
+```{=html}
+<div class="poll-container">
+  <div class="poll-question">Have you used AI tools (ChatGPT, Gemini, Claude)?</div>
+  <div class="poll-options">
+    <button class="poll-option" onclick="recordVote('ai-experience', 'Yes, regularly'); updatePollDisplay('ai-experience')"><i class="fa-solid fa-check"></i> Yes, regularly</button>
+    <button class="poll-option" onclick="recordVote('ai-experience', 'Yes, once or twice'); updatePollDisplay('ai-experience')"><i class="fa-solid fa-check"></i> Yes, once or twice</button>
+    <button class="poll-option" onclick="recordVote('ai-experience', 'No, never'); updatePollDisplay('ai-experience')"><i class="fa-solid fa-xmark"></i> No, never</button>
+    <button class="poll-option" onclick="recordVote('ai-experience', 'Not sure what they are'); updatePollDisplay('ai-experience')"><i class="fa-solid fa-question"></i> Not sure</button>
+  </div>
+  <div id="poll-results-ai-experience"></div>
+  <div class="poll-footer">Click an option to vote • Results update live</div>
+</div>
+<script>initPoll('ai-experience', ['Yes, regularly', 'Yes, once or twice', 'No, never', 'Not sure what they are'])</script>
+```
+
+---
+
 ## What is Gemini?
 
 Gemini is Google's family of **multimodal** AI models that can reason over
@@ -101,7 +270,7 @@ text, code, and structured data (and more).
 
 . . .
 
-**Key strengths for SFBBO researchers:**
+**Key strengths for SFBBO staff:**
 
 ::: {.incremental}
 {{< fa compress-alt >}} **Summarization** — distill years of survey data
@@ -112,6 +281,319 @@ text, code, and structured data (and more).
 
 {{< fa file-alt >}} **Narrative storytelling** — write reports and grant summaries
 :::
+
+---
+
+## AI vs LLM: What's the Difference?
+
+**AI (Artificial Intelligence)** is a broad field:
+
+::: {.incremental}
+{{< fa robot >}} Any technology that performs tasks humans usually do
+
+{{< fa brain >}} Includes chatbots, recommendation engines, image recognition, game-playing bots
+:::
+
+. . .
+
+**LLM (Large Language Model)** is a specific type of AI:
+
+::: {.incremental}
+{{< fa book >}} Uses text data to understand and generate language
+
+{{< fa microscope >}} Trained on billions of words from the internet, books, code, etc.
+
+{{< fa speech >}} Gemini, ChatGPT, and Claude are all LLMs
+:::
+
+. . .
+
+**Think of it like birdwatching:** All LLMs are AI, but not all AI is LLMs—just like all shorebirds are birds, but not all birds are shorebirds!
+
+---
+
+## Discuss with Your Neighbor (2 min) {.center}
+
+```{=html}
+<div class="poll-container">
+  <div class="poll-question">Which of these is an LLM?</div>
+  <div class="poll-options">
+    <button class="poll-option" onclick="recordVote('llm-quiz', 'Spotify recommendation'); updatePollDisplay('llm-quiz')"><i class="fa-solid fa-music"></i> Spotify recommendation</button>
+    <button class="poll-option" onclick="recordVote('llm-quiz', 'Google image search'); updatePollDisplay('llm-quiz')"><i class="fa-solid fa-image"></i> Google image search</button>
+    <button class="poll-option" onclick="recordVote('llm-quiz', 'Gemini'); updatePollDisplay('llm-quiz')"><i class="fa-solid fa-check"></i> Gemini</button>
+    <button class="poll-option" onclick="recordVote('llm-quiz', 'ChatGPT'); updatePollDisplay('llm-quiz')"><i class="fa-solid fa-check"></i> ChatGPT</button>
+  </div>
+  <div id="poll-results-llm-quiz"></div>
+  <div class="poll-footer">Vote now • Discuss with your neighbor • We'll review in 2 min</div>
+</div>
+<script>initPoll('llm-quiz', ['Spotify recommendation', 'Google image search', 'Gemini', 'ChatGPT'])</script>
+```
+
+. . .
+
+::: {.callout-tip}
+**Answers:** Gemini and ChatGPT are LLMs (both are correct!)
+**Why?** They use language understanding, not image recognition or recommendation algorithms.
+:::
+
+---
+
+## How LLMs Are Created — Part 1: Training Data {.smaller}
+
+**Step 1: Collect massive amounts of text**
+
+::: {.incremental}
+{{< fa database >}} Billions of pages from the internet, books, research papers, code repositories
+
+{{< fa filter >}} Remove spam, personal data, and low-quality text
+
+{{< fa balance-scale >}} Curate a balanced dataset covering many topics
+:::
+
+. . .
+
+**Why this matters:**
+- Quality data = better understanding of language patterns
+- Diverse data = model works across many domains (including ornithology!)
+- Quantity = model learns more nuanced patterns
+
+---
+
+## How LLMs Are Created — Part 2: Training Process {.smaller}
+
+**Step 2: The model learns through prediction**
+
+Imagine teaching a bird watcher to identify species. You show examples:
+
+```
+"This small brown bird with a ___ is a House Sparrow."
+```
+
+The model learns: "The blank word should be 'curved bill' or 'striped head'."
+
+. . .
+
+**Same concept for LLMs:**
+
+- Show the model: "The Dunlin (Calidris alpina) is a small ___"
+- Model predicts: "shorebird"
+- If wrong, adjust so it gets better next time
+- Repeat billions of times
+
+. . .
+
+This teaches the model patterns about what words go together and what makes sense.
+
+---
+
+## How LLMs Are Created — Part 3: Fine-tuning & Safety {.smaller}
+
+**Step 3: Make it helpful and safe**
+
+::: {.incremental}
+{{< fa users >}} Human experts label examples of good vs. bad responses
+
+{{< fa thumbs-up >}} Train the model to prefer helpful, accurate, honest answers
+
+{{< fa shield-alt >}} Add safeguards against harmful outputs
+:::
+
+. . .
+
+**Real example for SFBBO:**
+
+- Train on bird survey best practices
+- Reward: "Here's how to analyze tern breeding success using SFBBO protocols"
+- Penalize: Made-up conservation statistics
+
+---
+
+## How LLMs Are Created — Summary {.smaller}
+
+**The journey from data to AI assistant:**
+
+::: {.columns}
+::: {.column width="50%"}
+1. {{< fa database >}} Gather text data
+2. {{< fa brain >}} Learn patterns through prediction
+3. {{< fa gear >}} Optimize and refine
+4. {{< fa users >}} Add human feedback
+5. {{< fa check >}} Safety testing
+:::
+
+::: {.column width="50%"}
+**The model learns to:**
+- Understand context and meaning
+- Follow instructions
+- Admit uncertainty
+- Write in different styles
+- Reason through problems
+:::
+:::
+
+---
+
+## Think-Pair-Share: Real-World Example {.center}
+
+**Scenario:** You ask Gemini: "List all Dunlin observations in SFBBO's 2024 database."
+
+. . .
+
+**Think (30 sec):** What could go wrong?
+
+. . .
+
+**Pair (1 min):** Turn to a neighbor and share concerns.
+
+. . .
+
+**Share:** Let's hear 2-3 concerns...
+
+. . .
+
+::: {.callout-warning}
+**Key insight:** Gemini can't access SFBBO's private database—it only knows what you tell it. Always provide your data explicitly!
+:::
+
+---
+
+## What LLMs Can Do Well
+
+{{< fa check-circle >}} **Text understanding & analysis**
+- Summarize SFBBO survey notes
+- Extract key information from datasets
+
+. . .
+
+{{< fa check-circle >}} **Writing & communication**
+- Draft reports, grant proposals, newsletters
+- Generate multiple versions or reframings
+
+. . .
+
+{{< fa check-circle >}} **Coding & automation**
+- Write Python/R code for data cleaning
+- Generate SQL queries for databases
+
+. . .
+
+{{< fa check-circle >}} **Brainstorming & patterns**
+- Suggest research directions
+- Identify correlations in data
+
+---
+
+## What LLMs Cannot Do {.smaller}
+
+{{< fa times-circle >}} **Access real-time information**
+- No internet browsing (unless specifically enabled)
+- Doesn't know events after training date
+- Can't check current SFBBO monitoring sites
+
+. . .
+
+{{< fa times-circle >}} **Perform complex math reliably**
+- May make arithmetic errors
+- Struggles with multi-step calculations
+- Always verify statistics yourself!
+
+. . .
+
+{{< fa times-circle >}} **Have personal experiences or emotions**
+- Can't actually go birdwatching
+- Can't feel passion for conservation
+- Simulates understanding, doesn't truly "know"
+
+. . .
+
+{{< fa times-circle >}} **Access external data without you providing it**
+- Doesn't have access to SFBBO's internal databases
+- Can't pull up historical records on its own
+- You must share the data to analyze
+
+---
+
+## What LLMs Cannot Do (cont.) {.smaller}
+
+{{< fa times-circle >}} **Guarantee accuracy or avoid hallucinations**
+- Can confidently state false information
+- May invent citations or statistics
+- Always fact-check outputs!
+
+. . .
+
+{{< fa times-circle >}} **Understand context you don't explicitly provide**
+- Doesn't know SFBBO protocols unless you explain them
+- Doesn't know your local bird species distributions
+- Works best when you give complete context
+
+. . .
+
+{{< fa times-circle >}} **Make final scientific decisions**
+- LLM suggestions need expert review
+- Should inform, not replace, your expertise
+- Always validate with field data
+
+---
+
+## Quick Check: Spot the Hallucination {.center}
+
+```{=html}
+<div class="poll-container">
+  <div class="poll-question">Which statement about California Gulls is FALSE?</div>
+  <div class="poll-options">
+    <button class="poll-option" onclick="recordVote('hallucination', 'State bird of Utah'); updatePollDisplay('hallucination')"><strong>1.</strong> State bird of Utah</button>
+    <button class="poll-option" onclick="recordVote('hallucination', 'Nest exclusively on SF Bay islands'); updatePollDisplay('hallucination')"><strong>2.</strong> Nest exclusively on SF Bay islands</button>
+    <button class="poll-option" onclick="recordVote('hallucination', 'Medium-sized gull with yellow-green legs'); updatePollDisplay('hallucination')"><strong>3.</strong> Medium-sized gull with yellow-green legs</button>
+    <button class="poll-option" onclick="recordVote('hallucination', 'Population stable since 1980'); updatePollDisplay('hallucination')"><strong>4.</strong> Population stable since 1980</button>
+  </div>
+  <div id="poll-results-hallucination"></div>
+  <div class="poll-footer">Vote before we reveal the answers</div>
+</div>
+<script>initPoll('hallucination', ['State bird of Utah', 'Nest exclusively on SF Bay islands', 'Medium-sized gull with yellow-green legs', 'Population stable since 1980'])</script>
+```
+
+. . .
+
+::: {.callout-warning}
+**Answers:** #2 (they nest inland at lakes, not exclusively on Bay islands) and #4 (populations have fluctuated significantly!)
+
+Even confident-sounding facts about local species need verification!
+:::
+
+---
+
+## LLM Capabilities & Limitations — Quick Reference {.smaller}
+
+| Task | LLM Capability | Your Role |
+|------|---|---|
+| Summarize survey data | {{< fa check >}} Excellent | Review for accuracy |
+| Analyze bird counts | {{< fa check >}} Good | Validate statistics |
+| Write grants or reports | {{< fa check >}} Excellent | Edit and fact-check |
+| Generate analysis code | {{< fa check >}} Good | Test and verify |
+| Real-time species alerts | {{< fa times >}} Cannot do | You must set up |
+| Complex statistical tests | {{< fa exclamation >}} Risky | You should code/verify |
+| Interpret species biology | {{< fa check >}} Good | Confirm with literature |
+| Make conservation decisions | {{< fa times >}} Cannot do | That's your expertise |
+
+---
+
+## Poll: Which Would YOU Trust Gemini With? {.center}
+
+```{=html}
+<div class="poll-container">
+  <div class="poll-question">Which task would you trust Gemini with?</div>
+  <div class="poll-options">
+    <button class="poll-option" onclick="recordVote('trust-task', 'Drafting a grant'); updatePollDisplay('trust-task')"><i class="fa-solid fa-file-pen"></i> Drafting a grant</button>
+    <button class="poll-option" onclick="recordVote('trust-task', 'Writing Python code'); updatePollDisplay('trust-task')"><i class="fa-solid fa-code"></i> Writing Python code</button>
+    <button class="poll-option" onclick="recordVote('trust-task', 'Statistical analysis'); updatePollDisplay('trust-task')"><i class="fa-solid fa-chart-bar"></i> Statistical analysis</button>
+    <button class="poll-option" onclick="recordVote('trust-task', 'Conservation decisions'); updatePollDisplay('trust-task')"><i class="fa-solid fa-dove"></i> Conservation decisions</button>
+  </div>
+  <div id="poll-results-trust-task"></div>
+  <div class="poll-footer">Click an option to vote • See live results</div>
+</div>
+<script>initPoll('trust-task', ['Drafting a grant', 'Writing Python code', 'Statistical analysis', 'Conservation decisions'])</script>
+```
 
 ---
 
@@ -168,9 +650,31 @@ Great prompts include:
 
 ---
 
+## Interactive: Build a Prompt Together {.center}
+
+**Let's co-create a prompt for Gemini!**
+
+. . .
+
+**I'll say:** *"Analyze bird count data."* {{< fa times >}} Too vague!
+
+. . .
+
+**Who can help make it better?**
+
+- What role should Gemini play?
+- What exactly should it analyze?
+- What format for output?
+
+. . .
+
+**Better version:** *"You are a conservation analyst at SFBBO. Analyze this CSV of shorebird counts. Highlight species with >20% population decline and suggest management actions. Format as bullet points."* {{< fa check >}}
+
+---
+
 ## Exercise 1: Prompt Template {.smaller}
 
-Copy this template and customize for your SFBBO data:
+{{< fa lightbulb >}} **Your Turn:** Copy this template and customize for your SFBBO data:
 
 ```{.markdown filename="Copy to Gemini"}
 Role: You are an expert ornithologist and data analyst 
@@ -214,45 +718,39 @@ date,location,species,count,weather,observer,habitat,tide_level
 
 ---
 
-## Exercise 2: Token Intuition {.smaller}
+## Exercise 2: Data Quality Check {.smaller}
 
-**Goal:** Build intuition for token usage and length control.
+{{< fa lightbulb >}} **Your Turn:** Use Gemini to identify data quality issues in SFBBO survey data.
 
 Copy this prompt and run it in Gemini:
 
 ```{.markdown filename="Copy to Gemini"}
-Estimate how many tokens are in the following SFBBO field observation 
-note and explain your reasoning:
-
-"During this morning's survey at Palo Alto Baylands, we observed an 
-unusually large flock of approximately 1,200 Western Sandpipers 
-foraging on the exposed mudflats during low tide. The birds exhibited 
-typical probing behavior, and several individuals displayed breeding 
-plumage despite it being mid-January. Weather conditions were optimal 
-with clear skies and minimal wind. Notable was the presence of a single 
-Pectoral Sandpiper among the flock—a rare winter sighting for this 
-location. Survey conducted as part of SFBBO's ongoing waterbird 
-monitoring program."
+You are a data quality analyst for SFBBO. Review this waterbird survey 
+data and identify any potential data quality issues, inconsistencies, 
+or anomalies that might affect analysis. Flag anything that seems 
+unusual for SF Bay bird surveys.
 ```
 
 ---
 
 ## Exercise 2: Dataset {.smaller}
 
-Use this data to test token counting:
+Paste this data after your prompt—can you spot the issues?
 
 ```{.csv filename="Copy to Gemini"}
-survey_id,date,site,start_time,end_time,species_count,observer_notes
-SFB-2025-001,2025-01-15,Palo Alto Baylands,07:30,09:45,12,Low tide optimal for shorebirds
-SFB-2025-002,2025-01-15,Don Edwards NWR,08:00,10:30,8,Salt pond levels moderate
-SFB-2025-003,2025-01-16,Coyote Hills,07:00,09:00,15,Rain delayed start by 30min
-SFB-2025-004,2025-01-17,Alviso Marina,06:45,08:30,6,Fog limited visibility initially
-SFB-2025-005,2025-01-18,Shoreline Lake,07:15,09:30,9,High waterfowl activity
+survey_id,date,site,species,count,observer,tide,weather
+SFB-2025-001,2025-01-15,Palo Alto Baylands,Western Sandpiper,342,J. Chen,low,Clear
+SFB-2025-002,2025-01-15,Don Edwards NWR,American Avocet,-15,M. Rodriguez,mid,Overcast
+SFB-2025-003,2025-01-16,Coyote Hills,Northern Shoveler,412,K. Patel,high,Rain
+SFB-2025-004,2025-01-17,Alviso Marina,Snowy Egret,67,A. Kim,low,Clear
+SFB-2025-005,2025-01-18,Shoreline Lake,Emperor Penguin,3,J. Chen,na,Fog
+SFB-2025-006,2025-13-19,MLK Shoreline,Great Blue Heron,12,Thompson,mid,Clear
+SFB-2025-007,2025-01-20,Don Edwards NWR,Dunlin,8500,M. Rodriguez,low,Clear
 ```
 
 . . .
 
-**Task:** Ask Gemini to estimate tokens for different row counts of this data.
+**Issues to find:** Negative count, impossible species, invalid date, unusually high count
 
 ---
 
@@ -269,6 +767,38 @@ Choose based on your analysis needs:
 
 {{< fa graduation-cap >}} **Quality** — reasoning depth for complex analysis
 :::
+
+---
+
+## Pair Activity: Pick Your Model {.center}
+
+**Scenario 1:** You need to analyze 5 years of SFBBO shorebird counts (~50k rows) to write a grant.
+
+**Scenario 2:** You're on a field trip and want a quick summary of today's sightings.
+
+. . .
+
+**Discussion:** Which Gemini version for each scenario? Talk with your neighbor for 1 minute.
+
+. . .
+
+::: {.callout-tip}
+Scenario 1: Larger model (more reasoning, bigger context). Scenario 2: Faster model (speed matters more).
+:::
+
+---
+
+## {{< fa mug-hot >}} Quick Break Reflection {.center}
+
+**Before we move to prompting, reflect:**
+
+. . .
+
+**What's one thing Gemini could help you with in your bird work?**
+
+. . .
+
+*(You can write it down—we'll revisit this in the capstone!)*
 
 ---
 
@@ -290,7 +820,7 @@ Tasks Gemini can help with for SFBBO data:
 
 ## Exercise 3: EDA Prompt {.smaller}
 
-Copy this prompt to analyze SFBBO survey data:
+{{< fa lightbulb >}} **Your Turn:** Copy this prompt to analyze SFBBO survey data:
 
 ```{.markdown filename="Copy to Gemini"}
 You are an expert ornithologist working with SFBBO (San Francisco Bay 
@@ -348,7 +878,7 @@ date,site_code,site_name,species,count,behavior,habitat,tide,temp_f,wind_mph,obs
 
 ## Exercise 4: Visualization Guidance {.smaller}
 
-Ask Gemini for specific chart recommendations:
+{{< fa lightbulb >}} **Your Turn:** Ask Gemini for specific chart recommendations:
 
 ```{.markdown filename="Copy to Gemini"}
 Based on the SFBBO waterbird survey data below, recommend visualizations 
@@ -380,7 +910,7 @@ Eden Landing,salt_pond,3456,890,123,8
 
 ## Exercise 5: Shorebird Migration Analysis {.smaller}
 
-**Dataset:** SFBBO Shorebird Migration Monitoring (Winter 2024-2025)
+{{< fa lightbulb >}} **Your Turn (if time allows):** SFBBO Shorebird Migration Monitoring (Winter 2024-2025)
 
 ```{.csv filename="Copy to Gemini"}
 week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
@@ -403,7 +933,7 @@ week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
 
 ## Exercise 5: Analysis Prompt {.smaller}
 
-Use this prompt with the shorebird dataset:
+Use this prompt with the shorebird dataset (or save for later):
 
 ```{.markdown filename="Copy to Gemini"}
 You are an ornithologist at SFBBO analyzing shorebird migration data.
@@ -432,9 +962,9 @@ Format: Use headers, bullet points, and bold for key findings.
 
 ---
 
-## Prompting Patterns {.smaller}
+## Prompting Patterns — The Big Three {.smaller}
 
-Master these three patterns:
+Master these patterns and you'll level up your prompts:
 
 . . .
 
@@ -470,6 +1000,23 @@ Note which findings need field verification by SFBBO staff.
 
 ---
 
+## Pair Challenge: Apply the Patterns {.center}
+
+**Task:** You want Gemini to analyze tern breeding success.
+
+. . .
+
+**With a neighbor:**
+- Which pattern would help? (Decompose, Constrain, Verify?)
+- Why?
+- How would you apply it?
+
+. . .
+
+**Answer:** Likely all three! Decompose (multiple steps), Constrain (specific metrics), Verify (confidence levels).
+
+---
+
 ## Hour 3 — Tooling + Workflows
 
 **Typical SFBBO analysis workflow:**
@@ -482,6 +1029,24 @@ Note which findings need field verification by SFBBO staff.
 3. {{< fa laptop-code >}} Validate with Python/R code
 
 4. {{< fa sync-alt >}} Iterate based on results
+:::
+
+---
+
+## Real-World Scenario: Would You Catch This? {.center}
+
+You ask Gemini: *"My bird survey shows a 400% increase in Snowy Egrets from Jan to Feb. Is this migration or climate change?"*
+
+Gemini responds: *"This dramatic increase suggests climate-driven habitat expansion."*
+
+. . .
+
+**What's missing?** (Think 30 seconds...)
+
+. . .
+
+::: {.callout-warning}
+**Gemini didn't ask:** Did you check your data entry? Is that 4x real? Could it be observer differences? **You need to validate first!**
 :::
 
 ---
@@ -524,6 +1089,8 @@ AI can make mistakes with bird data. Mitigation strategies:
 
 ## Exercise 6: Uncertainty Prompt {.smaller}
 
+{{< fa lightbulb >}} **Your Turn:**
+
 ```{.markdown filename="Copy to Gemini"}
 Analyze this SFBBO bird count data. For each conclusion:
 - State your confidence level (high/medium/low)
@@ -557,7 +1124,7 @@ month,year,site,species,count,previous_year_count,percent_change
 
 ## Exercise 7: Structured Checklist {.smaller}
 
-**Task:** Convert a narrative prompt into a structured checklist prompt.
+{{< fa lightbulb >}} **Your Turn:** Convert a narrative prompt into a structured checklist prompt.
 
 . . .
 
@@ -613,6 +1180,25 @@ survey_date,marsh_name,region,rails_detected,call_playback,tide_level,duration_m
 
 ---
 
+## {{< fa mug-hot >}} Debrief: Most Useful So Far? {.center}
+
+```{=html}
+<div class="poll-container">
+  <div class="poll-question">Which technique has been most useful?</div>
+  <div class="poll-options">
+    <button class="poll-option" onclick="recordVote('useful-technique', 'Token counting'); updatePollDisplay('useful-technique')"><i class="fa-solid fa-hashtag"></i> Token counting</button>
+    <button class="poll-option" onclick="recordVote('useful-technique', 'Decompose pattern'); updatePollDisplay('useful-technique')"><i class="fa-solid fa-clipboard-list"></i> Decompose pattern</button>
+    <button class="poll-option" onclick="recordVote('useful-technique', 'Constrain pattern'); updatePollDisplay('useful-technique')"><i class="fa-solid fa-bullseye"></i> Constrain pattern</button>
+    <button class="poll-option" onclick="recordVote('useful-technique', 'Verification checklist'); updatePollDisplay('useful-technique')"><i class="fa-solid fa-check"></i> Verification checklist</button>
+  </div>
+  <div id="poll-results-useful-technique"></div>
+  <div class="poll-footer">Vote to help us prioritize remaining time</div>
+</div>
+<script>initPoll('useful-technique', ['Token counting', 'Decompose pattern', 'Constrain pattern', 'Verification checklist'])</script>
+```
+
+---
+
 ## Hour 4 — Capstone Project {.smaller}
 
 Choose one project relevant to SFBBO's mission:
@@ -653,7 +1239,7 @@ Compare nesting success rates across habitats
 
 ## Exercise 8: Waterfowl Trends {.smaller}
 
-**SFBBO Waterfowl Census 2021-2025**
+{{< fa lightbulb >}} **Your Capstone Choice (Option 1):** SFBBO Waterfowl Census 2021-2025
 
 ```{.csv filename="Copy to Gemini"}
 year,month,site,species,count,habitat_type,water_level_ft,human_disturbance,notes
@@ -716,7 +1302,7 @@ OUTPUT: Executive summary (1 page) + detailed findings with statistics.
 
 ## Exercise 9: Raptor Migration {.smaller}
 
-**SFBBO Hawk Watch Data — Fall 2024**
+{{< fa lightbulb >}} **Your Capstone Choice (Option 2):** SFBBO Hawk Watch Data — Fall 2024
 
 ```{.csv filename="Copy to Gemini"}
 date,site,species,count,flight_direction,time_period,wind_dir,wind_mph,visibility_mi,cloud_cover,observer
@@ -776,7 +1362,7 @@ Format as a structured report suitable for SFBBO's newsletter.
 
 ## Exercise 10: Breeding Bird Survey {.smaller}
 
-**SFBBO Breeding Territory Mapping 2024**
+{{< fa lightbulb >}} **Your Capstone Choice (Option 3):** SFBBO Breeding Territory Mapping 2024
 
 ```{.csv filename="Copy to Gemini"}
 year,territory_id,species_code,species_name,site,first_detected,last_detected,nest_confirmed,fledglings,habitat,area_ha,threats
@@ -937,6 +1523,25 @@ Reference SFBBO's conservation mission where relevant.
 
 ---
 
+## Final Reflection: Your AI Journey {.center}
+
+```{=html}
+<div class="poll-container">
+  <div class="poll-question">How do you feel about using Gemini for your bird work?</div>
+  <div class="poll-options">
+    <button class="poll-option" onclick="recordVote('confidence', 'Confident'); updatePollDisplay('confidence')"><i class="fa-solid fa-circle-check"></i> Confident</button>
+    <button class="poll-option" onclick="recordVote('confidence', 'Curious - want practice'); updatePollDisplay('confidence')"><i class="fa-solid fa-lightbulb"></i> Curious - want practice</button>
+    <button class="poll-option" onclick="recordVote('confidence', 'Still learning'); updatePollDisplay('confidence')"><i class="fa-solid fa-book-open-reader"></i> Still learning</button>
+    <button class="poll-option" onclick="recordVote('confidence', 'Need more guidance'); updatePollDisplay('confidence')"><i class="fa-solid fa-hand"></i> Need more guidance</button>
+  </div>
+  <div id="poll-results-confidence"></div>
+  <div class="poll-footer">Your feedback helps us customize Q&A time</div>
+</div>
+<script>initPoll('confidence', ['Confident', 'Curious - want practice', 'Still learning', 'Need more guidance'])</script>
+```
+
+---
+
 ## Closing + Resources
 
 **Next steps for your SFBBO work:**
@@ -951,14 +1556,43 @@ Reference SFBBO's conservation mission where relevant.
 {{< fa database >}} Integrate Gemini into eBird and SFBBO data workflows
 :::
 
+---
+
+## Action Items: Go Forth! {.center}
+
+**This week, try:**
+
 . . .
 
-::: {.callout-note}
-## Thank you!
-Happy birding and data analysis! {{< fa feather >}}
+1. Ask Gemini to summarize one SFBBO dataset
+
+. . .
+
+2. Use one of the three prompting patterns we learned
+
+. . .
+
+3. Validate the output—did it match reality?
+
+. . .
+
+4. Share your experience with the SFBBO team
+
+---
+
+## Thank You {.center}
+
+:::{.r-fit-text}
+Happy birding and AI-powered data analysis! {{< fa feather >}}
+:::
+
+. . .
+
+**Questions? Discussion?** {{< fa comments >}}
+
+. . .
 
 Learn more at [sfbbo.org](https://www.sfbbo.org)
-:::
 
 ---
 
