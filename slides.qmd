@@ -1,92 +1,151 @@
 ---
 title: "Gemini for Data Analysis — 4‑Hour Workshop"
 subtitle: "From fundamentals to production‑ready workflows"
-author: "Your Name"
+author: "San Francisco Bay Bird Observatory (SFBBO)"
 format:
   revealjs:
-   transition: slide
-   background-transition: fade
-   slide-number: true
-   incremental: true
-   center: true
-   navigation-mode: linear
-   code-line-numbers: true
-   highlight-style: github
-   multiplex: true
-   footer: "Gemini for Data Analysis Workshop"
+    transition: slide
+    background-transition: fade
+    slide-number: true
+    incremental: true
+    center: true
+    navigation-mode: linear
+    code-line-numbers: true
+    highlight-style: github
+    multiplex: true
+    footer: "Gemini for Data Analysis Workshop | SFBBO"
+    code-copy: true
+    theme: default
 ---
 
-## Welcome
+## Welcome {.center}
 
-**Today’s goal:** become confident using Gemini to accelerate data analysis.
+:::{.r-fit-text}
+**Today's goal:** become confident using Gemini to accelerate bird data analysis.
+:::
 
-**What we’ll do (4 hours):**
-- Foundations of how AI works
-- Gemini capabilities + tokens + pricing basics
-- Prompting patterns for analysis
-- Hands‑on labs with CSVs and notebooks
-- Building reusable analysis workflows
+. . .
+
+**What we'll do (4 hours):**
+
+{{< fa brain >}} Foundations of how AI works
+
+{{< fa tools >}} Gemini capabilities + tokens + pricing basics
+
+{{< fa pen >}} Prompting patterns for ornithological analysis
+
+{{< fa crow >}} Hands‑on labs with SFBBO survey datasets
+
+{{< fa sync >}} Building reusable analysis workflows
 
 ---
 
 ## Workshop Agenda (4 Hours)
 
-1. **Hour 1 — Foundations**
-  - AI/LLM basics, tokens, context windows
-  - Gemini model family and safety
-2. **Hour 2 — Prompting for Analysis**
-  - Data understanding, EDA prompts
-  - Asking for charts, summaries, and insights
-3. **Hour 3 — Tooling + Workflows**
-  - CSV + notebook workflows
-  - Iterative refinement and validation
-4. **Hour 4 — Capstone + Q&A**
-  - Mini‑project and best practices
-  - Pitfalls, governance, next steps
+::: {.columns}
+::: {.column width="50%"}
+**Hour 1 — Foundations**
+
+{{< fa microchip >}} AI/LLM basics, tokens, context windows
+
+{{< fa shield-alt >}} Gemini model family and safety
+
+<br>
+
+**Hour 2 — Prompting for Analysis**
+
+{{< fa search >}} Data understanding, EDA prompts
+
+{{< fa chart-bar >}} Asking for charts, summaries, and insights
+:::
+
+::: {.column width="50%"}
+**Hour 3 — Tooling + Workflows**
+
+{{< fa file-csv >}} CSV + notebook workflows
+
+{{< fa redo >}} Iterative refinement and validation
+
+<br>
+
+**Hour 4 — Capstone + Q&A**
+
+{{< fa project-diagram >}} Mini‑project and best practices
+
+{{< fa exclamation-triangle >}} Pitfalls, governance, next steps
+:::
+:::
 
 ---
 
 ## Learning Outcomes
 
 By the end, you will:
-- Explain what tokens and context windows are
-- Craft high‑quality prompts for analysis tasks
-- Build a repeatable analysis workflow with Gemini
-- Validate outputs and reduce hallucinations
+
+::: {.incremental}
+{{< fa check-circle >}} Explain what tokens and context windows are
+
+{{< fa check-circle >}} Craft high‑quality prompts for bird data analysis tasks
+
+{{< fa check-circle >}} Build a repeatable analysis workflow with Gemini
+
+{{< fa check-circle >}} Validate outputs and reduce hallucinations
+:::
 
 ---
 
 ## What is Gemini?
 
-Gemini is Google’s family of **multimodal** AI models that can reason over
+Gemini is Google's family of **multimodal** AI models that can reason over
 text, code, and structured data (and more).
 
-Key strengths for analysts:
-- Summarization
-- Pattern detection
-- Code generation
-- Narrative storytelling
+. . .
+
+**Key strengths for SFBBO researchers:**
+
+::: {.incremental}
+{{< fa compress-alt >}} **Summarization** — distill years of survey data
+
+{{< fa binoculars >}} **Pattern detection** — find migration trends
+
+{{< fa code >}} **Code generation** — automate data cleaning
+
+{{< fa file-alt >}} **Narrative storytelling** — write reports and grant summaries
+:::
 
 ---
 
 ## How AI Works (High‑Level)
 
-LLMs are trained to predict the next token in a sequence.
+LLMs are trained to predict the **next token** in a sequence.
+
+. . .
 
 They learn statistical patterns from large corpora to generate useful outputs.
 
-**You provide:** instructions + data + constraints  
+. . .
+
+::: {.callout-note}
+**You provide:** instructions + data + constraints
+
 **Model returns:** a best‑guess completion
+:::
 
 ---
 
 ## Tokens, Context, and Cost
 
-- **Token** ≈ a chunk of text (word piece)
-- **Context window** = max tokens a model can see at once
-- **Costs** scale with input + output tokens
+::: {.incremental}
+{{< fa puzzle-piece >}} **Token** ≈ a chunk of text (word piece)
 
-Rule of thumb:
+{{< fa window-maximize >}} **Context window** = max tokens a model can see at once
+
+{{< fa dollar-sign >}} **Costs** scale with input + output tokens
+:::
+
+. . .
+
+**Rule of thumb:**
 $$\text{Cost} \propto \text{input tokens} + \text{output tokens}$$
 
 ---
@@ -94,171 +153,851 @@ $$\text{Cost} \propto \text{input tokens} + \text{output tokens}$$
 ## Prompting Basics
 
 Great prompts include:
-- **Role** (who the model is)
-- **Task** (what to do)
-- **Data** (input)
-- **Constraints** (format, length, method)
-- **Examples** (optional but powerful)
+
+::: {.incremental}
+{{< fa user-tag >}} **Role** — who the model is
+
+{{< fa tasks >}} **Task** — what to do
+
+{{< fa database >}} **Data** — input
+
+{{< fa ruler >}} **Constraints** — format, length, method
+
+{{< fa lightbulb >}} **Examples** — optional but powerful
+:::
 
 ---
 
-## Prompt Template (Reusable)
+## Exercise 1: Prompt Template {.smaller}
 
-**Role:** You are a data analyst.  
-**Task:** Summarize key trends in the dataset.  
-**Data:** <paste CSV or description>  
-**Constraints:** Provide 5 bullet insights + 2 chart ideas.
+Copy this template and customize for your SFBBO data:
+
+```{.markdown filename="Copy to Gemini"}
+Role: You are an expert ornithologist and data analyst 
+working with the San Francisco Bay Bird Observatory (SFBBO).
+
+Task: Summarize key trends in the bird survey dataset.
+
+Data: <paste CSV or description here>
+
+Constraints:
+- Provide 5 bullet-point insights
+- Suggest 2 visualization ideas
+- Note any data quality issues
+- Highlight conservation implications for SF Bay wetlands
+```
 
 ---
 
-## Hour 1 — Foundations (Mini‑Lab)
+## Exercise 1: Dataset {.smaller}
 
-**Exercise:** Token intuition
+**SFBBO Waterbird Survey — January 2025**
 
-Prompt:
-> Estimate how many tokens are in this paragraph and explain your reasoning.
+```{.csv filename="Copy to Gemini"}
+date,location,species,count,weather,observer,habitat,tide_level
+2025-01-15,Palo Alto Baylands,Western Sandpiper,342,Clear,J. Chen,mudflat,low
+2025-01-15,Palo Alto Baylands,Marbled Godwit,87,Clear,J. Chen,mudflat,low
+2025-01-15,Palo Alto Baylands,Willet,45,Clear,J. Chen,mudflat,low
+2025-01-16,Don Edwards NWR,American Avocet,156,Overcast,M. Rodriguez,salt_pond,mid
+2025-01-16,Don Edwards NWR,Black-necked Stilt,203,Overcast,M. Rodriguez,salt_pond,mid
+2025-01-16,Don Edwards NWR,Northern Harrier,3,Overcast,M. Rodriguez,marsh,mid
+2025-01-17,Coyote Hills,Northern Shoveler,412,Rain,K. Patel,freshwater,high
+2025-01-17,Coyote Hills,Bufflehead,89,Rain,K. Patel,freshwater,high
+2025-01-17,Coyote Hills,Great Blue Heron,12,Rain,K. Patel,freshwater,high
+2025-01-18,Alviso Marina,Snowy Egret,67,Clear,A. Kim,mudflat,low
+2025-01-18,Alviso Marina,Great Egret,34,Clear,A. Kim,mudflat,low
+2025-01-18,Alviso Marina,Forster's Tern,145,Clear,A. Kim,open_water,low
+2025-01-19,Shoreline Lake,Canada Goose,523,Fog,J. Chen,freshwater,na
+2025-01-19,Shoreline Lake,American Coot,287,Fog,J. Chen,freshwater,na
+2025-01-19,Shoreline Lake,Pied-billed Grebe,23,Fog,J. Chen,freshwater,na
+```
 
-Goal: build a feel for token usage and length control.
+---
+
+## Exercise 2: Token Intuition {.smaller}
+
+**Goal:** Build intuition for token usage and length control.
+
+Copy this prompt and run it in Gemini:
+
+```{.markdown filename="Copy to Gemini"}
+Estimate how many tokens are in the following SFBBO field observation 
+note and explain your reasoning:
+
+"During this morning's survey at Palo Alto Baylands, we observed an 
+unusually large flock of approximately 1,200 Western Sandpipers 
+foraging on the exposed mudflats during low tide. The birds exhibited 
+typical probing behavior, and several individuals displayed breeding 
+plumage despite it being mid-January. Weather conditions were optimal 
+with clear skies and minimal wind. Notable was the presence of a single 
+Pectoral Sandpiper among the flock—a rare winter sighting for this 
+location. Survey conducted as part of SFBBO's ongoing waterbird 
+monitoring program."
+```
+
+---
+
+## Exercise 2: Dataset {.smaller}
+
+Use this data to test token counting:
+
+```{.csv filename="Copy to Gemini"}
+survey_id,date,site,start_time,end_time,species_count,observer_notes
+SFB-2025-001,2025-01-15,Palo Alto Baylands,07:30,09:45,12,Low tide optimal for shorebirds
+SFB-2025-002,2025-01-15,Don Edwards NWR,08:00,10:30,8,Salt pond levels moderate
+SFB-2025-003,2025-01-16,Coyote Hills,07:00,09:00,15,Rain delayed start by 30min
+SFB-2025-004,2025-01-17,Alviso Marina,06:45,08:30,6,Fog limited visibility initially
+SFB-2025-005,2025-01-18,Shoreline Lake,07:15,09:30,9,High waterfowl activity
+```
+
+. . .
+
+**Task:** Ask Gemini to estimate tokens for different row counts of this data.
 
 ---
 
 ## Gemini Model Options (Overview)
 
-Choose based on:
-- **Latency** (speed)
-- **Context length** (how much data fits)
-- **Cost** (budget)
-- **Quality** (reasoning depth)
+Choose based on your analysis needs:
+
+::: {.incremental}
+{{< fa bolt >}} **Latency** — speed for quick queries
+
+{{< fa expand-arrows-alt >}} **Context length** — how much survey data fits
+
+{{< fa coins >}} **Cost** — budget for large datasets
+
+{{< fa graduation-cap >}} **Quality** — reasoning depth for complex analysis
+:::
 
 ---
 
 ## Hour 2 — Prompting for EDA
 
-Tasks Gemini can help with:
-- Column summaries
-- Missing value analysis
-- Outlier detection ideas
-- Hypothesis generation
+Tasks Gemini can help with for SFBBO data:
+
+::: {.incremental}
+{{< fa list-alt >}} Column summaries and data dictionary generation
+
+{{< fa question-circle >}} Missing value analysis (incomplete surveys)
+
+{{< fa chart-line >}} Outlier detection (unusual counts, rare species)
+
+{{< fa lightbulb >}} Hypothesis generation (population trends, habitat preferences)
+:::
 
 ---
 
-## Example: EDA Prompt
+## Exercise 3: EDA Prompt {.smaller}
 
-**Prompt:**
-"You are a data analyst. Given this dataset, list key summary stats, detect
-missing values, and propose 3 visualization ideas. Output as bullets."
+Copy this prompt to analyze SFBBO survey data:
+
+```{.markdown filename="Copy to Gemini"}
+You are an expert ornithologist working with SFBBO (San Francisco Bay 
+Bird Observatory). I'm sharing a waterbird survey dataset.
+
+TASK: Perform an exploratory data analysis and provide:
+
+1. **Data Overview**
+   - Number of records, date range, locations covered
+   - List of species observed with frequency counts
+
+2. **Data Quality Assessment**
+   - Missing values by column
+   - Potential data entry errors or outliers
+   - Consistency issues (e.g., species naming)
+
+3. **Initial Insights**
+   - Top 5 most frequently observed species
+   - Location with highest species diversity
+   - Any notable rare species sightings
+
+4. **Visualization Recommendations**
+   - Suggest 3 charts with specific axis mappings
+   - Explain what each would reveal about SF Bay bird populations
+
+Output as structured markdown with clear headers.
+```
 
 ---
 
-## Turn Insights into Visuals
+## Exercise 3: Dataset {.smaller}
 
-Ask for:
-- Chart type + rationale
-- Axis mappings
-- Key annotations
+**SFBBO Winter Waterbird Census 2025**
+
+```{.csv filename="Copy to Gemini"}
+date,site_code,site_name,species,count,behavior,habitat,tide,temp_f,wind_mph,observer
+2025-01-08,PAB,Palo Alto Baylands,Dunlin,1245,foraging,mudflat,low,52,5,Chen
+2025-01-08,PAB,Palo Alto Baylands,Western Sandpiper,876,foraging,mudflat,low,52,5,Chen
+2025-01-08,PAB,Palo Alto Baylands,Least Sandpiper,234,foraging,mudflat,low,52,5,Chen
+2025-01-08,PAB,Palo Alto Baylands,Marbled Godwit,89,roosting,mudflat,low,52,5,Chen
+2025-01-08,DEN,Don Edwards NWR,American Avocet,445,foraging,salt_pond,mid,50,8,Rivera
+2025-01-08,DEN,Don Edwards NWR,Black-necked Stilt,312,foraging,salt_pond,mid,50,8,Rivera
+2025-01-08,DEN,Don Edwards NWR,Northern Shoveler,567,swimming,salt_pond,mid,50,8,Rivera
+2025-01-09,CHR,Coyote Hills,Bufflehead,178,diving,freshwater,na,48,12,Thompson
+2025-01-09,CHR,Coyote Hills,Ruddy Duck,234,diving,freshwater,na,48,12,Thompson
+2025-01-09,CHR,Coyote Hills,American Coot,456,swimming,freshwater,na,48,12,Thompson
+2025-01-09,ALV,Alviso Marina,Great Egret,23,hunting,mudflat,low,51,6,Kim
+2025-01-09,ALV,Alviso Marina,Snowy Egret,45,hunting,mudflat,low,51,6,Kim
+2025-01-09,ALV,Alviso Marina,Black-crowned Night-Heron,12,roosting,marsh,low,51,6,Kim
+2025-01-10,SHL,Shoreline Lake,Canada Goose,345,grazing,freshwater,na,49,10,Chen
+2025-01-10,SHL,Shoreline Lake,Mallard,189,swimming,freshwater,na,49,10,Chen
+```
 
 ---
 
-## Hour 2 — Hands‑On Lab
+## Exercise 4: Visualization Guidance {.smaller}
 
-**Dataset:** sample sales CSV
+Ask Gemini for specific chart recommendations:
 
-Tasks:
-1. Summarize the dataset
-2. Identify 3 anomalies
-3. Propose 2 next steps
+```{.markdown filename="Copy to Gemini"}
+Based on the SFBBO waterbird survey data below, recommend visualizations 
+for our annual report.
+
+For each chart, specify:
+- Chart type and rationale
+- X-axis and Y-axis mappings
+- Color encoding (if applicable)
+- Key annotations to include
+- What ecological question it answers for SF Bay conservation
+
+Focus on:
+1. Temporal patterns (migration, seasonality)
+2. Spatial distribution (by SFBBO monitoring site)
+3. Species composition comparisons across habitats
+
+DATA:
+site_name,habitat,total_shorebirds,total_waterfowl,total_waders,survey_count
+Palo Alto Baylands,mudflat,4523,234,156,12
+Don Edwards NWR,salt_pond,2345,1567,89,10
+Coyote Hills,freshwater,123,2345,67,8
+Alviso Marina,mudflat,1234,189,234,6
+Shoreline Lake,freshwater,45,3456,23,10
+Eden Landing,salt_pond,3456,890,123,8
+```
 
 ---
 
-## Prompting Patterns
+## Exercise 5: Shorebird Migration Analysis {.smaller}
 
-- **Decompose:** “First summarize, then analyze trends.”
-- **Constrain:** “Use 5 bullets, max 12 words each.”
-- **Verify:** “List assumptions and uncertainties.”
+**Dataset:** SFBBO Shorebird Migration Monitoring (Winter 2024-2025)
+
+```{.csv filename="Copy to Gemini"}
+week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
+1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing
+1,2025,Palo Alto Baylands,Western Sandpiper,1890,52,0.2,4.2,waxing
+1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing
+1,2025,Don Edwards NWR,Least Sandpiper,432,51,0.3,4.1,waxing
+2,2025,Palo Alto Baylands,Dunlin,2890,48,1.1,3.8,full
+2,2025,Palo Alto Baylands,Western Sandpiper,2234,48,1.1,3.8,full
+2,2025,Don Edwards NWR,Dunlin,1890,47,1.2,3.7,full
+3,2025,Palo Alto Baylands,Dunlin,3102,45,2.3,3.2,waning
+3,2025,Palo Alto Baylands,Western Sandpiper,2567,45,2.3,3.2,waning
+4,2025,Palo Alto Baylands,Dunlin,2654,50,0.1,4.5,new
+4,2025,Don Edwards NWR,Western Sandpiper,1234,49,0.1,4.4,new
+5,2025,Palo Alto Baylands,Dunlin,2456,53,0.0,4.8,waxing
+5,2025,Eden Landing,Western Sandpiper,1678,52,0.0,4.7,waxing
+```
+
+---
+
+## Exercise 5: Analysis Prompt {.smaller}
+
+Use this prompt with the shorebird dataset:
+
+```{.markdown filename="Copy to Gemini"}
+You are an ornithologist at SFBBO analyzing shorebird migration data.
+
+Using the provided dataset, complete these tasks:
+
+1. **Summarize the dataset**
+   - Total observations by species and site
+   - Weekly survey coverage
+
+2. **Identify 3 patterns or anomalies**
+   - Look for unusual count spikes or drops
+   - Note any correlation with weather, tide, or moon phase
+   - Flag potential data quality issues
+
+3. **Ecological interpretation**
+   - What do the patterns suggest about shorebird use of SF Bay?
+   - How do counts compare between sites?
+
+4. **Propose 2 conservation-relevant next steps**
+   - What additional data would strengthen this analysis?
+   - What management questions could this data help answer?
+
+Format: Use headers, bullet points, and bold for key findings.
+```
+
+---
+
+## Prompting Patterns {.smaller}
+
+Master these three patterns:
+
+. . .
+
+{{< fa sitemap >}} **Decompose** — Break complex tasks into steps
+
+```{.markdown filename="Copy to Gemini"}
+First, summarize species counts by SFBBO monitoring site.
+Then, analyze weekly trends for the top 3 shorebird species.
+Finally, identify correlations with tide and weather variables.
+```
+
+. . .
+
+{{< fa bullseye >}} **Constrain** — Set specific output requirements
+
+```{.markdown filename="Copy to Gemini"}
+Provide exactly 5 bullet points, max 15 words each.
+Focus only on shorebird species in the Scolopacidae family.
+Use scientific names in parentheses after common names.
+```
+
+---
+
+## Prompting Patterns (cont.) {.smaller}
+
+{{< fa clipboard-check >}} **Verify** — Request self-assessment
+
+```{.markdown filename="Copy to Gemini"}
+List your assumptions about the SFBBO dataset.
+Rate your confidence (high/medium/low) for each insight.
+Note which findings need field verification by SFBBO staff.
+```
 
 ---
 
 ## Hour 3 — Tooling + Workflows
 
-Typical workflow:
-1. Load data in a notebook
-2. Use Gemini for hypotheses
-3. Validate with code
-4. Iterate
+**Typical SFBBO analysis workflow:**
+
+::: {.incremental}
+1. {{< fa download >}} Load survey data in a notebook
+
+2. {{< fa robot >}} Use Gemini to generate hypotheses about patterns
+
+3. {{< fa laptop-code >}} Validate with Python/R code
+
+4. {{< fa sync-alt >}} Iterate based on results
+:::
 
 ---
 
 ## Safe and Reliable Use
 
-Always:
-- Cross‑check claims with data
-- Keep prompts specific
-- Ask for sources or rationale
-- Use small, testable steps
+::: {.callout-important}
+**Always validate AI outputs against your field expertise!**
+:::
+
+. . .
+
+::: {.incremental}
+{{< fa check >}} Cross‑check species IDs and counts with raw data
+
+{{< fa check >}} Keep prompts specific to SFBBO survey protocols
+
+{{< fa check >}} Ask for sources or ecological rationale
+
+{{< fa check >}} Use small, testable analytical steps
+:::
 
 ---
 
-## Handling Hallucinations
+## Handling Hallucinations {.smaller}
 
-Mitigation strategies:
-- Provide the data explicitly
-- Ask for uncertainty
-- Request calculations or code
-- Validate with a quick script
+AI can make mistakes with bird data. Mitigation strategies:
 
----
+::: {.incremental}
+{{< fa clipboard-list >}} **Provide data explicitly** — don't assume it knows SFBBO protocols
 
-## Hour 3 — Mini‑Lab
+{{< fa question >}} **Ask for uncertainty** — "How confident are you?"
 
-**Task:** Convert a narrative prompt into a checklist prompt.
+{{< fa calculator >}} **Request calculations** — have it show the math
 
-Example:
-“Analyze customer churn” →
-1) Define churn metric  
-2) Summarize churn rate  
-3) Segment by cohort
+{{< fa code >}} **Validate with code** — quick sanity checks
+:::
 
 ---
 
-## Hour 4 — Capstone Project
+## Exercise 6: Uncertainty Prompt {.smaller}
 
-Pick one:
-- Sales performance dashboard outline
-- Marketing campaign analysis
-- Customer segmentation summary
+```{.markdown filename="Copy to Gemini"}
+Analyze this SFBBO bird count data. For each conclusion:
+- State your confidence level (high/medium/low)
+- Explain what evidence supports it
+- Note what could disprove it
+- Identify what additional SFBBO data would help confirm the finding
+```
 
-Deliverables:
-- Prompt set
-- Findings summary
-- Next‑step recommendations
+---
+
+## Exercise 6: Dataset {.smaller}
+
+**SFBBO Monthly Comparison Data**
+
+```{.csv filename="Copy to Gemini"}
+month,year,site,species,count,previous_year_count,percent_change
+1,2025,Palo Alto Baylands,Dunlin,2340,2890,-19.0
+1,2025,Palo Alto Baylands,Western Sandpiper,1890,1567,20.6
+1,2025,Don Edwards NWR,American Avocet,445,512,-13.1
+1,2025,Don Edwards NWR,Black-necked Stilt,312,289,8.0
+1,2025,Coyote Hills,Northern Shoveler,567,623,-9.0
+1,2025,Coyote Hills,Bufflehead,178,145,22.8
+1,2025,Alviso Marina,Great Egret,23,34,-32.4
+1,2025,Alviso Marina,Snowy Egret,45,67,-32.8
+1,2025,Shoreline Lake,Canada Goose,345,298,15.8
+1,2025,Eden Landing,Dunlin,1234,1456,-15.3
+1,2025,Eden Landing,American Avocet,567,534,6.2
+```
+
+---
+
+## Exercise 7: Structured Checklist {.smaller}
+
+**Task:** Convert a narrative prompt into a structured checklist prompt.
+
+. . .
+
+**Before (vague):**
+
+```{.markdown}
+Analyze the Ridgway's Rail population data.
+```
+
+. . .
+
+**After (structured):**
+
+```{.markdown filename="Copy to Gemini"}
+Analyze Ridgway's Rail (Rallus obsoletus) survey data from SFBBO's 
+long-term monitoring program.
+
+Complete this checklist:
+□ 1) Define the population metric (individuals, breeding pairs, or call responses)
+□ 2) Calculate year-over-year population change (%) for each marsh
+□ 3) Segment by region (North Bay vs. South Bay)
+□ 4) Identify peak detection months
+□ 5) Flag any surveys with zero detections (potential concern)
+□ 6) Note correlation with tide levels during surveys
+□ 7) Compare with historical SFBBO baselines if patterns emerge
+
+Output format: Numbered findings with supporting statistics.
+```
+
+---
+
+## Exercise 7: Ridgway's Rail Dataset {.smaller}
+
+**SFBBO Ridgway's Rail Monitoring Program 2024**
+
+```{.csv filename="Copy to Gemini"}
+survey_date,marsh_name,region,rails_detected,call_playback,tide_level,duration_min,observer,temp_f,start_time
+2024-03-15,Arrowhead Marsh,North Bay,4,yes,low,45,Rivera,58,06:30
+2024-03-15,Martin Luther King Jr. Shoreline,North Bay,2,yes,low,45,Rivera,58,07:30
+2024-03-22,Palo Alto Baylands,South Bay,7,yes,mid,60,Thompson,62,06:15
+2024-03-22,Don Edwards - Alviso,South Bay,5,yes,mid,60,Thompson,62,07:30
+2024-04-05,Arrowhead Marsh,North Bay,6,yes,low,45,Chen,65,06:00
+2024-04-05,Hayward Regional Shoreline,North Bay,3,yes,low,45,Chen,65,07:00
+2024-04-12,Palo Alto Baylands,South Bay,9,yes,low,60,Rivera,68,05:45
+2024-04-12,Don Edwards - Alviso,South Bay,4,yes,low,60,Rivera,68,07:00
+2024-04-19,Arrowhead Marsh,North Bay,5,no,high,30,Thompson,64,06:30
+2024-04-26,Martin Luther King Jr. Shoreline,North Bay,0,yes,high,45,Chen,61,07:00
+2024-05-03,Palo Alto Baylands,South Bay,8,yes,mid,60,Thompson,70,05:30
+2024-05-10,Don Edwards - Alviso,South Bay,6,yes,low,60,Rivera,72,05:45
+2024-05-17,Greco Island,South Bay,11,yes,low,60,Chen,69,05:30
+2024-05-24,Dumbarton Marsh,South Bay,3,yes,mid,45,Thompson,67,06:00
+```
+
+---
+
+## Hour 4 — Capstone Project {.smaller}
+
+Choose one project relevant to SFBBO's mission:
+
+. . .
+
+::: {.columns}
+::: {.column width="33%"}
+{{< fa dove >}} **Waterfowl Trends**
+
+Analyze duck & goose populations across SF Bay wetlands over 5 years
+:::
+
+::: {.column width="33%"}
+{{< fa feather-alt >}} **Raptor Survey**
+
+Examine seasonal patterns in hawk and falcon sightings at SFBBO sites
+:::
+
+::: {.column width="33%"}
+{{< fa egg >}} **Breeding Success**
+
+Compare nesting success rates across habitats
+:::
+:::
+
+. . .
+
+**Deliverables:**
+
+{{< fa file-alt >}} Prompt set (3-5 well-crafted prompts)
+
+{{< fa chart-pie >}} Findings summary (key insights)
+
+{{< fa arrow-right >}} Next‑step recommendations for SFBBO
+
+---
+
+## Exercise 8: Waterfowl Trends {.smaller}
+
+**SFBBO Waterfowl Census 2021-2025**
+
+```{.csv filename="Copy to Gemini"}
+year,month,site,species,count,habitat_type,water_level_ft,human_disturbance,notes
+2021,1,Shoreline Lake,Northern Shoveler,856,freshwater,8.2,low,normal_conditions
+2021,1,Shoreline Lake,Bufflehead,234,freshwater,8.2,low,normal_conditions
+2021,1,Don Edwards NWR,Northern Pintail,1243,salt_pond,na,low,pond_A3
+2022,1,Shoreline Lake,Northern Shoveler,923,freshwater,7.8,medium,trail_construction
+2022,1,Shoreline Lake,Bufflehead,198,freshwater,7.8,medium,trail_construction
+2022,1,Don Edwards NWR,Northern Pintail,987,salt_pond,na,low,pond_A3
+2023,1,Shoreline Lake,Northern Shoveler,1102,freshwater,9.1,low,high_water_year
+2023,1,Shoreline Lake,Bufflehead,267,freshwater,9.1,low,high_water_year
+2023,1,Don Edwards NWR,Northern Pintail,1098,salt_pond,na,medium,levee_work_nearby
+2024,1,Shoreline Lake,Northern Shoveler,745,freshwater,6.5,high,drought_conditions
+2024,1,Shoreline Lake,Bufflehead,156,freshwater,6.5,high,drought_conditions
+2024,1,Don Edwards NWR,Northern Pintail,1321,salt_pond,na,low,pond_A3
+2025,1,Shoreline Lake,Northern Shoveler,834,freshwater,8.0,medium,normal_conditions
+2025,1,Shoreline Lake,Bufflehead,201,freshwater,8.0,medium,normal_conditions
+2025,1,Don Edwards NWR,Northern Pintail,1156,salt_pond,na,low,pond_A3
+```
+
+---
+
+## Exercise 8: Capstone Prompt {.smaller}
+
+```{.markdown filename="Copy to Gemini"}
+You are a wildlife data analyst at SFBBO (San Francisco Bay Bird Observatory).
+
+PROJECT: Waterfowl Population Trends Analysis
+
+CONTEXT:
+- Data source: SFBBO annual January waterfowl census
+- Time period: 2021-2025
+- Goal: Inform wetland management and conservation decisions
+
+ANALYSIS REQUIRED:
+
+1. **Trend Analysis**
+   - Calculate year-over-year changes for each species
+   - Identify any concerning declines (>20%) or notable increases
+   - Note the 5-year trend direction for each species
+
+2. **Habitat Comparison**
+   - Compare waterfowl use between freshwater and salt pond habitats
+   - Identify which species show habitat preferences
+
+3. **Disturbance Assessment**
+   - Correlate counts with human disturbance levels
+   - Assess impact of water level changes
+   - Recommend management interventions
+
+4. **Conservation Recommendations**
+   - Prioritize species/sites for enhanced monitoring
+   - Suggest habitat improvements
+   - Identify data gaps for SFBBO to address
+
+OUTPUT: Executive summary (1 page) + detailed findings with statistics.
+```
+
+---
+
+## Exercise 9: Raptor Migration {.smaller}
+
+**SFBBO Hawk Watch Data — Fall 2024**
+
+```{.csv filename="Copy to Gemini"}
+date,site,species,count,flight_direction,time_period,wind_dir,wind_mph,visibility_mi,cloud_cover,observer
+2024-09-15,Hawk Hill,Red-tailed Hawk,23,south,morning,NW,12,10,clear,Martinez
+2024-09-15,Hawk Hill,Turkey Vulture,156,south,morning,NW,12,10,clear,Martinez
+2024-09-15,Hawk Hill,Sharp-shinned Hawk,8,south,midday,NW,15,10,partly,Martinez
+2024-09-15,Hawk Hill,Cooper's Hawk,3,south,midday,NW,15,10,partly,Martinez
+2024-09-22,Hawk Hill,Red-tailed Hawk,45,south,morning,N,8,15,clear,Chen
+2024-09-22,Hawk Hill,Turkey Vulture,234,south,morning,N,8,15,clear,Chen
+2024-09-22,Hawk Hill,Broad-winged Hawk,12,south,midday,N,10,15,clear,Chen
+2024-09-29,Hawk Hill,Red-tailed Hawk,67,south,morning,NW,18,8,overcast,Martinez
+2024-09-29,Hawk Hill,Turkey Vulture,189,south,morning,NW,18,8,overcast,Martinez
+2024-09-29,Hawk Hill,American Kestrel,15,south,afternoon,NW,20,8,overcast,Martinez
+2024-10-06,Hawk Hill,Red-tailed Hawk,89,south,morning,N,10,12,partly,Thompson
+2024-10-06,Hawk Hill,Turkey Vulture,312,south,morning,N,10,12,partly,Thompson
+2024-10-06,Hawk Hill,Sharp-shinned Hawk,23,south,midday,N,12,12,clear,Thompson
+2024-10-13,Hawk Hill,Red-tailed Hawk,34,south,morning,W,5,15,clear,Chen
+2024-10-13,Hawk Hill,Northern Harrier,7,south,afternoon,W,8,15,clear,Chen
+2024-10-20,Hawk Hill,Red-tailed Hawk,78,south,morning,NW,14,10,partly,Martinez
+2024-10-20,Hawk Hill,Golden Eagle,2,south,midday,NW,16,10,partly,Martinez
+```
+
+---
+
+## Exercise 9: Raptor Analysis Prompt {.smaller}
+
+```{.markdown filename="Copy to Gemini"}
+You are an ornithologist at SFBBO analyzing fall raptor migration data 
+from Hawk Hill in the Marin Headlands.
+
+Using the dataset, provide:
+
+1. **Migration Summary**
+   - Total count by species
+   - Peak migration dates for each species
+   - Species diversity and dominance patterns
+
+2. **Weather Correlations**
+   - How do wind direction and speed affect flight counts?
+   - Does visibility or cloud cover impact detection?
+   - Identify optimal survey conditions
+
+3. **Temporal Patterns**
+   - Compare morning vs. midday vs. afternoon flights
+   - Weekly trends through the season
+   - Any notable late-season observations?
+
+4. **Conservation Insights**
+   - Which species should SFBBO prioritize for monitoring?
+   - Are any species showing unusual patterns?
+   - Recommendations for next year's survey effort
+
+Format as a structured report suitable for SFBBO's newsletter.
+```
+
+---
+
+## Exercise 10: Breeding Bird Survey {.smaller}
+
+**SFBBO Breeding Territory Mapping 2024**
+
+```{.csv filename="Copy to Gemini"}
+year,territory_id,species_code,species_name,site,first_detected,last_detected,nest_confirmed,fledglings,habitat,area_ha,threats
+2024,T001,SOSP,Song Sparrow,Palo Alto Baylands,2024-03-15,2024-07-20,yes,3,marsh_edge,0.8,none
+2024,T002,SOSP,Song Sparrow,Palo Alto Baylands,2024-03-22,2024-07-15,yes,2,marsh_edge,0.6,predator
+2024,T003,COYE,Common Yellowthroat,Palo Alto Baylands,2024-04-01,2024-08-10,yes,4,cattail,1.2,none
+2024,T004,MAWR,Marsh Wren,Don Edwards NWR,2024-03-10,2024-06-30,yes,2,tidal_marsh,0.5,flooding
+2024,T005,MAWR,Marsh Wren,Don Edwards NWR,2024-03-18,2024-07-05,no,0,tidal_marsh,0.4,flooding
+2024,T006,RIRA,Ridgway's Rail,Arrowhead Marsh,2024-02-28,2024-08-15,yes,5,tidal_marsh,2.1,none
+2024,T007,RIRA,Ridgway's Rail,Arrowhead Marsh,2024-03-05,2024-08-20,yes,4,tidal_marsh,1.8,disturbance
+2024,T008,BCNH,Black-crowned Night-Heron,Coyote Hills,2024-04-15,2024-07-30,yes,3,riparian,0.3,none
+2024,T009,KILL,Killdeer,Shoreline Park,2024-03-20,2024-06-15,yes,2,gravel,0.2,disturbance
+2024,T010,KILL,Killdeer,Shoreline Park,2024-03-25,2024-06-20,no,0,gravel,0.2,disturbance
+2024,T011,SAVS,Savannah Sparrow,Don Edwards NWR,2024-04-10,2024-07-25,yes,3,grassland,1.5,mowing
+2024,T012,RWBL,Red-winged Blackbird,Alviso Marina,2024-03-01,2024-07-15,yes,4,cattail,0.9,none
+```
+
+---
+
+## Exercise 10: Breeding Analysis Prompt {.smaller}
+
+```{.markdown filename="Copy to Gemini"}
+You are analyzing SFBBO's breeding bird territory mapping data.
+
+Provide a comprehensive breeding season summary:
+
+1. **Nesting Success Overview**
+   - Calculate nest success rate by species (% with confirmed nests)
+   - Calculate productivity (fledglings per successful nest)
+   - Identify most and least successful species
+
+2. **Habitat Analysis**
+   - Compare success rates across habitat types
+   - Calculate average territory size by species
+   - Which habitats support highest species diversity?
+
+3. **Threat Assessment**
+   - Categorize and quantify threats
+   - Which species/sites face highest threat levels?
+   - Correlation between threats and nest failure
+
+4. **Site Comparison**
+   - Rank SFBBO sites by breeding bird diversity
+   - Identify sites with conservation concern
+   - Recommend priority sites for protection
+
+5. **Management Recommendations**
+   - Actions to improve nest success
+   - Threat mitigation strategies
+   - Data collection improvements for next season
+
+Output as a formal report suitable for SFBBO's annual summary.
+```
 
 ---
 
 ## Prompt Engineering Cheatsheet
 
-**Clarity > cleverness**
+::: {.callout-tip}
+## Remember: **Clarity > cleverness**
+:::
 
-- State the desired format
-- Provide necessary data
-- Specify time period and scope
-- Ask for confidence / assumptions
+. . .
+
+::: {.incremental}
+{{< fa list >}} State the desired output format explicitly
+
+{{< fa database >}} Provide all necessary SFBBO data (don't assume knowledge)
+
+{{< fa calendar-alt >}} Specify time period, site, and species scope
+
+{{< fa question-circle >}} Ask for confidence levels and assumptions
+
+{{< fa hashtag >}} Request specific numbers, not vague qualifiers
+:::
+
+---
+
+## Quick Reference: Data Cleaning {.smaller}
+
+```{.markdown filename="Copy to Gemini"}
+Review this SFBBO bird survey CSV for data quality issues. 
+
+Flag the following:
+- Duplicate records (same date, site, species, count)
+- Impossible counts (negative or >10,000 for non-colonial species)
+- Misspelled species names or invalid species codes
+- Dates outside the survey period
+- Missing required fields (date, site, species, count)
+- Inconsistent site naming
+
+Output as a table of issues with row numbers, issue type, and suggested fixes.
+```
+
+---
+
+## Quick Reference: Summary Stats {.smaller}
+
+```{.markdown filename="Copy to Gemini"}
+Calculate for each species in this SFBBO dataset:
+- Total count across all surveys
+- Mean count per survey
+- Standard deviation
+- Minimum and maximum counts
+- Number of surveys where detected (frequency of occurrence)
+- Percentage of surveys with detections
+
+Format as a markdown table sorted by total count descending.
+Include a brief interpretation highlighting:
+- Most abundant species
+- Most consistently detected species
+- Species with high variability (potential concern)
+```
+
+---
+
+## Quick Reference: Conservation {.smaller}
+
+```{.markdown filename="Copy to Gemini"}
+Based on these SFBBO population trends, identify:
+
+1. **Species of Conservation Concern**
+   - Any species declining >15% year-over-year
+   - Species with high count variability (CV > 50%)
+   - Species absent from historical sites
+
+2. **Potential Causes**
+   - Habitat changes at SFBBO monitoring sites
+   - Weather/climate factors affecting SF Bay
+   - Human disturbance patterns
+
+3. **Recommended Actions**
+   - Priority species for enhanced SFBBO monitoring
+   - Sites needing management intervention
+   - Data collection protocol improvements
+
+Cite specific numbers from the data to support each conclusion.
+Reference SFBBO's conservation mission where relevant.
+```
 
 ---
 
 ## Governance and Ethics
 
-- Avoid sensitive data in prompts
-- Follow org policies
-- Document model usage
-- Keep a human in the loop
+::: {.callout-warning}
+## Data Responsibility for SFBBO
+:::
+
+::: {.incremental}
+{{< fa lock >}} Avoid sharing sensitive location data (rare species nest sites)
+
+{{< fa scroll >}} Follow SFBBO's data sharing policies
+
+{{< fa file-signature >}} Document AI model usage in methods sections
+
+{{< fa user-check >}} Keep SFBBO scientists in the loop for all conclusions
+:::
 
 ---
 
 ## Closing + Resources
 
-**Next steps:**
-- Practice on your own datasets
-- Build a prompt library
-- Share learnings with your team
+**Next steps for your SFBBO work:**
 
-Thanks!
+::: {.incremental}
+{{< fa crow >}} Practice with your own SFBBO survey datasets
+
+{{< fa book >}} Build a prompt library for common analyses
+
+{{< fa users >}} Share learnings with the SFBBO team
+
+{{< fa database >}} Integrate Gemini into eBird and SFBBO data workflows
+:::
+
+. . .
+
+::: {.callout-note}
+## Thank you!
+Happy birding and data analysis! {{< fa feather >}}
+
+Learn more at [sfbbo.org](https://www.sfbbo.org)
+:::
+
+---
+
+## Appendix A: SFBBO Site Codes {.smaller}
+
+| Code | Site Name | Habitat Type | Region |
+|------|-----------|--------------|--------|
+| PAB | Palo Alto Baylands | Mudflat/Marsh | South Bay |
+| DEN | Don Edwards NWR | Salt Pond | South Bay |
+| CHR | Coyote Hills Regional Park | Freshwater | East Bay |
+| ALV | Alviso Marina | Mudflat | South Bay |
+| SHL | Shoreline Lake | Freshwater | South Bay |
+| EDL | Eden Landing | Salt Pond | East Bay |
+| ARM | Arrowhead Marsh | Tidal Marsh | East Bay |
+| MLK | MLK Jr. Shoreline | Tidal Marsh | East Bay |
+| HRS | Hayward Regional Shoreline | Tidal Marsh | East Bay |
+| GRI | Greco Island | Tidal Marsh | South Bay |
+| DUM | Dumbarton Marsh | Tidal Marsh | South Bay |
+
+---
+
+## Appendix B: Species Codes {.smaller .scrollable}
+
+| Code | Common Name | Scientific Name | Guild |
+|------|-------------|-----------------|-------|
+| DUNL | Dunlin | Calidris alpina | Shorebird |
+| WESA | Western Sandpiper | Calidris mauri | Shorebird |
+| LESA | Least Sandpiper | Calidris minutilla | Shorebird |
+| MAGO | Marbled Godwit | Limosa fedoa | Shorebird |
+| AMAV | American Avocet | Recurvirostra americana | Shorebird |
+| BNST | Black-necked Stilt | Himantopus mexicanus | Shorebird |
+| NSHO | Northern Shoveler | Spatula clypeata | Waterfowl |
+| NOPI | Northern Pintail | Anas acuta | Waterfowl |
+| BUFF | Bufflehead | Bucephala albeola | Waterfowl |
+| RUDU | Ruddy Duck | Oxyura jamaicensis | Waterfowl |
+| GREG | Great Egret | Ardea alba | Wader |
+| SNEG | Snowy Egret | Egretta thula | Wader |
+| GBHE | Great Blue Heron | Ardea herodias | Wader |
+| RIRA | Ridgway's Rail | Rallus obsoletus | Marsh Bird |
+| SOSP | Song Sparrow | Melospiza melodia | Passerine |
+| COYE | Common Yellowthroat | Geothlypis trichas | Passerine |
+| MAWR | Marsh Wren | Cistothorus palustris | Passerine |
