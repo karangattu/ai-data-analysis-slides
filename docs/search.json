@@ -25,7 +25,7 @@
     "href": "slides.html#quick-poll-your-ai-experience",
     "title": "AI for Data Analysis",
     "section": "Quick Poll: Your AI Experience",
-    "text": "Quick Poll: Your AI Experience\n\n  Have you used AI tools (ChatGPT, Gemini, Claude)?\n  \n     Yes, regularly\n     Yes, once or twice\n     No, never\n     Not sure\n  \n  \n  Click an option to vote • Results update live"
+    "text": "Quick Poll: Your AI Experience\n\n  Have you used AI tools (ChatGPT, Gemini, Claude)?\n  \n     Yes, regularly\n     Yes, once or twice\n     No, never\n     Not sure"
   },
   {
     "objectID": "slides.html#what-is-gemini",
@@ -46,7 +46,7 @@
     "href": "slides.html#discuss-with-your-neighbor-2-min",
     "title": "AI for Data Analysis",
     "section": "Discuss with Your Neighbor (2 min)",
-    "text": "Discuss with Your Neighbor (2 min)\n\n  Which of these is an LLM?\n  \n     Spotify recommendation\n     Google image search\n     Gemini\n     ChatGPT\n  \n  \n  Vote now • Discuss with your neighbor • We'll review in 2 min\n\n\n\n\n\n\n\n\n\nTip\n\n\nAnswers: Gemini and ChatGPT are LLMs (both are correct!) Why? They use language understanding, not image recognition or recommendation algorithms."
+    "text": "Discuss with Your Neighbor (2 min)\n\n  Which of these is an LLM?\n  \n     Spotify recommendation\n     Google image search\n     Gemini\n     ChatGPT\n  \n\n\n\n\n\n\n\n\nTip\n\n\nAnswers: Gemini and ChatGPT are LLMs (both are correct!) Why? They use language understanding, not image recognition or recommendation algorithms."
   },
   {
     "objectID": "slides.html#how-llms-are-created-part-1-training-data",
@@ -109,7 +109,7 @@
     "href": "slides.html#quick-check-spot-the-hallucination",
     "title": "AI for Data Analysis",
     "section": "Quick Check: Spot the Hallucination",
-    "text": "Quick Check: Spot the Hallucination\n\n  Which statement about California Gulls is FALSE?\n  \n    1. State bird of Utah\n    2. Nest exclusively on SF Bay islands\n    3. Medium-sized gull with yellow-green legs\n    4. Population stable since 1980\n  \n  \n  Vote before we reveal the answers\n\n\n\n\n\n\n\n\n\nWarning\n\n\nAnswers: #2 (they nest inland at lakes, not exclusively on Bay islands) and #4 (populations have fluctuated significantly!)\nEven confident-sounding facts about local species need verification!"
+    "text": "Quick Check: Spot the Hallucination\n\n  Which statement about California Gulls is FALSE?\n  \n    1. State bird of Utah\n    2. Nest exclusively on SF Bay islands\n    3. Medium-sized gull with yellow-green legs\n    4. Population stable since 1980\n  \n\n\n\n\n\n\n\n\nWarning\n\n\nAnswers: #2 (they nest inland at lakes, not exclusively on Bay islands) and #4 (populations have fluctuated significantly!)\nEven confident-sounding facts about local species need verification!"
   },
   {
     "objectID": "slides.html#llm-capabilities-limitations-quick-reference",
@@ -123,7 +123,7 @@
     "href": "slides.html#poll-which-would-you-trust-gemini-with",
     "title": "AI for Data Analysis",
     "section": "Poll: Which Would YOU Trust Gemini With?",
-    "text": "Poll: Which Would YOU Trust Gemini With?\n\n  Which task would you trust Gemini with?\n  \n     Drafting a grant\n     Writing Python code\n     Statistical analysis\n     Conservation decisions\n  \n  \n  Click an option to vote • See live results"
+    "text": "Poll: Which Would YOU Trust Gemini With?\n\n  Which task would you trust Gemini with?\n  \n     Drafting a grant\n     Writing Python code\n     Statistical analysis\n     Conservation decisions"
   },
   {
     "objectID": "slides.html#how-ai-works-highlevel",
@@ -326,7 +326,7 @@
     "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d75672d686f74203e7d7d--debrief-most-useful-so-far",
     "title": "AI for Data Analysis",
     "section": " Debrief: Most Useful So Far?",
-    "text": "Debrief: Most Useful So Far?\n\n  Which technique has been most useful?\n  \n     Token counting\n     Decompose pattern\n     Constrain pattern\n     Verification checklist\n  \n  \n  Vote to help us prioritize remaining time"
+    "text": "Debrief: Most Useful So Far?\n\n  Which technique has been most useful?\n  \n     Token counting\n     Decompose pattern\n     Constrain pattern\n     Verification checklist"
   },
   {
     "objectID": "slides.html#hour-4-capstone-project",
@@ -417,7 +417,7 @@
     "href": "slides.html#final-reflection-your-ai-journey",
     "title": "AI for Data Analysis",
     "section": "Final Reflection: Your AI Journey",
-    "text": "Final Reflection: Your AI Journey\n\n  How do you feel about using Gemini for your bird work?\n  \n     Confident\n     Curious - want practice\n     Still learning\n     Need more guidance\n  \n  \n  Your feedback helps us customize Q&A time"
+    "text": "Final Reflection: Your AI Journey\n\n  How do you feel about using Gemini for your bird work?\n  \n     Confident\n     Curious - want practice\n     Still learning\n     Need more guidance"
   },
   {
     "objectID": "slides.html#closing-resources",

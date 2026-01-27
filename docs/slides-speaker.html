@@ -223,123 +223,12 @@
       border: 2px solid #007bff;
       border-radius: 8px;
       padding: 12px 15px;
-      cursor: pointer;
-      transition: all 0.3s ease;
       font-size: 0.95em;
       font-weight: 500;
       text-align: center;
       color: #007bff;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .poll-option:hover {
-      background: #f0f8ff;
-      transform: scale(1.02);
-      box-shadow: 0 2px 8px rgba(0,123,255,0.3);
-    }
-
-    .poll-option.selected {
-      background: #007bff;
-      color: white;
-      box-shadow: 0 4px 12px rgba(0,123,255,0.4);
-    }
-
-    .poll-results {
-      margin-top: 15px;
-      padding-top: 15px;
-      border-top: 2px solid #ddd;
-      font-size: 0.85em;
-    }
-
-    .poll-result-item {
-      margin-bottom: 8px;
-      text-align: left;
-    }
-
-    .poll-result-label {
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: #333;
-      font-size: 0.9em;
-    }
-
-    .poll-result-bar {
-      background: linear-gradient(90deg, #007bff, #0056b3);
-      border-radius: 4px;
-      height: 20px;
-      min-width: 20px;
-      display: flex;
-      align-items: center;
-      padding: 0 8px;
-      color: white;
-      font-weight: bold;
-      font-size: 0.8em;
-      transition: width 0.3s ease;
-    }
-
-    .poll-footer {
-      font-size: 0.8em;
-      margin-top: 10px;
-    }
-    .poll-footer {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 0.9em;
-      color: #666;
-      font-style: italic;
     }
   </style>
-  <script>
-    // Poll tracking object
-    window.pollData = {};
-
-    function initPoll(pollId, options) {
-      if (!window.pollData[pollId]) {
-        window.pollData[pollId] = {};
-        options.forEach(opt => {
-          window.pollData[pollId][opt] = 0;
-        });
-      }
-    }
-
-    function recordVote(pollId, option) {
-      if (window.pollData[pollId]) {
-        window.pollData[pollId][option]++;
-        updatePollDisplay(pollId);
-
-        // Visual feedback
-        const btn = event.target;
-        btn.classList.add('selected');
-        setTimeout(() => btn.classList.remove('selected'), 800);
-      }
-    }
-
-    function updatePollDisplay(pollId) {
-      const results = window.pollData[pollId];
-      const total = Object.values(results).reduce((a, b) => a + b, 0);
-      const resultsDiv = document.getElementById(`poll-results-${pollId}`);
-
-      if (resultsDiv && total > 0) {
-        let html = '<div class="poll-results"><strong>Live Results:</strong>';
-
-        Object.keys(results).forEach(option => {
-          const count = results[option];
-          const percentage = Math.round((count / total) * 100);
-          html += `
-            <div class="poll-result-item">
-              <div class="poll-result-label">${option}: ${count} vote${count !== 1 ? 's' : ''} (${percentage}%)</div>
-              <div class="poll-result-bar" style="width: ${percentage}%;">${percentage}%</div>
-            </div>
-          `;
-        });
-
-        html += '</div>';
-        resultsDiv.innerHTML = html;
-      }
-    }
-  </script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -406,15 +295,12 @@ Karan Gathani
 <div class="poll-container">
   <div class="poll-question">Have you used AI tools (ChatGPT, Gemini, Claude)?</div>
   <div class="poll-options">
-    <button class="poll-option" onclick="recordVote('ai-experience', 'Yes, regularly'); updatePollDisplay('ai-experience')"><i class="fa-solid fa-check"></i> Yes, regularly</button>
-    <button class="poll-option" onclick="recordVote('ai-experience', 'Yes, once or twice'); updatePollDisplay('ai-experience')"><i class="fa-solid fa-check"></i> Yes, once or twice</button>
-    <button class="poll-option" onclick="recordVote('ai-experience', 'No, never'); updatePollDisplay('ai-experience')"><i class="fa-solid fa-xmark"></i> No, never</button>
-    <button class="poll-option" onclick="recordVote('ai-experience', 'Not sure what they are'); updatePollDisplay('ai-experience')"><i class="fa-solid fa-question"></i> Not sure</button>
+    <div class="poll-option"><i class="fa-solid fa-check"></i> Yes, regularly</div>
+    <div class="poll-option"><i class="fa-solid fa-check"></i> Yes, once or twice</div>
+    <div class="poll-option"><i class="fa-solid fa-xmark"></i> No, never</div>
+    <div class="poll-option"><i class="fa-solid fa-question"></i> Not sure</div>
   </div>
-  <div id="poll-results-ai-experience"></div>
-  <div class="poll-footer">Click an option to vote • Results update live</div>
 </div>
-<script>initPoll('ai-experience', ['Yes, regularly', 'Yes, once or twice', 'No, never', 'Not sure what they are'])</script>
 </section>
 <section id="what-is-gemini" class="slide level2 center">
 <h2>What is Gemini?</h2>
@@ -427,7 +313,7 @@ Karan Gathani
 <p><i class="fa-solid fa-file-alt" aria-label="file-alt"></i> <strong>Narrative storytelling</strong> — write reports and grant summaries</p>
 </div>
 </section>
-<section id="ai-vs-llm-whats-the-difference" class="slide level2 center">
+<section id="ai-vs-llm-whats-the-difference" class="slide level2 smaller center">
 <h2>AI vs LLM: What’s the Difference?</h2>
 <p><strong>AI (Artificial Intelligence)</strong> is a broad field:</p>
 <p><i class="fa-solid fa-robot" aria-label="robot"></i> Any technology that performs tasks humans usually do</p>
@@ -436,7 +322,7 @@ Karan Gathani
 <p><strong>LLM (Large Language Model)</strong> is a specific type of AI:</p>
 <p><i class="fa-solid fa-book" aria-label="book"></i> Uses text data to understand and generate language</p>
 <p><i class="fa-solid fa-microscope" aria-label="microscope"></i> Trained on billions of words from the internet, books, code, etc.</p>
-<p><i class="fa-solid fa-speech" aria-label="speech"></i> Gemini, ChatGPT, and Claude are all LLMs</p>
+<p><i class="fa-solid fa-comment" aria-label="comment"></i> Gemini, ChatGPT, and Claude are all LLMs</p>
 </div>
 <div class="fragment">
 <p><strong>Think of it like birdwatching:</strong> All LLMs are AI, but not all AI is LLMs—just like all shorebirds are birds, but not all birds are shorebirds!</p>
@@ -447,15 +333,12 @@ Karan Gathani
 <div class="poll-container">
   <div class="poll-question">Which of these is an LLM?</div>
   <div class="poll-options">
-    <button class="poll-option" onclick="recordVote('llm-quiz', 'Spotify recommendation'); updatePollDisplay('llm-quiz')"><i class="fa-solid fa-music"></i> Spotify recommendation</button>
-    <button class="poll-option" onclick="recordVote('llm-quiz', 'Google image search'); updatePollDisplay('llm-quiz')"><i class="fa-solid fa-image"></i> Google image search</button>
-    <button class="poll-option" onclick="recordVote('llm-quiz', 'Gemini'); updatePollDisplay('llm-quiz')"><i class="fa-solid fa-check"></i> Gemini</button>
-    <button class="poll-option" onclick="recordVote('llm-quiz', 'ChatGPT'); updatePollDisplay('llm-quiz')"><i class="fa-solid fa-check"></i> ChatGPT</button>
+    <div class="poll-option"><i class="fa-solid fa-music"></i> Spotify recommendation</div>
+    <div class="poll-option"><i class="fa-solid fa-image"></i> Google image search</div>
+    <div class="poll-option"><i class="fa-solid fa-check"></i> Gemini</div>
+    <div class="poll-option"><i class="fa-solid fa-check"></i> ChatGPT</div>
   </div>
-  <div id="poll-results-llm-quiz"></div>
-  <div class="poll-footer">Vote now • Discuss with your neighbor • We'll review in 2 min</div>
 </div>
-<script>initPoll('llm-quiz', ['Spotify recommendation', 'Google image search', 'Gemini', 'ChatGPT'])</script>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -601,15 +484,12 @@ Karan Gathani
 <div class="poll-container">
   <div class="poll-question">Which statement about California Gulls is FALSE?</div>
   <div class="poll-options">
-    <button class="poll-option" onclick="recordVote('hallucination', 'State bird of Utah'); updatePollDisplay('hallucination')"><strong>1.</strong> State bird of Utah</button>
-    <button class="poll-option" onclick="recordVote('hallucination', 'Nest exclusively on SF Bay islands'); updatePollDisplay('hallucination')"><strong>2.</strong> Nest exclusively on SF Bay islands</button>
-    <button class="poll-option" onclick="recordVote('hallucination', 'Medium-sized gull with yellow-green legs'); updatePollDisplay('hallucination')"><strong>3.</strong> Medium-sized gull with yellow-green legs</button>
-    <button class="poll-option" onclick="recordVote('hallucination', 'Population stable since 1980'); updatePollDisplay('hallucination')"><strong>4.</strong> Population stable since 1980</button>
+    <div class="poll-option"><strong>1.</strong> State bird of Utah</div>
+    <div class="poll-option"><strong>2.</strong> Nest exclusively on SF Bay islands</div>
+    <div class="poll-option"><strong>3.</strong> Medium-sized gull with yellow-green legs</div>
+    <div class="poll-option"><strong>4.</strong> Population stable since 1980</div>
   </div>
-  <div id="poll-results-hallucination"></div>
-  <div class="poll-footer">Vote before we reveal the answers</div>
 </div>
-<script>initPoll('hallucination', ['State bird of Utah', 'Nest exclusively on SF Bay islands', 'Medium-sized gull with yellow-green legs', 'Population stable since 1980'])</script>
 <div class="fragment">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
@@ -691,15 +571,12 @@ Karan Gathani
 <div class="poll-container">
   <div class="poll-question">Which task would you trust Gemini with?</div>
   <div class="poll-options">
-    <button class="poll-option" onclick="recordVote('trust-task', 'Drafting a grant'); updatePollDisplay('trust-task')"><i class="fa-solid fa-file-pen"></i> Drafting a grant</button>
-    <button class="poll-option" onclick="recordVote('trust-task', 'Writing Python code'); updatePollDisplay('trust-task')"><i class="fa-solid fa-code"></i> Writing Python code</button>
-    <button class="poll-option" onclick="recordVote('trust-task', 'Statistical analysis'); updatePollDisplay('trust-task')"><i class="fa-solid fa-chart-bar"></i> Statistical analysis</button>
-    <button class="poll-option" onclick="recordVote('trust-task', 'Conservation decisions'); updatePollDisplay('trust-task')"><i class="fa-solid fa-dove"></i> Conservation decisions</button>
+    <div class="poll-option"><i class="fa-solid fa-file-pen"></i> Drafting a grant</div>
+    <div class="poll-option"><i class="fa-solid fa-code"></i> Writing Python code</div>
+    <div class="poll-option"><i class="fa-solid fa-chart-bar"></i> Statistical analysis</div>
+    <div class="poll-option"><i class="fa-solid fa-dove"></i> Conservation decisions</div>
   </div>
-  <div id="poll-results-trust-task"></div>
-  <div class="poll-footer">Click an option to vote • See live results</div>
 </div>
-<script>initPoll('trust-task', ['Drafting a grant', 'Writing Python code', 'Statistical analysis', 'Conservation decisions'])</script>
 </section>
 <section id="how-ai-works-highlevel" class="slide level2 center">
 <h2>How AI Works (High‑Level)</h2>
@@ -1237,15 +1114,12 @@ Karan Gathani
 <div class="poll-container">
   <div class="poll-question">Which technique has been most useful?</div>
   <div class="poll-options">
-    <button class="poll-option" onclick="recordVote('useful-technique', 'Token counting'); updatePollDisplay('useful-technique')"><i class="fa-solid fa-hashtag"></i> Token counting</button>
-    <button class="poll-option" onclick="recordVote('useful-technique', 'Decompose pattern'); updatePollDisplay('useful-technique')"><i class="fa-solid fa-clipboard-list"></i> Decompose pattern</button>
-    <button class="poll-option" onclick="recordVote('useful-technique', 'Constrain pattern'); updatePollDisplay('useful-technique')"><i class="fa-solid fa-bullseye"></i> Constrain pattern</button>
-    <button class="poll-option" onclick="recordVote('useful-technique', 'Verification checklist'); updatePollDisplay('useful-technique')"><i class="fa-solid fa-check"></i> Verification checklist</button>
+    <div class="poll-option"><i class="fa-solid fa-hashtag"></i> Token counting</div>
+    <div class="poll-option"><i class="fa-solid fa-clipboard-list"></i> Decompose pattern</div>
+    <div class="poll-option"><i class="fa-solid fa-bullseye"></i> Constrain pattern</div>
+    <div class="poll-option"><i class="fa-solid fa-check"></i> Verification checklist</div>
   </div>
-  <div id="poll-results-useful-technique"></div>
-  <div class="poll-footer">Vote to help us prioritize remaining time</div>
 </div>
-<script>initPoll('useful-technique', ['Token counting', 'Decompose pattern', 'Constrain pattern', 'Verification checklist'])</script>
 </section>
 <section id="hour-4-capstone-project" class="slide level2 smaller center">
 <h2>Hour 4 — Capstone Project</h2>
@@ -1570,15 +1444,12 @@ Karan Gathani
 <div class="poll-container">
   <div class="poll-question">How do you feel about using Gemini for your bird work?</div>
   <div class="poll-options">
-    <button class="poll-option" onclick="recordVote('confidence', 'Confident'); updatePollDisplay('confidence')"><i class="fa-solid fa-circle-check"></i> Confident</button>
-    <button class="poll-option" onclick="recordVote('confidence', 'Curious - want practice'); updatePollDisplay('confidence')"><i class="fa-solid fa-lightbulb"></i> Curious - want practice</button>
-    <button class="poll-option" onclick="recordVote('confidence', 'Still learning'); updatePollDisplay('confidence')"><i class="fa-solid fa-book-open-reader"></i> Still learning</button>
-    <button class="poll-option" onclick="recordVote('confidence', 'Need more guidance'); updatePollDisplay('confidence')"><i class="fa-solid fa-hand"></i> Need more guidance</button>
+    <div class="poll-option"><i class="fa-solid fa-circle-check"></i> Confident</div>
+    <div class="poll-option"><i class="fa-solid fa-lightbulb"></i> Curious - want practice</div>
+    <div class="poll-option"><i class="fa-solid fa-book-open-reader"></i> Still learning</div>
+    <div class="poll-option"><i class="fa-solid fa-hand"></i> Need more guidance</div>
   </div>
-  <div id="poll-results-confidence"></div>
-  <div class="poll-footer">Your feedback helps us customize Q&amp;A time</div>
 </div>
-<script>initPoll('confidence', ['Confident', 'Curious - want practice', 'Still learning', 'Need more guidance'])</script>
 </section>
 <section id="closing-resources" class="slide level2 center">
 <h2>Closing + Resources</h2>
@@ -1827,7 +1698,7 @@ Karan Gathani
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>AI for Data Analysis Workshop | SFBBO</p>
+
 </div>
 </div></div>
 
@@ -1862,7 +1733,7 @@ Karan Gathani
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":"ab9e69fa75a2d68dedeef2277e8f0bd0","id":"99fc3f0890f17fff454948a52d434415839b2c40a69f2cf253db37d9ebf03ce2","url":"https://multiplex.up.railway.app/"},
+'multiplex': {"secret":"85595150e4eefad71b959191d6327d08","id":"ce846740880559a9adb7d2cff0ee295db629931d0896cfd679ab292a97f4bd2a","url":"https://multiplex.up.railway.app/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
