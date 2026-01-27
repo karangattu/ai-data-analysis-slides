@@ -249,7 +249,14 @@
     "href": "slides.html#prompting-patterns-the-big-three",
     "title": "AI for Data Analysis",
     "section": "Prompting Patterns — The Big Three",
-    "text": "Prompting Patterns — The Big Three\nMaster these patterns and you’ll level up your prompts:\n\n Decompose — Break complex tasks into steps\n\n\nCopy to Gemini\n\nFirst, summarize species counts by SFBBO monitoring site.\nThen, analyze weekly trends for the top 3 shorebird species.\nFinally, identify correlations with tide and weather variables.\n\n\n\n Constrain — Set specific output requirements\n\n\nCopy to Gemini\n\nProvide exactly 5 bullet points, max 15 words each.\nFocus only on shorebird species in the Scolopacidae family.\nUse scientific names in parentheses after common names."
+    "text": "Prompting Patterns — The Big Three\nMaster these patterns and you’ll level up your prompts:\n\n Decompose — Break complex tasks into steps\n\n\nCopy to Gemini\n\nFirst, summarize species counts by SFBBO monitoring site.\nThen, analyze weekly trends for the top 3 shorebird species.\nFinally, identify correlations with tide and weather variables."
+  },
+  {
+    "objectID": "slides.html#prompting-patterns-the-big-three-cont.",
+    "href": "slides.html#prompting-patterns-the-big-three-cont.",
+    "title": "AI for Data Analysis",
+    "section": "Prompting Patterns — The Big Three (cont.)",
+    "text": "Prompting Patterns — The Big Three (cont.)\n Constrain — Set specific output requirements\n\n\nCopy to Gemini\n\nProvide exactly 5 bullet points, max 15 words each.\nFocus only on shorebird species in the Scolopacidae family.\nUse scientific names in parentheses after common names."
   },
   {
     "objectID": "slides.html#prompting-patterns-cont.",

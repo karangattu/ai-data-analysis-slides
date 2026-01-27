@@ -315,7 +315,7 @@ This teaches the model patterns about what words go together and what makes sens
 
 ---
 
-## Think-Pair-Share: Real-World Example {.center}
+## Think-Pair-Share: Real-World Example {.center .smaller}
 
 **Scenario:** You ask Gemini: "List all Dunlin observations in SFBBO's 2024 database."
 
@@ -339,7 +339,7 @@ This teaches the model patterns about what words go together and what makes sens
 
 ---
 
-## What LLMs Can Do Well
+## What LLMs Can Do Well {.smaller}
 
 {{< fa check-circle >}} **Text understanding & analysis**
 - Summarize SFBBO survey notes
@@ -526,7 +526,7 @@ Great prompts include:
 
 ---
 
-## Interactive: Build a Prompt Together {.center}
+## Interactive: Build a Prompt Together {.center .smaller}
 
 **Let's co-create a prompt for Gemini!**
 
@@ -852,7 +852,9 @@ Then, analyze weekly trends for the top 3 shorebird species.
 Finally, identify correlations with tide and weather variables.
 ```
 
-. . .
+---
+
+## Prompting Patterns — The Big Three (cont.) {.smaller}
 
 {{< fa bullseye >}} **Constrain** — Set specific output requirements
 
@@ -927,7 +929,7 @@ Gemini responds: *"This dramatic increase suggests climate-driven habitat expans
 
 ---
 
-## Safe and Reliable Use
+## Safe and Reliable Use {.smaller}
 
 ::: {.callout-important}
 **Always validate AI outputs against your field expertise!**
