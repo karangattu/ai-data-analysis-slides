@@ -1,66 +1,69 @@
 /* Custom CSS for AI Data Analysis Presentation */
+/* Clean, professional theme with nature-inspired palette */
 
 /* Global styles */
 .reveal {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 28px;
   font-weight: normal;
-  color: #e0e0e0;
-  background: #0a0a0a;
+  color: #e2e8f0;
+  background: #1e293b;
 }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
   text-transform: none;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
 }
 
 .reveal h1 {
   font-size: 2.5em;
-  color: #00d4ff;
+  color: #f8fafc;
 }
 
 .reveal h2 {
-  font-size: 2em;
-  color: #00d4ff;
-  border-bottom: 2px solid #00d4ff;
-  padding-bottom: 0.3em;
+  font-size: 1.8em;
+  color: #f1f5f9;
+  border: none !important;
+  border-bottom: none !important;
+  padding-bottom: 0.5em;
   margin-bottom: 0.5em;
 }
 
 .reveal h3 {
-  font-size: 1.5em;
-  color: #ff6b6b;
+  font-size: 1.4em;
+  color: #60a5fa;
 }
 
-/* Custom color scheme */
+/* Custom color scheme - calm, professional blues and greens */
 :root {
-  --primary-color: #00d4ff;
-  --secondary-color: #ff6b6b;
-  --accent-color: #00ff88;
-  --text-color: #e0e0e0;
-  --background-color: #0a0a0a;
-  --slide-background: #1a1a2e;
-  --code-background: #2d2d2d;
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --accent-color: #f59e0b;
+  --text-color: #e2e8f0;
+  --text-muted: #94a3b8;
+  --background-color: #0f172a;
+  --slide-background: #1e293b;
+  --code-background: #1e293b;
 }
 
-/* Slide background */
+/* Slide background - solid, uniform color */
 .reveal .slides section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+  background: #1e293b;
 }
 
 /* Links and navigation */
 .reveal a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .reveal a:hover {
-  color: var(--accent-color);
+  color: #60a5fa;
   text-decoration: underline;
 }
 
@@ -71,29 +74,29 @@
 }
 
 .reveal li {
-  margin: 0.3em 0;
-  line-height: 1.4;
+  margin: 0.4em 0;
+  line-height: 1.5;
 }
 
 .reveal li::marker {
   color: var(--secondary-color);
-  font-weight: bold;
 }
 
 /* Code and syntax highlighting */
 .reveal pre {
   background: var(--code-background);
+  border: 1px solid #334155;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   padding: 1em;
   margin: 1em 0;
   max-width: 90%;
 }
 
 .reveal code {
-  font-family: 'Fira Code', monospace;
-  background: rgba(45, 45, 45, 0.8);
-  padding: 0.2em 0.4em;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  background: #334155;
+  padding: 0.15em 0.4em;
   border-radius: 4px;
   font-size: 0.9em;
 }
@@ -105,52 +108,52 @@
 
 /* Blockquotes and callouts */
 .reveal blockquote {
-  background: rgba(0, 212, 255, 0.1);
-  border-left: 5px solid var(--primary-color);
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid var(--primary-color);
   padding: 1em;
   margin: 1em 0;
   border-radius: 0 8px 8px 0;
+  font-style: normal;
 }
 
 .reveal .callout {
   border-radius: 8px;
   padding: 1em;
   margin: 1em 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .reveal .callout-tip {
-  background: rgba(0, 255, 136, 0.1);
-  border-left: 5px solid var(--accent-color);
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--secondary-color);
 }
 
 .reveal .callout-warning {
-  background: rgba(255, 107, 107, 0.1);
-  border-left: 5px solid var(--secondary-color);
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 4px solid var(--accent-color);
 }
 
 .reveal .callout-important {
-  background: rgba(0, 212, 255, 0.1);
-  border-left: 5px solid var(--primary-color);
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid var(--primary-color);
 }
 
-/* Poll container enhancement */
+/* Poll container - clean card style */
 .poll-container {
-  background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+  background: #1e293b;
   border-radius: 12px;
   padding: 20px;
   margin: 10px auto;
   max-width: 600px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid #334155;
 }
 
 .poll-question {
   font-size: 1.1em;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 15px;
-  color: var(--primary-color);
+  color: #f1f5f9;
   text-align: center;
 }
 
@@ -161,23 +164,21 @@
 }
 
 .poll-option {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--primary-color);
+  background: #334155;
+  border: 1px solid #475569;
   border-radius: 8px;
   padding: 12px 15px;
   font-size: 0.95em;
   font-weight: 500;
   text-align: center;
   color: var(--text-color);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .poll-option:hover {
-  background: rgba(0, 212, 255, 0.2);
-  border-color: var(--accent-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  background: #475569;
+  border-color: var(--primary-color);
 }
 
 /* Two-column layout enhancements */
@@ -193,8 +194,7 @@
 
 /* r-fit-text enhancement */
 .reveal .r-fit-text {
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
 }
 
 /* Code block styling */
@@ -215,21 +215,21 @@
 
 /* Custom scrollbar */
 .reveal .scrollable::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .reveal .scrollable::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  background: #1e293b;
+  border-radius: 3px;
 }
 
 .reveal .scrollable::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 4px;
+  background: #475569;
+  border-radius: 3px;
 }
 
 .reveal .scrollable::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-color);
+  background: #64748b;
 }
 
 /* Footer styling */
@@ -238,16 +238,17 @@
   bottom: 10px;
   left: 20px;
   font-size: 0.7em;
-  color: rgba(224, 224, 224, 0.7);
+  color: var(--text-muted);
 }
 
 /* Progress bar */
 .reveal .progress {
-  background: rgba(255, 255, 255, 0.2);
+  background: #1e293b;
+  height: 4px;
 }
 
 .reveal .progress span {
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  background: var(--primary-color);
 }
 
 /* Controls */
@@ -257,8 +258,8 @@
 
 /* Overview mode */
 .reveal.overview .slides section {
-  background: rgba(26, 26, 46, 0.9);
-  border: 2px solid var(--primary-color);
+  background: #1e293b;
+  border: 1px solid #334155;
   border-radius: 8px;
   margin: 10px;
 }

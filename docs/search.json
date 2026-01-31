@@ -46,7 +46,7 @@
     "href": "slides.html#discuss-with-your-neighbor-2-min",
     "title": "AI for Data Analysis",
     "section": "Discuss with Your Neighbor (2 min)",
-    "text": "Discuss with Your Neighbor (2 min)\n\n  Which of these is an LLM?\n  \n     Spotify recommendation\n     Google image search\n     Gemini\n     ChatGPT\n  \n\n\n\n\n\n\n\n\nTip\n\n\nAnswers: Gemini and ChatGPT are LLMs (both are correct!) Why? They use language understanding, not image recognition or recommendation algorithms."
+    "text": "Discuss with Your Neighbor (2 min)\n\n  \n  ⏱️\n  02:00\n  ▶️\n  🔄\n\n\n\n\n  Which of these is an LLM?\n  \n     Spotify recommendation\n     Google image search\n     Gemini\n     ChatGPT\n  \n\n\n\n\n\n\n\n\nTip\n\n\nAnswers: Gemini and ChatGPT are LLMs (both are correct!) Why? They use language understanding, not image recognition or recommendation algorithms."
   },
   {
     "objectID": "slides.html#how-llms-are-created-part-1-training-data",
@@ -81,7 +81,7 @@
     "href": "slides.html#think-pair-share-real-world-example",
     "title": "AI for Data Analysis",
     "section": "Think-Pair-Share: Real-World Example",
-    "text": "Think-Pair-Share: Real-World Example\nScenario: You ask Gemini: “List all Dunlin observations in SFBBO’s 2024 database.”\n\nThink (30 sec): What could go wrong?\n\n\nPair (1 min): Turn to a neighbor and share concerns.\n\n\nShare: Let’s hear 2-3 concerns…\n\n\n\n\n\n\n\n\nWarning\n\n\nKey insight: Gemini can’t access SFBBO’s private database—it only knows what you tell it. Always provide your data explicitly!"
+    "text": "Think-Pair-Share: Real-World Example\nScenario: You ask Gemini: “List all Dunlin observations in SFBBO’s 2024 database.”\n\nThink (30 sec): What could go wrong?\n\n\nPair (1 min): Turn to a neighbor and share concerns.\n\n  \n  ⏱️\n  01:00\n  ▶️\n  🔄\n\n\n\n\n\nShare: Let’s hear 2-3 concerns…\n\n\n\n\n\n\n\n\nWarning\n\n\nKey insight: Gemini can’t access SFBBO’s private database—it only knows what you tell it. Always provide your data explicitly!"
   },
   {
     "objectID": "slides.html#what-llms-can-do-well",
@@ -158,7 +158,7 @@
     "href": "slides.html#exercise-1-prompt-template",
     "title": "AI for Data Analysis",
     "section": "Exercise 1: Prompt Template",
-    "text": "Exercise 1: Prompt Template\n Your Turn: Copy this template and customize for your SFBBO data:\n\n\nCopy to Gemini\n\nRole: You are an expert ornithologist and data analyst \nworking with the San Francisco Bay Bird Observatory (SFBBO).\n\nTask: Summarize key trends in the bird survey dataset.\n\nData: &lt;paste CSV or description here&gt;\n\nConstraints:\n- Provide 5 bullet-point insights\n- Suggest 2 visualization ideas\n- Note any data quality issues\n- Highlight conservation implications for SF Bay wetlands"
+    "text": "Exercise 1: Prompt Template\n\n  \n  ⏱️\n  05:00\n  ▶️\n  🔄\n\n\n\n Your Turn: Copy this template and customize for your SFBBO data:\n\n\nCopy to Gemini\n\nRole: You are an expert ornithologist and data analyst \nworking with the San Francisco Bay Bird Observatory (SFBBO).\n\nTask: Summarize key trends in the bird survey dataset.\n\nData: &lt;paste CSV or description here&gt;\n\nConstraints:\n- Provide 5 bullet-point insights\n- Suggest 2 visualization ideas\n- Note any data quality issues\n- Highlight conservation implications for SF Bay wetlands"
   },
   {
     "objectID": "slides.html#exercise-1-dataset",
@@ -172,7 +172,7 @@
     "href": "slides.html#exercise-2-data-quality-check",
     "title": "AI for Data Analysis",
     "section": "Exercise 2: Data Quality Check",
-    "text": "Exercise 2: Data Quality Check\n Your Turn: Use Gemini to identify data quality issues in SFBBO survey data.\nCopy this prompt and run it in Gemini:\n\n\nCopy to Gemini\n\nYou are a data quality analyst for SFBBO. Review this waterbird survey \ndata and identify any potential data quality issues, inconsistencies, \nor anomalies that might affect analysis. Flag anything that seems \nunusual for SF Bay bird surveys."
+    "text": "Exercise 2: Data Quality Check\n\n  \n  ⏱️\n  05:00\n  ▶️\n  🔄\n\n\n\n Your Turn: Use Gemini to identify data quality issues in SFBBO survey data.\nCopy this prompt and run it in Gemini:\n\n\nCopy to Gemini\n\nYou are a data quality analyst for SFBBO. Review this waterbird survey \ndata and identify any potential data quality issues, inconsistencies, \nor anomalies that might affect analysis. Flag anything that seems \nunusual for SF Bay bird surveys."
   },
   {
     "objectID": "slides.html#exercise-2-dataset",
@@ -193,7 +193,7 @@
     "href": "slides.html#pair-activity-pick-your-model",
     "title": "AI for Data Analysis",
     "section": "Pair Activity: Pick Your Model",
-    "text": "Pair Activity: Pick Your Model\nScenario 1: You need to analyze 5 years of SFBBO shorebird counts (~50k rows) to write a grant.\nScenario 2: You’re on a field trip and want a quick summary of today’s sightings.\n\nDiscussion: Which Gemini version for each scenario? Talk with your neighbor for 1 minute.\n\n\n\n\n\n\n\n\nTip\n\n\nScenario 1: Larger model (more reasoning, bigger context). Scenario 2: Faster model (speed matters more)."
+    "text": "Pair Activity: Pick Your Model\nScenario 1: You need to analyze 5 years of SFBBO shorebird counts (~50k rows) to write a grant.\nScenario 2: You’re on a field trip and want a quick summary of today’s sightings.\n\nDiscussion: Which Gemini version for each scenario? Talk with your neighbor for 1 minute.\n\n  \n  ⏱️\n  01:00\n  ▶️\n  🔄\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nScenario 1: Larger model (more reasoning, bigger context). Scenario 2: Faster model (speed matters more)."
   },
   {
     "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d75672d686f74203e7d7d--quick-break-reflection",
@@ -214,7 +214,7 @@
     "href": "slides.html#exercise-3-eda-prompt",
     "title": "AI for Data Analysis",
     "section": "Exercise 3: EDA Prompt",
-    "text": "Exercise 3: EDA Prompt\n Your Turn: Copy this prompt to analyze SFBBO survey data:\n\n\nCopy to Gemini\n\nYou are an expert ornithologist working with SFBBO (San Francisco Bay \nBird Observatory). I'm sharing a waterbird survey dataset.\n\nTASK: Perform an exploratory data analysis and provide:\n\n1. **Data Overview**\n   - Number of records, date range, locations covered\n   - List of species observed with frequency counts\n\n2. **Data Quality Assessment**\n   - Missing values by column\n   - Potential data entry errors or outliers\n   - Consistency issues (e.g., species naming)\n\n3. **Initial Insights**\n   - Top 5 most frequently observed species\n   - Location with highest species diversity\n   - Any notable rare species sightings\n\n4. **Visualization Recommendations**\n   - Suggest 3 charts with specific axis mappings\n   - Explain what each would reveal about SF Bay bird populations\n\nOutput as structured markdown with clear headers."
+    "text": "Exercise 3: EDA Prompt\n\n  \n  ⏱️\n  07:00\n  ▶️\n  🔄\n\n\n\n Your Turn: Copy this prompt to analyze SFBBO survey data:\n\n\nCopy to Gemini\n\nYou are an expert ornithologist working with SFBBO (San Francisco Bay \nBird Observatory). I'm sharing a waterbird survey dataset.\n\nTASK: Perform an exploratory data analysis and provide:\n\n1. **Data Overview**\n   - Number of records, date range, locations covered\n   - List of species observed with frequency counts\n\n2. **Data Quality Assessment**\n   - Missing values by column\n   - Potential data entry errors or outliers\n   - Consistency issues (e.g., species naming)\n\n3. **Initial Insights**\n   - Top 5 most frequently observed species\n   - Location with highest species diversity\n   - Any notable rare species sightings\n\n4. **Visualization Recommendations**\n   - Suggest 3 charts with specific axis mappings\n   - Explain what each would reveal about SF Bay bird populations\n\nOutput as structured markdown with clear headers."
   },
   {
     "objectID": "slides.html#exercise-3-dataset",
@@ -228,14 +228,14 @@
     "href": "slides.html#exercise-4-visualization-guidance",
     "title": "AI for Data Analysis",
     "section": "Exercise 4: Visualization Guidance",
-    "text": "Exercise 4: Visualization Guidance\n Your Turn: Ask Gemini for specific chart recommendations:\n\n\nCopy to Gemini\n\nBased on the SFBBO waterbird survey data below, recommend visualizations \nfor our annual report.\n\nFor each chart, specify:\n- Chart type and rationale\n- X-axis and Y-axis mappings\n- Color encoding (if applicable)\n- Key annotations to include\n- What ecological question it answers for SF Bay conservation\n\nFocus on:\n1. Temporal patterns (migration, seasonality)\n2. Spatial distribution (by SFBBO monitoring site)\n3. Species composition comparisons across habitats\n\nDATA:\nsite_name,habitat,total_shorebirds,total_waterfowl,total_waders,survey_count\nPalo Alto Baylands,mudflat,4523,234,156,12\nDon Edwards NWR,salt_pond,2345,1567,89,10\nCoyote Hills,freshwater,123,2345,67,8\nAlviso Marina,mudflat,1234,189,234,6\nShoreline Lake,freshwater,45,3456,23,10\nEden Landing,salt_pond,3456,890,123,8"
+    "text": "Exercise 4: Visualization Guidance\n\n  \n  ⏱️\n  05:00\n  ▶️\n  🔄\n\n\n\n Your Turn: Ask Gemini for specific chart recommendations:\n\n\nCopy to Gemini\n\nBased on the SFBBO waterbird survey data below, recommend visualizations \nfor our annual report.\n\nFor each chart, specify:\n- Chart type and rationale\n- X-axis and Y-axis mappings\n- Color encoding (if applicable)\n- Key annotations to include\n- What ecological question it answers for SF Bay conservation\n\nFocus on:\n1. Temporal patterns (migration, seasonality)\n2. Spatial distribution (by SFBBO monitoring site)\n3. Species composition comparisons across habitats\n\nDATA:\nsite_name,habitat,total_shorebirds,total_waterfowl,total_waders,survey_count\nPalo Alto Baylands,mudflat,4523,234,156,12\nDon Edwards NWR,salt_pond,2345,1567,89,10\nCoyote Hills,freshwater,123,2345,67,8\nAlviso Marina,mudflat,1234,189,234,6\nShoreline Lake,freshwater,45,3456,23,10\nEden Landing,salt_pond,3456,890,123,8"
   },
   {
     "objectID": "slides.html#exercise-5-shorebird-migration-analysis",
     "href": "slides.html#exercise-5-shorebird-migration-analysis",
     "title": "AI for Data Analysis",
     "section": "Exercise 5: Shorebird Migration Analysis",
-    "text": "Exercise 5: Shorebird Migration Analysis\n Your Turn (if time allows): SFBBO Shorebird Migration Monitoring (Winter 2024-2025)\n\n\nCopy to Gemini\n\nweek,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase\n1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing\n1,2025,Palo Alto Baylands,Western Sandpiper,1890,52,0.2,4.2,waxing\n1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing\n1,2025,Don Edwards NWR,Least Sandpiper,432,51,0.3,4.1,waxing\n2,2025,Palo Alto Baylands,Dunlin,2890,48,1.1,3.8,full\n2,2025,Palo Alto Baylands,Western Sandpiper,2234,48,1.1,3.8,full\n2,2025,Don Edwards NWR,Dunlin,1890,47,1.2,3.7,full\n3,2025,Palo Alto Baylands,Dunlin,3102,45,2.3,3.2,waning\n3,2025,Palo Alto Baylands,Western Sandpiper,2567,45,2.3,3.2,waning\n4,2025,Palo Alto Baylands,Dunlin,2654,50,0.1,4.5,new\n4,2025,Don Edwards NWR,Western Sandpiper,1234,49,0.1,4.4,new\n5,2025,Palo Alto Baylands,Dunlin,2456,53,0.0,4.8,waxing\n5,2025,Eden Landing,Western Sandpiper,1678,52,0.0,4.7,waxing"
+    "text": "Exercise 5: Shorebird Migration Analysis\n\n  \n  ⏱️\n  10:00\n  ▶️\n  🔄\n\n\n\n Your Turn (if time allows): SFBBO Shorebird Migration Monitoring (Winter 2024-2025)\n\n\nCopy to Gemini\n\nweek,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase\n1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing\n1,2025,Palo Alto Baylands,Western Sandpiper,1890,52,0.2,4.2,waxing\n1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing\n1,2025,Don Edwards NWR,Least Sandpiper,432,51,0.3,4.1,waxing\n2,2025,Palo Alto Baylands,Dunlin,2890,48,1.1,3.8,full\n2,2025,Palo Alto Baylands,Western Sandpiper,2234,48,1.1,3.8,full\n2,2025,Don Edwards NWR,Dunlin,1890,47,1.2,3.7,full\n3,2025,Palo Alto Baylands,Dunlin,3102,45,2.3,3.2,waning\n3,2025,Palo Alto Baylands,Western Sandpiper,2567,45,2.3,3.2,waning\n4,2025,Palo Alto Baylands,Dunlin,2654,50,0.1,4.5,new\n4,2025,Don Edwards NWR,Western Sandpiper,1234,49,0.1,4.4,new\n5,2025,Palo Alto Baylands,Dunlin,2456,53,0.0,4.8,waxing\n5,2025,Eden Landing,Western Sandpiper,1678,52,0.0,4.7,waxing"
   },
   {
     "objectID": "slides.html#exercise-5-analysis-prompt",
@@ -270,7 +270,7 @@
     "href": "slides.html#pair-challenge-apply-the-patterns",
     "title": "AI for Data Analysis",
     "section": "Pair Challenge: Apply the Patterns",
-    "text": "Pair Challenge: Apply the Patterns\nTask: You want Gemini to analyze tern breeding success.\n\nWith a neighbor: - Which pattern would help? (Decompose, Constrain, Verify?) - Why? - How would you apply it?\n\n\nAnswer: Likely all three! Decompose (multiple steps), Constrain (specific metrics), Verify (confidence levels)."
+    "text": "Pair Challenge: Apply the Patterns\n\n  \n  ⏱️\n  03:00\n  ▶️\n  🔄\n\n\n\nTask: You want Gemini to analyze tern breeding success.\n\nWith a neighbor: - Which pattern would help? (Decompose, Constrain, Verify?) - Why? - How would you apply it?\n\n\nAnswer: Likely all three! Decompose (multiple steps), Constrain (specific metrics), Verify (confidence levels)."
   },
   {
     "objectID": "slides.html#hour-3-tooling-workflows",
@@ -375,7 +375,7 @@
     "href": "slides.html#exercise-create-a-visualization",
     "title": "AI for Data Analysis",
     "section": "Exercise: Create a Visualization",
-    "text": "Exercise: Create a Visualization\n Your Turn: Upload one of the sample datasets and ask Gemini to create a chart.\nTry this with migration_timeline.csv:\n\n\nCopy to Gemini\n\nI've uploaded shorebird migration data. Please:\n\n1. Create a line chart showing how bird counts change from \n   September 2024 to April 2025 for each species\n   \n2. Add a title: \"Shorebird Migration Patterns at Palo Alto Baylands\"\n\n3. Label the axes clearly\n\n4. Use different colors for each species\n\n5. Explain what patterns you see in the data\n\n\nBonus: Ask Gemini to create a second chart type (bar chart, area chart) and compare which shows the pattern better!"
+    "text": "Exercise: Create a Visualization\n\n  \n  ⏱️\n  08:00\n  ▶️\n  🔄\n\n\n\n Your Turn: Upload one of the sample datasets and ask Gemini to create a chart.\nTry this with migration_timeline.csv:\n\n\nCopy to Gemini\n\nI've uploaded shorebird migration data. Please:\n\n1. Create a line chart showing how bird counts change from \n   September 2024 to April 2025 for each species\n   \n2. Add a title: \"Shorebird Migration Patterns at Palo Alto Baylands\"\n\n3. Label the axes clearly\n\n4. Use different colors for each species\n\n5. Explain what patterns you see in the data\n\n\nBonus: Ask Gemini to create a second chart type (bar chart, area chart) and compare which shows the pattern better!"
   },
   {
     "objectID": "slides.html#introducing-notebooklm",
@@ -536,7 +536,7 @@
     "href": "slides.html#exercise-6-uncertainty-prompt",
     "title": "AI for Data Analysis",
     "section": "Exercise 6: Uncertainty Prompt",
-    "text": "Exercise 6: Uncertainty Prompt\n Your Turn:\n\n\nCopy to Gemini\n\nAnalyze this SFBBO bird count data. For each conclusion:\n- State your confidence level (high/medium/low)\n- Explain what evidence supports it\n- Note what could disprove it\n- Identify what additional SFBBO data would help confirm the finding"
+    "text": "Exercise 6: Uncertainty Prompt\n\n  \n  ⏱️\n  05:00\n  ▶️\n  🔄\n\n\n\n Your Turn:\n\n\nCopy to Gemini\n\nAnalyze this SFBBO bird count data. For each conclusion:\n- State your confidence level (high/medium/low)\n- Explain what evidence supports it\n- Note what could disprove it\n- Identify what additional SFBBO data would help confirm the finding"
   },
   {
     "objectID": "slides.html#exercise-6-dataset",
@@ -550,7 +550,7 @@
     "href": "slides.html#exercise-7-structured-checklist",
     "title": "AI for Data Analysis",
     "section": "Exercise 7: Structured Checklist",
-    "text": "Exercise 7: Structured Checklist\n Your Turn: Convert a narrative prompt into a structured checklist prompt.\n\nBefore (vague):\nAnalyze the Ridgway's Rail population data.\n\n\nAfter (structured):\n\n\nCopy to Gemini\n\nAnalyze Ridgway's Rail (Rallus obsoletus) survey data from SFBBO's \nlong-term monitoring program.\n\nComplete this checklist:\n□ 1) Define the population metric (individuals, breeding pairs, or call responses)\n□ 2) Calculate year-over-year population change (%) for each marsh\n□ 3) Segment by region (North Bay vs. South Bay)\n□ 4) Identify peak detection months\n□ 5) Flag any surveys with zero detections (potential concern)\n□ 6) Note correlation with tide levels during surveys\n□ 7) Compare with historical SFBBO baselines if patterns emerge\n\nOutput format: Numbered findings with supporting statistics."
+    "text": "Exercise 7: Structured Checklist\n\n  \n  ⏱️\n  05:00\n  ▶️\n  🔄\n\n\n\n Your Turn: Convert a narrative prompt into a structured checklist prompt.\n\nBefore (vague):\nAnalyze the Ridgway's Rail population data.\n\n\nAfter (structured):\n\n\nCopy to Gemini\n\nAnalyze Ridgway's Rail (Rallus obsoletus) survey data from SFBBO's \nlong-term monitoring program.\n\nComplete this checklist:\n□ 1) Define the population metric (individuals, breeding pairs, or call responses)\n□ 2) Calculate year-over-year population change (%) for each marsh\n□ 3) Segment by region (North Bay vs. South Bay)\n□ 4) Identify peak detection months\n□ 5) Flag any surveys with zero detections (potential concern)\n□ 6) Note correlation with tide levels during surveys\n□ 7) Compare with historical SFBBO baselines if patterns emerge\n\nOutput format: Numbered findings with supporting statistics."
   },
   {
     "objectID": "slides.html#exercise-7-ridgways-rail-dataset",
@@ -578,7 +578,7 @@
     "href": "slides.html#exercise-8-waterfowl-trends",
     "title": "AI for Data Analysis",
     "section": "Exercise 8: Waterfowl Trends",
-    "text": "Exercise 8: Waterfowl Trends\n Your Capstone Choice (Option 1): SFBBO Waterfowl Census 2021-2025\n\n\nCopy to Gemini\n\nyear,month,site,species,count,habitat_type,water_level_ft,human_disturbance,notes\n2021,1,Shoreline Lake,Northern Shoveler,856,freshwater,8.2,low,normal_conditions\n2021,1,Shoreline Lake,Bufflehead,234,freshwater,8.2,low,normal_conditions\n2021,1,Don Edwards NWR,Northern Pintail,1243,salt_pond,na,low,pond_A3\n2022,1,Shoreline Lake,Northern Shoveler,923,freshwater,7.8,medium,trail_construction\n2022,1,Shoreline Lake,Bufflehead,198,freshwater,7.8,medium,trail_construction\n2022,1,Don Edwards NWR,Northern Pintail,987,salt_pond,na,low,pond_A3\n2023,1,Shoreline Lake,Northern Shoveler,1102,freshwater,9.1,low,high_water_year\n2023,1,Shoreline Lake,Bufflehead,267,freshwater,9.1,low,high_water_year\n2023,1,Don Edwards NWR,Northern Pintail,1098,salt_pond,na,medium,levee_work_nearby\n2024,1,Shoreline Lake,Northern Shoveler,745,freshwater,6.5,high,drought_conditions\n2024,1,Shoreline Lake,Bufflehead,156,freshwater,6.5,high,drought_conditions\n2024,1,Don Edwards NWR,Northern Pintail,1321,salt_pond,na,low,pond_A3\n2025,1,Shoreline Lake,Northern Shoveler,834,freshwater,8.0,medium,normal_conditions\n2025,1,Shoreline Lake,Bufflehead,201,freshwater,8.0,medium,normal_conditions\n2025,1,Don Edwards NWR,Northern Pintail,1156,salt_pond,na,low,pond_A3"
+    "text": "Exercise 8: Waterfowl Trends\n\n  \n  ⏱️\n  15:00\n  ▶️\n  🔄\n\n\n\n Your Capstone Choice (Option 1): SFBBO Waterfowl Census 2021-2025\n\n\nCopy to Gemini\n\nyear,month,site,species,count,habitat_type,water_level_ft,human_disturbance,notes\n2021,1,Shoreline Lake,Northern Shoveler,856,freshwater,8.2,low,normal_conditions\n2021,1,Shoreline Lake,Bufflehead,234,freshwater,8.2,low,normal_conditions\n2021,1,Don Edwards NWR,Northern Pintail,1243,salt_pond,na,low,pond_A3\n2022,1,Shoreline Lake,Northern Shoveler,923,freshwater,7.8,medium,trail_construction\n2022,1,Shoreline Lake,Bufflehead,198,freshwater,7.8,medium,trail_construction\n2022,1,Don Edwards NWR,Northern Pintail,987,salt_pond,na,low,pond_A3\n2023,1,Shoreline Lake,Northern Shoveler,1102,freshwater,9.1,low,high_water_year\n2023,1,Shoreline Lake,Bufflehead,267,freshwater,9.1,low,high_water_year\n2023,1,Don Edwards NWR,Northern Pintail,1098,salt_pond,na,medium,levee_work_nearby\n2024,1,Shoreline Lake,Northern Shoveler,745,freshwater,6.5,high,drought_conditions\n2024,1,Shoreline Lake,Bufflehead,156,freshwater,6.5,high,drought_conditions\n2024,1,Don Edwards NWR,Northern Pintail,1321,salt_pond,na,low,pond_A3\n2025,1,Shoreline Lake,Northern Shoveler,834,freshwater,8.0,medium,normal_conditions\n2025,1,Shoreline Lake,Bufflehead,201,freshwater,8.0,medium,normal_conditions\n2025,1,Don Edwards NWR,Northern Pintail,1156,salt_pond,na,low,pond_A3"
   },
   {
     "objectID": "slides.html#exercise-8-capstone-prompt",

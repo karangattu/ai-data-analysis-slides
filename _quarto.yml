@@ -5,9 +5,9 @@ project:
 format:
   revealjs:
     theme: night
-    highlight-style: monokai
-    transition: convex
-    background-transition: slide
+    highlight-style: github-dark
+    transition: fade
+    background-transition: fade
     slide-number: true
     incremental: true
     center: false
@@ -17,6 +17,6 @@ format:
     code-copy: true
     css: styles.css
     title-slide-attributes:
-      data-background-color: "#1a1a2e"
-      data-background-image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-      data-background-opacity: "0.7"
+      data-background-color: "#1e293b"
+      data-background-image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      data-background-opacity: "0.4"

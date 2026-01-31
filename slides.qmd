@@ -4,8 +4,6 @@ subtitle: "San Francisco Bay Bird Observatory (SFBBO)"
 author: "Karan Gathani"
 format:
   revealjs:
-    transition: convex
-    background-transition: slide
     slide-number: true
     incremental: true
     center: false
@@ -169,6 +167,8 @@ text, code, and structured data (and more).
 
 ## Discuss with Your Neighbor (2 min) {.center}
 
+{{< timer 2 >}}
+
 ```{=html}
 <div class="poll-container">
   <div class="poll-question">Which of these is an LLM?</div>
@@ -296,6 +296,8 @@ This teaches the model patterns about what words go together and what makes sens
 . . .
 
 **Pair (1 min):** Turn to a neighbor and share concerns.
+
+{{< timer 1 >}}
 
 . . .
 
@@ -520,6 +522,8 @@ Great prompts include:
 
 ## Exercise 1: Prompt Template {.smaller}
 
+{{< timer 5 >}}
+
 {{< fa lightbulb >}} **Your Turn:** Copy this template and customize for your SFBBO data:
 
 ```{.markdown filename="Copy to Gemini"}
@@ -565,6 +569,8 @@ date,location,species,count,weather,observer,habitat,tide_level
 ---
 
 ## Exercise 2: Data Quality Check {.smaller}
+
+{{< timer 5 >}}
 
 {{< fa lightbulb >}} **Your Turn:** Use Gemini to identify data quality issues in SFBBO survey data.
 
@@ -626,6 +632,8 @@ Choose based on your analysis needs:
 
 **Discussion:** Which Gemini version for each scenario? Talk with your neighbor for 1 minute.
 
+{{< timer 1 >}}
+
 . . .
 
 ::: {.callout-tip}
@@ -665,6 +673,8 @@ Tasks Gemini can help with for SFBBO data:
 ---
 
 ## Exercise 3: EDA Prompt {.smaller}
+
+{{< timer 7 >}}
 
 {{< fa lightbulb >}} **Your Turn:** Copy this prompt to analyze SFBBO survey data:
 
@@ -724,6 +734,8 @@ date,site_code,site_name,species,count,behavior,habitat,tide,temp_f,wind_mph,obs
 
 ## Exercise 4: Visualization Guidance {.smaller}
 
+{{< timer 5 >}}
+
 {{< fa lightbulb >}} **Your Turn:** Ask Gemini for specific chart recommendations:
 
 ```{.markdown filename="Copy to Gemini"}
@@ -755,6 +767,8 @@ Eden Landing,salt_pond,3456,890,123,8
 ---
 
 ## Exercise 5: Shorebird Migration Analysis {.smaller}
+
+{{< timer 10 >}}
 
 {{< fa lightbulb >}} **Your Turn (if time allows):** SFBBO Shorebird Migration Monitoring (Winter 2024-2025)
 
@@ -849,6 +863,8 @@ Note which findings need field verification by SFBBO staff.
 ---
 
 ## Pair Challenge: Apply the Patterns {.center}
+
+{{< timer 3 >}}
 
 **Task:** You want Gemini to analyze tern breeding success.
 
@@ -1293,6 +1309,8 @@ Bay in the background.
 ---
 
 ## Exercise: Create a Visualization {.smaller}
+
+{{< timer 8 >}}
 
 {{< fa lightbulb >}} **Your Turn:** Upload one of the sample datasets and ask Gemini to create a chart.
 
@@ -1940,6 +1958,8 @@ AI can make mistakes with bird data. Mitigation strategies:
 
 ## Exercise 6: Uncertainty Prompt {.smaller}
 
+{{< timer 5 >}}
+
 {{< fa lightbulb >}} **Your Turn:**
 
 ```{.markdown filename="Copy to Gemini"}
@@ -1974,6 +1994,8 @@ month,year,site,species,count,previous_year_count,percent_change
 ---
 
 ## Exercise 7: Structured Checklist {.smaller}
+
+{{< timer 5 >}}
 
 {{< fa lightbulb >}} **Your Turn:** Convert a narrative prompt into a structured checklist prompt.
 
@@ -2086,6 +2108,8 @@ Compare nesting success rates across habitats
 ---
 
 ## Exercise 8: Waterfowl Trends {.smaller}
+
+{{< timer 15 >}}
 
 {{< fa lightbulb >}} **Your Capstone Choice (Option 1):** SFBBO Waterfowl Census 2021-2025
 
