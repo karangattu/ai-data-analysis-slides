@@ -84,10 +84,10 @@
 
 /* Code and syntax highlighting */
 .reveal pre {
-  background: var(--code-background);
+  background: #0f172a;
   border: 1px solid #334155;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   padding: 1em;
   margin: 1em 0;
   max-width: 90%;
@@ -104,6 +104,76 @@
 .reveal pre code {
   background: transparent;
   padding: 0;
+}
+
+/* Code with filename - seamless integrated design */
+.reveal .code-with-filename {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid #334155;
+  margin: 1em 0;
+}
+
+.reveal .code-with-filename .code-with-filename-file {
+  background: #0f172a;
+  border: none;
+  border-bottom: 1px solid #334155;
+  border-radius: 0;
+  padding: 0.6em 1em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.reveal .code-with-filename .code-with-filename-file::before {
+  content: "📄";
+  font-size: 0.85em;
+}
+
+.reveal .code-with-filename .code-with-filename-file pre {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 0.8em;
+  color: #60a5fa;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.reveal .code-with-filename .code-with-filename-file pre strong {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.reveal .code-with-filename .code-with-filename-file pre code {
+  background: transparent !important;
+  color: #60a5fa;
+  padding: 0;
+}
+
+.reveal .code-with-filename div.sourceCode {
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.reveal .code-with-filename div.sourceCode pre {
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  background: #0f172a !important;
+}
+
+/* Override the white border from reveal theme */
+.reveal div.sourceCode {
+  border: 1px solid #334155 !important;
+  border-radius: 8px;
 }
 
 /* Blockquotes and callouts */

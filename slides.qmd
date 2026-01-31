@@ -2291,6 +2291,180 @@ Output as a formal report suitable for SFBBO's annual summary.
 
 ---
 
+## {{< fa seedling >}} For the Habitat Restoration Team {.center}
+
+**AI tools can help with:**
+
+::: {.incremental}
+- Plant survival tracking and analysis
+- Volunteer event planning and reporting
+- Invasive species monitoring data
+- Sea level rise impact modeling
+- Grant writing for restoration projects
+:::
+
+---
+
+## Exercise 11: Tidal Marsh Restoration {.smaller}
+
+{{< timer 15 >}}
+
+{{< fa lightbulb >}} **Your Capstone Choice (Option 4):** SFBBO Habitat Restoration Monitoring 2021-2025
+
+```{.csv filename="Copy to Gemini"}
+year,site,plot_id,native_cover_pct,invasive_cover_pct,species_planted,survival_rate,soil_prep,dominant_native,dominant_invasive,ridgways_rail_detected,harvest_mouse_detected
+2021,Pond A6,A6-01,25,45,Grindelia stricta,0.62,broadcast_seed,Distichlis spicata,Lepidium latifolium,no,no
+2021,Pond A6,A6-02,18,52,Grindelia stricta,0.58,broadcast_seed,Frankenia salina,Lepidium latifolium,no,no
+2022,Pond A6,A6-01,38,32,Grindelia stricta,0.71,broadcast_seed,Grindelia stricta,Lepidium latifolium,yes,no
+2022,Pond A6,A6-02,29,41,Grindelia stricta,0.65,broadcast_seed,Distichlis spicata,Lepidium latifolium,no,no
+2023,Bair Island,BI-01,45,20,Frankenia salina,0.78,hydroseed,Frankenia salina,Carpobrotus edulis,no,yes
+2023,Bair Island,BI-02,52,15,Frankenia salina,0.82,hydroseed,Jaumea carnosa,Carpobrotus edulis,yes,yes
+2024,Bair Island,BI-01,61,12,Frankenia salina,0.85,hydroseed,Frankenia salina,Carpobrotus edulis,yes,yes
+2024,Bair Island,BI-02,68,8,Frankenia salina,0.89,hydroseed,Jaumea carnosa,Carpobrotus edulis,yes,yes
+2023,Pond A17,A17-01,22,55,Distichlis spicata,0.45,tilled_straw,Distichlis spicata,Lepidium latifolium,no,no
+2023,Pond A17,A17-02,35,38,Distichlis spicata,0.68,tilled_straw,Distichlis spicata,Salsola tragus,no,no
+2024,Pond A17,A17-01,41,42,Distichlis spicata,0.72,tilled_straw,Distichlis spicata,Lepidium latifolium,no,yes
+2024,Pond A17,A17-02,58,25,Distichlis spicata,0.79,tilled_straw,Grindelia stricta,Salsola tragus,yes,yes
+2024,Eden Landing,EL-01,55,18,Jaumea carnosa,0.81,direct_seed,Jaumea carnosa,Carpobrotus edulis,yes,no
+2024,Eden Landing,EL-02,48,22,Salicornia pacifica,0.76,direct_seed,Salicornia pacifica,Conium maculatum,no,yes
+2025,Alviso Marina,AM-01,32,35,Grindelia stricta,0.69,volunteer_planted,Distichlis spicata,Lepidium latifolium,no,no
+2025,Alviso Marina,AM-02,28,40,Jaumea carnosa,0.64,volunteer_planted,Frankenia salina,Raphanus sativus,no,no
+```
+
+---
+
+## Exercise 11: Restoration Analysis Prompt {.smaller}
+
+```{.markdown filename="Copy to Gemini"}
+You are an ecologist at SFBBO analyzing tidal marsh habitat restoration data 
+from the transition zone restoration program.
+
+CONTEXT:
+- Sites are upland-transition zones between tidal marsh and uplands
+- Goal: help marshes adapt to sea level rise by providing refuge for wildlife
+- Key target species: Ridgway's Rail (endangered) and salt marsh harvest mouse
+
+ANALYSIS REQUIRED:
+
+1. **Restoration Success Metrics**
+   - Calculate native cover improvement (%) by site over time
+   - Rank sites by restoration progress
+   - Which soil preparation method shows best plant survival?
+
+2. **Invasive Species Trends**
+   - Track invasive cover change over time per site
+   - Identify sites with increasing vs decreasing invasive pressure
+   - Which invasive species is most problematic?
+
+3. **Wildlife Response**
+   - Correlate native cover % with Ridgway's Rail detection
+   - At what native cover threshold do target species appear?
+   - Which sites show best wildlife outcomes?
+
+4. **Method Comparison**
+   - Compare hydroseed vs broadcast_seed vs tilled_straw vs volunteer_planted
+   - Survival rate comparison by method
+   - Cost-effectiveness recommendations
+
+5. **Management Recommendations**
+   - Priority sites for continued restoration effort
+   - Sites needing invasive removal focus
+   - Recommended expansion areas
+
+Format as a report for SFBBO's Habitat Restoration Program annual review.
+```
+
+---
+
+## Exercise 12: Volunteer Event Planning {.smaller}
+
+{{< timer 10 >}}
+
+{{< fa lightbulb >}} **For Habitat Restoration Coordinators:** Planning volunteer restoration events
+
+```{.csv filename="Copy to Gemini"}
+event_date,site,event_type,volunteers,plants_installed,area_weeded_sqm,hours_total,weather,soil_condition,plants_available,volunteer_source
+2024-01-20,Bair Island,planting,18,245,0,54,clear,moist,300,corporate_EA
+2024-02-17,Pond A17,weeding,12,0,850,36,overcast,wet,0,public
+2024-03-09,Alviso Marina,planting,25,380,0,75,clear,dry,400,corporate_Salesforce
+2024-03-23,Bair Island,weeding,8,0,420,24,rain,wet,0,public
+2024-04-13,Eden Landing,planting,22,310,0,66,clear,moist,350,school_SJSU
+2024-05-04,Pond A17,planting,15,185,0,45,overcast,dry,250,public
+2024-06-15,Bair Island,weeding,10,0,560,30,fog,moist,0,corporate_Intuitive
+2024-09-21,Alviso Marina,weeding,14,0,720,42,clear,dry,0,public
+2024-10-12,Eden Landing,planting,28,425,0,84,clear,moist,450,corporate_Google
+2024-11-16,Bair Island,planting,20,290,0,60,overcast,wet,320,public
+2024-12-07,Pond A17,weeding,6,0,280,18,rain,wet,0,public
+```
+
+---
+
+## Exercise 12: Volunteer Analysis Prompt {.smaller}
+
+```{.markdown filename="Copy to Gemini"}
+Analyze SFBBO's 2024 habitat restoration volunteer events.
+
+Provide insights for planning the 2025 volunteer season:
+
+1. **Event Productivity Analysis**
+   - Calculate plants per volunteer-hour for planting events
+   - Calculate area weeded per volunteer-hour for weeding events
+   - Which sites/event types are most efficient?
+
+2. **Volunteer Recruitment Patterns**
+   - Compare corporate vs public vs school group sizes
+   - Which months attract most volunteers?
+   - Weather impact on volunteer turnout
+
+3. **Resource Planning**
+   - Average plant utilization rate (installed vs available)
+   - Optimal volunteer-to-plant ratio
+   - Recommended event frequency by site
+
+4. **2025 Season Recommendations**
+   - Best months for planting vs weeding
+   - Target volunteer numbers by event type
+   - Corporate partnership opportunities
+
+Create a one-page summary suitable for grant reporting and 
+a detailed planning calendar for 2025 restoration events.
+```
+
+---
+
+## AI for Grant Writing: Habitat Restoration {.smaller}
+
+{{< fa file-alt >}} **Prompt template for restoration grant narratives:**
+
+```{.markdown filename="Copy to Gemini"}
+Help me draft a grant narrative for SFBBO's tidal marsh restoration program.
+
+PROJECT DETAILS:
+- Program: Upland Transition Zone Restoration
+- Sites: [Bair Island / Pond A17 / Eden Landing]
+- Duration: 3 years
+- Budget request: $[amount]
+
+KEY DATA POINTS:
+[Paste summary statistics from your restoration monitoring data]
+
+GRANT REQUIREMENTS:
+- Funder: [e.g., California Coastal Commission, NFWF]
+- Focus areas: [climate adaptation, endangered species, community engagement]
+- Word limit: [specify]
+
+Please write:
+1. Project summary (150 words)
+2. Need statement with local context
+3. Goals and measurable objectives
+4. Methods section
+5. Expected outcomes tied to funder priorities
+
+Use a professional but accessible tone appropriate for conservation funders.
+```
+
+---
+
 ## Prompt Engineering Cheatsheet
 
 ::: {.callout-tip}

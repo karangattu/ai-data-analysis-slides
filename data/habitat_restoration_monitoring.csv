@@ -1,0 +1,17 @@
+year,site,plot_id,native_cover_pct,invasive_cover_pct,species_planted,survival_rate,soil_prep,dominant_native,dominant_invasive,ridgways_rail_detected,harvest_mouse_detected
+2021,Pond A6,A6-01,25,45,Grindelia stricta,0.62,broadcast_seed,Distichlis spicata,Lepidium latifolium,no,no
+2021,Pond A6,A6-02,18,52,Grindelia stricta,0.58,broadcast_seed,Frankenia salina,Lepidium latifolium,no,no
+2022,Pond A6,A6-01,38,32,Grindelia stricta,0.71,broadcast_seed,Grindelia stricta,Lepidium latifolium,yes,no
+2022,Pond A6,A6-02,29,41,Grindelia stricta,0.65,broadcast_seed,Distichlis spicata,Lepidium latifolium,no,no
+2023,Bair Island,BI-01,45,20,Frankenia salina,0.78,hydroseed,Frankenia salina,Carpobrotus edulis,no,yes
+2023,Bair Island,BI-02,52,15,Frankenia salina,0.82,hydroseed,Jaumea carnosa,Carpobrotus edulis,yes,yes
+2024,Bair Island,BI-01,61,12,Frankenia salina,0.85,hydroseed,Frankenia salina,Carpobrotus edulis,yes,yes
+2024,Bair Island,BI-02,68,8,Frankenia salina,0.89,hydroseed,Jaumea carnosa,Carpobrotus edulis,yes,yes
+2023,Pond A17,A17-01,22,55,Distichlis spicata,0.45,tilled_straw,Distichlis spicata,Lepidium latifolium,no,no
+2023,Pond A17,A17-02,35,38,Distichlis spicata,0.68,tilled_straw,Distichlis spicata,Salsola tragus,no,no
+2024,Pond A17,A17-01,41,42,Distichlis spicata,0.72,tilled_straw,Distichlis spicata,Lepidium latifolium,no,yes
+2024,Pond A17,A17-02,58,25,Distichlis spicata,0.79,tilled_straw,Grindelia stricta,Salsola tragus,yes,yes
+2024,Eden Landing,EL-01,55,18,Jaumea carnosa,0.81,direct_seed,Jaumea carnosa,Carpobrotus edulis,yes,no
+2024,Eden Landing,EL-02,48,22,Salicornia pacifica,0.76,direct_seed,Salicornia pacifica,Conium maculatum,no,yes
+2025,Alviso Marina,AM-01,32,35,Grindelia stricta,0.69,volunteer_planted,Distichlis spicata,Lepidium latifolium,no,no
+2025,Alviso Marina,AM-02,28,40,Jaumea carnosa,0.64,volunteer_planted,Frankenia salina,Raphanus sativus,no,no

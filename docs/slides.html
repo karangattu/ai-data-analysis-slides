@@ -4091,6 +4091,483 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <span id="cb57-30"><a></a>Output as a formal report suitable for SFBBO's annual summary.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120736565646c696e67203e7d7d--for-the-habitat-restoration-team" class="slide level2 center">
+<h2><i class="fa-solid fa-seedling" aria-label="seedling"></i> For the Habitat Restoration Team</h2>
+<p><strong>AI tools can help with:</strong></p>
+<ul>
+<li class="fragment">Plant survival tracking and analysis</li>
+<li class="fragment">Volunteer event planning and reporting</li>
+<li class="fragment">Invasive species monitoring data</li>
+<li class="fragment">Sea level rise impact modeling</li>
+<li class="fragment">Grant writing for restoration projects</li>
+</ul>
+</section>
+<section id="exercise-11-tidal-marsh-restoration" class="slide level2 smaller">
+<h2>Exercise 11: Tidal Marsh Restoration</h2>
+<p></p><div id="countdown-timer-14" class="countdown-timer timer-normal" data-total="900" data-warn="60">
+  <style>
+    .countdown-timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6em;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 0.5em 1em;
+      margin: 0.5em 0;
+    }
+    .countdown-timer.timer-small {
+      font-size: 0.8em;
+      padding: 0.3em 0.6em;
+    }
+    .countdown-timer.timer-normal {
+      font-size: 1.1em;
+    }
+    .countdown-timer.timer-large {
+      font-size: 1.8em;
+      padding: 0.6em 1.2em;
+    }
+    .countdown-timer .timer-display {
+      font-weight: 600;
+      color: #e2e8f0;
+      min-width: 4em;
+      text-align: center;
+    }
+    .countdown-timer.warning .timer-display {
+      color: #f59e0b;
+    }
+    .countdown-timer.finished .timer-display {
+      color: #ef4444;
+    }
+    .countdown-timer.running {
+      border-color: #10b981;
+    }
+    .countdown-timer.running .timer-display {
+      color: #10b981;
+    }
+    .countdown-timer.paused {
+      border-color: #f59e0b;
+    }
+    .countdown-timer .timer-btn {
+      background: #334155;
+      border: none;
+      border-radius: 6px;
+      padding: 0.3em 0.6em;
+      cursor: pointer;
+      font-size: 0.85em;
+      color: #e2e8f0;
+      transition: background 0.2s ease;
+    }
+    .countdown-timer .timer-btn:hover {
+      background: #475569;
+    }
+    .countdown-timer .timer-icon {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+  <span class="timer-icon">⏱️</span>
+  <span class="timer-display">15:00</span>
+  <button class="timer-btn timer-start" onclick="toggleTimer('countdown-timer-14')" title="Start/Pause">▶️</button>
+  <button class="timer-btn timer-reset" onclick="resetTimer('countdown-timer-14')" title="Reset">🔄</button>
+</div>
+<script>
+(function() {
+  const timers = window.countdownTimers = window.countdownTimers || {};
+  
+  window.toggleTimer = function(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    
+    const timer = timers[id] = timers[id] || {
+      total: parseInt(el.dataset.total),
+      remaining: parseInt(el.dataset.total),
+      warn: parseInt(el.dataset.warn),
+      interval: null,
+      running: false
+    };
+    
+    if (timer.running) {
+      // Pause
+      clearInterval(timer.interval);
+      timer.running = false;
+      el.classList.remove('running');
+      el.classList.add('paused');
+      el.querySelector('.timer-start').textContent = '▶️';
+    } else {
+      // Start
+      if (timer.remaining <= 0) {
+        timer.remaining = timer.total;
+        el.classList.remove('finished', 'warning');
+      }
+      timer.running = true;
+      el.classList.remove('paused', 'finished');
+      el.classList.add('running');
+      el.querySelector('.timer-start').textContent = '⏸️';
+      
+      timer.interval = setInterval(function() {
+        timer.remaining--;
+        updateTimerDisplay(id);
+        
+        if (timer.remaining <= timer.warn && timer.remaining > 0) {
+          el.classList.add('warning');
+        }
+        
+        if (timer.remaining <= 0) {
+          clearInterval(timer.interval);
+          timer.running = false;
+          el.classList.remove('running', 'warning');
+          el.classList.add('finished');
+          el.querySelector('.timer-start').textContent = '▶️';
+        }
+      }, 1000);
+    }
+  };
+  
+  window.resetTimer = function(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    
+    const timer = timers[id] = timers[id] || {
+      total: parseInt(el.dataset.total),
+      remaining: parseInt(el.dataset.total),
+      warn: parseInt(el.dataset.warn),
+      interval: null,
+      running: false
+    };
+    
+    clearInterval(timer.interval);
+    timer.remaining = timer.total;
+    timer.running = false;
+    el.classList.remove('running', 'paused', 'warning', 'finished');
+    el.querySelector('.timer-start').textContent = '▶️';
+    updateTimerDisplay(id);
+  };
+  
+  function updateTimerDisplay(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    
+    const timer = timers[id];
+    const min = Math.floor(timer.remaining / 60);
+    const sec = timer.remaining % 60;
+    el.querySelector('.timer-display').textContent = 
+      String(min).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+  }
+})();
+</script>
+<p></p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Capstone Choice (Option 4):</strong> SFBBO Habitat Restoration Monitoring 2021-2025</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb58-1"><a></a>year,site,plot_id,native_cover_pct,invasive_cover_pct,species_planted,survival_rate,soil_prep,dominant_native,dominant_invasive,ridgways_rail_detected,harvest_mouse_detected</span>
+<span id="cb58-2"><a></a>2021,Pond A6,A6-01,25,45,Grindelia stricta,0.62,broadcast_seed,Distichlis spicata,Lepidium latifolium,no,no</span>
+<span id="cb58-3"><a></a>2021,Pond A6,A6-02,18,52,Grindelia stricta,0.58,broadcast_seed,Frankenia salina,Lepidium latifolium,no,no</span>
+<span id="cb58-4"><a></a>2022,Pond A6,A6-01,38,32,Grindelia stricta,0.71,broadcast_seed,Grindelia stricta,Lepidium latifolium,yes,no</span>
+<span id="cb58-5"><a></a>2022,Pond A6,A6-02,29,41,Grindelia stricta,0.65,broadcast_seed,Distichlis spicata,Lepidium latifolium,no,no</span>
+<span id="cb58-6"><a></a>2023,Bair Island,BI-01,45,20,Frankenia salina,0.78,hydroseed,Frankenia salina,Carpobrotus edulis,no,yes</span>
+<span id="cb58-7"><a></a>2023,Bair Island,BI-02,52,15,Frankenia salina,0.82,hydroseed,Jaumea carnosa,Carpobrotus edulis,yes,yes</span>
+<span id="cb58-8"><a></a>2024,Bair Island,BI-01,61,12,Frankenia salina,0.85,hydroseed,Frankenia salina,Carpobrotus edulis,yes,yes</span>
+<span id="cb58-9"><a></a>2024,Bair Island,BI-02,68,8,Frankenia salina,0.89,hydroseed,Jaumea carnosa,Carpobrotus edulis,yes,yes</span>
+<span id="cb58-10"><a></a>2023,Pond A17,A17-01,22,55,Distichlis spicata,0.45,tilled_straw,Distichlis spicata,Lepidium latifolium,no,no</span>
+<span id="cb58-11"><a></a>2023,Pond A17,A17-02,35,38,Distichlis spicata,0.68,tilled_straw,Distichlis spicata,Salsola tragus,no,no</span>
+<span id="cb58-12"><a></a>2024,Pond A17,A17-01,41,42,Distichlis spicata,0.72,tilled_straw,Distichlis spicata,Lepidium latifolium,no,yes</span>
+<span id="cb58-13"><a></a>2024,Pond A17,A17-02,58,25,Distichlis spicata,0.79,tilled_straw,Grindelia stricta,Salsola tragus,yes,yes</span>
+<span id="cb58-14"><a></a>2024,Eden Landing,EL-01,55,18,Jaumea carnosa,0.81,direct_seed,Jaumea carnosa,Carpobrotus edulis,yes,no</span>
+<span id="cb58-15"><a></a>2024,Eden Landing,EL-02,48,22,Salicornia pacifica,0.76,direct_seed,Salicornia pacifica,Conium maculatum,no,yes</span>
+<span id="cb58-16"><a></a>2025,Alviso Marina,AM-01,32,35,Grindelia stricta,0.69,volunteer_planted,Distichlis spicata,Lepidium latifolium,no,no</span>
+<span id="cb58-17"><a></a>2025,Alviso Marina,AM-02,28,40,Jaumea carnosa,0.64,volunteer_planted,Frankenia salina,Raphanus sativus,no,no</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="exercise-11-restoration-analysis-prompt" class="slide level2 smaller">
+<h2>Exercise 11: Restoration Analysis Prompt</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb59-1"><a></a>You are an ecologist at SFBBO analyzing tidal marsh habitat restoration data </span>
+<span id="cb59-2"><a></a>from the transition zone restoration program.</span>
+<span id="cb59-3"><a></a></span>
+<span id="cb59-4"><a></a>CONTEXT:</span>
+<span id="cb59-5"><a></a><span class="ss">- </span>Sites are upland-transition zones between tidal marsh and uplands</span>
+<span id="cb59-6"><a></a><span class="ss">- </span>Goal: help marshes adapt to sea level rise by providing refuge for wildlife</span>
+<span id="cb59-7"><a></a><span class="ss">- </span>Key target species: Ridgway's Rail (endangered) and salt marsh harvest mouse</span>
+<span id="cb59-8"><a></a></span>
+<span id="cb59-9"><a></a>ANALYSIS REQUIRED:</span>
+<span id="cb59-10"><a></a></span>
+<span id="cb59-11"><a></a><span class="ss">1. </span>**Restoration Success Metrics**</span>
+<span id="cb59-12"><a></a><span class="ss">   - </span>Calculate native cover improvement (%) by site over time</span>
+<span id="cb59-13"><a></a><span class="ss">   - </span>Rank sites by restoration progress</span>
+<span id="cb59-14"><a></a><span class="ss">   - </span>Which soil preparation method shows best plant survival?</span>
+<span id="cb59-15"><a></a></span>
+<span id="cb59-16"><a></a><span class="ss">2. </span>**Invasive Species Trends**</span>
+<span id="cb59-17"><a></a><span class="ss">   - </span>Track invasive cover change over time per site</span>
+<span id="cb59-18"><a></a><span class="ss">   - </span>Identify sites with increasing vs decreasing invasive pressure</span>
+<span id="cb59-19"><a></a><span class="ss">   - </span>Which invasive species is most problematic?</span>
+<span id="cb59-20"><a></a></span>
+<span id="cb59-21"><a></a><span class="ss">3. </span>**Wildlife Response**</span>
+<span id="cb59-22"><a></a><span class="ss">   - </span>Correlate native cover % with Ridgway's Rail detection</span>
+<span id="cb59-23"><a></a><span class="ss">   - </span>At what native cover threshold do target species appear?</span>
+<span id="cb59-24"><a></a><span class="ss">   - </span>Which sites show best wildlife outcomes?</span>
+<span id="cb59-25"><a></a></span>
+<span id="cb59-26"><a></a><span class="ss">4. </span>**Method Comparison**</span>
+<span id="cb59-27"><a></a><span class="ss">   - </span>Compare hydroseed vs broadcast_seed vs tilled_straw vs volunteer_planted</span>
+<span id="cb59-28"><a></a><span class="ss">   - </span>Survival rate comparison by method</span>
+<span id="cb59-29"><a></a><span class="ss">   - </span>Cost-effectiveness recommendations</span>
+<span id="cb59-30"><a></a></span>
+<span id="cb59-31"><a></a><span class="ss">5. </span>**Management Recommendations**</span>
+<span id="cb59-32"><a></a><span class="ss">   - </span>Priority sites for continued restoration effort</span>
+<span id="cb59-33"><a></a><span class="ss">   - </span>Sites needing invasive removal focus</span>
+<span id="cb59-34"><a></a><span class="ss">   - </span>Recommended expansion areas</span>
+<span id="cb59-35"><a></a></span>
+<span id="cb59-36"><a></a>Format as a report for SFBBO's Habitat Restoration Program annual review.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="exercise-12-volunteer-event-planning" class="slide level2 smaller">
+<h2>Exercise 12: Volunteer Event Planning</h2>
+<p></p><div id="countdown-timer-15" class="countdown-timer timer-normal" data-total="600" data-warn="60">
+  <style>
+    .countdown-timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6em;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 0.5em 1em;
+      margin: 0.5em 0;
+    }
+    .countdown-timer.timer-small {
+      font-size: 0.8em;
+      padding: 0.3em 0.6em;
+    }
+    .countdown-timer.timer-normal {
+      font-size: 1.1em;
+    }
+    .countdown-timer.timer-large {
+      font-size: 1.8em;
+      padding: 0.6em 1.2em;
+    }
+    .countdown-timer .timer-display {
+      font-weight: 600;
+      color: #e2e8f0;
+      min-width: 4em;
+      text-align: center;
+    }
+    .countdown-timer.warning .timer-display {
+      color: #f59e0b;
+    }
+    .countdown-timer.finished .timer-display {
+      color: #ef4444;
+    }
+    .countdown-timer.running {
+      border-color: #10b981;
+    }
+    .countdown-timer.running .timer-display {
+      color: #10b981;
+    }
+    .countdown-timer.paused {
+      border-color: #f59e0b;
+    }
+    .countdown-timer .timer-btn {
+      background: #334155;
+      border: none;
+      border-radius: 6px;
+      padding: 0.3em 0.6em;
+      cursor: pointer;
+      font-size: 0.85em;
+      color: #e2e8f0;
+      transition: background 0.2s ease;
+    }
+    .countdown-timer .timer-btn:hover {
+      background: #475569;
+    }
+    .countdown-timer .timer-icon {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+  <span class="timer-icon">⏱️</span>
+  <span class="timer-display">10:00</span>
+  <button class="timer-btn timer-start" onclick="toggleTimer('countdown-timer-15')" title="Start/Pause">▶️</button>
+  <button class="timer-btn timer-reset" onclick="resetTimer('countdown-timer-15')" title="Reset">🔄</button>
+</div>
+<script>
+(function() {
+  const timers = window.countdownTimers = window.countdownTimers || {};
+  
+  window.toggleTimer = function(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    
+    const timer = timers[id] = timers[id] || {
+      total: parseInt(el.dataset.total),
+      remaining: parseInt(el.dataset.total),
+      warn: parseInt(el.dataset.warn),
+      interval: null,
+      running: false
+    };
+    
+    if (timer.running) {
+      // Pause
+      clearInterval(timer.interval);
+      timer.running = false;
+      el.classList.remove('running');
+      el.classList.add('paused');
+      el.querySelector('.timer-start').textContent = '▶️';
+    } else {
+      // Start
+      if (timer.remaining <= 0) {
+        timer.remaining = timer.total;
+        el.classList.remove('finished', 'warning');
+      }
+      timer.running = true;
+      el.classList.remove('paused', 'finished');
+      el.classList.add('running');
+      el.querySelector('.timer-start').textContent = '⏸️';
+      
+      timer.interval = setInterval(function() {
+        timer.remaining--;
+        updateTimerDisplay(id);
+        
+        if (timer.remaining <= timer.warn && timer.remaining > 0) {
+          el.classList.add('warning');
+        }
+        
+        if (timer.remaining <= 0) {
+          clearInterval(timer.interval);
+          timer.running = false;
+          el.classList.remove('running', 'warning');
+          el.classList.add('finished');
+          el.querySelector('.timer-start').textContent = '▶️';
+        }
+      }, 1000);
+    }
+  };
+  
+  window.resetTimer = function(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    
+    const timer = timers[id] = timers[id] || {
+      total: parseInt(el.dataset.total),
+      remaining: parseInt(el.dataset.total),
+      warn: parseInt(el.dataset.warn),
+      interval: null,
+      running: false
+    };
+    
+    clearInterval(timer.interval);
+    timer.remaining = timer.total;
+    timer.running = false;
+    el.classList.remove('running', 'paused', 'warning', 'finished');
+    el.querySelector('.timer-start').textContent = '▶️';
+    updateTimerDisplay(id);
+  };
+  
+  function updateTimerDisplay(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    
+    const timer = timers[id];
+    const min = Math.floor(timer.remaining / 60);
+    const sec = timer.remaining % 60;
+    el.querySelector('.timer-display').textContent = 
+      String(min).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+  }
+})();
+</script>
+<p></p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>For Habitat Restoration Coordinators:</strong> Planning volunteer restoration events</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb60-1"><a></a>event_date,site,event_type,volunteers,plants_installed,area_weeded_sqm,hours_total,weather,soil_condition,plants_available,volunteer_source</span>
+<span id="cb60-2"><a></a>2024-01-20,Bair Island,planting,18,245,0,54,clear,moist,300,corporate_EA</span>
+<span id="cb60-3"><a></a>2024-02-17,Pond A17,weeding,12,0,850,36,overcast,wet,0,public</span>
+<span id="cb60-4"><a></a>2024-03-09,Alviso Marina,planting,25,380,0,75,clear,dry,400,corporate_Salesforce</span>
+<span id="cb60-5"><a></a>2024-03-23,Bair Island,weeding,8,0,420,24,rain,wet,0,public</span>
+<span id="cb60-6"><a></a>2024-04-13,Eden Landing,planting,22,310,0,66,clear,moist,350,school_SJSU</span>
+<span id="cb60-7"><a></a>2024-05-04,Pond A17,planting,15,185,0,45,overcast,dry,250,public</span>
+<span id="cb60-8"><a></a>2024-06-15,Bair Island,weeding,10,0,560,30,fog,moist,0,corporate_Intuitive</span>
+<span id="cb60-9"><a></a>2024-09-21,Alviso Marina,weeding,14,0,720,42,clear,dry,0,public</span>
+<span id="cb60-10"><a></a>2024-10-12,Eden Landing,planting,28,425,0,84,clear,moist,450,corporate_Google</span>
+<span id="cb60-11"><a></a>2024-11-16,Bair Island,planting,20,290,0,60,overcast,wet,320,public</span>
+<span id="cb60-12"><a></a>2024-12-07,Pond A17,weeding,6,0,280,18,rain,wet,0,public</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="exercise-12-volunteer-analysis-prompt" class="slide level2 smaller">
+<h2>Exercise 12: Volunteer Analysis Prompt</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb61-1"><a></a>Analyze SFBBO's 2024 habitat restoration volunteer events.</span>
+<span id="cb61-2"><a></a></span>
+<span id="cb61-3"><a></a>Provide insights for planning the 2025 volunteer season:</span>
+<span id="cb61-4"><a></a></span>
+<span id="cb61-5"><a></a><span class="ss">1. </span>**Event Productivity Analysis**</span>
+<span id="cb61-6"><a></a><span class="ss">   - </span>Calculate plants per volunteer-hour for planting events</span>
+<span id="cb61-7"><a></a><span class="ss">   - </span>Calculate area weeded per volunteer-hour for weeding events</span>
+<span id="cb61-8"><a></a><span class="ss">   - </span>Which sites/event types are most efficient?</span>
+<span id="cb61-9"><a></a></span>
+<span id="cb61-10"><a></a><span class="ss">2. </span>**Volunteer Recruitment Patterns**</span>
+<span id="cb61-11"><a></a><span class="ss">   - </span>Compare corporate vs public vs school group sizes</span>
+<span id="cb61-12"><a></a><span class="ss">   - </span>Which months attract most volunteers?</span>
+<span id="cb61-13"><a></a><span class="ss">   - </span>Weather impact on volunteer turnout</span>
+<span id="cb61-14"><a></a></span>
+<span id="cb61-15"><a></a><span class="ss">3. </span>**Resource Planning**</span>
+<span id="cb61-16"><a></a><span class="ss">   - </span>Average plant utilization rate (installed vs available)</span>
+<span id="cb61-17"><a></a><span class="ss">   - </span>Optimal volunteer-to-plant ratio</span>
+<span id="cb61-18"><a></a><span class="ss">   - </span>Recommended event frequency by site</span>
+<span id="cb61-19"><a></a></span>
+<span id="cb61-20"><a></a><span class="ss">4. </span>**2025 Season Recommendations**</span>
+<span id="cb61-21"><a></a><span class="ss">   - </span>Best months for planting vs weeding</span>
+<span id="cb61-22"><a></a><span class="ss">   - </span>Target volunteer numbers by event type</span>
+<span id="cb61-23"><a></a><span class="ss">   - </span>Corporate partnership opportunities</span>
+<span id="cb61-24"><a></a></span>
+<span id="cb61-25"><a></a>Create a one-page summary suitable for grant reporting and </span>
+<span id="cb61-26"><a></a>a detailed planning calendar for 2025 restoration events.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="ai-for-grant-writing-habitat-restoration" class="slide level2 smaller">
+<h2>AI for Grant Writing: Habitat Restoration</h2>
+<p><i class="fa-solid fa-file-alt" aria-label="file-alt"></i> <strong>Prompt template for restoration grant narratives:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb62-1"><a></a>Help me draft a grant narrative for SFBBO's tidal marsh restoration program.</span>
+<span id="cb62-2"><a></a></span>
+<span id="cb62-3"><a></a>PROJECT DETAILS:</span>
+<span id="cb62-4"><a></a><span class="ss">- </span>Program: Upland Transition Zone Restoration</span>
+<span id="cb62-5"><a></a><span class="ss">- </span>Sites: <span class="co">[</span><span class="ot">Bair Island / Pond A17 / Eden Landing</span><span class="co">]</span></span>
+<span id="cb62-6"><a></a><span class="ss">- </span>Duration: 3 years</span>
+<span id="cb62-7"><a></a><span class="ss">- </span>Budget request: $<span class="co">[</span><span class="ot">amount</span><span class="co">]</span></span>
+<span id="cb62-8"><a></a></span>
+<span id="cb62-9"><a></a>KEY DATA POINTS:</span>
+<span id="cb62-10"><a></a><span class="co">[</span><span class="ot">Paste summary statistics from your restoration monitoring data</span><span class="co">]</span></span>
+<span id="cb62-11"><a></a></span>
+<span id="cb62-12"><a></a>GRANT REQUIREMENTS:</span>
+<span id="cb62-13"><a></a><span class="ss">- </span>Funder: <span class="co">[</span><span class="ot">e.g., California Coastal Commission, NFWF</span><span class="co">]</span></span>
+<span id="cb62-14"><a></a><span class="ss">- </span>Focus areas: <span class="co">[</span><span class="ot">climate adaptation, endangered species, community engagement</span><span class="co">]</span></span>
+<span id="cb62-15"><a></a><span class="ss">- </span>Word limit: <span class="co">[</span><span class="ot">specify</span><span class="co">]</span></span>
+<span id="cb62-16"><a></a></span>
+<span id="cb62-17"><a></a>Please write:</span>
+<span id="cb62-18"><a></a><span class="ss">1. </span>Project summary (150 words)</span>
+<span id="cb62-19"><a></a><span class="ss">2. </span>Need statement with local context</span>
+<span id="cb62-20"><a></a><span class="ss">3. </span>Goals and measurable objectives</span>
+<span id="cb62-21"><a></a><span class="ss">4. </span>Methods section</span>
+<span id="cb62-22"><a></a><span class="ss">5. </span>Expected outcomes tied to funder priorities</span>
+<span id="cb62-23"><a></a></span>
+<span id="cb62-24"><a></a>Use a professional but accessible tone appropriate for conservation funders.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
 <section id="prompt-engineering-cheatsheet" class="slide level2">
 <h2>Prompt Engineering Cheatsheet</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -4120,17 +4597,17 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb58-1"><a></a>Review this SFBBO bird survey CSV for data quality issues. </span>
-<span id="cb58-2"><a></a></span>
-<span id="cb58-3"><a></a>Flag the following:</span>
-<span id="cb58-4"><a></a><span class="ss">- </span>Duplicate records (same date, site, species, count)</span>
-<span id="cb58-5"><a></a><span class="ss">- </span>Impossible counts (negative or &gt;10,000 for non-colonial species)</span>
-<span id="cb58-6"><a></a><span class="ss">- </span>Misspelled species names or invalid species codes</span>
-<span id="cb58-7"><a></a><span class="ss">- </span>Dates outside the survey period</span>
-<span id="cb58-8"><a></a><span class="ss">- </span>Missing required fields (date, site, species, count)</span>
-<span id="cb58-9"><a></a><span class="ss">- </span>Inconsistent site naming</span>
-<span id="cb58-10"><a></a></span>
-<span id="cb58-11"><a></a>Output as a table of issues with row numbers, issue type, and suggested fixes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb63-1"><a></a>Review this SFBBO bird survey CSV for data quality issues. </span>
+<span id="cb63-2"><a></a></span>
+<span id="cb63-3"><a></a>Flag the following:</span>
+<span id="cb63-4"><a></a><span class="ss">- </span>Duplicate records (same date, site, species, count)</span>
+<span id="cb63-5"><a></a><span class="ss">- </span>Impossible counts (negative or &gt;10,000 for non-colonial species)</span>
+<span id="cb63-6"><a></a><span class="ss">- </span>Misspelled species names or invalid species codes</span>
+<span id="cb63-7"><a></a><span class="ss">- </span>Dates outside the survey period</span>
+<span id="cb63-8"><a></a><span class="ss">- </span>Missing required fields (date, site, species, count)</span>
+<span id="cb63-9"><a></a><span class="ss">- </span>Inconsistent site naming</span>
+<span id="cb63-10"><a></a></span>
+<span id="cb63-11"><a></a>Output as a table of issues with row numbers, issue type, and suggested fixes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="quick-reference-summary-stats" class="slide level2 smaller">
@@ -4139,19 +4616,19 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb59-1"><a></a><span class="an">Calculate for each species in this SFBBO dataset:</span></span>
-<span id="cb59-2"><a></a><span class="ss">- </span>Total count across all surveys</span>
-<span id="cb59-3"><a></a><span class="ss">- </span>Mean count per survey</span>
-<span id="cb59-4"><a></a><span class="ss">- </span>Standard deviation</span>
-<span id="cb59-5"><a></a><span class="ss">- </span>Minimum and maximum counts</span>
-<span id="cb59-6"><a></a><span class="ss">- </span>Number of surveys where detected (frequency of occurrence)</span>
-<span id="cb59-7"><a></a><span class="ss">- </span>Percentage of surveys with detections</span>
-<span id="cb59-8"><a></a></span>
-<span id="cb59-9"><a></a>Format as a markdown table sorted by total count descending.</span>
-<span id="cb59-10"><a></a>Include a brief interpretation highlighting:</span>
-<span id="cb59-11"><a></a><span class="ss">- </span>Most abundant species</span>
-<span id="cb59-12"><a></a><span class="ss">- </span>Most consistently detected species</span>
-<span id="cb59-13"><a></a><span class="ss">- </span>Species with high variability (potential concern)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb64-1"><a></a><span class="an">Calculate for each species in this SFBBO dataset:</span></span>
+<span id="cb64-2"><a></a><span class="ss">- </span>Total count across all surveys</span>
+<span id="cb64-3"><a></a><span class="ss">- </span>Mean count per survey</span>
+<span id="cb64-4"><a></a><span class="ss">- </span>Standard deviation</span>
+<span id="cb64-5"><a></a><span class="ss">- </span>Minimum and maximum counts</span>
+<span id="cb64-6"><a></a><span class="ss">- </span>Number of surveys where detected (frequency of occurrence)</span>
+<span id="cb64-7"><a></a><span class="ss">- </span>Percentage of surveys with detections</span>
+<span id="cb64-8"><a></a></span>
+<span id="cb64-9"><a></a>Format as a markdown table sorted by total count descending.</span>
+<span id="cb64-10"><a></a>Include a brief interpretation highlighting:</span>
+<span id="cb64-11"><a></a><span class="ss">- </span>Most abundant species</span>
+<span id="cb64-12"><a></a><span class="ss">- </span>Most consistently detected species</span>
+<span id="cb64-13"><a></a><span class="ss">- </span>Species with high variability (potential concern)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="quick-reference-conservation" class="slide level2 smaller">
@@ -4160,25 +4637,25 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb60-1"><a></a>Based on these SFBBO population trends, identify:</span>
-<span id="cb60-2"><a></a></span>
-<span id="cb60-3"><a></a><span class="ss">1. </span>**Species of Conservation Concern**</span>
-<span id="cb60-4"><a></a><span class="ss">   - </span>Any species declining &gt;15% year-over-year</span>
-<span id="cb60-5"><a></a><span class="ss">   - </span>Species with high count variability (CV &gt; 50%)</span>
-<span id="cb60-6"><a></a><span class="ss">   - </span>Species absent from historical sites</span>
-<span id="cb60-7"><a></a></span>
-<span id="cb60-8"><a></a><span class="ss">2. </span>**Potential Causes**</span>
-<span id="cb60-9"><a></a><span class="ss">   - </span>Habitat changes at SFBBO monitoring sites</span>
-<span id="cb60-10"><a></a><span class="ss">   - </span>Weather/climate factors affecting SF Bay</span>
-<span id="cb60-11"><a></a><span class="ss">   - </span>Human disturbance patterns</span>
-<span id="cb60-12"><a></a></span>
-<span id="cb60-13"><a></a><span class="ss">3. </span>**Recommended Actions**</span>
-<span id="cb60-14"><a></a><span class="ss">   - </span>Priority species for enhanced SFBBO monitoring</span>
-<span id="cb60-15"><a></a><span class="ss">   - </span>Sites needing management intervention</span>
-<span id="cb60-16"><a></a><span class="ss">   - </span>Data collection protocol improvements</span>
-<span id="cb60-17"><a></a></span>
-<span id="cb60-18"><a></a>Cite specific numbers from the data to support each conclusion.</span>
-<span id="cb60-19"><a></a>Reference SFBBO's conservation mission where relevant.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb65" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb65-1"><a></a>Based on these SFBBO population trends, identify:</span>
+<span id="cb65-2"><a></a></span>
+<span id="cb65-3"><a></a><span class="ss">1. </span>**Species of Conservation Concern**</span>
+<span id="cb65-4"><a></a><span class="ss">   - </span>Any species declining &gt;15% year-over-year</span>
+<span id="cb65-5"><a></a><span class="ss">   - </span>Species with high count variability (CV &gt; 50%)</span>
+<span id="cb65-6"><a></a><span class="ss">   - </span>Species absent from historical sites</span>
+<span id="cb65-7"><a></a></span>
+<span id="cb65-8"><a></a><span class="ss">2. </span>**Potential Causes**</span>
+<span id="cb65-9"><a></a><span class="ss">   - </span>Habitat changes at SFBBO monitoring sites</span>
+<span id="cb65-10"><a></a><span class="ss">   - </span>Weather/climate factors affecting SF Bay</span>
+<span id="cb65-11"><a></a><span class="ss">   - </span>Human disturbance patterns</span>
+<span id="cb65-12"><a></a></span>
+<span id="cb65-13"><a></a><span class="ss">3. </span>**Recommended Actions**</span>
+<span id="cb65-14"><a></a><span class="ss">   - </span>Priority species for enhanced SFBBO monitoring</span>
+<span id="cb65-15"><a></a><span class="ss">   - </span>Sites needing management intervention</span>
+<span id="cb65-16"><a></a><span class="ss">   - </span>Data collection protocol improvements</span>
+<span id="cb65-17"><a></a></span>
+<span id="cb65-18"><a></a>Cite specific numbers from the data to support each conclusion.</span>
+<span id="cb65-19"><a></a>Reference SFBBO's conservation mission where relevant.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="using-gemini-for-grant-writing" class="slide level2 smaller">
@@ -4212,15 +4689,15 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb61-1"><a></a>Write a 250-word project summary for a conservation grant application.</span>
-<span id="cb61-2"><a></a></span>
-<span id="cb61-3"><a></a>Project: Long-term shorebird monitoring at San Francisco Bay</span>
-<span id="cb61-4"><a></a>Organization: San Francisco Bay Bird Observatory (SFBBO)</span>
-<span id="cb61-5"><a></a>Key data: <span class="co">[</span><span class="ot">paste your summary statistics</span><span class="co">]</span></span>
-<span id="cb61-6"><a></a>Goals: Track population trends, inform wetland management</span>
-<span id="cb61-7"><a></a>Audience: Wildlife conservation foundation</span>
-<span id="cb61-8"><a></a></span>
-<span id="cb61-9"><a></a>Emphasize: Scientific rigor, community engagement, measurable outcomes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb66-1"><a></a>Write a 250-word project summary for a conservation grant application.</span>
+<span id="cb66-2"><a></a></span>
+<span id="cb66-3"><a></a>Project: Long-term shorebird monitoring at San Francisco Bay</span>
+<span id="cb66-4"><a></a>Organization: San Francisco Bay Bird Observatory (SFBBO)</span>
+<span id="cb66-5"><a></a>Key data: <span class="co">[</span><span class="ot">paste your summary statistics</span><span class="co">]</span></span>
+<span id="cb66-6"><a></a>Goals: Track population trends, inform wetland management</span>
+<span id="cb66-7"><a></a>Audience: Wildlife conservation foundation</span>
+<span id="cb66-8"><a></a></span>
+<span id="cb66-9"><a></a>Emphasize: Scientific rigor, community engagement, measurable outcomes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Significance Statement:</strong></p>
@@ -4228,12 +4705,12 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb62-1"><a></a>Write a compelling significance statement (150 words) explaining </span>
-<span id="cb62-2"><a></a>why monitoring shorebird populations in SF Bay matters for:</span>
-<span id="cb62-3"><a></a><span class="ss">- </span>Pacific Flyway conservation</span>
-<span id="cb62-4"><a></a><span class="ss">- </span>Climate change adaptation</span>
-<span id="cb62-5"><a></a><span class="ss">- </span>Urban wildlife management</span>
-<span id="cb62-6"><a></a><span class="ss">- </span>Community science engagement</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb67-1"><a></a>Write a compelling significance statement (150 words) explaining </span>
+<span id="cb67-2"><a></a>why monitoring shorebird populations in SF Bay matters for:</span>
+<span id="cb67-3"><a></a><span class="ss">- </span>Pacific Flyway conservation</span>
+<span id="cb67-4"><a></a><span class="ss">- </span>Climate change adaptation</span>
+<span id="cb67-5"><a></a><span class="ss">- </span>Urban wildlife management</span>
+<span id="cb67-6"><a></a><span class="ss">- </span>Community science engagement</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -4244,16 +4721,16 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb63-1"><a></a>Draft a methods section for a grant proposal based on SFBBO's </span>
-<span id="cb63-2"><a></a>survey protocols:</span>
-<span id="cb63-3"><a></a></span>
-<span id="cb63-4"><a></a>Data collection: Monthly point counts at 12 wetland sites</span>
-<span id="cb63-5"><a></a>Species: Shorebirds, waterfowl, and marsh birds</span>
-<span id="cb63-6"><a></a>Variables: Species, count, habitat, tide level, weather</span>
-<span id="cb63-7"><a></a>Analysis: Trend analysis, habitat modeling, population estimates</span>
-<span id="cb63-8"><a></a>Timeline: 3-year monitoring period</span>
-<span id="cb63-9"><a></a></span>
-<span id="cb63-10"><a></a>Write in formal scientific grant language (300 words).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb68-1"><a></a>Draft a methods section for a grant proposal based on SFBBO's </span>
+<span id="cb68-2"><a></a>survey protocols:</span>
+<span id="cb68-3"><a></a></span>
+<span id="cb68-4"><a></a>Data collection: Monthly point counts at 12 wetland sites</span>
+<span id="cb68-5"><a></a>Species: Shorebirds, waterfowl, and marsh birds</span>
+<span id="cb68-6"><a></a>Variables: Species, count, habitat, tide level, weather</span>
+<span id="cb68-7"><a></a>Analysis: Trend analysis, habitat modeling, population estimates</span>
+<span id="cb68-8"><a></a>Timeline: 3-year monitoring period</span>
+<span id="cb68-9"><a></a></span>
+<span id="cb68-10"><a></a>Write in formal scientific grant language (300 words).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Budget Narrative:</strong></p>
@@ -4261,13 +4738,13 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb64-1"><a></a><span class="an">Write a budget justification for these line items:</span></span>
-<span id="cb64-2"><a></a><span class="ss">- </span>Field technician (0.5 FTE): $35,000</span>
-<span id="cb64-3"><a></a><span class="ss">- </span>Equipment (spotting scopes, GPS): $5,000</span>
-<span id="cb64-4"><a></a><span class="ss">- </span>Travel to survey sites: $3,000</span>
-<span id="cb64-5"><a></a><span class="ss">- </span>Data management: $2,000</span>
-<span id="cb64-6"><a></a></span>
-<span id="cb64-7"><a></a>Explain why each expense is necessary for shorebird monitoring success.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb69-1"><a></a><span class="an">Write a budget justification for these line items:</span></span>
+<span id="cb69-2"><a></a><span class="ss">- </span>Field technician (0.5 FTE): $35,000</span>
+<span id="cb69-3"><a></a><span class="ss">- </span>Equipment (spotting scopes, GPS): $5,000</span>
+<span id="cb69-4"><a></a><span class="ss">- </span>Travel to survey sites: $3,000</span>
+<span id="cb69-5"><a></a><span class="ss">- </span>Data management: $2,000</span>
+<span id="cb69-6"><a></a></span>
+<span id="cb69-7"><a></a>Explain why each expense is necessary for shorebird monitoring success.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -4278,22 +4755,22 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb65" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb65-1"><a></a>I work at San Francisco Bay Bird Observatory (SFBBO), a nonprofit </span>
-<span id="cb65-2"><a></a>focused on bird conservation and research in the SF Bay Area.</span>
-<span id="cb65-3"><a></a></span>
-<span id="cb65-4"><a></a>Our programs include:</span>
-<span id="cb65-5"><a></a><span class="ss">- </span>Long-term waterbird monitoring</span>
-<span id="cb65-6"><a></a><span class="ss">- </span>Ridgway's Rail population surveys</span>
-<span id="cb65-7"><a></a><span class="ss">- </span>Shorebird migration tracking</span>
-<span id="cb65-8"><a></a><span class="ss">- </span>Community science training</span>
-<span id="cb65-9"><a></a></span>
-<span id="cb65-10"><a></a>Suggest 10 potential grant opportunities from:</span>
-<span id="cb65-11"><a></a><span class="ss">- </span>Federal agencies (USFWS, NOAA, EPA)</span>
-<span id="cb65-12"><a></a><span class="ss">- </span>State agencies (CA Dept of Fish &amp; Wildlife)</span>
-<span id="cb65-13"><a></a><span class="ss">- </span>Private foundations (conservation-focused)</span>
-<span id="cb65-14"><a></a><span class="ss">- </span>Corporate giving programs</span>
-<span id="cb65-15"><a></a></span>
-<span id="cb65-16"><a></a>For each, note: typical award size, deadline cycle, and fit with our work.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb70-1"><a></a>I work at San Francisco Bay Bird Observatory (SFBBO), a nonprofit </span>
+<span id="cb70-2"><a></a>focused on bird conservation and research in the SF Bay Area.</span>
+<span id="cb70-3"><a></a></span>
+<span id="cb70-4"><a></a>Our programs include:</span>
+<span id="cb70-5"><a></a><span class="ss">- </span>Long-term waterbird monitoring</span>
+<span id="cb70-6"><a></a><span class="ss">- </span>Ridgway's Rail population surveys</span>
+<span id="cb70-7"><a></a><span class="ss">- </span>Shorebird migration tracking</span>
+<span id="cb70-8"><a></a><span class="ss">- </span>Community science training</span>
+<span id="cb70-9"><a></a></span>
+<span id="cb70-10"><a></a>Suggest 10 potential grant opportunities from:</span>
+<span id="cb70-11"><a></a><span class="ss">- </span>Federal agencies (USFWS, NOAA, EPA)</span>
+<span id="cb70-12"><a></a><span class="ss">- </span>State agencies (CA Dept of Fish &amp; Wildlife)</span>
+<span id="cb70-13"><a></a><span class="ss">- </span>Private foundations (conservation-focused)</span>
+<span id="cb70-14"><a></a><span class="ss">- </span>Corporate giving programs</span>
+<span id="cb70-15"><a></a></span>
+<span id="cb70-16"><a></a>For each, note: typical award size, deadline cycle, and fit with our work.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="research-collaboration-ideas" class="slide level2 smaller">
@@ -4303,19 +4780,19 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb66-1"><a></a>Based on SFBBO's 20+ years of waterbird monitoring data, </span>
-<span id="cb66-2"><a></a>suggest 5 research questions that could lead to:</span>
-<span id="cb66-3"><a></a><span class="ss">- </span>Peer-reviewed publications</span>
-<span id="cb66-4"><a></a><span class="ss">- </span>Graduate student thesis projects</span>
-<span id="cb66-5"><a></a><span class="ss">- </span>Collaborative studies with universities</span>
-<span id="cb66-6"><a></a></span>
-<span id="cb66-7"><a></a>Consider topics like:</span>
-<span id="cb66-8"><a></a><span class="ss">- </span>Climate change impacts on SF Bay birds</span>
-<span id="cb66-9"><a></a><span class="ss">- </span>Habitat restoration effectiveness</span>
-<span id="cb66-10"><a></a><span class="ss">- </span>Urban wetland conservation</span>
-<span id="cb66-11"><a></a><span class="ss">- </span>Shorebird migration phenology</span>
-<span id="cb66-12"><a></a></span>
-<span id="cb66-13"><a></a>For each question, suggest potential academic partners in the Bay Area.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb71" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb71-1"><a></a>Based on SFBBO's 20+ years of waterbird monitoring data, </span>
+<span id="cb71-2"><a></a>suggest 5 research questions that could lead to:</span>
+<span id="cb71-3"><a></a><span class="ss">- </span>Peer-reviewed publications</span>
+<span id="cb71-4"><a></a><span class="ss">- </span>Graduate student thesis projects</span>
+<span id="cb71-5"><a></a><span class="ss">- </span>Collaborative studies with universities</span>
+<span id="cb71-6"><a></a></span>
+<span id="cb71-7"><a></a>Consider topics like:</span>
+<span id="cb71-8"><a></a><span class="ss">- </span>Climate change impacts on SF Bay birds</span>
+<span id="cb71-9"><a></a><span class="ss">- </span>Habitat restoration effectiveness</span>
+<span id="cb71-10"><a></a><span class="ss">- </span>Urban wetland conservation</span>
+<span id="cb71-11"><a></a><span class="ss">- </span>Shorebird migration phenology</span>
+<span id="cb71-12"><a></a></span>
+<span id="cb71-13"><a></a>For each question, suggest potential academic partners in the Bay Area.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="annual-report-assistance" class="slide level2 smaller">
@@ -4325,20 +4802,20 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb67-1"><a></a>Write an executive summary (300 words) for SFBBO's annual report.</span>
-<span id="cb67-2"><a></a></span>
-<span id="cb67-3"><a></a>Key accomplishments this year:</span>
-<span id="cb67-4"><a></a><span class="ss">- </span>Monitored 45 wetland sites</span>
-<span id="cb67-5"><a></a><span class="ss">- </span>Recorded 125 bird species</span>
-<span id="cb67-6"><a></a><span class="ss">- </span>Trained 50 community scientists</span>
-<span id="cb67-7"><a></a><span class="ss">- </span>Published 2 peer-reviewed papers</span>
-<span id="cb67-8"><a></a><span class="ss">- </span>Received $150,000 in grants</span>
-<span id="cb67-9"><a></a></span>
-<span id="cb67-10"><a></a>Highlights from the data:</span>
-<span id="cb67-11"><a></a><span class="co">[</span><span class="ot">paste your key findings here</span><span class="co">]</span></span>
-<span id="cb67-12"><a></a></span>
-<span id="cb67-13"><a></a>Tone: Professional but accessible, celebratory but scientifically grounded</span>
-<span id="cb67-14"><a></a>Audience: Donors, partners, and the general public</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb72-1"><a></a>Write an executive summary (300 words) for SFBBO's annual report.</span>
+<span id="cb72-2"><a></a></span>
+<span id="cb72-3"><a></a>Key accomplishments this year:</span>
+<span id="cb72-4"><a></a><span class="ss">- </span>Monitored 45 wetland sites</span>
+<span id="cb72-5"><a></a><span class="ss">- </span>Recorded 125 bird species</span>
+<span id="cb72-6"><a></a><span class="ss">- </span>Trained 50 community scientists</span>
+<span id="cb72-7"><a></a><span class="ss">- </span>Published 2 peer-reviewed papers</span>
+<span id="cb72-8"><a></a><span class="ss">- </span>Received $150,000 in grants</span>
+<span id="cb72-9"><a></a></span>
+<span id="cb72-10"><a></a>Highlights from the data:</span>
+<span id="cb72-11"><a></a><span class="co">[</span><span class="ot">paste your key findings here</span><span class="co">]</span></span>
+<span id="cb72-12"><a></a></span>
+<span id="cb72-13"><a></a>Tone: Professional but accessible, celebratory but scientifically grounded</span>
+<span id="cb72-14"><a></a>Audience: Donors, partners, and the general public</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Donor Thank You Letters:</strong></p>
@@ -4346,11 +4823,11 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb68-1"><a></a><span class="an">Write a thank you letter template for SFBBO donors that:</span></span>
-<span id="cb68-2"><a></a><span class="ss">- </span>Acknowledges their specific contribution</span>
-<span id="cb68-3"><a></a><span class="ss">- </span>Shares one compelling data point from this year's surveys</span>
-<span id="cb68-4"><a></a><span class="ss">- </span>Describes the impact of their support</span>
-<span id="cb68-5"><a></a><span class="ss">- </span>Invites them to an upcoming field trip or event</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb73" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb73-1"><a></a><span class="an">Write a thank you letter template for SFBBO donors that:</span></span>
+<span id="cb73-2"><a></a><span class="ss">- </span>Acknowledges their specific contribution</span>
+<span id="cb73-3"><a></a><span class="ss">- </span>Shares one compelling data point from this year's surveys</span>
+<span id="cb73-4"><a></a><span class="ss">- </span>Describes the impact of their support</span>
+<span id="cb73-5"><a></a><span class="ss">- </span>Invites them to an upcoming field trip or event</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -4363,18 +4840,18 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb69-1"><a></a>Write a 400-word newsletter article </span>
-<span id="cb69-2"><a></a>about spring shorebird migration </span>
-<span id="cb69-3"><a></a>in SF Bay for SFBBO supporters.</span>
-<span id="cb69-4"><a></a></span>
-<span id="cb69-5"><a></a>Include:</span>
-<span id="cb69-6"><a></a><span class="ss">- </span>Which species to look for</span>
-<span id="cb69-7"><a></a><span class="ss">- </span>Peak timing (based on our data)</span>
-<span id="cb69-8"><a></a><span class="ss">- </span>Best viewing locations</span>
-<span id="cb69-9"><a></a><span class="ss">- </span>How SFBBO monitors migration</span>
-<span id="cb69-10"><a></a></span>
-<span id="cb69-11"><a></a>Tone: Engaging, educational, </span>
-<span id="cb69-12"><a></a>inspiring action</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb74-1"><a></a>Write a 400-word newsletter article </span>
+<span id="cb74-2"><a></a>about spring shorebird migration </span>
+<span id="cb74-3"><a></a>in SF Bay for SFBBO supporters.</span>
+<span id="cb74-4"><a></a></span>
+<span id="cb74-5"><a></a>Include:</span>
+<span id="cb74-6"><a></a><span class="ss">- </span>Which species to look for</span>
+<span id="cb74-7"><a></a><span class="ss">- </span>Peak timing (based on our data)</span>
+<span id="cb74-8"><a></a><span class="ss">- </span>Best viewing locations</span>
+<span id="cb74-9"><a></a><span class="ss">- </span>How SFBBO monitors migration</span>
+<span id="cb74-10"><a></a></span>
+<span id="cb74-11"><a></a>Tone: Engaging, educational, </span>
+<span id="cb74-12"><a></a>inspiring action</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><i class="fa-solid fa-share-alt" aria-label="share-alt"></i> <strong>Social Media:</strong></p>
@@ -4382,17 +4859,17 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb70-1"><a></a>Create 5 social media posts </span>
-<span id="cb70-2"><a></a>about SFBBO's winter waterbird </span>
-<span id="cb70-3"><a></a>census results.</span>
-<span id="cb70-4"><a></a></span>
-<span id="cb70-5"><a></a>For each post include:</span>
-<span id="cb70-6"><a></a><span class="ss">- </span>Hook (attention-grabbing fact)</span>
-<span id="cb70-7"><a></a><span class="ss">- </span>Key finding from the data</span>
-<span id="cb70-8"><a></a><span class="ss">- </span>Call to action</span>
-<span id="cb70-9"><a></a><span class="ss">- </span>Suggested hashtags</span>
-<span id="cb70-10"><a></a></span>
-<span id="cb70-11"><a></a>Platform: Twitter/X (280 chars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb75" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb75-1"><a></a>Create 5 social media posts </span>
+<span id="cb75-2"><a></a>about SFBBO's winter waterbird </span>
+<span id="cb75-3"><a></a>census results.</span>
+<span id="cb75-4"><a></a></span>
+<span id="cb75-5"><a></a>For each post include:</span>
+<span id="cb75-6"><a></a><span class="ss">- </span>Hook (attention-grabbing fact)</span>
+<span id="cb75-7"><a></a><span class="ss">- </span>Key finding from the data</span>
+<span id="cb75-8"><a></a><span class="ss">- </span>Call to action</span>
+<span id="cb75-9"><a></a><span class="ss">- </span>Suggested hashtags</span>
+<span id="cb75-10"><a></a></span>
+<span id="cb75-11"><a></a>Platform: Twitter/X (280 chars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </section>
@@ -4757,7 +5234,7 @@ highlighting that we counted over 15,000 birds this year"</code></pre>
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":null,"id":"6fa02e8e473e63683073144de135f55da4b7afe2ef89575e45ba14b26a23131b","url":"https://multiplex.up.railway.app/"},
+'multiplex': {"secret":null,"id":"2de1e600c742dbadafe6bc3bcf2ffef9422555f5593dc69dddf7dd348f89af8e","url":"https://multiplex.up.railway.app/"},
 'smaller': false,
  
         // Display controls in the bottom right corner

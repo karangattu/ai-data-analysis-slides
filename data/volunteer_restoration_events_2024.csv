@@ -1,0 +1,12 @@
+event_date,site,event_type,volunteers,plants_installed,area_weeded_sqm,hours_total,weather,soil_condition,plants_available,volunteer_source
+2024-01-20,Bair Island,planting,18,245,0,54,clear,moist,300,corporate_EA
+2024-02-17,Pond A17,weeding,12,0,850,36,overcast,wet,public
+2024-03-09,Alviso Marina,planting,25,380,0,75,clear,dry,400,corporate_Salesforce
+2024-03-23,Bair Island,weeding,8,0,420,24,rain,wet,public
+2024-04-13,Eden Landing,planting,22,310,0,66,clear,moist,350,school_SJSU
+2024-05-04,Pond A17,planting,15,185,0,45,overcast,dry,250,public
+2024-06-15,Bair Island,weeding,10,0,560,30,fog,moist,corporate_Intuitive
+2024-09-21,Alviso Marina,weeding,14,0,720,42,clear,dry,public
+2024-10-12,Eden Landing,planting,28,425,0,84,clear,moist,450,corporate_Google
+2024-11-16,Bair Island,planting,20,290,0,60,overcast,wet,320,public
+2024-12-07,Pond A17,weeding,6,0,280,18,rain,wet,public
