@@ -6,7 +6,7 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-98f33259cc9912f9b44620857d989c8f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-ccfe2091801c58232ee4d944ae3e490b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.17">
@@ -64,43 +64,44 @@
       }
     pre.numberSource { margin-left: 3em;  padding-left: 4px; }
     div.sourceCode
-      { color: #24292e;  }
+      { color: #f8f8f2; background-color: #2e3440; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #24292e; } /* Normal */
+    code span { color: #f8f8f2; } /* Normal */
     code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #d73a49; } /* Attribute */
-    code span.bn { color: #005cc5; } /* BaseN */
-    code span.bu { color: #d73a49; } /* BuiltIn */
-    code span.cf { color: #d73a49; } /* ControlFlow */
-    code span.ch { color: #032f62; } /* Char */
-    code span.cn { color: #005cc5; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #d73a49; } /* DataType */
-    code span.dv { color: #005cc5; } /* DecVal */
+    code span.an { color: #75715e; } /* Annotation */
+    code span.at { color: #f92672; } /* Attribute */
+    code span.bn { color: #ae81ff; } /* BaseN */
+    code span.bu { color: #66d9ef; } /* BuiltIn */
+    code span.cf { color: #f92672; } /* ControlFlow */
+    code span.ch { color: #e6db74; } /* Char */
+    code span.cn { color: #ae81ff; } /* Constant */
+    code span.co { color: #75715e; } /* Comment */
+    code span.cv { color: #75715e; } /* CommentVar */
+    code span.do { color: #75715e; } /* Documentation */
+    code span.dt { color: #66d9ef; font-style: italic; } /* DataType */
+    code span.dv { color: #ae81ff; } /* DecVal */
     code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
-    code span.fl { color: #005cc5; } /* Float */
-    code span.fu { color: #6f42c1; } /* Function */
-    code span.im { color: #032f62; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #d73a49; } /* Keyword */
-    code span.op { color: #24292e; } /* Operator */
-    code span.ot { color: #6f42c1; } /* Other */
-    code span.pp { color: #d73a49; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #005cc5; } /* SpecialChar */
-    code span.ss { color: #032f62; } /* SpecialString */
-    code span.st { color: #032f62; } /* String */
-    code span.va { color: #e36209; } /* Variable */
-    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.ex { color: #a6e22e; font-weight: bold; } /* Extension */
+    code span.fl { color: #ae81ff; } /* Float */
+    code span.fu { color: #a6e22e; } /* Function */
+    code span.im { color: #f92672; } /* Import */
+    code span.in { color: #f1fa8c; } /* Information */
+    code span.kw { color: #f92672; } /* Keyword */
+    code span.op { color: #f8f8f2; } /* Operator */
+    code span.ot { color: #a6e22e; } /* Other */
+    code span.pp { color: #f92672; } /* Preprocessor */
+    code span.re { color: #75715e; } /* RegionMarker */
+    code span.sc { color: #ae81ff; } /* SpecialChar */
+    code span.ss { color: #e6db74; } /* SpecialString */
+    code span.st { color: #e6db74; } /* String */
+    code span.va { color: #f8f8f2; } /* Variable */
+    code span.vs { color: #e6db74; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-03ee58d93aa56ae2ee8298346d0b2a97.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-872c65cf27aec345f17afe4a282a2c09.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -193,48 +194,13 @@
     }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    .poll-container {
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 10px auto;
-      max-width: 550px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .poll-question {
-      font-size: 1.1em;
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: #333;
-      text-align: center;
-    }
-
-    .poll-options {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .poll-option {
-      background: white;
-      border: 2px solid #007bff;
-      border-radius: 8px;
-      padding: 12px 15px;
-      font-size: 0.95em;
-      font-weight: 500;
-      text-align: center;
-      color: #007bff;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet">
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#1a1a2e" data-background-image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80" data-background-opacity="0.7" class="quarto-title-block center">
   <h1 class="title">AI for Data Analysis</h1>
   <p class="subtitle">San Francisco Bay Bird Observatory (SFBBO)</p>
 
@@ -261,7 +227,7 @@ Karan Gathani
 <p><i class="fa-solid fa-sync" aria-label="sync"></i> Building reusable analysis workflows</p>
 </div>
 </section>
-<section id="workshop-agenda-4-hours" class="slide level2 center">
+<section id="workshop-agenda-4-hours" class="slide level2">
 <h2>Workshop Agenda (4 Hours)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -282,7 +248,7 @@ Karan Gathani
 <p><i class="fa-solid fa-exclamation-triangle" aria-label="exclamation-triangle"></i> Pitfalls, governance, next steps</p>
 </div></div>
 </section>
-<section id="learning-outcomes" class="slide level2 center">
+<section id="learning-outcomes" class="slide level2">
 <h2>Learning Outcomes</h2>
 <p>By the end, you will:</p>
 <p><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> Explain what tokens and context windows are</p>
@@ -302,7 +268,7 @@ Karan Gathani
   </div>
 </div>
 </section>
-<section id="what-is-gemini" class="slide level2 center">
+<section id="what-is-gemini" class="slide level2">
 <h2>What is Gemini?</h2>
 <p>Gemini is Google’s family of <strong>multimodal</strong> AI models that can reason over text, code, and structured data (and more).</p>
 <div class="fragment">
@@ -313,7 +279,7 @@ Karan Gathani
 <p><i class="fa-solid fa-file-alt" aria-label="file-alt"></i> <strong>Narrative storytelling</strong> — write reports and grant summaries</p>
 </div>
 </section>
-<section id="ai-vs-llm-whats-the-difference" class="slide level2 smaller center">
+<section id="ai-vs-llm-whats-the-difference" class="slide level2 smaller">
 <h2>AI vs LLM: What’s the Difference?</h2>
 <p><strong>AI (Artificial Intelligence)</strong> is a broad field:</p>
 <p><i class="fa-solid fa-robot" aria-label="robot"></i> Any technology that performs tasks humans usually do</p>
@@ -355,7 +321,7 @@ Karan Gathani
 </div>
 </div>
 </section>
-<section id="how-llms-are-created-part-1-training-data" class="slide level2 smaller center">
+<section id="how-llms-are-created-part-1-training-data" class="slide level2 smaller">
 <h2>How LLMs Are Created — Part 1: Training Data</h2>
 <p><strong>Step 1: Collect massive amounts of text</strong></p>
 <p><i class="fa-solid fa-database" aria-label="database"></i> Billions of pages from the internet, books, research papers, code repositories</p>
@@ -365,7 +331,7 @@ Karan Gathani
 <p><strong>Why this matters:</strong> - Quality data = better understanding of language patterns - Diverse data = model works across many domains (including ornithology!) - Quantity = model learns more nuanced patterns</p>
 </div>
 </section>
-<section id="how-llms-are-created-part-2-training-process" class="slide level2 smaller center">
+<section id="how-llms-are-created-part-2-training-process" class="slide level2 smaller">
 <h2>How LLMs Are Created — Part 2: Training Process</h2>
 <p><strong>Step 2: The model learns through prediction</strong></p>
 <p>Imagine teaching a bird watcher to identify species. You show examples:</p>
@@ -384,7 +350,7 @@ Karan Gathani
 <p>This teaches the model patterns about what words go together and what makes sense.</p>
 </div>
 </section>
-<section id="how-llms-are-created-part-3-fine-tuning-safety" class="slide level2 smaller center">
+<section id="how-llms-are-created-part-3-fine-tuning-safety" class="slide level2 smaller">
 <h2>How LLMs Are Created — Part 3: Fine-tuning &amp; Safety</h2>
 <p><strong>Step 3: Make it helpful and safe</strong></p>
 <p><i class="fa-solid fa-users" aria-label="users"></i> Human experts label examples of good vs.&nbsp;bad responses</p>
@@ -399,7 +365,7 @@ Karan Gathani
 </ul>
 </div>
 </section>
-<section id="how-llms-are-created-summary" class="slide level2 smaller center">
+<section id="how-llms-are-created-summary" class="slide level2 smaller">
 <h2>How LLMs Are Created — Summary</h2>
 <p><strong>The journey from data to AI assistant:</strong></p>
 <div class="columns">
@@ -443,7 +409,7 @@ Karan Gathani
 </div>
 </div>
 </section>
-<section id="what-llms-can-do-well" class="slide level2 smaller center">
+<section id="what-llms-can-do-well" class="slide level2 smaller">
 <h2>What LLMs Can Do Well</h2>
 <p><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> <strong>Text understanding &amp; analysis</strong> - Summarize SFBBO survey notes - Extract key information from datasets</p>
 <div class="fragment">
@@ -456,7 +422,7 @@ Karan Gathani
 <p><i class="fa-solid fa-check-circle" aria-label="check-circle"></i> <strong>Brainstorming &amp; patterns</strong> - Suggest research directions - Identify correlations in data</p>
 </div>
 </section>
-<section id="what-llms-cannot-do" class="slide level2 smaller center">
+<section id="what-llms-cannot-do" class="slide level2 smaller">
 <h2>What LLMs Cannot Do</h2>
 <p><i class="fa-solid fa-times-circle" aria-label="times-circle"></i> <strong>Access real-time information</strong> - No internet browsing (unless specifically enabled) - Doesn’t know events after training date - Can’t check current SFBBO monitoring sites</p>
 <div class="fragment">
@@ -469,7 +435,7 @@ Karan Gathani
 <p><i class="fa-solid fa-times-circle" aria-label="times-circle"></i> <strong>Access external data without you providing it</strong> - Doesn’t have access to SFBBO’s internal databases - Can’t pull up historical records on its own - You must share the data to analyze</p>
 </div>
 </section>
-<section id="what-llms-cannot-do-cont." class="slide level2 smaller center">
+<section id="what-llms-cannot-do-cont." class="slide level2 smaller">
 <h2>What LLMs Cannot Do (cont.)</h2>
 <p><i class="fa-solid fa-times-circle" aria-label="times-circle"></i> <strong>Guarantee accuracy or avoid hallucinations</strong> - Can confidently state false information - May invent citations or statistics - Always fact-check outputs!</p>
 <div class="fragment">
@@ -507,7 +473,7 @@ Karan Gathani
 </div>
 </div>
 </section>
-<section id="llm-capabilities-limitations-quick-reference" class="slide level2 smaller center">
+<section id="llm-capabilities-limitations-quick-reference" class="slide level2 smaller">
 <h2>LLM Capabilities &amp; Limitations — Quick Reference</h2>
 <table class="caption-top">
 <colgroup>
@@ -578,7 +544,7 @@ Karan Gathani
   </div>
 </div>
 </section>
-<section id="how-ai-works-highlevel" class="slide level2 center">
+<section id="how-ai-works-highlevel" class="slide level2">
 <h2>How AI Works (High‑Level)</h2>
 <p>LLMs are trained to predict the <strong>next token</strong> in a sequence.</p>
 <div class="fragment">
@@ -601,7 +567,7 @@ Karan Gathani
 </div>
 </div>
 </section>
-<section id="tokens-context-and-cost" class="slide level2 center">
+<section id="tokens-context-and-cost" class="slide level2">
 <h2>Tokens, Context, and Cost</h2>
 <p><i class="fa-solid fa-puzzle-piece" aria-label="puzzle-piece"></i> <strong>Token</strong> ≈ a chunk of text (word piece)</p>
 <p><i class="fa-solid fa-window-maximize" aria-label="window-maximize"></i> <strong>Context window</strong> = max tokens a model can see at once</p>
@@ -610,7 +576,7 @@ Karan Gathani
 <p><strong>Rule of thumb:</strong> <span class="math display">\[\text{Cost} \propto \text{input tokens} + \text{output tokens}\]</span></p>
 </div>
 </section>
-<section id="prompting-basics" class="slide level2 center">
+<section id="prompting-basics" class="slide level2">
 <h2>Prompting Basics</h2>
 <p>Great prompts include:</p>
 <p><i class="fa-solid fa-user-tag" aria-label="user-tag"></i> <strong>Role</strong> — who the model is</p>
@@ -637,7 +603,7 @@ Karan Gathani
 <p><strong>Better version:</strong> <em>“You are a conservation analyst at SFBBO. Analyze this CSV of shorebird counts. Highlight species with &gt;20% population decline and suggest management actions. Format as bullet points.”</em> <i class="fa-solid fa-check" aria-label="check"></i></p>
 </div>
 </section>
-<section id="exercise-1-prompt-template" class="slide level2 smaller center">
+<section id="exercise-1-prompt-template" class="slide level2 smaller">
 <h2>Exercise 1: Prompt Template</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Turn:</strong> Copy this template and customize for your SFBBO data:</p>
 <div class="code-with-filename">
@@ -658,7 +624,7 @@ Karan Gathani
 <span id="cb2-12"><a></a><span class="ss">- </span>Highlight conservation implications for SF Bay wetlands</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-1-dataset" class="slide level2 smaller center">
+<section id="exercise-1-dataset" class="slide level2 smaller">
 <h2>Exercise 1: Dataset</h2>
 <p><strong>SFBBO Waterbird Survey — January 2025</strong></p>
 <div class="code-with-filename">
@@ -683,7 +649,7 @@ Karan Gathani
 <span id="cb3-16"><a></a>2025-01-19,Shoreline Lake,Pied-billed Grebe,23,Fog,J. Chen,freshwater,na</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-2-data-quality-check" class="slide level2 smaller center">
+<section id="exercise-2-data-quality-check" class="slide level2 smaller">
 <h2>Exercise 2: Data Quality Check</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Turn:</strong> Use Gemini to identify data quality issues in SFBBO survey data.</p>
 <p>Copy this prompt and run it in Gemini:</p>
@@ -697,7 +663,7 @@ Karan Gathani
 <span id="cb4-4"><a></a>unusual for SF Bay bird surveys.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-2-dataset" class="slide level2 smaller center">
+<section id="exercise-2-dataset" class="slide level2 smaller">
 <h2>Exercise 2: Dataset</h2>
 <p>Paste this data after your prompt—can you spot the issues?</p>
 <div class="code-with-filename">
@@ -717,7 +683,7 @@ Karan Gathani
 <p><strong>Issues to find:</strong> Negative count, impossible species, invalid date, unusually high count</p>
 </div>
 </section>
-<section id="gemini-model-options-overview" class="slide level2 center">
+<section id="gemini-model-options-overview" class="slide level2">
 <h2>Gemini Model Options (Overview)</h2>
 <p>Choose based on your analysis needs:</p>
 <p><i class="fa-solid fa-bolt" aria-label="bolt"></i> <strong>Latency</strong> — speed for quick queries</p>
@@ -758,7 +724,7 @@ Karan Gathani
 <p><em>(You can write it down—we’ll revisit this in the capstone!)</em></p>
 </div>
 </section>
-<section id="hour-2-prompting-for-eda" class="slide level2 center">
+<section id="hour-2-prompting-for-eda" class="slide level2">
 <h2>Hour 2 — Prompting for EDA</h2>
 <p>Tasks Gemini can help with for SFBBO data:</p>
 <p><i class="fa-solid fa-list-alt" aria-label="list-alt"></i> Column summaries and data dictionary generation</p>
@@ -766,7 +732,7 @@ Karan Gathani
 <p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Outlier detection (unusual counts, rare species)</p>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hypothesis generation (population trends, habitat preferences)</p>
 </section>
-<section id="exercise-3-eda-prompt" class="slide level2 smaller center">
+<section id="exercise-3-eda-prompt" class="slide level2 smaller">
 <h2>Exercise 3: EDA Prompt</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Turn:</strong> Copy this prompt to analyze SFBBO survey data:</p>
 <div class="code-with-filename">
@@ -799,7 +765,7 @@ Karan Gathani
 <span id="cb6-24"><a></a>Output as structured markdown with clear headers.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-3-dataset" class="slide level2 smaller center">
+<section id="exercise-3-dataset" class="slide level2 smaller">
 <h2>Exercise 3: Dataset</h2>
 <p><strong>SFBBO Winter Waterbird Census 2025</strong></p>
 <div class="code-with-filename">
@@ -824,7 +790,7 @@ Karan Gathani
 <span id="cb7-16"><a></a>2025-01-10,SHL,Shoreline Lake,Mallard,189,swimming,freshwater,na,49,10,Chen</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-4-visualization-guidance" class="slide level2 smaller center">
+<section id="exercise-4-visualization-guidance" class="slide level2 smaller">
 <h2>Exercise 4: Visualization Guidance</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Turn:</strong> Ask Gemini for specific chart recommendations:</p>
 <div class="code-with-filename">
@@ -856,7 +822,7 @@ Karan Gathani
 <span id="cb8-23"><a></a>Eden Landing,salt_pond,3456,890,123,8</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-5-shorebird-migration-analysis" class="slide level2 smaller center">
+<section id="exercise-5-shorebird-migration-analysis" class="slide level2 smaller">
 <h2>Exercise 5: Shorebird Migration Analysis</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Turn (if time allows):</strong> SFBBO Shorebird Migration Monitoring (Winter 2024-2025)</p>
 <div class="code-with-filename">
@@ -879,7 +845,7 @@ Karan Gathani
 <span id="cb9-14"><a></a>5,2025,Eden Landing,Western Sandpiper,1678,52,0.0,4.7,waxing</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-5-analysis-prompt" class="slide level2 smaller center">
+<section id="exercise-5-analysis-prompt" class="slide level2 smaller">
 <h2>Exercise 5: Analysis Prompt</h2>
 <p>Use this prompt with the shorebird dataset (or save for later):</p>
 <div class="code-with-filename">
@@ -910,7 +876,7 @@ Karan Gathani
 <span id="cb10-22"><a></a>Format: Use headers, bullet points, and bold for key findings.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="prompting-patterns-the-big-three" class="slide level2 smaller center">
+<section id="prompting-patterns-the-big-three" class="slide level2 smaller">
 <h2>Prompting Patterns — The Big Three</h2>
 <p>Master these patterns and you’ll level up your prompts:</p>
 <div class="fragment">
@@ -925,7 +891,7 @@ Karan Gathani
 </div>
 </div>
 </section>
-<section id="prompting-patterns-the-big-three-cont." class="slide level2 smaller center">
+<section id="prompting-patterns-the-big-three-cont." class="slide level2 smaller">
 <h2>Prompting Patterns — The Big Three (cont.)</h2>
 <p><i class="fa-solid fa-bullseye" aria-label="bullseye"></i> <strong>Constrain</strong> — Set specific output requirements</p>
 <div class="code-with-filename">
@@ -937,7 +903,7 @@ Karan Gathani
 <span id="cb12-3"><a></a>Use scientific names in parentheses after common names.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="prompting-patterns-cont." class="slide level2 smaller center">
+<section id="prompting-patterns-cont." class="slide level2 smaller">
 <h2>Prompting Patterns (cont.)</h2>
 <p><i class="fa-solid fa-clipboard-check" aria-label="clipboard-check"></i> <strong>Verify</strong> — Request self-assessment</p>
 <div class="code-with-filename">
@@ -959,7 +925,7 @@ Karan Gathani
 <p><strong>Answer:</strong> Likely all three! Decompose (multiple steps), Constrain (specific metrics), Verify (confidence levels).</p>
 </div>
 </section>
-<section id="hour-3-tooling-workflows" class="slide level2 center">
+<section id="hour-3-tooling-workflows" class="slide level2">
 <h2>Hour 3 — Tooling + Workflows</h2>
 <p><strong>Typical SFBBO analysis workflow:</strong></p>
 <ol type="1">
@@ -968,6 +934,799 @@ Karan Gathani
 <li class="fragment"><p><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Validate with Python/R code</p></li>
 <li class="fragment"><p><i class="fa-solid fa-sync-alt" aria-label="sync-alt"></i> Iterate based on results</p></li>
 </ol>
+</section>
+<section id="what-is-a-csv-file" class="slide level2 smaller">
+<h2>What is a CSV File?</h2>
+<p><strong>CSV = Comma-Separated Values</strong></p>
+<p>A simple, universal format for storing tabular data as plain text.</p>
+<div class="fragment">
+<p><strong>Structure:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>species,count,location,date</span>
+<span id="cb14-2"><a></a>Dunlin,245,Palo Alto Baylands,2025-01-15</span>
+<span id="cb14-3"><a></a>Western Sandpiper,189,Don Edwards NWR,2025-01-15</span>
+<span id="cb14-4"><a></a>American Avocet,67,Alviso Marina,2025-01-16</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-check" aria-label="check"></i> First row = column headers (field names)</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Each subsequent row = one record (observation)</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Commas separate values within a row</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Can be opened in Excel, Google Sheets, or any text editor</p>
+</div>
+</section>
+<section id="why-csv-is-great-for-data-analysis" class="slide level2 smaller">
+<h2>Why CSV is Great for Data Analysis</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Advantages:</strong></p>
+<p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i> Universal compatibility</p>
+<p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i> Human-readable (it’s just text!)</p>
+<p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i> Small file sizes</p>
+<p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i> Easy to share and version control</p>
+<p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i> Works with Python, R, Excel, Gemini</p>
+</div><div class="column" style="width:50%;">
+<p><strong>SFBBO Use Cases:</strong></p>
+<p><i class="fa-solid fa-crow" aria-label="crow"></i> Export survey data from databases</p>
+<p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Share datasets with collaborators</p>
+<p><i class="fa-solid fa-robot" aria-label="robot"></i> Upload to AI tools for analysis</p>
+<p><i class="fa-solid fa-code" aria-label="code"></i> Load into analysis scripts</p>
+</div></div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Pro tip:</strong> Export your SFBBO survey data as CSV before uploading to Gemini!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-export-csv-from-google-sheets" class="slide level2 smaller">
+<h2>How to Export CSV from Google Sheets</h2>
+<p><strong>Step-by-step:</strong></p>
+<ol type="1">
+<li class="fragment"><p><i class="fa-solid fa-table" aria-label="table"></i> Open your data in <strong>Google Sheets</strong></p></li>
+<li class="fragment"><p><i class="fa-solid fa-mouse-pointer" aria-label="mouse-pointer"></i> Click <strong>File</strong> in the top menu</p></li>
+<li class="fragment"><p><i class="fa-solid fa-download" aria-label="download"></i> Hover over <strong>Download</strong></p></li>
+<li class="fragment"><p><i class="fa-solid fa-file-csv" aria-label="file-csv"></i> Select <strong>Comma-separated values (.csv)</strong></p></li>
+<li class="fragment"><p><i class="fa-solid fa-folder" aria-label="folder"></i> File downloads to your computer’s Downloads folder</p></li>
+</ol>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Note:</strong> CSV export only saves the <strong>current sheet</strong>. If you have multiple tabs, export each one separately.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Alternative:</strong> For Excel users, go to <strong>File → Save As</strong> and choose <strong>CSV (Comma delimited)</strong></p>
+</div>
+</section>
+<section id="what-can-you-upload-to-google-gemini" class="slide level2 smaller">
+<h2>What Can You Upload to Google Gemini?</h2>
+<p>Gemini accepts multiple file types for analysis:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong><i class="fa-solid fa-file-alt" aria-label="file-alt"></i> Documents</strong></p>
+<ul>
+<li class="fragment">PDF files (reports, papers)</li>
+<li class="fragment">Word documents (.docx)</li>
+<li class="fragment">Text files (.txt)</li>
+<li class="fragment">Google Docs</li>
+</ul>
+<p><strong><i class="fa-solid fa-table" aria-label="table"></i> Spreadsheets</strong></p>
+<ul>
+<li class="fragment">CSV files (.csv) <i class="fa-solid fa-star" aria-label="star"></i></li>
+<li class="fragment">Excel files (.xlsx)</li>
+<li class="fragment">Google Sheets</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong><i class="fa-solid fa-image" aria-label="image"></i> Images</strong></p>
+<ul>
+<li class="fragment">Photos (JPG, PNG)</li>
+<li class="fragment">Screenshots</li>
+<li class="fragment">Scanned documents</li>
+</ul>
+<p><strong><i class="fa-solid fa-code" aria-label="code"></i> Code</strong></p>
+<ul>
+<li class="fragment">Python, R, JavaScript files</li>
+<li class="fragment">Jupyter notebooks</li>
+</ul>
+</div></div>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><i class="fa-solid fa-star" aria-label="star"></i> <strong>For SFBBO data analysis, CSV is typically your best choice!</strong></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="gemini-file-upload-limits" class="slide level2 smaller">
+<h2>Gemini File Upload Limits</h2>
+<p><strong>Current limits (as of 2025):</strong></p>
+<p><i class="fa-solid fa-file" aria-label="file"></i> <strong>Single file:</strong> Up to 20MB per file</p>
+<p><i class="fa-solid fa-copy" aria-label="copy"></i> <strong>Multiple files:</strong> Up to 10 files per conversation</p>
+<p><i class="fa-solid fa-ruler" aria-label="ruler"></i> <strong>Text extraction:</strong> ~100,000 tokens from uploaded files</p>
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> <strong>Session duration:</strong> Files persist for the conversation</p>
+<div class="fragment">
+<p><strong>Practical implications for SFBBO:</strong></p>
+<ul>
+<li class="fragment">Most survey CSVs are well under 20MB ✓</li>
+<li class="fragment">Can upload multiple years of data ✓</li>
+<li class="fragment">Large multi-year databases may need splitting</li>
+<li class="fragment">Consider summarizing before uploading very large datasets</li>
+</ul>
+</div>
+</section>
+<section id="how-to-upload-data-to-gemini" class="slide level2 smaller">
+<h2>How to Upload Data to Gemini</h2>
+<p><strong>Step-by-step:</strong></p>
+<ol type="1">
+<li class="fragment"><p><i class="fa-solid fa-globe" aria-label="globe"></i> Go to <a href="https://gemini.google.com">gemini.google.com</a></p></li>
+<li class="fragment"><p><i class="fa-solid fa-paperclip" aria-label="paperclip"></i> Click the <strong>+</strong> or paperclip icon in the chat</p></li>
+<li class="fragment"><p><i class="fa-solid fa-file-upload" aria-label="file-upload"></i> Select your CSV file (or drag and drop)</p></li>
+<li class="fragment"><p><i class="fa-solid fa-keyboard" aria-label="keyboard"></i> Type your analysis prompt</p></li>
+<li class="fragment"><p><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Send and let Gemini analyze!</p></li>
+</ol>
+<div class="fragment">
+<p><strong>Example prompt after uploading:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a>I've uploaded our SFBBO shorebird survey data. Please:</span>
+<span id="cb15-2"><a></a><span class="ss">1. </span>Summarize the dataset structure</span>
+<span id="cb15-3"><a></a><span class="ss">2. </span>Identify the top 5 species by total count</span>
+<span id="cb15-4"><a></a><span class="ss">3. </span>Note any data quality issues</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="best-practices-for-uploading-data" class="slide level2 smaller">
+<h2>Best Practices for Uploading Data</h2>
+<p><i class="fa-solid fa-shield-alt" aria-label="shield-alt"></i> <strong>Privacy &amp; Security</strong></p>
+<ul>
+<li class="fragment">Remove sensitive personal information before uploading</li>
+<li class="fragment">Check your organization’s data sharing policies</li>
+<li class="fragment">Consider anonymizing observer names if needed</li>
+</ul>
+<div class="fragment">
+<p><i class="fa-solid fa-broom" aria-label="broom"></i> <strong>Data Preparation</strong></p>
+<ul>
+<li class="fragment">Clean up obvious errors before uploading</li>
+<li class="fragment">Use consistent date formats (YYYY-MM-DD recommended)</li>
+<li class="fragment">Ensure column headers are clear and descriptive</li>
+<li class="fragment">Remove empty rows at the end of files</li>
+</ul>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Pro tip:</strong> Tell Gemini about your data context — what survey protocol, study area, and time period it covers!</p>
+</div>
+</section>
+<section id="gemini-can-create-charts-graphs" class="slide level2 smaller">
+<h2>Gemini Can Create Charts &amp; Graphs!</h2>
+<p>One of Gemini’s powerful features is <strong>automatic visualization</strong> from your data:</p>
+<p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> <strong>Line charts</strong> — Show trends over time (migration patterns, population changes)</p>
+<p><i class="fa-solid fa-chart-bar" aria-label="chart-bar"></i> <strong>Bar charts</strong> — Compare categories (species counts, site comparisons)</p>
+<p><i class="fa-solid fa-chart-pie" aria-label="chart-pie"></i> <strong>Pie charts</strong> — Show proportions (habitat distribution, species composition)</p>
+<p><i class="fa-solid fa-project-diagram" aria-label="project-diagram"></i> <strong>Scatter plots</strong> — Reveal correlations (temperature vs.&nbsp;bird counts)</p>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Just ask!</strong> Gemini will analyze your data and create appropriate visualizations automatically.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-request-charts-from-gemini" class="slide level2 smaller">
+<h2>How to Request Charts from Gemini</h2>
+<p><strong>After uploading your CSV, try these prompts:</strong></p>
+<div class="fragment">
+<p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> <strong>For trends:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a></a>Create a line chart showing how Dunlin counts change across months.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-chart-bar" aria-label="chart-bar"></i> <strong>For comparisons:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a></a>Make a bar chart comparing total bird counts at each monitoring site.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-project-diagram" aria-label="project-diagram"></i> <strong>For relationships:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a></a>Create a scatter plot of temperature vs. shorebird count </span>
+<span id="cb18-2"><a></a>and add a trend line.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-palette" aria-label="palette"></i> <strong>For customization:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a></a>Create a chart showing species by habitat. Use blue for shorebirds, </span>
+<span id="cb19-2"><a></a>green for waterfowl, and orange for waders.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="chart-generation-tips" class="slide level2 smaller">
+<h2>Chart Generation Tips</h2>
+<p><strong>Get better visualizations with specific prompts:</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Be specific about:</strong></p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Chart type you want</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Which columns to use</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> X and Y axis labels</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Title for the chart</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Colors (if you have preferences)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Example prompt:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a></a><span class="an">Create a line chart with:</span></span>
+<span id="cb20-2"><a></a><span class="ss">- </span>X-axis: month</span>
+<span id="cb20-3"><a></a><span class="ss">- </span>Y-axis: count</span>
+<span id="cb20-4"><a></a><span class="ss">- </span>Separate lines for each species</span>
+<span id="cb20-5"><a></a><span class="ss">- </span>Title: "Shorebird Migration 2024-25"</span>
+<span id="cb20-6"><a></a><span class="ss">- </span>Use a legend</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If Gemini’s first chart isn’t quite right, <strong>iterate!</strong> Ask it to adjust colors, add labels, or change the chart type.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="gemini-can-generate-images-too" class="slide level2 smaller">
+<h2>Gemini Can Generate Images Too!</h2>
+<p>Beyond charts, Gemini can create images using <strong>AI image generation</strong>:</p>
+<p><i class="fa-solid fa-image" aria-label="image"></i> <strong>Illustrations</strong> — Visual aids for presentations and reports</p>
+<p><i class="fa-solid fa-palette" aria-label="palette"></i> <strong>Infographics</strong> — Combine data with visual storytelling</p>
+<p><i class="fa-solid fa-camera" aria-label="camera"></i> <strong>Artistic renderings</strong> — Creative visualizations of concepts</p>
+<p><i class="fa-solid fa-file-image" aria-label="file-image"></i> <strong>Diagrams</strong> — Explain processes or workflows</p>
+<div class="fragment">
+<p><strong>Start your prompt with:</strong> “Generate an image of…” or “Create an illustration of…”</p>
+</div>
+</section>
+<section id="image-generation-for-sfbbo" class="slide level2 smaller">
+<h2>Image Generation for SFBBO</h2>
+<p><strong>Practical uses for bird conservation work:</strong></p>
+<div class="fragment">
+<p><i class="fa-solid fa-book" aria-label="book"></i> <strong>Educational materials:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a></a>Generate an illustration showing the different habitats </span>
+<span id="cb21-2"><a></a>in San Francisco Bay: mudflats, salt ponds, freshwater </span>
+<span id="cb21-3"><a></a>marshes, and open water, with typical bird species in each.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-file-powerpoint" aria-label="file-powerpoint"></i> <strong>Presentation visuals:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a></a>Create an infographic showing the shorebird migration </span>
+<span id="cb22-2"><a></a>flyway along the Pacific Coast, highlighting the </span>
+<span id="cb22-3"><a></a>San Francisco Bay as a critical stopover.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> <strong>Newsletter graphics:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a></a>Generate a watercolor-style illustration of Ridgway's </span>
+<span id="cb23-2"><a></a>Rails in a tidal marsh for our conservation newsletter.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="image-generation-tips" class="slide level2 smaller">
+<h2>Image Generation Tips</h2>
+<p><strong>Write better image prompts:</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Include in your prompt:</strong></p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Subject (what to show)</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Style (photorealistic, watercolor, cartoon, diagram)</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Setting/background</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Mood or lighting</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Purpose (infographic, illustration, etc.)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Example prompt:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a></a>Generate a photorealistic image </span>
+<span id="cb24-2"><a></a>of a Western Sandpiper foraging </span>
+<span id="cb24-3"><a></a>on a mudflat at low tide during </span>
+<span id="cb24-4"><a></a>golden hour, with the San Francisco </span>
+<span id="cb24-5"><a></a>Bay in the background.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Important:</strong> AI-generated images should be labeled as such. Don’t use them as substitutes for actual field photos in scientific documentation!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-create-a-visualization" class="slide level2 smaller">
+<h2>Exercise: Create a Visualization</h2>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Turn:</strong> Upload one of the sample datasets and ask Gemini to create a chart.</p>
+<p><strong>Try this with <code>migration_timeline.csv</code>:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a></a>I've uploaded shorebird migration data. Please:</span>
+<span id="cb25-2"><a></a></span>
+<span id="cb25-3"><a></a><span class="ss">1. </span>Create a line chart showing how bird counts change from </span>
+<span id="cb25-4"><a></a>   September 2024 to April 2025 for each species</span>
+<span id="cb25-5"><a></a>   </span>
+<span id="cb25-6"><a></a><span class="ss">2. </span>Add a title: "Shorebird Migration Patterns at Palo Alto Baylands"</span>
+<span id="cb25-7"><a></a></span>
+<span id="cb25-8"><a></a><span class="ss">3. </span>Label the axes clearly</span>
+<span id="cb25-9"><a></a></span>
+<span id="cb25-10"><a></a><span class="ss">4. </span>Use different colors for each species</span>
+<span id="cb25-11"><a></a></span>
+<span id="cb25-12"><a></a><span class="ss">5. </span>Explain what patterns you see in the data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><strong>Bonus:</strong> Ask Gemini to create a second chart type (bar chart, area chart) and compare which shows the pattern better!</p>
+</div>
+</section>
+<section id="introducing-notebooklm" class="slide level2 smaller">
+<h2>Introducing NotebookLM</h2>
+<p><strong>Another powerful Google AI tool for SFBBO:</strong></p>
+<p><a href="https://notebooklm.google.com">NotebookLM</a> is a research assistant that helps you understand complex documents.</p>
+<p><i class="fa-solid fa-upload" aria-label="upload"></i> <strong>Upload sources</strong> — PDFs, Google Docs, Slides, websites, YouTube videos</p>
+<p><i class="fa-solid fa-brain" aria-label="brain"></i> <strong>Ask questions</strong> — Get answers grounded in YOUR sources only</p>
+<p><i class="fa-solid fa-quote-left" aria-label="quote-left"></i> <strong>Get citations</strong> — Every response links back to source material</p>
+<p><i class="fa-solid fa-headphones" aria-label="headphones"></i> <strong>Audio Overviews</strong> — Turn documents into podcast-style discussions!</p>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Perfect for:</strong> Summarizing research papers, annual reports, grant guidelines, and training materials!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-audio-overview" class="slide level2 smaller">
+<h2>What is Audio Overview?</h2>
+<p>NotebookLM’s <strong>Audio Overview</strong> feature creates AI-generated podcast-style discussions from your documents.</p>
+<div class="fragment">
+<p><strong>Two AI hosts will:</strong></p>
+<p><i class="fa-solid fa-comments" aria-label="comments"></i> Have a lively conversation about your sources</p>
+<p><i class="fa-solid fa-link" aria-label="link"></i> Make connections between topics and ideas</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Explain complex concepts in an accessible way</p>
+<p><i class="fa-solid fa-clock" aria-label="clock"></i> Create 5-30 minute audio summaries</p>
+</div>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Great for learning on the go!</strong> Download and listen during your commute, while doing fieldwork, or during data entry.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="audio-overview-formats" class="slide level2 smaller">
+<h2>Audio Overview Formats</h2>
+<p>Choose the format that fits your needs:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><i class="fa-solid fa-microphone" aria-label="microphone"></i> <strong>Deep Dive</strong> (default)</p>
+<p>Two hosts unpack topics in an in-depth conversation</p>
+<p>. . .</p>
+<p><i class="fa-solid fa-bolt" aria-label="bolt"></i> <strong>The Brief</strong></p>
+<p>Single speaker delivers key takeaways in under 2 minutes</p>
+</div><div class="column" style="width:50%;">
+<p><i class="fa-solid fa-comments" aria-label="comments"></i> <strong>The Critique</strong></p>
+<p>Two hosts provide constructive feedback on documents</p>
+<p>. . .</p>
+<p><i class="fa-solid fa-balance-scale" aria-label="balance-scale"></i> <strong>The Debate</strong></p>
+<p>Two hosts explore multiple perspectives on a topic</p>
+</div></div>
+<div class="fragment">
+<p><strong>You can also customize:</strong></p>
+<ul>
+<li class="fragment">Length (Shorter, Default, Longer)</li>
+<li class="fragment">Focus topics with a custom prompt</li>
+<li class="fragment">Language (80+ languages supported!)</li>
+</ul>
+</div>
+</section>
+<section id="how-to-create-an-audio-overview" class="slide level2 smaller">
+<h2>How to Create an Audio Overview</h2>
+<p><strong>Step-by-step:</strong></p>
+<ol type="1">
+<li class="fragment"><p><i class="fa-solid fa-globe" aria-label="globe"></i> Go to <a href="https://notebooklm.google.com">notebooklm.google.com</a></p></li>
+<li class="fragment"><p><i class="fa-solid fa-plus" aria-label="plus"></i> Create a new notebook</p></li>
+<li class="fragment"><p><i class="fa-solid fa-upload" aria-label="upload"></i> Add your sources (PDFs, Docs, websites)</p></li>
+<li class="fragment"><p><i class="fa-solid fa-sliders-h" aria-label="sliders-h"></i> Open the <strong>Studio</strong> panel</p></li>
+<li class="fragment"><p><i class="fa-solid fa-headphones" aria-label="headphones"></i> Select <strong>Audio Overview</strong> and click Generate</p></li>
+<li class="fragment"><p><i class="fa-solid fa-download" aria-label="download"></i> Download the audio or listen in the browser</p></li>
+</ol>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Generation takes a few minutes for longer documents. You can work on other things while it processes!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="interactive-mode-join-the-conversation" class="slide level2 smaller">
+<h2>Interactive Mode: Join the Conversation!</h2>
+<p><strong>New feature:</strong> You can now <strong>interact</strong> with the AI hosts!</p>
+<p><i class="fa-solid fa-microphone-alt" aria-label="microphone-alt"></i> Ask follow-up questions with your voice</p>
+<p><i class="fa-solid fa-question-circle" aria-label="question-circle"></i> Request clarification on specific topics</p>
+<p><i class="fa-solid fa-comment-dots" aria-label="comment-dots"></i> Get personalized answers based on your sources</p>
+<p><i class="fa-solid fa-play" aria-label="play"></i> Hosts resume the original discussion after answering</p>
+<div class="fragment">
+<p><strong>To use:</strong></p>
+<ol type="1">
+<li class="fragment">Generate a new Audio Overview</li>
+<li class="fragment">Select <strong>Interactive mode</strong></li>
+<li class="fragment">While listening, click <strong>Join</strong></li>
+<li class="fragment">Ask your questions when the hosts call on you!</li>
+</ol>
+</div>
+</section>
+<section id="audio-overviews-for-sfbbo" class="slide level2 smaller">
+<h2>Audio Overviews for SFBBO</h2>
+<p><strong>Practical use cases for your team:</strong></p>
+<div class="fragment">
+<p><i class="fa-solid fa-book" aria-label="book"></i> <strong>Onboarding new staff/volunteers:</strong></p>
+<pre><code>Upload: SFBBO survey protocols, species ID guides, safety procedures
+Result: Audio training they can listen to before their first field day</code></pre>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-file-contract" aria-label="file-contract"></i> <strong>Grant preparation:</strong></p>
+<pre><code>Upload: Funding guidelines, RFP documents, past successful proposals
+Result: Audio summary of requirements while you draft your application</code></pre>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-graduation-cap" aria-label="graduation-cap"></i> <strong>Staying current on research:</strong></p>
+<pre><code>Upload: Recent shorebird research papers, conservation reports
+Result: Podcast-style summary of new findings relevant to SF Bay</code></pre>
+</div>
+</section>
+<section id="audio-overviews-for-sfbbo-cont." class="slide level2 smaller">
+<h2>Audio Overviews for SFBBO (cont.)</h2>
+<p><i class="fa-solid fa-users" aria-label="users"></i> <strong>Board meeting prep:</strong></p>
+<pre><code>Upload: Previous meeting minutes, financial reports, strategic plan
+Result: Quick audio briefing before meetings</code></pre>
+<div class="fragment">
+<p><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> <strong>Annual report digestion:</strong></p>
+<pre><code>Upload: Your own SFBBO annual reports from multiple years
+Result: Audio summary highlighting trends and accomplishments</code></pre>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-handshake" aria-label="handshake"></i> <strong>Partner communications:</strong></p>
+<pre><code>Upload: Partner organization reports, collaborative project documents
+Result: Stay informed about partner activities while multitasking</code></pre>
+</div>
+</section>
+<section id="example-research-paper-summary" class="slide level2 smaller">
+<h2>Example: Research Paper Summary</h2>
+<p><strong>Scenario:</strong> You want to understand a new shorebird migration study.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Upload to NotebookLM:</strong></p>
+<ul>
+<li class="fragment">The research paper PDF</li>
+<li class="fragment">SFBBO’s related survey data summary</li>
+<li class="fragment">SF Bay habitat maps</li>
+</ul>
+<p><strong>Custom prompt:</strong></p>
+<pre><code>Focus on findings relevant to 
+San Francisco Bay shorebirds. 
+Explain statistical methods 
+in simple terms.</code></pre>
+</div><div class="column" style="width:50%;">
+<p><strong>Audio Overview will discuss:</strong></p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Key findings from the paper</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> How results apply to SF Bay</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Connections to your SFBBO data</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Implications for conservation</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Questions for further research</p>
+</div></div>
+<div class="fragment">
+<p><strong>Result:</strong> A 15-minute audio summary you can listen to during your commute!</p>
+</div>
+</section>
+<section id="tips-for-better-audio-overviews" class="slide level2 smaller">
+<h2>Tips for Better Audio Overviews</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Do:</strong></p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Upload related documents together</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Use custom prompts to focus topics</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Choose the right format for your goal</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Download for offline listening</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Share with team members</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Keep in mind:</strong></p>
+<p><i class="fa-solid fa-exclamation" aria-label="exclamation"></i> AI voices may have occasional glitches</p>
+<p><i class="fa-solid fa-exclamation" aria-label="exclamation"></i> Content reflects ONLY your sources</p>
+<p><i class="fa-solid fa-exclamation" aria-label="exclamation"></i> May take several minutes to generate</p>
+<p><i class="fa-solid fa-exclamation" aria-label="exclamation"></i> Best for English (other languages available)</p>
+<p><i class="fa-solid fa-exclamation" aria-label="exclamation"></i> Verify important facts independently</p>
+</div></div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Pro tip:</strong> Create a NotebookLM notebook for each major SFBBO project to keep sources organized!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="more-google-ai-tools-no-coding" class="slide level2 smaller">
+<h2>More Google AI Tools (No Coding!)</h2>
+<p>Google has integrated Gemini AI across its Workspace apps:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><i class="fa-solid fa-file-word" aria-label="file-word"></i> <strong>Google Docs</strong></p>
+<p><i class="fa-solid fa-table" aria-label="table"></i> <strong>Google Sheets</strong></p>
+<p><i class="fa-solid fa-file-powerpoint" aria-label="file-powerpoint"></i> <strong>Google Slides</strong></p>
+</div><div class="column" style="width:50%;">
+<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <strong>Gmail</strong></p>
+<p><i class="fa-solid fa-folder" aria-label="folder"></i> <strong>Google Drive</strong></p>
+<p><i class="fa-solid fa-video" aria-label="video"></i> <strong>Google Meet</strong></p>
+</div></div>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Access:</strong> These features require Google Workspace with Gemini or a Google AI Premium plan. Check with your organization’s IT administrator!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="gemini-in-google-sheets" class="slide level2 smaller">
+<h2>Gemini in Google Sheets</h2>
+<p><strong>Analyze SFBBO data directly in your spreadsheets!</strong></p>
+<p><i class="fa-solid fa-table" aria-label="table"></i> <strong>Create tables</strong> — Generate organized data from descriptions</p>
+<p><i class="fa-solid fa-calculator" aria-label="calculator"></i> <strong>Create formulas</strong> — Ask for formulas in plain English</p>
+<p><i class="fa-solid fa-chart-bar" aria-label="chart-bar"></i> <strong>Build charts</strong> — Generate visualizations from your data</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Get insights</strong> — Ask questions about patterns in your data</p>
+<p><i class="fa-solid fa-filter" aria-label="filter"></i> <strong>Perform actions</strong> — Sort, filter, format, pivot tables</p>
+<div class="fragment">
+<p><strong>How to access:</strong> Click <strong>“Ask Gemini”</strong> button in the top right of any Google Sheet.</p>
+</div>
+</section>
+<section id="gemini-in-sheets-sfbbo-examples" class="slide level2 smaller">
+<h2>Gemini in Sheets: SFBBO Examples</h2>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Ask Gemini in your spreadsheet:</strong></p>
+<div class="fragment">
+<pre><code>"Create a formula to calculate the total bird count for each species"</code></pre>
+</div>
+<div class="fragment">
+<pre><code>"Build a bar chart comparing bird counts across our monitoring sites"</code></pre>
+</div>
+<div class="fragment">
+<pre><code>"Summarize the key trends in this survey data"</code></pre>
+</div>
+<div class="fragment">
+<pre><code>"Add conditional formatting to highlight counts over 1000 in red"</code></pre>
+</div>
+<div class="fragment">
+<pre><code>"Create a pivot table showing species counts by month and location"</code></pre>
+</div>
+</section>
+<section id="gemini-in-google-docs" class="slide level2 smaller">
+<h2>Gemini in Google Docs</h2>
+<p><strong>Write, edit, and research without leaving your document!</strong></p>
+<p><i class="fa-solid fa-pen" aria-label="pen"></i> <strong>Write content</strong> — Draft text from descriptions</p>
+<p><i class="fa-solid fa-sync" aria-label="sync"></i> <strong>Rewrite &amp; refine</strong> — Improve clarity, tone, length</p>
+<p><i class="fa-solid fa-compress" aria-label="compress"></i> <strong>Summarize</strong> — Condense long documents</p>
+<p><i class="fa-solid fa-image" aria-label="image"></i> <strong>Generate images</strong> — Create visuals for your document</p>
+<p><i class="fa-solid fa-file" aria-label="file"></i> <strong>Reference files</strong> — Pull info from Drive files and Gmail</p>
+<div class="fragment">
+<p><strong>How to access:</strong> Click <strong>“Ask Gemini”</strong> button in the top right of any Google Doc.</p>
+</div>
+</section>
+<section id="gemini-in-docs-sfbbo-examples" class="slide level2 smaller">
+<h2>Gemini in Docs: SFBBO Examples</h2>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Use cases for SFBBO staff:</strong></p>
+<div class="fragment">
+<p><i class="fa-solid fa-file-alt" aria-label="file-alt"></i> <strong>Grant narratives:</strong></p>
+<pre><code>"Write a 200-word project description for our shorebird monitoring program"</code></pre>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-users" aria-label="users"></i> <strong>Volunteer communications:</strong></p>
+<pre><code>"Draft an email inviting volunteers to our winter waterbird census"</code></pre>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-clipboard" aria-label="clipboard"></i> <strong>Meeting notes:</strong></p>
+<pre><code>"Summarize the key action items from this meeting document"</code></pre>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-book" aria-label="book"></i> <strong>Educational content:</strong></p>
+<pre><code>"Rewrite this scientific text at a 6th-grade reading level for our 
+youth education program"</code></pre>
+</div>
+</section>
+<section id="gemini-in-google-slides" class="slide level2 smaller">
+<h2>Gemini in Google Slides</h2>
+<p><strong>Create presentations faster with AI assistance!</strong></p>
+<p><i class="fa-solid fa-image" aria-label="image"></i> <strong>Generate images</strong> — Create custom visuals for slides</p>
+<p><i class="fa-solid fa-magic" aria-label="magic"></i> <strong>Improve content</strong> — Get suggestions for better slides</p>
+<p><i class="fa-solid fa-palette" aria-label="palette"></i> <strong>Design help</strong> — Format and style recommendations</p>
+<p><i class="fa-solid fa-compress-alt" aria-label="compress-alt"></i> <strong>Summarize</strong> — Create slides from documents</p>
+<div class="fragment">
+<p><strong>SFBBO example:</strong></p>
+<pre><code>"Generate an image of shorebirds at a mudflat for my 
+conservation presentation"</code></pre>
+<pre><code>"Create speaker notes for this slide about migration patterns"</code></pre>
+</div>
+</section>
+<section id="gemini-in-gmail" class="slide level2 smaller">
+<h2>Gemini in Gmail</h2>
+<p><strong>Draft, summarize, and respond to emails efficiently!</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Composing:</strong></p>
+<p><i class="fa-solid fa-pen" aria-label="pen"></i> Draft new emails from prompts</p>
+<p><i class="fa-solid fa-redo" aria-label="redo"></i> Rewrite for tone (formal, casual)</p>
+<p><i class="fa-solid fa-expand" aria-label="expand"></i> Elaborate on short notes</p>
+<p><i class="fa-solid fa-compress" aria-label="compress"></i> Shorten long emails</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Reading:</strong></p>
+<p><i class="fa-solid fa-compress-alt" aria-label="compress-alt"></i> Summarize long email threads</p>
+<p><i class="fa-solid fa-list" aria-label="list"></i> Extract action items</p>
+<p><i class="fa-solid fa-reply" aria-label="reply"></i> Suggest responses</p>
+<p><i class="fa-solid fa-language" aria-label="language"></i> Translate messages</p>
+</div></div>
+<div class="fragment">
+<p><strong>SFBBO example:</strong></p>
+<pre><code>"Draft a thank you email to our winter census volunteers, 
+highlighting that we counted over 15,000 birds this year"</code></pre>
+</div>
+</section>
+<section id="gemini-in-google-drive" class="slide level2 smaller">
+<h2>Gemini in Google Drive</h2>
+<p><strong>Search and summarize across all your files!</strong></p>
+<p><i class="fa-solid fa-search" aria-label="search"></i> <strong>Smart search</strong> — Find files by describing content</p>
+<p><i class="fa-solid fa-compress-alt" aria-label="compress-alt"></i> <strong>Summarize files</strong> — Get quick overviews of documents</p>
+<p><i class="fa-solid fa-question-circle" aria-label="question-circle"></i> <strong>Ask questions</strong> — Query information across multiple files</p>
+<p><i class="fa-solid fa-file-alt" aria-label="file-alt"></i> <strong>Compare documents</strong> — Find differences between versions</p>
+<div class="fragment">
+<p><strong>SFBBO example:</strong></p>
+<pre><code>"Summarize our shorebird reports from the last 3 years"</code></pre>
+<pre><code>"Find all documents mentioning Ridgway's Rail population trends"</code></pre>
+</div>
+</section>
+<section id="google-meet-with-gemini" class="slide level2 smaller">
+<h2>Google Meet with Gemini</h2>
+<p><strong>Get more from your meetings!</strong></p>
+<p><i class="fa-solid fa-closed-captioning" aria-label="closed-captioning"></i> <strong>Live captions</strong> — Real-time transcription</p>
+<p><i class="fa-solid fa-file-alt" aria-label="file-alt"></i> <strong>Meeting notes</strong> — Automatic summaries after meetings</p>
+<p><i class="fa-solid fa-tasks" aria-label="tasks"></i> <strong>Action items</strong> — Extract to-dos from discussions</p>
+<p><i class="fa-solid fa-language" aria-label="language"></i> <strong>Translation</strong> — Real-time translated captions</p>
+<div class="fragment">
+<p><strong>Perfect for:</strong></p>
+<ul>
+<li class="fragment">SFBBO board meetings → automatic minutes</li>
+<li class="fragment">Partner calls → action item tracking<br>
+</li>
+<li class="fragment">Training sessions → transcripts for reference</li>
+<li class="fragment">Remote volunteer coordination → everyone stays informed</li>
+</ul>
+</div>
+</section>
+<section id="google-ai-tools-summary" class="slide level2 smaller">
+<h2>Google AI Tools Summary</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 31%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Best For</th>
+<th>SFBBO Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Gemini Chat</strong></td>
+<td>Data analysis, coding help</td>
+<td>Analyze survey datasets</td>
+</tr>
+<tr class="even">
+<td><strong>NotebookLM</strong></td>
+<td>Research, audio summaries</td>
+<td>Digest scientific papers</td>
+</tr>
+<tr class="odd">
+<td><strong>Sheets + Gemini</strong></td>
+<td>Spreadsheet analysis</td>
+<td>Survey data formulas &amp; charts</td>
+</tr>
+<tr class="even">
+<td><strong>Docs + Gemini</strong></td>
+<td>Writing &amp; editing</td>
+<td>Grant proposals, reports</td>
+</tr>
+<tr class="odd">
+<td><strong>Slides + Gemini</strong></td>
+<td>Presentations</td>
+<td>Board presentations</td>
+</tr>
+<tr class="even">
+<td><strong>Gmail + Gemini</strong></td>
+<td>Email drafting</td>
+<td>Donor &amp; volunteer communications</td>
+</tr>
+<tr class="odd">
+<td><strong>Drive + Gemini</strong></td>
+<td>File search &amp; summary</td>
+<td>Find past reports</td>
+</tr>
+<tr class="even">
+<td><strong>Meet + Gemini</strong></td>
+<td>Meeting notes</td>
+<td>Automatic meeting minutes</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="real-world-scenario-would-you-catch-this" class="slide level2 center">
 <h2>Real-World Scenario: Would You Catch This?</h2>
@@ -992,7 +1751,7 @@ Karan Gathani
 </div>
 </div>
 </section>
-<section id="safe-and-reliable-use" class="slide level2 smaller center">
+<section id="safe-and-reliable-use" class="slide level2 smaller">
 <h2>Safe and Reliable Use</h2>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -1014,7 +1773,7 @@ Karan Gathani
 <p><i class="fa-solid fa-check" aria-label="check"></i> Use small, testable analytical steps</p>
 </div>
 </section>
-<section id="handling-hallucinations" class="slide level2 smaller center">
+<section id="handling-hallucinations" class="slide level2 smaller">
 <h2>Handling Hallucinations</h2>
 <p>AI can make mistakes with bird data. Mitigation strategies:</p>
 <p><i class="fa-solid fa-clipboard-list" aria-label="clipboard-list"></i> <strong>Provide data explicitly</strong> — don’t assume it knows SFBBO protocols</p>
@@ -1022,47 +1781,47 @@ Karan Gathani
 <p><i class="fa-solid fa-calculator" aria-label="calculator"></i> <strong>Request calculations</strong> — have it show the math</p>
 <p><i class="fa-solid fa-code" aria-label="code"></i> <strong>Validate with code</strong> — quick sanity checks</p>
 </section>
-<section id="exercise-6-uncertainty-prompt" class="slide level2 smaller center">
+<section id="exercise-6-uncertainty-prompt" class="slide level2 smaller">
 <h2>Exercise 6: Uncertainty Prompt</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Turn:</strong></p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a></a>Analyze this SFBBO bird count data. For each conclusion:</span>
-<span id="cb14-2"><a></a><span class="ss">- </span>State your confidence level (high/medium/low)</span>
-<span id="cb14-3"><a></a><span class="ss">- </span>Explain what evidence supports it</span>
-<span id="cb14-4"><a></a><span class="ss">- </span>Note what could disprove it</span>
-<span id="cb14-5"><a></a><span class="ss">- </span>Identify what additional SFBBO data would help confirm the finding</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb47-1"><a></a>Analyze this SFBBO bird count data. For each conclusion:</span>
+<span id="cb47-2"><a></a><span class="ss">- </span>State your confidence level (high/medium/low)</span>
+<span id="cb47-3"><a></a><span class="ss">- </span>Explain what evidence supports it</span>
+<span id="cb47-4"><a></a><span class="ss">- </span>Note what could disprove it</span>
+<span id="cb47-5"><a></a><span class="ss">- </span>Identify what additional SFBBO data would help confirm the finding</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-6-dataset" class="slide level2 smaller center">
+<section id="exercise-6-dataset" class="slide level2 smaller">
 <h2>Exercise 6: Dataset</h2>
 <p><strong>SFBBO Monthly Comparison Data</strong></p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>month,year,site,species,count,previous_year_count,percent_change</span>
-<span id="cb15-2"><a></a>1,2025,Palo Alto Baylands,Dunlin,2340,2890,-19.0</span>
-<span id="cb15-3"><a></a>1,2025,Palo Alto Baylands,Western Sandpiper,1890,1567,20.6</span>
-<span id="cb15-4"><a></a>1,2025,Don Edwards NWR,American Avocet,445,512,-13.1</span>
-<span id="cb15-5"><a></a>1,2025,Don Edwards NWR,Black-necked Stilt,312,289,8.0</span>
-<span id="cb15-6"><a></a>1,2025,Coyote Hills,Northern Shoveler,567,623,-9.0</span>
-<span id="cb15-7"><a></a>1,2025,Coyote Hills,Bufflehead,178,145,22.8</span>
-<span id="cb15-8"><a></a>1,2025,Alviso Marina,Great Egret,23,34,-32.4</span>
-<span id="cb15-9"><a></a>1,2025,Alviso Marina,Snowy Egret,45,67,-32.8</span>
-<span id="cb15-10"><a></a>1,2025,Shoreline Lake,Canada Goose,345,298,15.8</span>
-<span id="cb15-11"><a></a>1,2025,Eden Landing,Dunlin,1234,1456,-15.3</span>
-<span id="cb15-12"><a></a>1,2025,Eden Landing,American Avocet,567,534,6.2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb48-1"><a></a>month,year,site,species,count,previous_year_count,percent_change</span>
+<span id="cb48-2"><a></a>1,2025,Palo Alto Baylands,Dunlin,2340,2890,-19.0</span>
+<span id="cb48-3"><a></a>1,2025,Palo Alto Baylands,Western Sandpiper,1890,1567,20.6</span>
+<span id="cb48-4"><a></a>1,2025,Don Edwards NWR,American Avocet,445,512,-13.1</span>
+<span id="cb48-5"><a></a>1,2025,Don Edwards NWR,Black-necked Stilt,312,289,8.0</span>
+<span id="cb48-6"><a></a>1,2025,Coyote Hills,Northern Shoveler,567,623,-9.0</span>
+<span id="cb48-7"><a></a>1,2025,Coyote Hills,Bufflehead,178,145,22.8</span>
+<span id="cb48-8"><a></a>1,2025,Alviso Marina,Great Egret,23,34,-32.4</span>
+<span id="cb48-9"><a></a>1,2025,Alviso Marina,Snowy Egret,45,67,-32.8</span>
+<span id="cb48-10"><a></a>1,2025,Shoreline Lake,Canada Goose,345,298,15.8</span>
+<span id="cb48-11"><a></a>1,2025,Eden Landing,Dunlin,1234,1456,-15.3</span>
+<span id="cb48-12"><a></a>1,2025,Eden Landing,American Avocet,567,534,6.2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-7-structured-checklist" class="slide level2 smaller center">
+<section id="exercise-7-structured-checklist" class="slide level2 smaller">
 <h2>Exercise 7: Structured Checklist</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Turn:</strong> Convert a narrative prompt into a structured checklist prompt.</p>
 <div class="fragment">
 <p><strong>Before (vague):</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a></a>Analyze the Ridgway's Rail population data.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb49-1"><a></a>Analyze the Ridgway's Rail population data.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><strong>After (structured):</strong></p>
@@ -1070,44 +1829,44 @@ Karan Gathani
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a></a>Analyze Ridgway's Rail (Rallus obsoletus) survey data from SFBBO's </span>
-<span id="cb17-2"><a></a>long-term monitoring program.</span>
-<span id="cb17-3"><a></a></span>
-<span id="cb17-4"><a></a>Complete this checklist:</span>
-<span id="cb17-5"><a></a>□ 1) Define the population metric (individuals, breeding pairs, or call responses)</span>
-<span id="cb17-6"><a></a>□ 2) Calculate year-over-year population change (%) for each marsh</span>
-<span id="cb17-7"><a></a>□ 3) Segment by region (North Bay vs. South Bay)</span>
-<span id="cb17-8"><a></a>□ 4) Identify peak detection months</span>
-<span id="cb17-9"><a></a>□ 5) Flag any surveys with zero detections (potential concern)</span>
-<span id="cb17-10"><a></a>□ 6) Note correlation with tide levels during surveys</span>
-<span id="cb17-11"><a></a>□ 7) Compare with historical SFBBO baselines if patterns emerge</span>
-<span id="cb17-12"><a></a></span>
-<span id="cb17-13"><a></a>Output format: Numbered findings with supporting statistics.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb50-1"><a></a>Analyze Ridgway's Rail (Rallus obsoletus) survey data from SFBBO's </span>
+<span id="cb50-2"><a></a>long-term monitoring program.</span>
+<span id="cb50-3"><a></a></span>
+<span id="cb50-4"><a></a>Complete this checklist:</span>
+<span id="cb50-5"><a></a>□ 1) Define the population metric (individuals, breeding pairs, or call responses)</span>
+<span id="cb50-6"><a></a>□ 2) Calculate year-over-year population change (%) for each marsh</span>
+<span id="cb50-7"><a></a>□ 3) Segment by region (North Bay vs. South Bay)</span>
+<span id="cb50-8"><a></a>□ 4) Identify peak detection months</span>
+<span id="cb50-9"><a></a>□ 5) Flag any surveys with zero detections (potential concern)</span>
+<span id="cb50-10"><a></a>□ 6) Note correlation with tide levels during surveys</span>
+<span id="cb50-11"><a></a>□ 7) Compare with historical SFBBO baselines if patterns emerge</span>
+<span id="cb50-12"><a></a></span>
+<span id="cb50-13"><a></a>Output format: Numbered findings with supporting statistics.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
-<section id="exercise-7-ridgways-rail-dataset" class="slide level2 smaller center">
+<section id="exercise-7-ridgways-rail-dataset" class="slide level2 smaller">
 <h2>Exercise 7: Ridgway’s Rail Dataset</h2>
 <p><strong>SFBBO Ridgway’s Rail Monitoring Program 2024</strong></p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>survey_date,marsh_name,region,rails_detected,call_playback,tide_level,duration_min,observer,temp_f,start_time</span>
-<span id="cb18-2"><a></a>2024-03-15,Arrowhead Marsh,North Bay,4,yes,low,45,Rivera,58,06:30</span>
-<span id="cb18-3"><a></a>2024-03-15,Martin Luther King Jr. Shoreline,North Bay,2,yes,low,45,Rivera,58,07:30</span>
-<span id="cb18-4"><a></a>2024-03-22,Palo Alto Baylands,South Bay,7,yes,mid,60,Thompson,62,06:15</span>
-<span id="cb18-5"><a></a>2024-03-22,Don Edwards - Alviso,South Bay,5,yes,mid,60,Thompson,62,07:30</span>
-<span id="cb18-6"><a></a>2024-04-05,Arrowhead Marsh,North Bay,6,yes,low,45,Chen,65,06:00</span>
-<span id="cb18-7"><a></a>2024-04-05,Hayward Regional Shoreline,North Bay,3,yes,low,45,Chen,65,07:00</span>
-<span id="cb18-8"><a></a>2024-04-12,Palo Alto Baylands,South Bay,9,yes,low,60,Rivera,68,05:45</span>
-<span id="cb18-9"><a></a>2024-04-12,Don Edwards - Alviso,South Bay,4,yes,low,60,Rivera,68,07:00</span>
-<span id="cb18-10"><a></a>2024-04-19,Arrowhead Marsh,North Bay,5,no,high,30,Thompson,64,06:30</span>
-<span id="cb18-11"><a></a>2024-04-26,Martin Luther King Jr. Shoreline,North Bay,0,yes,high,45,Chen,61,07:00</span>
-<span id="cb18-12"><a></a>2024-05-03,Palo Alto Baylands,South Bay,8,yes,mid,60,Thompson,70,05:30</span>
-<span id="cb18-13"><a></a>2024-05-10,Don Edwards - Alviso,South Bay,6,yes,low,60,Rivera,72,05:45</span>
-<span id="cb18-14"><a></a>2024-05-17,Greco Island,South Bay,11,yes,low,60,Chen,69,05:30</span>
-<span id="cb18-15"><a></a>2024-05-24,Dumbarton Marsh,South Bay,3,yes,mid,45,Thompson,67,06:00</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb51-1"><a></a>survey_date,marsh_name,region,rails_detected,call_playback,tide_level,duration_min,observer,temp_f,start_time</span>
+<span id="cb51-2"><a></a>2024-03-15,Arrowhead Marsh,North Bay,4,yes,low,45,Rivera,58,06:30</span>
+<span id="cb51-3"><a></a>2024-03-15,Martin Luther King Jr. Shoreline,North Bay,2,yes,low,45,Rivera,58,07:30</span>
+<span id="cb51-4"><a></a>2024-03-22,Palo Alto Baylands,South Bay,7,yes,mid,60,Thompson,62,06:15</span>
+<span id="cb51-5"><a></a>2024-03-22,Don Edwards - Alviso,South Bay,5,yes,mid,60,Thompson,62,07:30</span>
+<span id="cb51-6"><a></a>2024-04-05,Arrowhead Marsh,North Bay,6,yes,low,45,Chen,65,06:00</span>
+<span id="cb51-7"><a></a>2024-04-05,Hayward Regional Shoreline,North Bay,3,yes,low,45,Chen,65,07:00</span>
+<span id="cb51-8"><a></a>2024-04-12,Palo Alto Baylands,South Bay,9,yes,low,60,Rivera,68,05:45</span>
+<span id="cb51-9"><a></a>2024-04-12,Don Edwards - Alviso,South Bay,4,yes,low,60,Rivera,68,07:00</span>
+<span id="cb51-10"><a></a>2024-04-19,Arrowhead Marsh,North Bay,5,no,high,30,Thompson,64,06:30</span>
+<span id="cb51-11"><a></a>2024-04-26,Martin Luther King Jr. Shoreline,North Bay,0,yes,high,45,Chen,61,07:00</span>
+<span id="cb51-12"><a></a>2024-05-03,Palo Alto Baylands,South Bay,8,yes,mid,60,Thompson,70,05:30</span>
+<span id="cb51-13"><a></a>2024-05-10,Don Edwards - Alviso,South Bay,6,yes,low,60,Rivera,72,05:45</span>
+<span id="cb51-14"><a></a>2024-05-17,Greco Island,South Bay,11,yes,low,60,Chen,69,05:30</span>
+<span id="cb51-15"><a></a>2024-05-24,Dumbarton Marsh,South Bay,3,yes,mid,45,Thompson,67,06:00</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d75672d686f74203e7d7d--debrief-most-useful-so-far" class="slide level2 center">
@@ -1122,7 +1881,7 @@ Karan Gathani
   </div>
 </div>
 </section>
-<section id="hour-4-capstone-project" class="slide level2 smaller center">
+<section id="hour-4-capstone-project" class="slide level2 smaller">
 <h2>Hour 4 — Capstone Project</h2>
 <p>Choose one project relevant to SFBBO’s mission:</p>
 <div class="fragment">
@@ -1145,192 +1904,192 @@ Karan Gathani
 <p><i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> Next‑step recommendations for SFBBO</p>
 </div>
 </section>
-<section id="exercise-8-waterfowl-trends" class="slide level2 smaller center">
+<section id="exercise-8-waterfowl-trends" class="slide level2 smaller">
 <h2>Exercise 8: Waterfowl Trends</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Capstone Choice (Option 1):</strong> SFBBO Waterfowl Census 2021-2025</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a></a>year,month,site,species,count,habitat_type,water_level_ft,human_disturbance,notes</span>
-<span id="cb19-2"><a></a>2021,1,Shoreline Lake,Northern Shoveler,856,freshwater,8.2,low,normal_conditions</span>
-<span id="cb19-3"><a></a>2021,1,Shoreline Lake,Bufflehead,234,freshwater,8.2,low,normal_conditions</span>
-<span id="cb19-4"><a></a>2021,1,Don Edwards NWR,Northern Pintail,1243,salt_pond,na,low,pond_A3</span>
-<span id="cb19-5"><a></a>2022,1,Shoreline Lake,Northern Shoveler,923,freshwater,7.8,medium,trail_construction</span>
-<span id="cb19-6"><a></a>2022,1,Shoreline Lake,Bufflehead,198,freshwater,7.8,medium,trail_construction</span>
-<span id="cb19-7"><a></a>2022,1,Don Edwards NWR,Northern Pintail,987,salt_pond,na,low,pond_A3</span>
-<span id="cb19-8"><a></a>2023,1,Shoreline Lake,Northern Shoveler,1102,freshwater,9.1,low,high_water_year</span>
-<span id="cb19-9"><a></a>2023,1,Shoreline Lake,Bufflehead,267,freshwater,9.1,low,high_water_year</span>
-<span id="cb19-10"><a></a>2023,1,Don Edwards NWR,Northern Pintail,1098,salt_pond,na,medium,levee_work_nearby</span>
-<span id="cb19-11"><a></a>2024,1,Shoreline Lake,Northern Shoveler,745,freshwater,6.5,high,drought_conditions</span>
-<span id="cb19-12"><a></a>2024,1,Shoreline Lake,Bufflehead,156,freshwater,6.5,high,drought_conditions</span>
-<span id="cb19-13"><a></a>2024,1,Don Edwards NWR,Northern Pintail,1321,salt_pond,na,low,pond_A3</span>
-<span id="cb19-14"><a></a>2025,1,Shoreline Lake,Northern Shoveler,834,freshwater,8.0,medium,normal_conditions</span>
-<span id="cb19-15"><a></a>2025,1,Shoreline Lake,Bufflehead,201,freshwater,8.0,medium,normal_conditions</span>
-<span id="cb19-16"><a></a>2025,1,Don Edwards NWR,Northern Pintail,1156,salt_pond,na,low,pond_A3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb52-1"><a></a>year,month,site,species,count,habitat_type,water_level_ft,human_disturbance,notes</span>
+<span id="cb52-2"><a></a>2021,1,Shoreline Lake,Northern Shoveler,856,freshwater,8.2,low,normal_conditions</span>
+<span id="cb52-3"><a></a>2021,1,Shoreline Lake,Bufflehead,234,freshwater,8.2,low,normal_conditions</span>
+<span id="cb52-4"><a></a>2021,1,Don Edwards NWR,Northern Pintail,1243,salt_pond,na,low,pond_A3</span>
+<span id="cb52-5"><a></a>2022,1,Shoreline Lake,Northern Shoveler,923,freshwater,7.8,medium,trail_construction</span>
+<span id="cb52-6"><a></a>2022,1,Shoreline Lake,Bufflehead,198,freshwater,7.8,medium,trail_construction</span>
+<span id="cb52-7"><a></a>2022,1,Don Edwards NWR,Northern Pintail,987,salt_pond,na,low,pond_A3</span>
+<span id="cb52-8"><a></a>2023,1,Shoreline Lake,Northern Shoveler,1102,freshwater,9.1,low,high_water_year</span>
+<span id="cb52-9"><a></a>2023,1,Shoreline Lake,Bufflehead,267,freshwater,9.1,low,high_water_year</span>
+<span id="cb52-10"><a></a>2023,1,Don Edwards NWR,Northern Pintail,1098,salt_pond,na,medium,levee_work_nearby</span>
+<span id="cb52-11"><a></a>2024,1,Shoreline Lake,Northern Shoveler,745,freshwater,6.5,high,drought_conditions</span>
+<span id="cb52-12"><a></a>2024,1,Shoreline Lake,Bufflehead,156,freshwater,6.5,high,drought_conditions</span>
+<span id="cb52-13"><a></a>2024,1,Don Edwards NWR,Northern Pintail,1321,salt_pond,na,low,pond_A3</span>
+<span id="cb52-14"><a></a>2025,1,Shoreline Lake,Northern Shoveler,834,freshwater,8.0,medium,normal_conditions</span>
+<span id="cb52-15"><a></a>2025,1,Shoreline Lake,Bufflehead,201,freshwater,8.0,medium,normal_conditions</span>
+<span id="cb52-16"><a></a>2025,1,Don Edwards NWR,Northern Pintail,1156,salt_pond,na,low,pond_A3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-8-capstone-prompt" class="slide level2 smaller center">
+<section id="exercise-8-capstone-prompt" class="slide level2 smaller">
 <h2>Exercise 8: Capstone Prompt</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a></a>You are a wildlife data analyst at SFBBO (San Francisco Bay Bird Observatory).</span>
-<span id="cb20-2"><a></a></span>
-<span id="cb20-3"><a></a>PROJECT: Waterfowl Population Trends Analysis</span>
-<span id="cb20-4"><a></a></span>
-<span id="cb20-5"><a></a>CONTEXT:</span>
-<span id="cb20-6"><a></a><span class="ss">- </span>Data source: SFBBO annual January waterfowl census</span>
-<span id="cb20-7"><a></a><span class="ss">- </span>Time period: 2021-2025</span>
-<span id="cb20-8"><a></a><span class="ss">- </span>Goal: Inform wetland management and conservation decisions</span>
-<span id="cb20-9"><a></a></span>
-<span id="cb20-10"><a></a>ANALYSIS REQUIRED:</span>
-<span id="cb20-11"><a></a></span>
-<span id="cb20-12"><a></a><span class="ss">1. </span>**Trend Analysis**</span>
-<span id="cb20-13"><a></a><span class="ss">   - </span>Calculate year-over-year changes for each species</span>
-<span id="cb20-14"><a></a><span class="ss">   - </span>Identify any concerning declines (&gt;20%) or notable increases</span>
-<span id="cb20-15"><a></a><span class="ss">   - </span>Note the 5-year trend direction for each species</span>
-<span id="cb20-16"><a></a></span>
-<span id="cb20-17"><a></a><span class="ss">2. </span>**Habitat Comparison**</span>
-<span id="cb20-18"><a></a><span class="ss">   - </span>Compare waterfowl use between freshwater and salt pond habitats</span>
-<span id="cb20-19"><a></a><span class="ss">   - </span>Identify which species show habitat preferences</span>
-<span id="cb20-20"><a></a></span>
-<span id="cb20-21"><a></a><span class="ss">3. </span>**Disturbance Assessment**</span>
-<span id="cb20-22"><a></a><span class="ss">   - </span>Correlate counts with human disturbance levels</span>
-<span id="cb20-23"><a></a><span class="ss">   - </span>Assess impact of water level changes</span>
-<span id="cb20-24"><a></a><span class="ss">   - </span>Recommend management interventions</span>
-<span id="cb20-25"><a></a></span>
-<span id="cb20-26"><a></a><span class="ss">4. </span>**Conservation Recommendations**</span>
-<span id="cb20-27"><a></a><span class="ss">   - </span>Prioritize species/sites for enhanced monitoring</span>
-<span id="cb20-28"><a></a><span class="ss">   - </span>Suggest habitat improvements</span>
-<span id="cb20-29"><a></a><span class="ss">   - </span>Identify data gaps for SFBBO to address</span>
-<span id="cb20-30"><a></a></span>
-<span id="cb20-31"><a></a>OUTPUT: Executive summary (1 page) + detailed findings with statistics.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb53-1"><a></a>You are a wildlife data analyst at SFBBO (San Francisco Bay Bird Observatory).</span>
+<span id="cb53-2"><a></a></span>
+<span id="cb53-3"><a></a>PROJECT: Waterfowl Population Trends Analysis</span>
+<span id="cb53-4"><a></a></span>
+<span id="cb53-5"><a></a>CONTEXT:</span>
+<span id="cb53-6"><a></a><span class="ss">- </span>Data source: SFBBO annual January waterfowl census</span>
+<span id="cb53-7"><a></a><span class="ss">- </span>Time period: 2021-2025</span>
+<span id="cb53-8"><a></a><span class="ss">- </span>Goal: Inform wetland management and conservation decisions</span>
+<span id="cb53-9"><a></a></span>
+<span id="cb53-10"><a></a>ANALYSIS REQUIRED:</span>
+<span id="cb53-11"><a></a></span>
+<span id="cb53-12"><a></a><span class="ss">1. </span>**Trend Analysis**</span>
+<span id="cb53-13"><a></a><span class="ss">   - </span>Calculate year-over-year changes for each species</span>
+<span id="cb53-14"><a></a><span class="ss">   - </span>Identify any concerning declines (&gt;20%) or notable increases</span>
+<span id="cb53-15"><a></a><span class="ss">   - </span>Note the 5-year trend direction for each species</span>
+<span id="cb53-16"><a></a></span>
+<span id="cb53-17"><a></a><span class="ss">2. </span>**Habitat Comparison**</span>
+<span id="cb53-18"><a></a><span class="ss">   - </span>Compare waterfowl use between freshwater and salt pond habitats</span>
+<span id="cb53-19"><a></a><span class="ss">   - </span>Identify which species show habitat preferences</span>
+<span id="cb53-20"><a></a></span>
+<span id="cb53-21"><a></a><span class="ss">3. </span>**Disturbance Assessment**</span>
+<span id="cb53-22"><a></a><span class="ss">   - </span>Correlate counts with human disturbance levels</span>
+<span id="cb53-23"><a></a><span class="ss">   - </span>Assess impact of water level changes</span>
+<span id="cb53-24"><a></a><span class="ss">   - </span>Recommend management interventions</span>
+<span id="cb53-25"><a></a></span>
+<span id="cb53-26"><a></a><span class="ss">4. </span>**Conservation Recommendations**</span>
+<span id="cb53-27"><a></a><span class="ss">   - </span>Prioritize species/sites for enhanced monitoring</span>
+<span id="cb53-28"><a></a><span class="ss">   - </span>Suggest habitat improvements</span>
+<span id="cb53-29"><a></a><span class="ss">   - </span>Identify data gaps for SFBBO to address</span>
+<span id="cb53-30"><a></a></span>
+<span id="cb53-31"><a></a>OUTPUT: Executive summary (1 page) + detailed findings with statistics.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-9-raptor-migration" class="slide level2 smaller center">
+<section id="exercise-9-raptor-migration" class="slide level2 smaller">
 <h2>Exercise 9: Raptor Migration</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Capstone Choice (Option 2):</strong> SFBBO Hawk Watch Data — Fall 2024</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb21-1"><a></a>date,site,species,count,flight_direction,time_period,wind_dir,wind_mph,visibility_mi,cloud_cover,observer</span>
-<span id="cb21-2"><a></a>2024-09-15,Hawk Hill,Red-tailed Hawk,23,south,morning,NW,12,10,clear,Martinez</span>
-<span id="cb21-3"><a></a>2024-09-15,Hawk Hill,Turkey Vulture,156,south,morning,NW,12,10,clear,Martinez</span>
-<span id="cb21-4"><a></a>2024-09-15,Hawk Hill,Sharp-shinned Hawk,8,south,midday,NW,15,10,partly,Martinez</span>
-<span id="cb21-5"><a></a>2024-09-15,Hawk Hill,Cooper's Hawk,3,south,midday,NW,15,10,partly,Martinez</span>
-<span id="cb21-6"><a></a>2024-09-22,Hawk Hill,Red-tailed Hawk,45,south,morning,N,8,15,clear,Chen</span>
-<span id="cb21-7"><a></a>2024-09-22,Hawk Hill,Turkey Vulture,234,south,morning,N,8,15,clear,Chen</span>
-<span id="cb21-8"><a></a>2024-09-22,Hawk Hill,Broad-winged Hawk,12,south,midday,N,10,15,clear,Chen</span>
-<span id="cb21-9"><a></a>2024-09-29,Hawk Hill,Red-tailed Hawk,67,south,morning,NW,18,8,overcast,Martinez</span>
-<span id="cb21-10"><a></a>2024-09-29,Hawk Hill,Turkey Vulture,189,south,morning,NW,18,8,overcast,Martinez</span>
-<span id="cb21-11"><a></a>2024-09-29,Hawk Hill,American Kestrel,15,south,afternoon,NW,20,8,overcast,Martinez</span>
-<span id="cb21-12"><a></a>2024-10-06,Hawk Hill,Red-tailed Hawk,89,south,morning,N,10,12,partly,Thompson</span>
-<span id="cb21-13"><a></a>2024-10-06,Hawk Hill,Turkey Vulture,312,south,morning,N,10,12,partly,Thompson</span>
-<span id="cb21-14"><a></a>2024-10-06,Hawk Hill,Sharp-shinned Hawk,23,south,midday,N,12,12,clear,Thompson</span>
-<span id="cb21-15"><a></a>2024-10-13,Hawk Hill,Red-tailed Hawk,34,south,morning,W,5,15,clear,Chen</span>
-<span id="cb21-16"><a></a>2024-10-13,Hawk Hill,Northern Harrier,7,south,afternoon,W,8,15,clear,Chen</span>
-<span id="cb21-17"><a></a>2024-10-20,Hawk Hill,Red-tailed Hawk,78,south,morning,NW,14,10,partly,Martinez</span>
-<span id="cb21-18"><a></a>2024-10-20,Hawk Hill,Golden Eagle,2,south,midday,NW,16,10,partly,Martinez</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb54-1"><a></a>date,site,species,count,flight_direction,time_period,wind_dir,wind_mph,visibility_mi,cloud_cover,observer</span>
+<span id="cb54-2"><a></a>2024-09-15,Hawk Hill,Red-tailed Hawk,23,south,morning,NW,12,10,clear,Martinez</span>
+<span id="cb54-3"><a></a>2024-09-15,Hawk Hill,Turkey Vulture,156,south,morning,NW,12,10,clear,Martinez</span>
+<span id="cb54-4"><a></a>2024-09-15,Hawk Hill,Sharp-shinned Hawk,8,south,midday,NW,15,10,partly,Martinez</span>
+<span id="cb54-5"><a></a>2024-09-15,Hawk Hill,Cooper's Hawk,3,south,midday,NW,15,10,partly,Martinez</span>
+<span id="cb54-6"><a></a>2024-09-22,Hawk Hill,Red-tailed Hawk,45,south,morning,N,8,15,clear,Chen</span>
+<span id="cb54-7"><a></a>2024-09-22,Hawk Hill,Turkey Vulture,234,south,morning,N,8,15,clear,Chen</span>
+<span id="cb54-8"><a></a>2024-09-22,Hawk Hill,Broad-winged Hawk,12,south,midday,N,10,15,clear,Chen</span>
+<span id="cb54-9"><a></a>2024-09-29,Hawk Hill,Red-tailed Hawk,67,south,morning,NW,18,8,overcast,Martinez</span>
+<span id="cb54-10"><a></a>2024-09-29,Hawk Hill,Turkey Vulture,189,south,morning,NW,18,8,overcast,Martinez</span>
+<span id="cb54-11"><a></a>2024-09-29,Hawk Hill,American Kestrel,15,south,afternoon,NW,20,8,overcast,Martinez</span>
+<span id="cb54-12"><a></a>2024-10-06,Hawk Hill,Red-tailed Hawk,89,south,morning,N,10,12,partly,Thompson</span>
+<span id="cb54-13"><a></a>2024-10-06,Hawk Hill,Turkey Vulture,312,south,morning,N,10,12,partly,Thompson</span>
+<span id="cb54-14"><a></a>2024-10-06,Hawk Hill,Sharp-shinned Hawk,23,south,midday,N,12,12,clear,Thompson</span>
+<span id="cb54-15"><a></a>2024-10-13,Hawk Hill,Red-tailed Hawk,34,south,morning,W,5,15,clear,Chen</span>
+<span id="cb54-16"><a></a>2024-10-13,Hawk Hill,Northern Harrier,7,south,afternoon,W,8,15,clear,Chen</span>
+<span id="cb54-17"><a></a>2024-10-20,Hawk Hill,Red-tailed Hawk,78,south,morning,NW,14,10,partly,Martinez</span>
+<span id="cb54-18"><a></a>2024-10-20,Hawk Hill,Golden Eagle,2,south,midday,NW,16,10,partly,Martinez</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-9-raptor-analysis-prompt" class="slide level2 smaller center">
+<section id="exercise-9-raptor-analysis-prompt" class="slide level2 smaller">
 <h2>Exercise 9: Raptor Analysis Prompt</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a></a>You are an ornithologist at SFBBO analyzing fall raptor migration data </span>
-<span id="cb22-2"><a></a>from Hawk Hill in the Marin Headlands.</span>
-<span id="cb22-3"><a></a></span>
-<span id="cb22-4"><a></a>Using the dataset, provide:</span>
-<span id="cb22-5"><a></a></span>
-<span id="cb22-6"><a></a><span class="ss">1. </span>**Migration Summary**</span>
-<span id="cb22-7"><a></a><span class="ss">   - </span>Total count by species</span>
-<span id="cb22-8"><a></a><span class="ss">   - </span>Peak migration dates for each species</span>
-<span id="cb22-9"><a></a><span class="ss">   - </span>Species diversity and dominance patterns</span>
-<span id="cb22-10"><a></a></span>
-<span id="cb22-11"><a></a><span class="ss">2. </span>**Weather Correlations**</span>
-<span id="cb22-12"><a></a><span class="ss">   - </span>How do wind direction and speed affect flight counts?</span>
-<span id="cb22-13"><a></a><span class="ss">   - </span>Does visibility or cloud cover impact detection?</span>
-<span id="cb22-14"><a></a><span class="ss">   - </span>Identify optimal survey conditions</span>
-<span id="cb22-15"><a></a></span>
-<span id="cb22-16"><a></a><span class="ss">3. </span>**Temporal Patterns**</span>
-<span id="cb22-17"><a></a><span class="ss">   - </span>Compare morning vs. midday vs. afternoon flights</span>
-<span id="cb22-18"><a></a><span class="ss">   - </span>Weekly trends through the season</span>
-<span id="cb22-19"><a></a><span class="ss">   - </span>Any notable late-season observations?</span>
-<span id="cb22-20"><a></a></span>
-<span id="cb22-21"><a></a><span class="ss">4. </span>**Conservation Insights**</span>
-<span id="cb22-22"><a></a><span class="ss">   - </span>Which species should SFBBO prioritize for monitoring?</span>
-<span id="cb22-23"><a></a><span class="ss">   - </span>Are any species showing unusual patterns?</span>
-<span id="cb22-24"><a></a><span class="ss">   - </span>Recommendations for next year's survey effort</span>
-<span id="cb22-25"><a></a></span>
-<span id="cb22-26"><a></a>Format as a structured report suitable for SFBBO's newsletter.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb55-1"><a></a>You are an ornithologist at SFBBO analyzing fall raptor migration data </span>
+<span id="cb55-2"><a></a>from Hawk Hill in the Marin Headlands.</span>
+<span id="cb55-3"><a></a></span>
+<span id="cb55-4"><a></a>Using the dataset, provide:</span>
+<span id="cb55-5"><a></a></span>
+<span id="cb55-6"><a></a><span class="ss">1. </span>**Migration Summary**</span>
+<span id="cb55-7"><a></a><span class="ss">   - </span>Total count by species</span>
+<span id="cb55-8"><a></a><span class="ss">   - </span>Peak migration dates for each species</span>
+<span id="cb55-9"><a></a><span class="ss">   - </span>Species diversity and dominance patterns</span>
+<span id="cb55-10"><a></a></span>
+<span id="cb55-11"><a></a><span class="ss">2. </span>**Weather Correlations**</span>
+<span id="cb55-12"><a></a><span class="ss">   - </span>How do wind direction and speed affect flight counts?</span>
+<span id="cb55-13"><a></a><span class="ss">   - </span>Does visibility or cloud cover impact detection?</span>
+<span id="cb55-14"><a></a><span class="ss">   - </span>Identify optimal survey conditions</span>
+<span id="cb55-15"><a></a></span>
+<span id="cb55-16"><a></a><span class="ss">3. </span>**Temporal Patterns**</span>
+<span id="cb55-17"><a></a><span class="ss">   - </span>Compare morning vs. midday vs. afternoon flights</span>
+<span id="cb55-18"><a></a><span class="ss">   - </span>Weekly trends through the season</span>
+<span id="cb55-19"><a></a><span class="ss">   - </span>Any notable late-season observations?</span>
+<span id="cb55-20"><a></a></span>
+<span id="cb55-21"><a></a><span class="ss">4. </span>**Conservation Insights**</span>
+<span id="cb55-22"><a></a><span class="ss">   - </span>Which species should SFBBO prioritize for monitoring?</span>
+<span id="cb55-23"><a></a><span class="ss">   - </span>Are any species showing unusual patterns?</span>
+<span id="cb55-24"><a></a><span class="ss">   - </span>Recommendations for next year's survey effort</span>
+<span id="cb55-25"><a></a></span>
+<span id="cb55-26"><a></a>Format as a structured report suitable for SFBBO's newsletter.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-10-breeding-bird-survey" class="slide level2 smaller center">
+<section id="exercise-10-breeding-bird-survey" class="slide level2 smaller">
 <h2>Exercise 10: Breeding Bird Survey</h2>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Your Capstone Choice (Option 3):</strong> SFBBO Breeding Territory Mapping 2024</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb23-1"><a></a>year,territory_id,species_code,species_name,site,first_detected,last_detected,nest_confirmed,fledglings,habitat,area_ha,threats</span>
-<span id="cb23-2"><a></a>2024,T001,SOSP,Song Sparrow,Palo Alto Baylands,2024-03-15,2024-07-20,yes,3,marsh_edge,0.8,none</span>
-<span id="cb23-3"><a></a>2024,T002,SOSP,Song Sparrow,Palo Alto Baylands,2024-03-22,2024-07-15,yes,2,marsh_edge,0.6,predator</span>
-<span id="cb23-4"><a></a>2024,T003,COYE,Common Yellowthroat,Palo Alto Baylands,2024-04-01,2024-08-10,yes,4,cattail,1.2,none</span>
-<span id="cb23-5"><a></a>2024,T004,MAWR,Marsh Wren,Don Edwards NWR,2024-03-10,2024-06-30,yes,2,tidal_marsh,0.5,flooding</span>
-<span id="cb23-6"><a></a>2024,T005,MAWR,Marsh Wren,Don Edwards NWR,2024-03-18,2024-07-05,no,0,tidal_marsh,0.4,flooding</span>
-<span id="cb23-7"><a></a>2024,T006,RIRA,Ridgway's Rail,Arrowhead Marsh,2024-02-28,2024-08-15,yes,5,tidal_marsh,2.1,none</span>
-<span id="cb23-8"><a></a>2024,T007,RIRA,Ridgway's Rail,Arrowhead Marsh,2024-03-05,2024-08-20,yes,4,tidal_marsh,1.8,disturbance</span>
-<span id="cb23-9"><a></a>2024,T008,BCNH,Black-crowned Night-Heron,Coyote Hills,2024-04-15,2024-07-30,yes,3,riparian,0.3,none</span>
-<span id="cb23-10"><a></a>2024,T009,KILL,Killdeer,Shoreline Park,2024-03-20,2024-06-15,yes,2,gravel,0.2,disturbance</span>
-<span id="cb23-11"><a></a>2024,T010,KILL,Killdeer,Shoreline Park,2024-03-25,2024-06-20,no,0,gravel,0.2,disturbance</span>
-<span id="cb23-12"><a></a>2024,T011,SAVS,Savannah Sparrow,Don Edwards NWR,2024-04-10,2024-07-25,yes,3,grassland,1.5,mowing</span>
-<span id="cb23-13"><a></a>2024,T012,RWBL,Red-winged Blackbird,Alviso Marina,2024-03-01,2024-07-15,yes,4,cattail,0.9,none</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56" data-filename="Copy to Gemini"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb56-1"><a></a>year,territory_id,species_code,species_name,site,first_detected,last_detected,nest_confirmed,fledglings,habitat,area_ha,threats</span>
+<span id="cb56-2"><a></a>2024,T001,SOSP,Song Sparrow,Palo Alto Baylands,2024-03-15,2024-07-20,yes,3,marsh_edge,0.8,none</span>
+<span id="cb56-3"><a></a>2024,T002,SOSP,Song Sparrow,Palo Alto Baylands,2024-03-22,2024-07-15,yes,2,marsh_edge,0.6,predator</span>
+<span id="cb56-4"><a></a>2024,T003,COYE,Common Yellowthroat,Palo Alto Baylands,2024-04-01,2024-08-10,yes,4,cattail,1.2,none</span>
+<span id="cb56-5"><a></a>2024,T004,MAWR,Marsh Wren,Don Edwards NWR,2024-03-10,2024-06-30,yes,2,tidal_marsh,0.5,flooding</span>
+<span id="cb56-6"><a></a>2024,T005,MAWR,Marsh Wren,Don Edwards NWR,2024-03-18,2024-07-05,no,0,tidal_marsh,0.4,flooding</span>
+<span id="cb56-7"><a></a>2024,T006,RIRA,Ridgway's Rail,Arrowhead Marsh,2024-02-28,2024-08-15,yes,5,tidal_marsh,2.1,none</span>
+<span id="cb56-8"><a></a>2024,T007,RIRA,Ridgway's Rail,Arrowhead Marsh,2024-03-05,2024-08-20,yes,4,tidal_marsh,1.8,disturbance</span>
+<span id="cb56-9"><a></a>2024,T008,BCNH,Black-crowned Night-Heron,Coyote Hills,2024-04-15,2024-07-30,yes,3,riparian,0.3,none</span>
+<span id="cb56-10"><a></a>2024,T009,KILL,Killdeer,Shoreline Park,2024-03-20,2024-06-15,yes,2,gravel,0.2,disturbance</span>
+<span id="cb56-11"><a></a>2024,T010,KILL,Killdeer,Shoreline Park,2024-03-25,2024-06-20,no,0,gravel,0.2,disturbance</span>
+<span id="cb56-12"><a></a>2024,T011,SAVS,Savannah Sparrow,Don Edwards NWR,2024-04-10,2024-07-25,yes,3,grassland,1.5,mowing</span>
+<span id="cb56-13"><a></a>2024,T012,RWBL,Red-winged Blackbird,Alviso Marina,2024-03-01,2024-07-15,yes,4,cattail,0.9,none</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="exercise-10-breeding-analysis-prompt" class="slide level2 smaller center">
+<section id="exercise-10-breeding-analysis-prompt" class="slide level2 smaller">
 <h2>Exercise 10: Breeding Analysis Prompt</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a></a>You are analyzing SFBBO's breeding bird territory mapping data.</span>
-<span id="cb24-2"><a></a></span>
-<span id="cb24-3"><a></a>Provide a comprehensive breeding season summary:</span>
-<span id="cb24-4"><a></a></span>
-<span id="cb24-5"><a></a><span class="ss">1. </span>**Nesting Success Overview**</span>
-<span id="cb24-6"><a></a><span class="ss">   - </span>Calculate nest success rate by species (% with confirmed nests)</span>
-<span id="cb24-7"><a></a><span class="ss">   - </span>Calculate productivity (fledglings per successful nest)</span>
-<span id="cb24-8"><a></a><span class="ss">   - </span>Identify most and least successful species</span>
-<span id="cb24-9"><a></a></span>
-<span id="cb24-10"><a></a><span class="ss">2. </span>**Habitat Analysis**</span>
-<span id="cb24-11"><a></a><span class="ss">   - </span>Compare success rates across habitat types</span>
-<span id="cb24-12"><a></a><span class="ss">   - </span>Calculate average territory size by species</span>
-<span id="cb24-13"><a></a><span class="ss">   - </span>Which habitats support highest species diversity?</span>
-<span id="cb24-14"><a></a></span>
-<span id="cb24-15"><a></a><span class="ss">3. </span>**Threat Assessment**</span>
-<span id="cb24-16"><a></a><span class="ss">   - </span>Categorize and quantify threats</span>
-<span id="cb24-17"><a></a><span class="ss">   - </span>Which species/sites face highest threat levels?</span>
-<span id="cb24-18"><a></a><span class="ss">   - </span>Correlation between threats and nest failure</span>
-<span id="cb24-19"><a></a></span>
-<span id="cb24-20"><a></a><span class="ss">4. </span>**Site Comparison**</span>
-<span id="cb24-21"><a></a><span class="ss">   - </span>Rank SFBBO sites by breeding bird diversity</span>
-<span id="cb24-22"><a></a><span class="ss">   - </span>Identify sites with conservation concern</span>
-<span id="cb24-23"><a></a><span class="ss">   - </span>Recommend priority sites for protection</span>
-<span id="cb24-24"><a></a></span>
-<span id="cb24-25"><a></a><span class="ss">5. </span>**Management Recommendations**</span>
-<span id="cb24-26"><a></a><span class="ss">   - </span>Actions to improve nest success</span>
-<span id="cb24-27"><a></a><span class="ss">   - </span>Threat mitigation strategies</span>
-<span id="cb24-28"><a></a><span class="ss">   - </span>Data collection improvements for next season</span>
-<span id="cb24-29"><a></a></span>
-<span id="cb24-30"><a></a>Output as a formal report suitable for SFBBO's annual summary.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb57-1"><a></a>You are analyzing SFBBO's breeding bird territory mapping data.</span>
+<span id="cb57-2"><a></a></span>
+<span id="cb57-3"><a></a>Provide a comprehensive breeding season summary:</span>
+<span id="cb57-4"><a></a></span>
+<span id="cb57-5"><a></a><span class="ss">1. </span>**Nesting Success Overview**</span>
+<span id="cb57-6"><a></a><span class="ss">   - </span>Calculate nest success rate by species (% with confirmed nests)</span>
+<span id="cb57-7"><a></a><span class="ss">   - </span>Calculate productivity (fledglings per successful nest)</span>
+<span id="cb57-8"><a></a><span class="ss">   - </span>Identify most and least successful species</span>
+<span id="cb57-9"><a></a></span>
+<span id="cb57-10"><a></a><span class="ss">2. </span>**Habitat Analysis**</span>
+<span id="cb57-11"><a></a><span class="ss">   - </span>Compare success rates across habitat types</span>
+<span id="cb57-12"><a></a><span class="ss">   - </span>Calculate average territory size by species</span>
+<span id="cb57-13"><a></a><span class="ss">   - </span>Which habitats support highest species diversity?</span>
+<span id="cb57-14"><a></a></span>
+<span id="cb57-15"><a></a><span class="ss">3. </span>**Threat Assessment**</span>
+<span id="cb57-16"><a></a><span class="ss">   - </span>Categorize and quantify threats</span>
+<span id="cb57-17"><a></a><span class="ss">   - </span>Which species/sites face highest threat levels?</span>
+<span id="cb57-18"><a></a><span class="ss">   - </span>Correlation between threats and nest failure</span>
+<span id="cb57-19"><a></a></span>
+<span id="cb57-20"><a></a><span class="ss">4. </span>**Site Comparison**</span>
+<span id="cb57-21"><a></a><span class="ss">   - </span>Rank SFBBO sites by breeding bird diversity</span>
+<span id="cb57-22"><a></a><span class="ss">   - </span>Identify sites with conservation concern</span>
+<span id="cb57-23"><a></a><span class="ss">   - </span>Recommend priority sites for protection</span>
+<span id="cb57-24"><a></a></span>
+<span id="cb57-25"><a></a><span class="ss">5. </span>**Management Recommendations**</span>
+<span id="cb57-26"><a></a><span class="ss">   - </span>Actions to improve nest success</span>
+<span id="cb57-27"><a></a><span class="ss">   - </span>Threat mitigation strategies</span>
+<span id="cb57-28"><a></a><span class="ss">   - </span>Data collection improvements for next season</span>
+<span id="cb57-29"><a></a></span>
+<span id="cb57-30"><a></a>Output as a formal report suitable for SFBBO's annual summary.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="prompt-engineering-cheatsheet" class="slide level2 center">
+<section id="prompt-engineering-cheatsheet" class="slide level2">
 <h2>Prompt Engineering Cheatsheet</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -1353,74 +2112,336 @@ Karan Gathani
 <p><i class="fa-solid fa-hashtag" aria-label="hashtag"></i> Request specific numbers, not vague qualifiers</p>
 </div>
 </section>
-<section id="quick-reference-data-cleaning" class="slide level2 smaller center">
+<section id="quick-reference-data-cleaning" class="slide level2 smaller">
 <h2>Quick Reference: Data Cleaning</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a></a>Review this SFBBO bird survey CSV for data quality issues. </span>
-<span id="cb25-2"><a></a></span>
-<span id="cb25-3"><a></a>Flag the following:</span>
-<span id="cb25-4"><a></a><span class="ss">- </span>Duplicate records (same date, site, species, count)</span>
-<span id="cb25-5"><a></a><span class="ss">- </span>Impossible counts (negative or &gt;10,000 for non-colonial species)</span>
-<span id="cb25-6"><a></a><span class="ss">- </span>Misspelled species names or invalid species codes</span>
-<span id="cb25-7"><a></a><span class="ss">- </span>Dates outside the survey period</span>
-<span id="cb25-8"><a></a><span class="ss">- </span>Missing required fields (date, site, species, count)</span>
-<span id="cb25-9"><a></a><span class="ss">- </span>Inconsistent site naming</span>
-<span id="cb25-10"><a></a></span>
-<span id="cb25-11"><a></a>Output as a table of issues with row numbers, issue type, and suggested fixes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb58-1"><a></a>Review this SFBBO bird survey CSV for data quality issues. </span>
+<span id="cb58-2"><a></a></span>
+<span id="cb58-3"><a></a>Flag the following:</span>
+<span id="cb58-4"><a></a><span class="ss">- </span>Duplicate records (same date, site, species, count)</span>
+<span id="cb58-5"><a></a><span class="ss">- </span>Impossible counts (negative or &gt;10,000 for non-colonial species)</span>
+<span id="cb58-6"><a></a><span class="ss">- </span>Misspelled species names or invalid species codes</span>
+<span id="cb58-7"><a></a><span class="ss">- </span>Dates outside the survey period</span>
+<span id="cb58-8"><a></a><span class="ss">- </span>Missing required fields (date, site, species, count)</span>
+<span id="cb58-9"><a></a><span class="ss">- </span>Inconsistent site naming</span>
+<span id="cb58-10"><a></a></span>
+<span id="cb58-11"><a></a>Output as a table of issues with row numbers, issue type, and suggested fixes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="quick-reference-summary-stats" class="slide level2 smaller center">
+<section id="quick-reference-summary-stats" class="slide level2 smaller">
 <h2>Quick Reference: Summary Stats</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a></a><span class="an">Calculate for each species in this SFBBO dataset:</span></span>
-<span id="cb26-2"><a></a><span class="ss">- </span>Total count across all surveys</span>
-<span id="cb26-3"><a></a><span class="ss">- </span>Mean count per survey</span>
-<span id="cb26-4"><a></a><span class="ss">- </span>Standard deviation</span>
-<span id="cb26-5"><a></a><span class="ss">- </span>Minimum and maximum counts</span>
-<span id="cb26-6"><a></a><span class="ss">- </span>Number of surveys where detected (frequency of occurrence)</span>
-<span id="cb26-7"><a></a><span class="ss">- </span>Percentage of surveys with detections</span>
-<span id="cb26-8"><a></a></span>
-<span id="cb26-9"><a></a>Format as a markdown table sorted by total count descending.</span>
-<span id="cb26-10"><a></a>Include a brief interpretation highlighting:</span>
-<span id="cb26-11"><a></a><span class="ss">- </span>Most abundant species</span>
-<span id="cb26-12"><a></a><span class="ss">- </span>Most consistently detected species</span>
-<span id="cb26-13"><a></a><span class="ss">- </span>Species with high variability (potential concern)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb59-1"><a></a><span class="an">Calculate for each species in this SFBBO dataset:</span></span>
+<span id="cb59-2"><a></a><span class="ss">- </span>Total count across all surveys</span>
+<span id="cb59-3"><a></a><span class="ss">- </span>Mean count per survey</span>
+<span id="cb59-4"><a></a><span class="ss">- </span>Standard deviation</span>
+<span id="cb59-5"><a></a><span class="ss">- </span>Minimum and maximum counts</span>
+<span id="cb59-6"><a></a><span class="ss">- </span>Number of surveys where detected (frequency of occurrence)</span>
+<span id="cb59-7"><a></a><span class="ss">- </span>Percentage of surveys with detections</span>
+<span id="cb59-8"><a></a></span>
+<span id="cb59-9"><a></a>Format as a markdown table sorted by total count descending.</span>
+<span id="cb59-10"><a></a>Include a brief interpretation highlighting:</span>
+<span id="cb59-11"><a></a><span class="ss">- </span>Most abundant species</span>
+<span id="cb59-12"><a></a><span class="ss">- </span>Most consistently detected species</span>
+<span id="cb59-13"><a></a><span class="ss">- </span>Species with high variability (potential concern)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="quick-reference-conservation" class="slide level2 smaller center">
+<section id="quick-reference-conservation" class="slide level2 smaller">
 <h2>Quick Reference: Conservation</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Copy to Gemini</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a></a>Based on these SFBBO population trends, identify:</span>
-<span id="cb27-2"><a></a></span>
-<span id="cb27-3"><a></a><span class="ss">1. </span>**Species of Conservation Concern**</span>
-<span id="cb27-4"><a></a><span class="ss">   - </span>Any species declining &gt;15% year-over-year</span>
-<span id="cb27-5"><a></a><span class="ss">   - </span>Species with high count variability (CV &gt; 50%)</span>
-<span id="cb27-6"><a></a><span class="ss">   - </span>Species absent from historical sites</span>
-<span id="cb27-7"><a></a></span>
-<span id="cb27-8"><a></a><span class="ss">2. </span>**Potential Causes**</span>
-<span id="cb27-9"><a></a><span class="ss">   - </span>Habitat changes at SFBBO monitoring sites</span>
-<span id="cb27-10"><a></a><span class="ss">   - </span>Weather/climate factors affecting SF Bay</span>
-<span id="cb27-11"><a></a><span class="ss">   - </span>Human disturbance patterns</span>
-<span id="cb27-12"><a></a></span>
-<span id="cb27-13"><a></a><span class="ss">3. </span>**Recommended Actions**</span>
-<span id="cb27-14"><a></a><span class="ss">   - </span>Priority species for enhanced SFBBO monitoring</span>
-<span id="cb27-15"><a></a><span class="ss">   - </span>Sites needing management intervention</span>
-<span id="cb27-16"><a></a><span class="ss">   - </span>Data collection protocol improvements</span>
-<span id="cb27-17"><a></a></span>
-<span id="cb27-18"><a></a>Cite specific numbers from the data to support each conclusion.</span>
-<span id="cb27-19"><a></a>Reference SFBBO's conservation mission where relevant.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb60-1"><a></a>Based on these SFBBO population trends, identify:</span>
+<span id="cb60-2"><a></a></span>
+<span id="cb60-3"><a></a><span class="ss">1. </span>**Species of Conservation Concern**</span>
+<span id="cb60-4"><a></a><span class="ss">   - </span>Any species declining &gt;15% year-over-year</span>
+<span id="cb60-5"><a></a><span class="ss">   - </span>Species with high count variability (CV &gt; 50%)</span>
+<span id="cb60-6"><a></a><span class="ss">   - </span>Species absent from historical sites</span>
+<span id="cb60-7"><a></a></span>
+<span id="cb60-8"><a></a><span class="ss">2. </span>**Potential Causes**</span>
+<span id="cb60-9"><a></a><span class="ss">   - </span>Habitat changes at SFBBO monitoring sites</span>
+<span id="cb60-10"><a></a><span class="ss">   - </span>Weather/climate factors affecting SF Bay</span>
+<span id="cb60-11"><a></a><span class="ss">   - </span>Human disturbance patterns</span>
+<span id="cb60-12"><a></a></span>
+<span id="cb60-13"><a></a><span class="ss">3. </span>**Recommended Actions**</span>
+<span id="cb60-14"><a></a><span class="ss">   - </span>Priority species for enhanced SFBBO monitoring</span>
+<span id="cb60-15"><a></a><span class="ss">   - </span>Sites needing management intervention</span>
+<span id="cb60-16"><a></a><span class="ss">   - </span>Data collection protocol improvements</span>
+<span id="cb60-17"><a></a></span>
+<span id="cb60-18"><a></a>Cite specific numbers from the data to support each conclusion.</span>
+<span id="cb60-19"><a></a>Reference SFBBO's conservation mission where relevant.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="governance-and-ethics" class="slide level2 center">
+<section id="using-gemini-for-grant-writing" class="slide level2 smaller">
+<h2>Using Gemini for Grant Writing</h2>
+<p>Gemini can accelerate your grant application process:</p>
+<p><i class="fa-solid fa-file-alt" aria-label="file-alt"></i> <strong>Draft proposals</strong> — Generate initial text from your data insights</p>
+<p><i class="fa-solid fa-edit" aria-label="edit"></i> <strong>Improve writing</strong> — Refine language for clarity and impact</p>
+<p><i class="fa-solid fa-search" aria-label="search"></i> <strong>Research alignment</strong> — Connect your work to funding priorities</p>
+<p><i class="fa-solid fa-calculator" aria-label="calculator"></i> <strong>Budget justifications</strong> — Articulate why resources are needed</p>
+<p><i class="fa-solid fa-list-check" aria-label="list-check"></i> <strong>Review checklists</strong> — Ensure all requirements are addressed</p>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Key insight:</strong> Use Gemini to draft, but always personalize with SFBBO’s unique voice and mission!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="grant-writing-prompts" class="slide level2 smaller">
+<h2>Grant Writing Prompts</h2>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Project Summary:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb61-1"><a></a>Write a 250-word project summary for a conservation grant application.</span>
+<span id="cb61-2"><a></a></span>
+<span id="cb61-3"><a></a>Project: Long-term shorebird monitoring at San Francisco Bay</span>
+<span id="cb61-4"><a></a>Organization: San Francisco Bay Bird Observatory (SFBBO)</span>
+<span id="cb61-5"><a></a>Key data: <span class="co">[</span><span class="ot">paste your summary statistics</span><span class="co">]</span></span>
+<span id="cb61-6"><a></a>Goals: Track population trends, inform wetland management</span>
+<span id="cb61-7"><a></a>Audience: Wildlife conservation foundation</span>
+<span id="cb61-8"><a></a></span>
+<span id="cb61-9"><a></a>Emphasize: Scientific rigor, community engagement, measurable outcomes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Significance Statement:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb62-1"><a></a>Write a compelling significance statement (150 words) explaining </span>
+<span id="cb62-2"><a></a>why monitoring shorebird populations in SF Bay matters for:</span>
+<span id="cb62-3"><a></a><span class="ss">- </span>Pacific Flyway conservation</span>
+<span id="cb62-4"><a></a><span class="ss">- </span>Climate change adaptation</span>
+<span id="cb62-5"><a></a><span class="ss">- </span>Urban wildlife management</span>
+<span id="cb62-6"><a></a><span class="ss">- </span>Community science engagement</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="grant-writing-prompts-cont." class="slide level2 smaller">
+<h2>Grant Writing Prompts (cont.)</h2>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Methods Section:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb63-1"><a></a>Draft a methods section for a grant proposal based on SFBBO's </span>
+<span id="cb63-2"><a></a>survey protocols:</span>
+<span id="cb63-3"><a></a></span>
+<span id="cb63-4"><a></a>Data collection: Monthly point counts at 12 wetland sites</span>
+<span id="cb63-5"><a></a>Species: Shorebirds, waterfowl, and marsh birds</span>
+<span id="cb63-6"><a></a>Variables: Species, count, habitat, tide level, weather</span>
+<span id="cb63-7"><a></a>Analysis: Trend analysis, habitat modeling, population estimates</span>
+<span id="cb63-8"><a></a>Timeline: 3-year monitoring period</span>
+<span id="cb63-9"><a></a></span>
+<span id="cb63-10"><a></a>Write in formal scientific grant language (300 words).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Budget Narrative:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb64-1"><a></a><span class="an">Write a budget justification for these line items:</span></span>
+<span id="cb64-2"><a></a><span class="ss">- </span>Field technician (0.5 FTE): $35,000</span>
+<span id="cb64-3"><a></a><span class="ss">- </span>Equipment (spotting scopes, GPS): $5,000</span>
+<span id="cb64-4"><a></a><span class="ss">- </span>Travel to survey sites: $3,000</span>
+<span id="cb64-5"><a></a><span class="ss">- </span>Data management: $2,000</span>
+<span id="cb64-6"><a></a></span>
+<span id="cb64-7"><a></a>Explain why each expense is necessary for shorebird monitoring success.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="finding-research-opportunities" class="slide level2 smaller">
+<h2>Finding Research Opportunities</h2>
+<p>Ask Gemini to help identify funding sources:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb65" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb65-1"><a></a>I work at San Francisco Bay Bird Observatory (SFBBO), a nonprofit </span>
+<span id="cb65-2"><a></a>focused on bird conservation and research in the SF Bay Area.</span>
+<span id="cb65-3"><a></a></span>
+<span id="cb65-4"><a></a>Our programs include:</span>
+<span id="cb65-5"><a></a><span class="ss">- </span>Long-term waterbird monitoring</span>
+<span id="cb65-6"><a></a><span class="ss">- </span>Ridgway's Rail population surveys</span>
+<span id="cb65-7"><a></a><span class="ss">- </span>Shorebird migration tracking</span>
+<span id="cb65-8"><a></a><span class="ss">- </span>Community science training</span>
+<span id="cb65-9"><a></a></span>
+<span id="cb65-10"><a></a>Suggest 10 potential grant opportunities from:</span>
+<span id="cb65-11"><a></a><span class="ss">- </span>Federal agencies (USFWS, NOAA, EPA)</span>
+<span id="cb65-12"><a></a><span class="ss">- </span>State agencies (CA Dept of Fish &amp; Wildlife)</span>
+<span id="cb65-13"><a></a><span class="ss">- </span>Private foundations (conservation-focused)</span>
+<span id="cb65-14"><a></a><span class="ss">- </span>Corporate giving programs</span>
+<span id="cb65-15"><a></a></span>
+<span id="cb65-16"><a></a>For each, note: typical award size, deadline cycle, and fit with our work.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="research-collaboration-ideas" class="slide level2 smaller">
+<h2>Research Collaboration Ideas</h2>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Generate research questions:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb66-1"><a></a>Based on SFBBO's 20+ years of waterbird monitoring data, </span>
+<span id="cb66-2"><a></a>suggest 5 research questions that could lead to:</span>
+<span id="cb66-3"><a></a><span class="ss">- </span>Peer-reviewed publications</span>
+<span id="cb66-4"><a></a><span class="ss">- </span>Graduate student thesis projects</span>
+<span id="cb66-5"><a></a><span class="ss">- </span>Collaborative studies with universities</span>
+<span id="cb66-6"><a></a></span>
+<span id="cb66-7"><a></a>Consider topics like:</span>
+<span id="cb66-8"><a></a><span class="ss">- </span>Climate change impacts on SF Bay birds</span>
+<span id="cb66-9"><a></a><span class="ss">- </span>Habitat restoration effectiveness</span>
+<span id="cb66-10"><a></a><span class="ss">- </span>Urban wetland conservation</span>
+<span id="cb66-11"><a></a><span class="ss">- </span>Shorebird migration phenology</span>
+<span id="cb66-12"><a></a></span>
+<span id="cb66-13"><a></a>For each question, suggest potential academic partners in the Bay Area.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="annual-report-assistance" class="slide level2 smaller">
+<h2>Annual Report Assistance</h2>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Executive Summary:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb67-1"><a></a>Write an executive summary (300 words) for SFBBO's annual report.</span>
+<span id="cb67-2"><a></a></span>
+<span id="cb67-3"><a></a>Key accomplishments this year:</span>
+<span id="cb67-4"><a></a><span class="ss">- </span>Monitored 45 wetland sites</span>
+<span id="cb67-5"><a></a><span class="ss">- </span>Recorded 125 bird species</span>
+<span id="cb67-6"><a></a><span class="ss">- </span>Trained 50 community scientists</span>
+<span id="cb67-7"><a></a><span class="ss">- </span>Published 2 peer-reviewed papers</span>
+<span id="cb67-8"><a></a><span class="ss">- </span>Received $150,000 in grants</span>
+<span id="cb67-9"><a></a></span>
+<span id="cb67-10"><a></a>Highlights from the data:</span>
+<span id="cb67-11"><a></a><span class="co">[</span><span class="ot">paste your key findings here</span><span class="co">]</span></span>
+<span id="cb67-12"><a></a></span>
+<span id="cb67-13"><a></a>Tone: Professional but accessible, celebratory but scientifically grounded</span>
+<span id="cb67-14"><a></a>Audience: Donors, partners, and the general public</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Donor Thank You Letters:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb68-1"><a></a><span class="an">Write a thank you letter template for SFBBO donors that:</span></span>
+<span id="cb68-2"><a></a><span class="ss">- </span>Acknowledges their specific contribution</span>
+<span id="cb68-3"><a></a><span class="ss">- </span>Shares one compelling data point from this year's surveys</span>
+<span id="cb68-4"><a></a><span class="ss">- </span>Describes the impact of their support</span>
+<span id="cb68-5"><a></a><span class="ss">- </span>Invites them to an upcoming field trip or event</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="newsletter-outreach-content" class="slide level2 smaller">
+<h2>Newsletter &amp; Outreach Content</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> <strong>Newsletter Articles:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb69-1"><a></a>Write a 400-word newsletter article </span>
+<span id="cb69-2"><a></a>about spring shorebird migration </span>
+<span id="cb69-3"><a></a>in SF Bay for SFBBO supporters.</span>
+<span id="cb69-4"><a></a></span>
+<span id="cb69-5"><a></a>Include:</span>
+<span id="cb69-6"><a></a><span class="ss">- </span>Which species to look for</span>
+<span id="cb69-7"><a></a><span class="ss">- </span>Peak timing (based on our data)</span>
+<span id="cb69-8"><a></a><span class="ss">- </span>Best viewing locations</span>
+<span id="cb69-9"><a></a><span class="ss">- </span>How SFBBO monitors migration</span>
+<span id="cb69-10"><a></a></span>
+<span id="cb69-11"><a></a>Tone: Engaging, educational, </span>
+<span id="cb69-12"><a></a>inspiring action</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><i class="fa-solid fa-share-alt" aria-label="share-alt"></i> <strong>Social Media:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Copy to Gemini</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70" data-filename="Copy to Gemini"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb70-1"><a></a>Create 5 social media posts </span>
+<span id="cb70-2"><a></a>about SFBBO's winter waterbird </span>
+<span id="cb70-3"><a></a>census results.</span>
+<span id="cb70-4"><a></a></span>
+<span id="cb70-5"><a></a>For each post include:</span>
+<span id="cb70-6"><a></a><span class="ss">- </span>Hook (attention-grabbing fact)</span>
+<span id="cb70-7"><a></a><span class="ss">- </span>Key finding from the data</span>
+<span id="cb70-8"><a></a><span class="ss">- </span>Call to action</span>
+<span id="cb70-9"><a></a><span class="ss">- </span>Suggested hashtags</span>
+<span id="cb70-10"><a></a></span>
+<span id="cb70-11"><a></a>Platform: Twitter/X (280 chars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div></div>
+</section>
+<section id="tips-for-grant-research-writing-with-ai" class="slide level2 smaller">
+<h2>Tips for Grant &amp; Research Writing with AI</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Best Practices</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Do:</strong></p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Provide specific data and context</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Ask for multiple draft versions</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Edit heavily to match your voice</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Fact-check all statistics</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Add SFBBO-specific details</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Don’t:</strong></p>
+<p><i class="fa-solid fa-times" aria-label="times"></i> Submit AI text without editing</p>
+<p><i class="fa-solid fa-times" aria-label="times"></i> Let AI invent data or citations</p>
+<p><i class="fa-solid fa-times" aria-label="times"></i> Use generic language</p>
+<p><i class="fa-solid fa-times" aria-label="times"></i> Skip the review process</p>
+<p><i class="fa-solid fa-times" aria-label="times"></i> Forget to acknowledge AI use</p>
+</div></div>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Pro tip:</strong> Tell Gemini to write in SFBBO’s voice by providing examples of past successful proposals!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="governance-and-ethics" class="slide level2">
 <h2>Governance and Ethics</h2>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
@@ -1452,7 +2473,7 @@ Karan Gathani
   </div>
 </div>
 </section>
-<section id="closing-resources" class="slide level2 center">
+<section id="closing-resources" class="slide level2">
 <h2>Closing + Resources</h2>
 <p><strong>Next steps for your SFBBO work:</strong></p>
 <p><i class="fa-solid fa-crow" aria-label="crow"></i> Practice with your own SFBBO survey datasets</p>
@@ -1496,7 +2517,7 @@ Karan Gathani
 <p>Learn more at <a href="https://www.sfbbo.org">sfbbo.org</a></p>
 </div>
 </section>
-<section id="appendix-a-sfbbo-site-codes" class="slide level2 smaller center">
+<section id="appendix-a-sfbbo-site-codes" class="slide level2 smaller">
 <h2>Appendix A: SFBBO Site Codes</h2>
 <table class="caption-top">
 <thead>
@@ -1577,7 +2598,7 @@ Karan Gathani
 </tbody>
 </table>
 </section>
-<section id="appendix-b-species-codes" class="slide level2 smaller scrollable center">
+<section id="appendix-b-species-codes" class="slide level2 smaller scrollable">
 <h2>Appendix B: Species Codes</h2>
 <table class="caption-top">
 <thead>
@@ -1734,7 +2755,7 @@ Karan Gathani
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":"9cfb2cc6af4e12b244d4652ed6798f97","id":"f0c738789d182e9a1d4b7e794ab8fc8a9fb13b27aa4f90eeeb75382857667de4","url":"https://multiplex.up.railway.app/"},
+'multiplex': {"secret":"1403a5b7f6832c01ced68f3bf91b1953","id":"137c7b3c1d1a280c72a33e883db0e2b31f95eadac4b96c874241cbbd339f4f23","url":"https://multiplex.up.railway.app/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1784,7 +2805,7 @@ Karan Gathani
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -1860,14 +2881,14 @@ Karan Gathani
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+        transition: 'convex',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'fade',
+        backgroundTransition: 'slide',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,

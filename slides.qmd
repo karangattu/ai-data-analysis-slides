@@ -4,56 +4,26 @@ subtitle: "San Francisco Bay Bird Observatory (SFBBO)"
 author: "Karan Gathani"
 format:
   revealjs:
-    transition: slide
-    background-transition: fade
+    transition: convex
+    background-transition: slide
     slide-number: true
     incremental: true
-    center: true
+    center: false
     navigation-mode: linear
     code-line-numbers: true
-    highlight-style: github
+    highlight-style: monokai
     multiplex: true
     code-copy: true
-    theme: default
+    theme: night
+    css: styles.css
+    title-slide-attributes:
+      data-background-color: "#1a1a2e"
+      data-background-image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      data-background-opacity: "0.7"
 include-in-header: 
   - text: |
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-      <style>
-        .poll-container {
-          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-          border-radius: 12px;
-          padding: 20px;
-          margin: 10px auto;
-          max-width: 550px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-          overflow: hidden;
-        }
-        
-        .poll-question {
-          font-size: 1.1em;
-          font-weight: bold;
-          margin-bottom: 15px;
-          color: #333;
-          text-align: center;
-        }
-        
-        .poll-options {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-        
-        .poll-option {
-          background: white;
-          border: 2px solid #007bff;
-          border-radius: 8px;
-          padding: 12px 15px;
-          font-size: 0.95em;
-          font-weight: 500;
-          text-align: center;
-          color: #007bff;
-        }
-      </style>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 ---
 
 ## Welcome {.center}
@@ -911,6 +881,1009 @@ Note which findings need field verification by SFBBO staff.
 
 ---
 
+## What is a CSV File? {.smaller}
+
+**CSV = Comma-Separated Values**
+
+A simple, universal format for storing tabular data as plain text.
+
+. . .
+
+**Structure:**
+
+```{.csv}
+species,count,location,date
+Dunlin,245,Palo Alto Baylands,2025-01-15
+Western Sandpiper,189,Don Edwards NWR,2025-01-15
+American Avocet,67,Alviso Marina,2025-01-16
+```
+
+. . .
+
+::: {.incremental}
+{{< fa check >}} First row = column headers (field names)
+
+{{< fa check >}} Each subsequent row = one record (observation)
+
+{{< fa check >}} Commas separate values within a row
+
+{{< fa check >}} Can be opened in Excel, Google Sheets, or any text editor
+:::
+
+---
+
+## Why CSV is Great for Data Analysis {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Advantages:**
+
+{{< fa thumbs-up >}} Universal compatibility
+
+{{< fa thumbs-up >}} Human-readable (it's just text!)
+
+{{< fa thumbs-up >}} Small file sizes
+
+{{< fa thumbs-up >}} Easy to share and version control
+
+{{< fa thumbs-up >}} Works with Python, R, Excel, Gemini
+:::
+
+::: {.column width="50%"}
+**SFBBO Use Cases:**
+
+{{< fa crow >}} Export survey data from databases
+
+{{< fa chart-line >}} Share datasets with collaborators
+
+{{< fa robot >}} Upload to AI tools for analysis
+
+{{< fa code >}} Load into analysis scripts
+:::
+:::
+
+. . .
+
+::: {.callout-tip}
+**Pro tip:** Export your SFBBO survey data as CSV before uploading to Gemini!
+:::
+
+---
+
+## How to Export CSV from Google Sheets {.smaller}
+
+**Step-by-step:**
+
+::: {.incremental}
+1. {{< fa table >}} Open your data in **Google Sheets**
+
+2. {{< fa mouse-pointer >}} Click **File** in the top menu
+
+3. {{< fa download >}} Hover over **Download**
+
+4. {{< fa file-csv >}} Select **Comma-separated values (.csv)**
+
+5. {{< fa folder >}} File downloads to your computer's Downloads folder
+:::
+
+. . .
+
+::: {.callout-note}
+**Note:** CSV export only saves the **current sheet**. If you have multiple tabs, export each one separately.
+:::
+
+. . .
+
+**Alternative:** For Excel users, go to **File → Save As** and choose **CSV (Comma delimited)**
+
+---
+
+## What Can You Upload to Google Gemini? {.smaller}
+
+Gemini accepts multiple file types for analysis:
+
+::: {.columns}
+::: {.column width="50%"}
+**{{< fa file-alt >}} Documents**
+
+- PDF files (reports, papers)
+- Word documents (.docx)
+- Text files (.txt)
+- Google Docs
+
+**{{< fa table >}} Spreadsheets**
+
+- CSV files (.csv) {{< fa star >}}
+- Excel files (.xlsx)
+- Google Sheets
+:::
+
+::: {.column width="50%"}
+**{{< fa image >}} Images**
+
+- Photos (JPG, PNG)
+- Screenshots
+- Scanned documents
+
+**{{< fa code >}} Code**
+
+- Python, R, JavaScript files
+- Jupyter notebooks
+:::
+:::
+
+. . .
+
+::: {.callout-note}
+{{< fa star >}} **For SFBBO data analysis, CSV is typically your best choice!**
+:::
+
+---
+
+## Gemini File Upload Limits {.smaller}
+
+**Current limits (as of 2025):**
+
+::: {.incremental}
+{{< fa file >}} **Single file:** Up to 20MB per file
+
+{{< fa copy >}} **Multiple files:** Up to 10 files per conversation
+
+{{< fa ruler >}} **Text extraction:** ~100,000 tokens from uploaded files
+
+{{< fa clock >}} **Session duration:** Files persist for the conversation
+:::
+
+. . .
+
+**Practical implications for SFBBO:**
+
+- Most survey CSVs are well under 20MB ✓
+- Can upload multiple years of data ✓
+- Large multi-year databases may need splitting
+- Consider summarizing before uploading very large datasets
+
+---
+
+## How to Upload Data to Gemini {.smaller}
+
+**Step-by-step:**
+
+::: {.incremental}
+1. {{< fa globe >}} Go to [gemini.google.com](https://gemini.google.com)
+
+2. {{< fa paperclip >}} Click the **+** or paperclip icon in the chat
+
+3. {{< fa file-upload >}} Select your CSV file (or drag and drop)
+
+4. {{< fa keyboard >}} Type your analysis prompt
+
+5. {{< fa paper-plane >}} Send and let Gemini analyze!
+:::
+
+. . .
+
+**Example prompt after uploading:**
+
+```{.markdown}
+I've uploaded our SFBBO shorebird survey data. Please:
+1. Summarize the dataset structure
+2. Identify the top 5 species by total count
+3. Note any data quality issues
+```
+
+---
+
+## Best Practices for Uploading Data {.smaller}
+
+{{< fa shield-alt >}} **Privacy & Security**
+
+::: {.incremental}
+- Remove sensitive personal information before uploading
+- Check your organization's data sharing policies
+- Consider anonymizing observer names if needed
+:::
+
+. . .
+
+{{< fa broom >}} **Data Preparation**
+
+::: {.incremental}
+- Clean up obvious errors before uploading
+- Use consistent date formats (YYYY-MM-DD recommended)
+- Ensure column headers are clear and descriptive
+- Remove empty rows at the end of files
+:::
+
+. . .
+
+{{< fa lightbulb >}} **Pro tip:** Tell Gemini about your data context — what survey protocol, study area, and time period it covers!
+
+---
+
+## Gemini Can Create Charts & Graphs! {.smaller}
+
+One of Gemini's powerful features is **automatic visualization** from your data:
+
+::: {.incremental}
+{{< fa chart-line >}} **Line charts** — Show trends over time (migration patterns, population changes)
+
+{{< fa chart-bar >}} **Bar charts** — Compare categories (species counts, site comparisons)
+
+{{< fa chart-pie >}} **Pie charts** — Show proportions (habitat distribution, species composition)
+
+{{< fa project-diagram >}} **Scatter plots** — Reveal correlations (temperature vs. bird counts)
+:::
+
+. . .
+
+::: {.callout-tip}
+**Just ask!** Gemini will analyze your data and create appropriate visualizations automatically.
+:::
+
+---
+
+## How to Request Charts from Gemini {.smaller}
+
+**After uploading your CSV, try these prompts:**
+
+. . .
+
+{{< fa chart-line >}} **For trends:**
+```{.markdown}
+Create a line chart showing how Dunlin counts change across months.
+```
+
+. . .
+
+{{< fa chart-bar >}} **For comparisons:**
+```{.markdown}
+Make a bar chart comparing total bird counts at each monitoring site.
+```
+
+. . .
+
+{{< fa project-diagram >}} **For relationships:**
+```{.markdown}
+Create a scatter plot of temperature vs. shorebird count 
+and add a trend line.
+```
+
+. . .
+
+{{< fa palette >}} **For customization:**
+```{.markdown}
+Create a chart showing species by habitat. Use blue for shorebirds, 
+green for waterfowl, and orange for waders.
+```
+
+---
+
+## Chart Generation Tips {.smaller}
+
+**Get better visualizations with specific prompts:**
+
+::: {.columns}
+::: {.column width="50%"}
+**Be specific about:**
+
+{{< fa check >}} Chart type you want
+
+{{< fa check >}} Which columns to use
+
+{{< fa check >}} X and Y axis labels
+
+{{< fa check >}} Title for the chart
+
+{{< fa check >}} Colors (if you have preferences)
+:::
+
+::: {.column width="50%"}
+**Example prompt:**
+
+```{.markdown}
+Create a line chart with:
+- X-axis: month
+- Y-axis: count
+- Separate lines for each species
+- Title: "Shorebird Migration 2024-25"
+- Use a legend
+```
+:::
+:::
+
+. . .
+
+::: {.callout-note}
+If Gemini's first chart isn't quite right, **iterate!** Ask it to adjust colors, add labels, or change the chart type.
+:::
+
+---
+
+## Gemini Can Generate Images Too! {.smaller}
+
+Beyond charts, Gemini can create images using **AI image generation**:
+
+::: {.incremental}
+{{< fa image >}} **Illustrations** — Visual aids for presentations and reports
+
+{{< fa palette >}} **Infographics** — Combine data with visual storytelling
+
+{{< fa camera >}} **Artistic renderings** — Creative visualizations of concepts
+
+{{< fa file-image >}} **Diagrams** — Explain processes or workflows
+:::
+
+. . .
+
+**Start your prompt with:** "Generate an image of..." or "Create an illustration of..."
+
+---
+
+## Image Generation for SFBBO {.smaller}
+
+**Practical uses for bird conservation work:**
+
+. . .
+
+{{< fa book >}} **Educational materials:**
+```{.markdown}
+Generate an illustration showing the different habitats 
+in San Francisco Bay: mudflats, salt ponds, freshwater 
+marshes, and open water, with typical bird species in each.
+```
+
+. . .
+
+{{< fa file-powerpoint >}} **Presentation visuals:**
+```{.markdown}
+Create an infographic showing the shorebird migration 
+flyway along the Pacific Coast, highlighting the 
+San Francisco Bay as a critical stopover.
+```
+
+. . .
+
+{{< fa newspaper >}} **Newsletter graphics:**
+```{.markdown}
+Generate a watercolor-style illustration of Ridgway's 
+Rails in a tidal marsh for our conservation newsletter.
+```
+
+---
+
+## Image Generation Tips {.smaller}
+
+**Write better image prompts:**
+
+::: {.columns}
+::: {.column width="50%"}
+**Include in your prompt:**
+
+{{< fa check >}} Subject (what to show)
+
+{{< fa check >}} Style (photorealistic, watercolor, cartoon, diagram)
+
+{{< fa check >}} Setting/background
+
+{{< fa check >}} Mood or lighting
+
+{{< fa check >}} Purpose (infographic, illustration, etc.)
+:::
+
+::: {.column width="50%"}
+**Example prompt:**
+
+```{.markdown}
+Generate a photorealistic image 
+of a Western Sandpiper foraging 
+on a mudflat at low tide during 
+golden hour, with the San Francisco 
+Bay in the background.
+```
+:::
+:::
+
+. . .
+
+::: {.callout-warning}
+**Important:** AI-generated images should be labeled as such. Don't use them as substitutes for actual field photos in scientific documentation!
+:::
+
+---
+
+## Exercise: Create a Visualization {.smaller}
+
+{{< fa lightbulb >}} **Your Turn:** Upload one of the sample datasets and ask Gemini to create a chart.
+
+**Try this with `migration_timeline.csv`:**
+
+```{.markdown filename="Copy to Gemini"}
+I've uploaded shorebird migration data. Please:
+
+1. Create a line chart showing how bird counts change from 
+   September 2024 to April 2025 for each species
+   
+2. Add a title: "Shorebird Migration Patterns at Palo Alto Baylands"
+
+3. Label the axes clearly
+
+4. Use different colors for each species
+
+5. Explain what patterns you see in the data
+```
+
+. . .
+
+**Bonus:** Ask Gemini to create a second chart type (bar chart, area chart) and compare which shows the pattern better!
+
+---
+
+## Introducing NotebookLM {.smaller}
+
+**Another powerful Google AI tool for SFBBO:**
+
+[NotebookLM](https://notebooklm.google.com) is a research assistant that helps you understand complex documents.
+
+::: {.incremental}
+{{< fa upload >}} **Upload sources** — PDFs, Google Docs, Slides, websites, YouTube videos
+
+{{< fa brain >}} **Ask questions** — Get answers grounded in YOUR sources only
+
+{{< fa quote-left >}} **Get citations** — Every response links back to source material
+
+{{< fa headphones >}} **Audio Overviews** — Turn documents into podcast-style discussions!
+:::
+
+. . .
+
+::: {.callout-tip}
+**Perfect for:** Summarizing research papers, annual reports, grant guidelines, and training materials!
+:::
+
+---
+
+## What is Audio Overview? {.smaller}
+
+NotebookLM's **Audio Overview** feature creates AI-generated podcast-style discussions from your documents.
+
+. . .
+
+**Two AI hosts will:**
+
+::: {.incremental}
+{{< fa comments >}} Have a lively conversation about your sources
+
+{{< fa link >}} Make connections between topics and ideas
+
+{{< fa lightbulb >}} Explain complex concepts in an accessible way
+
+{{< fa clock >}} Create 5-30 minute audio summaries
+:::
+
+. . .
+
+::: {.callout-note}
+**Great for learning on the go!** Download and listen during your commute, while doing fieldwork, or during data entry.
+:::
+
+---
+
+## Audio Overview Formats {.smaller}
+
+Choose the format that fits your needs:
+
+::: {.columns}
+::: {.column width="50%"}
+{{< fa microphone >}} **Deep Dive** (default)
+
+Two hosts unpack topics in an in-depth conversation
+
+. . .
+
+{{< fa bolt >}} **The Brief**
+
+Single speaker delivers key takeaways in under 2 minutes
+
+:::
+
+::: {.column width="50%"}
+{{< fa comments >}} **The Critique**
+
+Two hosts provide constructive feedback on documents
+
+. . .
+
+{{< fa balance-scale >}} **The Debate**
+
+Two hosts explore multiple perspectives on a topic
+
+:::
+:::
+
+. . .
+
+**You can also customize:**
+
+- Length (Shorter, Default, Longer)
+- Focus topics with a custom prompt
+- Language (80+ languages supported!)
+
+---
+
+## How to Create an Audio Overview {.smaller}
+
+**Step-by-step:**
+
+::: {.incremental}
+1. {{< fa globe >}} Go to [notebooklm.google.com](https://notebooklm.google.com)
+
+2. {{< fa plus >}} Create a new notebook
+
+3. {{< fa upload >}} Add your sources (PDFs, Docs, websites)
+
+4. {{< fa sliders-h >}} Open the **Studio** panel
+
+5. {{< fa headphones >}} Select **Audio Overview** and click Generate
+
+6. {{< fa download >}} Download the audio or listen in the browser
+:::
+
+. . .
+
+::: {.callout-note}
+Generation takes a few minutes for longer documents. You can work on other things while it processes!
+:::
+
+---
+
+## Interactive Mode: Join the Conversation! {.smaller}
+
+**New feature:** You can now **interact** with the AI hosts!
+
+::: {.incremental}
+{{< fa microphone-alt >}} Ask follow-up questions with your voice
+
+{{< fa question-circle >}} Request clarification on specific topics
+
+{{< fa comment-dots >}} Get personalized answers based on your sources
+
+{{< fa play >}} Hosts resume the original discussion after answering
+:::
+
+. . .
+
+**To use:**
+
+1. Generate a new Audio Overview
+2. Select **Interactive mode**
+3. While listening, click **Join**
+4. Ask your questions when the hosts call on you!
+
+---
+
+## Audio Overviews for SFBBO {.smaller}
+
+**Practical use cases for your team:**
+
+. . .
+
+{{< fa book >}} **Onboarding new staff/volunteers:**
+```
+Upload: SFBBO survey protocols, species ID guides, safety procedures
+Result: Audio training they can listen to before their first field day
+```
+
+. . .
+
+{{< fa file-contract >}} **Grant preparation:**
+```
+Upload: Funding guidelines, RFP documents, past successful proposals
+Result: Audio summary of requirements while you draft your application
+```
+
+. . .
+
+{{< fa graduation-cap >}} **Staying current on research:**
+```
+Upload: Recent shorebird research papers, conservation reports
+Result: Podcast-style summary of new findings relevant to SF Bay
+```
+
+---
+
+## Audio Overviews for SFBBO (cont.) {.smaller}
+
+{{< fa users >}} **Board meeting prep:**
+```
+Upload: Previous meeting minutes, financial reports, strategic plan
+Result: Quick audio briefing before meetings
+```
+
+. . .
+
+{{< fa newspaper >}} **Annual report digestion:**
+```
+Upload: Your own SFBBO annual reports from multiple years
+Result: Audio summary highlighting trends and accomplishments
+```
+
+. . .
+
+{{< fa handshake >}} **Partner communications:**
+```
+Upload: Partner organization reports, collaborative project documents
+Result: Stay informed about partner activities while multitasking
+```
+
+---
+
+## Example: Research Paper Summary {.smaller}
+
+**Scenario:** You want to understand a new shorebird migration study.
+
+::: {.columns}
+::: {.column width="50%"}
+**Upload to NotebookLM:**
+
+- The research paper PDF
+- SFBBO's related survey data summary
+- SF Bay habitat maps
+
+**Custom prompt:**
+
+```
+Focus on findings relevant to 
+San Francisco Bay shorebirds. 
+Explain statistical methods 
+in simple terms.
+```
+:::
+
+::: {.column width="50%"}
+**Audio Overview will discuss:**
+
+{{< fa check >}} Key findings from the paper
+
+{{< fa check >}} How results apply to SF Bay
+
+{{< fa check >}} Connections to your SFBBO data
+
+{{< fa check >}} Implications for conservation
+
+{{< fa check >}} Questions for further research
+:::
+:::
+
+. . .
+
+**Result:** A 15-minute audio summary you can listen to during your commute!
+
+---
+
+## Tips for Better Audio Overviews {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Do:**
+
+{{< fa check >}} Upload related documents together
+
+{{< fa check >}} Use custom prompts to focus topics
+
+{{< fa check >}} Choose the right format for your goal
+
+{{< fa check >}} Download for offline listening
+
+{{< fa check >}} Share with team members
+:::
+
+::: {.column width="50%"}
+**Keep in mind:**
+
+{{< fa exclamation >}} AI voices may have occasional glitches
+
+{{< fa exclamation >}} Content reflects ONLY your sources
+
+{{< fa exclamation >}} May take several minutes to generate
+
+{{< fa exclamation >}} Best for English (other languages available)
+
+{{< fa exclamation >}} Verify important facts independently
+:::
+:::
+
+. . .
+
+::: {.callout-tip}
+**Pro tip:** Create a NotebookLM notebook for each major SFBBO project to keep sources organized!
+:::
+
+---
+
+## More Google AI Tools (No Coding!) {.smaller}
+
+Google has integrated Gemini AI across its Workspace apps:
+
+::: {.columns}
+::: {.column width="50%"}
+{{< fa file-word >}} **Google Docs**
+
+{{< fa table >}} **Google Sheets**
+
+{{< fa file-powerpoint >}} **Google Slides**
+:::
+
+::: {.column width="50%"}
+{{< fa envelope >}} **Gmail**
+
+{{< fa folder >}} **Google Drive**
+
+{{< fa video >}} **Google Meet**
+:::
+:::
+
+. . .
+
+::: {.callout-note}
+**Access:** These features require Google Workspace with Gemini or a Google AI Premium plan. Check with your organization's IT administrator!
+:::
+
+---
+
+## Gemini in Google Sheets {.smaller}
+
+**Analyze SFBBO data directly in your spreadsheets!**
+
+::: {.incremental}
+{{< fa table >}} **Create tables** — Generate organized data from descriptions
+
+{{< fa calculator >}} **Create formulas** — Ask for formulas in plain English
+
+{{< fa chart-bar >}} **Build charts** — Generate visualizations from your data
+
+{{< fa lightbulb >}} **Get insights** — Ask questions about patterns in your data
+
+{{< fa filter >}} **Perform actions** — Sort, filter, format, pivot tables
+:::
+
+. . .
+
+**How to access:** Click **"Ask Gemini"** button in the top right of any Google Sheet.
+
+---
+
+## Gemini in Sheets: SFBBO Examples {.smaller}
+
+{{< fa lightbulb >}} **Ask Gemini in your spreadsheet:**
+
+. . .
+
+```
+"Create a formula to calculate the total bird count for each species"
+```
+
+. . .
+
+```
+"Build a bar chart comparing bird counts across our monitoring sites"
+```
+
+. . .
+
+```
+"Summarize the key trends in this survey data"
+```
+
+. . .
+
+```
+"Add conditional formatting to highlight counts over 1000 in red"
+```
+
+. . .
+
+```
+"Create a pivot table showing species counts by month and location"
+```
+
+---
+
+## Gemini in Google Docs {.smaller}
+
+**Write, edit, and research without leaving your document!**
+
+::: {.incremental}
+{{< fa pen >}} **Write content** — Draft text from descriptions
+
+{{< fa sync >}} **Rewrite & refine** — Improve clarity, tone, length
+
+{{< fa compress >}} **Summarize** — Condense long documents
+
+{{< fa image >}} **Generate images** — Create visuals for your document
+
+{{< fa file >}} **Reference files** — Pull info from Drive files and Gmail
+:::
+
+. . .
+
+**How to access:** Click **"Ask Gemini"** button in the top right of any Google Doc.
+
+---
+
+## Gemini in Docs: SFBBO Examples {.smaller}
+
+{{< fa lightbulb >}} **Use cases for SFBBO staff:**
+
+. . .
+
+{{< fa file-alt >}} **Grant narratives:**
+```
+"Write a 200-word project description for our shorebird monitoring program"
+```
+
+. . .
+
+{{< fa users >}} **Volunteer communications:**
+```
+"Draft an email inviting volunteers to our winter waterbird census"
+```
+
+. . .
+
+{{< fa clipboard >}} **Meeting notes:**
+```
+"Summarize the key action items from this meeting document"
+```
+
+. . .
+
+{{< fa book >}} **Educational content:**
+```
+"Rewrite this scientific text at a 6th-grade reading level for our 
+youth education program"
+```
+
+---
+
+## Gemini in Google Slides {.smaller}
+
+**Create presentations faster with AI assistance!**
+
+::: {.incremental}
+{{< fa image >}} **Generate images** — Create custom visuals for slides
+
+{{< fa magic >}} **Improve content** — Get suggestions for better slides
+
+{{< fa palette >}} **Design help** — Format and style recommendations
+
+{{< fa compress-alt >}} **Summarize** — Create slides from documents
+:::
+
+. . .
+
+**SFBBO example:**
+
+```
+"Generate an image of shorebirds at a mudflat for my 
+conservation presentation"
+```
+
+```
+"Create speaker notes for this slide about migration patterns"
+```
+
+---
+
+## Gemini in Gmail {.smaller}
+
+**Draft, summarize, and respond to emails efficiently!**
+
+::: {.columns}
+::: {.column width="50%"}
+**Composing:**
+
+{{< fa pen >}} Draft new emails from prompts
+
+{{< fa redo >}} Rewrite for tone (formal, casual)
+
+{{< fa expand >}} Elaborate on short notes
+
+{{< fa compress >}} Shorten long emails
+:::
+
+::: {.column width="50%"}
+**Reading:**
+
+{{< fa compress-alt >}} Summarize long email threads
+
+{{< fa list >}} Extract action items
+
+{{< fa reply >}} Suggest responses
+
+{{< fa language >}} Translate messages
+:::
+:::
+
+. . .
+
+**SFBBO example:**
+
+```
+"Draft a thank you email to our winter census volunteers, 
+highlighting that we counted over 15,000 birds this year"
+```
+
+---
+
+## Gemini in Google Drive {.smaller}
+
+**Search and summarize across all your files!**
+
+::: {.incremental}
+{{< fa search >}} **Smart search** — Find files by describing content
+
+{{< fa compress-alt >}} **Summarize files** — Get quick overviews of documents
+
+{{< fa question-circle >}} **Ask questions** — Query information across multiple files
+
+{{< fa file-alt >}} **Compare documents** — Find differences between versions
+:::
+
+. . .
+
+**SFBBO example:**
+
+```
+"Summarize our shorebird reports from the last 3 years"
+```
+
+```
+"Find all documents mentioning Ridgway's Rail population trends"
+```
+
+---
+
+## Google Meet with Gemini {.smaller}
+
+**Get more from your meetings!**
+
+::: {.incremental}
+{{< fa closed-captioning >}} **Live captions** — Real-time transcription
+
+{{< fa file-alt >}} **Meeting notes** — Automatic summaries after meetings
+
+{{< fa tasks >}} **Action items** — Extract to-dos from discussions
+
+{{< fa language >}} **Translation** — Real-time translated captions
+:::
+
+. . .
+
+**Perfect for:**
+
+- SFBBO board meetings → automatic minutes
+- Partner calls → action item tracking  
+- Training sessions → transcripts for reference
+- Remote volunteer coordination → everyone stays informed
+
+---
+
+## Google AI Tools Summary {.smaller}
+
+| Tool | Best For | SFBBO Use Case |
+|------|----------|----------------|
+| **Gemini Chat** | Data analysis, coding help | Analyze survey datasets |
+| **NotebookLM** | Research, audio summaries | Digest scientific papers |
+| **Sheets + Gemini** | Spreadsheet analysis | Survey data formulas & charts |
+| **Docs + Gemini** | Writing & editing | Grant proposals, reports |
+| **Slides + Gemini** | Presentations | Board presentations |
+| **Gmail + Gemini** | Email drafting | Donor & volunteer communications |
+| **Drive + Gemini** | File search & summary | Find past reports |
+| **Meet + Gemini** | Meeting notes | Automatic meeting minutes |
+
+---
+
 ## Real-World Scenario: Would You Catch This? {.center}
 
 You ask Gemini: *"My bird survey shows a 400% increase in Snowy Egrets from Jan to Feb. Is this migration or climate change?"*
@@ -1377,6 +2350,263 @@ Based on these SFBBO population trends, identify:
 Cite specific numbers from the data to support each conclusion.
 Reference SFBBO's conservation mission where relevant.
 ```
+
+---
+
+## Using Gemini for Grant Writing {.smaller}
+
+Gemini can accelerate your grant application process:
+
+::: {.incremental}
+{{< fa file-alt >}} **Draft proposals** — Generate initial text from your data insights
+
+{{< fa edit >}} **Improve writing** — Refine language for clarity and impact
+
+{{< fa search >}} **Research alignment** — Connect your work to funding priorities
+
+{{< fa calculator >}} **Budget justifications** — Articulate why resources are needed
+
+{{< fa list-check >}} **Review checklists** — Ensure all requirements are addressed
+:::
+
+. . .
+
+::: {.callout-tip}
+**Key insight:** Use Gemini to draft, but always personalize with SFBBO's unique voice and mission!
+:::
+
+---
+
+## Grant Writing Prompts {.smaller}
+
+{{< fa lightbulb >}} **Project Summary:**
+
+```{.markdown filename="Copy to Gemini"}
+Write a 250-word project summary for a conservation grant application.
+
+Project: Long-term shorebird monitoring at San Francisco Bay
+Organization: San Francisco Bay Bird Observatory (SFBBO)
+Key data: [paste your summary statistics]
+Goals: Track population trends, inform wetland management
+Audience: Wildlife conservation foundation
+
+Emphasize: Scientific rigor, community engagement, measurable outcomes
+```
+
+. . .
+
+{{< fa lightbulb >}} **Significance Statement:**
+
+```{.markdown filename="Copy to Gemini"}
+Write a compelling significance statement (150 words) explaining 
+why monitoring shorebird populations in SF Bay matters for:
+- Pacific Flyway conservation
+- Climate change adaptation
+- Urban wildlife management
+- Community science engagement
+```
+
+---
+
+## Grant Writing Prompts (cont.) {.smaller}
+
+{{< fa lightbulb >}} **Methods Section:**
+
+```{.markdown filename="Copy to Gemini"}
+Draft a methods section for a grant proposal based on SFBBO's 
+survey protocols:
+
+Data collection: Monthly point counts at 12 wetland sites
+Species: Shorebirds, waterfowl, and marsh birds
+Variables: Species, count, habitat, tide level, weather
+Analysis: Trend analysis, habitat modeling, population estimates
+Timeline: 3-year monitoring period
+
+Write in formal scientific grant language (300 words).
+```
+
+. . .
+
+{{< fa lightbulb >}} **Budget Narrative:**
+
+```{.markdown filename="Copy to Gemini"}
+Write a budget justification for these line items:
+- Field technician (0.5 FTE): $35,000
+- Equipment (spotting scopes, GPS): $5,000
+- Travel to survey sites: $3,000
+- Data management: $2,000
+
+Explain why each expense is necessary for shorebird monitoring success.
+```
+
+---
+
+## Finding Research Opportunities {.smaller}
+
+Ask Gemini to help identify funding sources:
+
+```{.markdown filename="Copy to Gemini"}
+I work at San Francisco Bay Bird Observatory (SFBBO), a nonprofit 
+focused on bird conservation and research in the SF Bay Area.
+
+Our programs include:
+- Long-term waterbird monitoring
+- Ridgway's Rail population surveys
+- Shorebird migration tracking
+- Community science training
+
+Suggest 10 potential grant opportunities from:
+- Federal agencies (USFWS, NOAA, EPA)
+- State agencies (CA Dept of Fish & Wildlife)
+- Private foundations (conservation-focused)
+- Corporate giving programs
+
+For each, note: typical award size, deadline cycle, and fit with our work.
+```
+
+---
+
+## Research Collaboration Ideas {.smaller}
+
+{{< fa lightbulb >}} **Generate research questions:**
+
+```{.markdown filename="Copy to Gemini"}
+Based on SFBBO's 20+ years of waterbird monitoring data, 
+suggest 5 research questions that could lead to:
+- Peer-reviewed publications
+- Graduate student thesis projects
+- Collaborative studies with universities
+
+Consider topics like:
+- Climate change impacts on SF Bay birds
+- Habitat restoration effectiveness
+- Urban wetland conservation
+- Shorebird migration phenology
+
+For each question, suggest potential academic partners in the Bay Area.
+```
+
+---
+
+## Annual Report Assistance {.smaller}
+
+{{< fa lightbulb >}} **Executive Summary:**
+
+```{.markdown filename="Copy to Gemini"}
+Write an executive summary (300 words) for SFBBO's annual report.
+
+Key accomplishments this year:
+- Monitored 45 wetland sites
+- Recorded 125 bird species
+- Trained 50 community scientists
+- Published 2 peer-reviewed papers
+- Received $150,000 in grants
+
+Highlights from the data:
+[paste your key findings here]
+
+Tone: Professional but accessible, celebratory but scientifically grounded
+Audience: Donors, partners, and the general public
+```
+
+. . .
+
+{{< fa lightbulb >}} **Donor Thank You Letters:**
+
+```{.markdown filename="Copy to Gemini"}
+Write a thank you letter template for SFBBO donors that:
+- Acknowledges their specific contribution
+- Shares one compelling data point from this year's surveys
+- Describes the impact of their support
+- Invites them to an upcoming field trip or event
+```
+
+---
+
+## Newsletter & Outreach Content {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+{{< fa newspaper >}} **Newsletter Articles:**
+
+```{.markdown filename="Copy to Gemini"}
+Write a 400-word newsletter article 
+about spring shorebird migration 
+in SF Bay for SFBBO supporters.
+
+Include:
+- Which species to look for
+- Peak timing (based on our data)
+- Best viewing locations
+- How SFBBO monitors migration
+
+Tone: Engaging, educational, 
+inspiring action
+```
+:::
+
+::: {.column width="50%"}
+{{< fa share-alt >}} **Social Media:**
+
+```{.markdown filename="Copy to Gemini"}
+Create 5 social media posts 
+about SFBBO's winter waterbird 
+census results.
+
+For each post include:
+- Hook (attention-grabbing fact)
+- Key finding from the data
+- Call to action
+- Suggested hashtags
+
+Platform: Twitter/X (280 chars)
+```
+:::
+:::
+
+---
+
+## Tips for Grant & Research Writing with AI {.smaller}
+
+::: {.callout-important}
+## Best Practices
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+**Do:**
+
+{{< fa check >}} Provide specific data and context
+
+{{< fa check >}} Ask for multiple draft versions
+
+{{< fa check >}} Edit heavily to match your voice
+
+{{< fa check >}} Fact-check all statistics
+
+{{< fa check >}} Add SFBBO-specific details
+:::
+
+::: {.column width="50%"}
+**Don't:**
+
+{{< fa times >}} Submit AI text without editing
+
+{{< fa times >}} Let AI invent data or citations
+
+{{< fa times >}} Use generic language
+
+{{< fa times >}} Skip the review process
+
+{{< fa times >}} Forget to acknowledge AI use
+:::
+:::
+
+. . .
+
+::: {.callout-note}
+**Pro tip:** Tell Gemini to write in SFBBO's voice by providing examples of past successful proposals!
+:::
 
 ---
 
