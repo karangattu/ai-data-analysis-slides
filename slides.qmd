@@ -921,6 +921,11 @@ Include:
 - {{< fa file-lines >}} **Structured outputs** — FAQs, study guides, briefing docs, timelines
 :::
 
+## {{< fa book-open >}} Citations in NotebookLM
+
+::: {.fragment}
+![](assets/citations.gif)
+:::
 
 ## {{< fa upload >}} Getting Started with NotebookLM
 
@@ -963,6 +968,9 @@ Include:
 [Scientific mumbo-jumbo paper link](https://drive.google.com/file/d/1-WqbyrUZUbuZgMlMsM4mETDQay1cEVGV/view?usp=sharing)
 - Click on the suggested questions to explore the content.
 - Try asking your own questions about the paper!
+  
+-  [Another Scientific Paper 1](https://drive.google.com/file/d/1qZ2Y2K5IdXK2OpbGdSGxKY7bupn32Mb1/view?usp=sharing)
+-  [And another Scientific Paper 2](https://drive.google.com/file/d/1fbkIwlKPXTEJIvPLcpJUvYPF-K1gC0U9/view?usp=sharing)
 
 
 ## {{< fa baseball-bat-ball >}} Hands-on exercise
@@ -1012,26 +1020,122 @@ Click on the Slide Deck Overview tab (will take ~10 minutes).
 ![](assets/slide_deck_overview.png)
 
 
-## {{< fa clipboard-check >}} NotebookLM Best Practices
+## {{< fa triangle-exclamation >}} Data Privacy & Security Risks {.center}
 
-**Get the most out of your AI research assistant:**
+**Before sharing data with AI, understand the risks:**
 
 ::: {.fragment}
-**1. Choose relevant sources**
-- Quality in = quality out
-- Mix of protocols, data reports, and research papers
+{{< fa building >}} **Organizational Data**
+- Grant proposals, budgets, donor information
+- Unpublished research findings
 :::
 
 ::: {.fragment}
-**2. Ask clear, specific questions**
-- Weak: "Tell me about birds"
-- Strong: "What monitoring protocols does SFBBO use for Snowy Plovers?"
+{{< fa location-dot >}} **Sensitive Location Data**
+- Exact nesting sites of endangered species
 :::
 
 ::: {.fragment}
-**3. Always verify**
-- AI is an assistant, not a replacement for human judgment (yet!)
-- Check citations before using in official reports
+{{< fa user-secret >}} **Personal Information**
+- Volunteer contact details
+- Observer full names in survey data
 :::
+
+::: {.fragment}
+::: callout-warning
+**Rule of thumb:** If you wouldn't publish it on your website, think twice before uploading to AI tools!
+:::
+:::
+
+
+## {{< fa lock >}} Best Practices for Sharing Data with AI
+
+**Protect your data while still benefiting from AI:**
+
+::: {.fragment}
+**1. Anonymize First** {{< fa user-xmark >}}
+
+- Remove observer names (use codes like OBS001)
+- Strip location precision (use general regions)
+- Redact sensitive notes
+:::
+
+## {{< fa magnifying-glass >}} How to Validate AI Answers
+
+**AI can be confident and wrong. Here's how to check:**
+
+::: {.fragment}
+**The "Smell Test"** {{< fa nose >}}
+
+- Does this answer seem too good/bad to be true?
+- Does it match your domain knowledge?
+- Are the numbers in the right ballpark?
+:::
+
+::: {.fragment}
+**Verify the Math** {{< fa calculator >}}
+
+- Recalculate key statistics independently
+- Check if percentages add up correctly
+- Spot-check a few data points manually
+:::
+
+## {{< fa magnifying-glass >}} How to Validate AI Answers
+
+**AI can be confident and wrong. Here's how to check:**
+
+::: {.fragment}
+**Cross-Reference Sources** {{< fa book-open >}}
+
+- Does the AI's summary match the original document?
+- Are citations pointing to the right sections?
+- Can you find the quoted text in the source?
+:::
+
+::: {.fragment}
+**Test with Known Data** {{< fa vial >}}
+
+- Ask AI about data YOU already analyzed
+- Compare AI's findings with your own conclusions
+- If they differ significantly, investigate why
+:::
+
+
+## {{< fa list-check >}} Using AI Responsibly
+
+::: {.fragment}
+::: callout-tip
+**Remember:** AI is a tool to accelerate your work, not replace your expertise. The final responsibility for accuracy always lies with you!
+:::
+:::
+
+
+## {{< fa scale-balanced >}} When to Use AI vs. When to Skip It
+
+**AI is great for:** {{< fa thumbs-up >}}
+
+- Drafting reports from your own clean data
+- Brainstorming analysis approaches
+- Explaining complex papers to beginners
+- Generating code for visualization
+- Creating practice datasets for training
+
+## {{< fa scale-balanced >}} When to Use AI vs. When to Skip It
+::: {.fragment}
+**Think twice before using AI for:** {{< fa hand >}}
+
+- Final published research findings
+- Legal or regulatory compliance documents
+- Data with unredacted sensitive locations
+- Decisions affecting endangered species protections
+- Anything requiring a signature or official stamp
+:::
+
+::: {.fragment}
+::: callout-note
+**When in doubt:** Use AI for exploration and drafting, but rely on human expertise for final decisions and official communications.
+:::
+:::
+
 
 ## {{< fa question-circle >}} Questions?

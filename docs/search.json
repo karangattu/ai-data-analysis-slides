@@ -364,6 +364,13 @@
     "text": "Introducing NotebookLM\nNotebookLM is Google’s AI-first notebook that becomes an expert on your documents.\n\nWhat makes it different?\n\n\n\n Grounded in YOUR sources — Unlike ChatGPT, it only uses your uploaded documents\n Audio Overview — Generates podcasts with two AI voices discussing your content\n Citations — Every answer includes source references you can verify\n Structured outputs — FAQs, study guides, briefing docs, timelines"
   },
   {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120626f6f6b2d6f70656e203e7d7d--citations-in-notebooklm",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120626f6f6b2d6f70656e203e7d7d--citations-in-notebooklm",
+    "title": "AI for Data Analysis",
+    "section": " Citations in NotebookLM",
+    "text": "Citations in NotebookLM"
+  },
+  {
     "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612075706c6f6164203e7d7d--getting-started-with-notebooklm",
     "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612075706c6f6164203e7d7d--getting-started-with-notebooklm",
     "title": "AI for Data Analysis",
@@ -382,7 +389,7 @@
     "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261736562616c6c2d6261742d62616c6c203e7d7d--hands-on-exercise",
     "title": "AI for Data Analysis",
     "section": " Hands-on exercise",
-    "text": "Hands-on exercise\n\n \n\nUpload this scientific paper to your NotebookLM account: Scientific mumbo-jumbo paper link\nClick on the suggested questions to explore the content.\nTry asking your own questions about the paper!"
+    "text": "Hands-on exercise\n\n \n\nUpload this scientific paper to your NotebookLM account: Scientific mumbo-jumbo paper link\nClick on the suggested questions to explore the content.\nTry asking your own questions about the paper!\nAnother Scientific Paper 1\nAnd another Scientific Paper 2"
   },
   {
     "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261736562616c6c2d6261742d62616c6c203e7d7d--hands-on-exercise-1",
@@ -420,11 +427,53 @@
     "text": "Slide Deck Overview Hands-on exercise\n\n \nClick on the Slide Deck Overview tab (will take ~10 minutes)."
   },
   {
-    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636c6970626f6172642d636865636b203e7d7d--notebooklm-best-practices",
-    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636c6970626f6172642d636865636b203e7d7d--notebooklm-best-practices",
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120747269616e676c652d6578636c616d6174696f6e203e7d7d--data-privacy-security-risks",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120747269616e676c652d6578636c616d6174696f6e203e7d7d--data-privacy-security-risks",
     "title": "AI for Data Analysis",
-    "section": " NotebookLM Best Practices",
-    "text": "NotebookLM Best Practices\nGet the most out of your AI research assistant:\n\n1. Choose relevant sources - Quality in = quality out - Mix of protocols, data reports, and research papers\n\n\n2. Ask clear, specific questions - Weak: “Tell me about birds” - Strong: “What monitoring protocols does SFBBO use for Snowy Plovers?”\n\n\n3. Always verify - AI is an assistant, not a replacement for human judgment (yet!) - Check citations before using in official reports"
+    "section": " Data Privacy & Security Risks",
+    "text": "Data Privacy & Security Risks\nBefore sharing data with AI, understand the risks:\n\n Organizational Data - Grant proposals, budgets, donor information - Unpublished research findings\n\n\n Sensitive Location Data - Exact nesting sites of endangered species\n\n\n Personal Information - Volunteer contact details - Observer full names in survey data\n\n\n\n\n\n\n\n\nRule of thumb: If you wouldn’t publish it on your website, think twice before uploading to AI tools!"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206c6f636b203e7d7d--best-practices-for-sharing-data-with-ai",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206c6f636b203e7d7d--best-practices-for-sharing-data-with-ai",
+    "title": "AI for Data Analysis",
+    "section": " Best Practices for Sharing Data with AI",
+    "text": "Best Practices for Sharing Data with AI\nProtect your data while still benefiting from AI:\n\n1. Anonymize First \n\nRemove observer names (use codes like OBS001)\nStrip location precision (use general regions)\nRedact sensitive notes"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d61676e696679696e672d676c617373203e7d7d--how-to-validate-ai-answers",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d61676e696679696e672d676c617373203e7d7d--how-to-validate-ai-answers",
+    "title": "AI for Data Analysis",
+    "section": " How to Validate AI Answers",
+    "text": "How to Validate AI Answers\nAI can be confident and wrong. Here’s how to check:\n\nThe “Smell Test” \n\nDoes this answer seem too good/bad to be true?\nDoes it match your domain knowledge?\nAre the numbers in the right ballpark?\n\n\n\nVerify the Math \n\nRecalculate key statistics independently\nCheck if percentages add up correctly\nSpot-check a few data points manually"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d61676e696679696e672d676c617373203e7d7d--how-to-validate-ai-answers-1",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d61676e696679696e672d676c617373203e7d7d--how-to-validate-ai-answers-1",
+    "title": "AI for Data Analysis",
+    "section": " How to Validate AI Answers",
+    "text": "How to Validate AI Answers\nAI can be confident and wrong. Here’s how to check:\n\nCross-Reference Sources \n\nDoes the AI’s summary match the original document?\nAre citations pointing to the right sections?\nCan you find the quoted text in the source?\n\n\n\nTest with Known Data \n\nAsk AI about data YOU already analyzed\nCompare AI’s findings with your own conclusions\nIf they differ significantly, investigate why"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206c6973742d636865636b203e7d7d--using-ai-responsibly",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206c6973742d636865636b203e7d7d--using-ai-responsibly",
+    "title": "AI for Data Analysis",
+    "section": " Using AI Responsibly",
+    "text": "Using AI Responsibly\n\n\n\n\n\n\n\nRemember: AI is a tool to accelerate your work, not replace your expertise. The final responsibility for accuracy always lies with you!"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207363616c652d62616c616e636564203e7d7d--when-to-use-ai-vs.-when-to-skip-it",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207363616c652d62616c616e636564203e7d7d--when-to-use-ai-vs.-when-to-skip-it",
+    "title": "AI for Data Analysis",
+    "section": " When to Use AI vs. When to Skip It",
+    "text": "When to Use AI vs. When to Skip It\nAI is great for: \n\nDrafting reports from your own clean data\nBrainstorming analysis approaches\nExplaining complex papers to beginners\nGenerating code for visualization\nCreating practice datasets for training"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207363616c652d62616c616e636564203e7d7d--when-to-use-ai-vs.-when-to-skip-it-1",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207363616c652d62616c616e636564203e7d7d--when-to-use-ai-vs.-when-to-skip-it-1",
+    "title": "AI for Data Analysis",
+    "section": " When to Use AI vs. When to Skip It",
+    "text": "When to Use AI vs. When to Skip It\n\nThink twice before using AI for: \n\nFinal published research findings\nLegal or regulatory compliance documents\nData with unredacted sensitive locations\nDecisions affecting endangered species protections\nAnything requiring a signature or official stamp\n\n\n\n\n\n\n\n\n\nWhen in doubt: Use AI for exploration and drafting, but rely on human expertise for final decisions and official communications."
   },
   {
     "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207175657374696f6e2d636972636c65203e7d7d--questions",
