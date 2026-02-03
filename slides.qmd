@@ -848,11 +848,6 @@ week,site,species,count
 **Weak prompt:** "Make a chart of this data" {{< fa xmark >}}
 :::
 
-::: fragment
-**Strong prompt:** {{< fa check >}}
-:::
-
-
 ## {{< fa check >}} Strong Visualization Prompt Example
 
 ```
@@ -909,10 +904,6 @@ Include:
 ## {{< fa book-open >}} Introducing NotebookLM {.center}
 
 **NotebookLM** is Google's AI-first notebook that becomes an expert on *your* documents.
-
-::: {.fragment}
-**What makes it different?**
-:::
 
 ::: {.fragment}
 - {{< fa database >}} **Grounded in YOUR sources** — Unlike ChatGPT, it only uses your uploaded documents

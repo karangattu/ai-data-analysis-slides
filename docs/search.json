@@ -326,7 +326,7 @@
     "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612070656e2d72756c6572203e7d7d--example-crafting-a-visualization-prompt",
     "title": "AI for Data Analysis",
     "section": " Example: Crafting a Visualization Prompt",
-    "text": "Example: Crafting a Visualization Prompt\nDataset: Weekly bird counts across three sites\nweek,site,species,count\n1,Palo Alto Baylands,Dunlin,2340\n1,Don Edwards NWR,Dunlin,1567\n1,Eden Landing,Dunlin,890\n2,Palo Alto Baylands,Dunlin,2890\n2,Don Edwards NWR,Dunlin,1789\n2,Eden Landing,Dunlin,1234\n3,Palo Alto Baylands,Dunlin,3120\n3,Don Edwards NWR,Dunlin,1987\n3,Eden Landing,Dunlin,1456\n4,Palo Alto Baylands,Dunlin,3567\n4,Don Edwards NWR,Dunlin,2345\n4,Eden Landing,Dunlin,1890\n\nWeak prompt: “Make a chart of this data” \n\n\nStrong prompt:"
+    "text": "Example: Crafting a Visualization Prompt\nDataset: Weekly bird counts across three sites\nweek,site,species,count\n1,Palo Alto Baylands,Dunlin,2340\n1,Don Edwards NWR,Dunlin,1567\n1,Eden Landing,Dunlin,890\n2,Palo Alto Baylands,Dunlin,2890\n2,Don Edwards NWR,Dunlin,1789\n2,Eden Landing,Dunlin,1234\n3,Palo Alto Baylands,Dunlin,3120\n3,Don Edwards NWR,Dunlin,1987\n3,Eden Landing,Dunlin,1456\n4,Palo Alto Baylands,Dunlin,3567\n4,Don Edwards NWR,Dunlin,2345\n4,Eden Landing,Dunlin,1890\n\nWeak prompt: “Make a chart of this data”"
   },
   {
     "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636865636b203e7d7d--strong-visualization-prompt-example",
@@ -361,7 +361,7 @@
     "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120626f6f6b2d6f70656e203e7d7d--introducing-notebooklm",
     "title": "AI for Data Analysis",
     "section": " Introducing NotebookLM",
-    "text": "Introducing NotebookLM\nNotebookLM is Google’s AI-first notebook that becomes an expert on your documents.\n\nWhat makes it different?\n\n\n\n Grounded in YOUR sources — Unlike ChatGPT, it only uses your uploaded documents\n Audio Overview — Generates podcasts with two AI voices discussing your content\n Citations — Every answer includes source references you can verify\n Structured outputs — FAQs, study guides, briefing docs, timelines"
+    "text": "Introducing NotebookLM\nNotebookLM is Google’s AI-first notebook that becomes an expert on your documents.\n\n\n Grounded in YOUR sources — Unlike ChatGPT, it only uses your uploaded documents\n Audio Overview — Generates podcasts with two AI voices discussing your content\n Citations — Every answer includes source references you can verify\n Structured outputs — FAQs, study guides, briefing docs, timelines"
   },
   {
     "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120626f6f6b2d6f70656e203e7d7d--citations-in-notebooklm",
