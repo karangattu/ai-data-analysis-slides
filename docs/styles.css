@@ -11,6 +11,29 @@
   margin-bottom: 0.5em;
 }
 
+/* Ensure .smaller class actually makes text smaller */
+.reveal .slides section.smaller,
+.reveal .slides section .smaller {
+  font-size: 0.7em;
+}
+
+.reveal .slides section.smaller h2,
+.reveal .slides section.smaller h3 {
+  font-size: 1.2em;
+}
+
+/* Scrollable code blocks for large datasets */
+.reveal .slides pre {
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+.reveal .slides h2::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
 /* Improve readability of white text on busy background images */
 .reveal .slides h1,
 .reveal .slides h2,

@@ -35,6 +35,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2; background-color: #2e3440; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #75715e; } /* Annotation */
+    code span.at { color: #f92672; } /* Attribute */
+    code span.bn { color: #ae81ff; } /* BaseN */
+    code span.bu { color: #66d9ef; } /* BuiltIn */
+    code span.cf { color: #f92672; } /* ControlFlow */
+    code span.ch { color: #e6db74; } /* Char */
+    code span.cn { color: #ae81ff; } /* Constant */
+    code span.co { color: #75715e; } /* Comment */
+    code span.cv { color: #75715e; } /* CommentVar */
+    code span.do { color: #75715e; } /* Documentation */
+    code span.dt { color: #66d9ef; font-style: italic; } /* DataType */
+    code span.dv { color: #ae81ff; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #a6e22e; font-weight: bold; } /* Extension */
+    code span.fl { color: #ae81ff; } /* Float */
+    code span.fu { color: #a6e22e; } /* Function */
+    code span.im { color: #f92672; } /* Import */
+    code span.in { color: #f1fa8c; } /* Information */
+    code span.kw { color: #f92672; } /* Keyword */
+    code span.op { color: #f8f8f2; } /* Operator */
+    code span.ot { color: #a6e22e; } /* Other */
+    code span.pp { color: #f92672; } /* Preprocessor */
+    code span.re { color: #75715e; } /* RegionMarker */
+    code span.sc { color: #ae81ff; } /* SpecialChar */
+    code span.ss { color: #e6db74; } /* SpecialString */
+    code span.st { color: #e6db74; } /* String */
+    code span.va { color: #f8f8f2; } /* Variable */
+    code span.vs { color: #e6db74; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-d5190ca12a2c8009c0f4cdeb293c69a2.css">
   <link rel="stylesheet" href="styles.css">
@@ -209,7 +275,7 @@ Karan Gathani
 </section>
 <section id="share-a-moment-where-ai-surprised-you" class="slide level2">
 <h2>Share a moment where AI surprised you!</h2>
-<countdown-timer id="timer_19da6c66e0496d60e549da387be1085d5589e4d1" minutes="02" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="02" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 <p><strong>Turn to a neighbor and share (2 min):</strong></p>
 <ul>
@@ -377,10 +443,6 @@ Karan Gathani
 <div class="fragment">
 <ul>
 <li class="fragment"><strong>Low Temperature (0.1 - 0.3):</strong> The AI always picks the #1 most likely word. It’s very logical but boring.</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
 <li class="fragment"><strong>High Temperature (0.7 - 1.0):</strong> The AI is allowed to pick the 3rd or 10th most likely word. This is where “creativity” comes from.</li>
 </ul>
 </div>
@@ -504,12 +566,10 @@ Karan Gathani
 <img data-src="assets/Google_Gemini.png" class="center r-stretch"></section>
 <section id="lets-take-it-for-a-spin" class="slide level2">
 <h2>Let’s take it for a spin!</h2>
-<countdown-timer id="timer_19da6c66e0496d60e549da387be1085d5589e4d1" minutes="02" seconds="30" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="02" seconds="30" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 <div class="fragment">
-<ul>
-<li class="fragment">Using the Tool selector as <strong>Create images</strong> and the Model picker as <em>Fast</em>, type the following prompt:</li>
-</ul>
+<p>Using the Tool selector as <strong>Create images</strong> and the Model picker as <em>Fast</em>, type the following prompt:</p>
 </div>
 <div class="fragment">
 <blockquote>
@@ -519,7 +579,7 @@ Karan Gathani
 </section>
 <section id="change-the-model-to-a-pro-model" class="slide level2">
 <h2>Change the model to a Pro model!</h2>
-<countdown-timer id="timer_19da6c66e0496d60e549da387be1085d5589e4d1" minutes="02" seconds="30" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="02" seconds="30" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 <div class="fragment">
 <p>Using the Tool selector as <strong>Create images</strong> and the Model picker as <em>Pro</em>, type the following prompt:</p>
@@ -535,7 +595,7 @@ Karan Gathani
 <h2>Can someone explain me what this paper is all about</h2>
 
 <img data-src="assets/soli_paper_screenshot.png" class="quarto-figure quarto-figure-center r-stretch"><p><a href="https://drive.google.com/file/d/1-WqbyrUZUbuZgMlMsM4mETDQay1cEVGV/view?usp=sharing">Scientific mumbo-jumbo paper link</a></p>
-<countdown-timer id="timer_19da6c66e0496d60e549da387be1085d5589e4d1" minutes="03" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="03" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 <div class="fragment">
 <div class="callout callout-tip callout-style-simple">
@@ -557,18 +617,18 @@ Karan Gathani
 <section id="using-gemini-identify-this-bird-species" class="slide level2">
 <h2>Using Gemini, identify this bird species!</h2>
 
-<img data-src="assets/what_bird_are_you.jpeg" class="quarto-figure quarto-figure-center r-stretch"><countdown-timer id="timer_19da6c66e0496d60e549da387be1085d5589e4d1" minutes="03" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="assets/what_bird_are_you.jpeg" class="quarto-figure quarto-figure-center r-stretch"><countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="03" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 </section>
 <section id="what-happens-if-you-ask-it-to-identify-a-fake-bird-species" class="slide level2">
 <h2>What happens if you ask it to identify a fake bird species?</h2>
 
-<img data-src="assets/a_new_species.png" class="quarto-figure quarto-figure-center r-stretch"><countdown-timer id="timer_19da6c66e0496d60e549da387be1085d5589e4d1" minutes="03" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="assets/a_new_species.png" class="quarto-figure quarto-figure-center r-stretch"><countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="03" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d75672d736175636572203e7d7d--break-time" class="slide level2 center">
 <h2><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i> Break Time!</h2>
-<countdown-timer id="timer_19da6c66e0496d60e549da387be1085d5589e4d1" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261636b77617264203e7d7d--recap-so-far" class="slide level2 center">
@@ -583,11 +643,594 @@ Karan Gathani
 <h2><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> What do you think will happen if you ask the following question to Gemini?</h2>
 <div class="fragment">
 <blockquote>
-<p>Give me the key trends or insights from SFBBO’s 2023 bird survey data.</p>
+<p>Give me the key trends or insights from SFBBO’s 2025 bird banding data or Snowy Plover banding data.</p>
 </blockquote>
 </div>
-<countdown-timer id="timer_19da6c66e0496d60e549da387be1085d5589e4d1" minutes="02" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="02" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612062616e203e7d7d--ai-does-not-have-access-to-your-data-by-default" class="slide level2">
+<h2><i class="fa-solid fa-ban" aria-label="ban"></i> AI does not have access to your data (by default)</h2>
+<div class="fragment">
+<p><i class="fa-solid fa-hand-point-up" aria-label="hand-point-up"></i> It can help if you provide the data in the prompt.</p>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-file-upload" aria-label="file-upload"></i>You can upload files in Gemini and reference them in your prompts.</p>
+</div>
+<div class="fragment">
+<p><i class="fa-solid fa-paste" aria-label="paste"></i> Or paste the data directly into the prompt.</p>
+</div>
+</section>
+<section id="recommended-data-formats-when-uploading-to-gemini" class="slide level2">
+<h2>Recommended data formats when uploading to Gemini</h2>
+<p>A <code>CSV</code> (Comma separated Values) file is the gold standard for making tabular data accessible to AI models.</p>
+<div class="fragment">
+<p><em>What is a CSV file?</em></p>
+</div>
+<div class="fragment">
+<p>A <code>CSV</code> is basically a spreadsheet stripped away all of all the colorful borders, the bold fonts, and the complex formulas.</p>
+</div>
+</section>
+<section id="csv-format" class="slide level2">
+<h2>CSV format</h2>
+<div class="fragment">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Quantity</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Apples</td>
+<td>6</td>
+<td>$3.00</td>
+</tr>
+<tr class="even">
+<td>Milk</td>
+<td>1</td>
+<td>$4.50</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<p>CSV looks like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>Item, Quantity, Price</span>
+<span id="cb1-2"><a></a>Apples, 6, $3.00</span>
+<span id="cb1-3"><a></a>Milk, 1, $4.50</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p><i class="fa-solid fa-file-csv" aria-label="file-csv"></i> The first line is the “Header”, and every line after that is a “Row”.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="why-is-csv-the-gold-tier-format-for-ai" class="slide level2">
+<h2>Why is CSV the “Gold Tier” format for AI?</h2>
+<ul>
+<li class="fragment">Since CSV is raw data, they are the most token efficient.</li>
+<li class="fragment">Every computer on Earth, understands CSV files.</li>
+<li class="fragment">Programming languages have built-in functions to read and write CSV files.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p><i class="fa-solid fa-code" aria-label="code"></i> By giving the AI a CSV, you are handing a carpenter a perfectly cut piece of wood instead of a whole tree.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lets-analyze-this-csv-data-with-gemini" class="slide level2">
+<h2>Let’s analyze this CSV data with Gemini</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase</span>
+<span id="cb2-2"><a></a>1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing</span>
+<span id="cb2-3"><a></a>1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing</span>
+<span id="cb2-4"><a></a>2,2025,Palo Alto Baylands,Dunlin,2890,48,1.1,3.8,full</span>
+<span id="cb2-5"><a></a>2,2025,Eden Landing,Western Sandpiper,890,47,1.2,3.7,full</span>
+<span id="cb2-6"><a></a>3,2025,Palo Alto Baylands,Least Sandpiper,678,45,2.3,3.2,waning</span>
+<span id="cb2-7"><a></a>3,2025,Don Edwards NWR,Dunlin,2345,44,2.4,3.1,waning</span>
+<span id="cb2-8"><a></a>4,2025,Eden Landing,Dunlin,1456,49,0.1,4.4,new</span>
+<span id="cb2-9"><a></a>5,2025,Palo Alto Baylands,Western Sandpiper,1987,53,0.0,4.8,waxing</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<blockquote>
+<p>Ask Gemini to analyze the above CSV data and provide what is most frequently observed species across all sites in the first 5 weeks of 2025.</p>
+</blockquote>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Use the Copy to Clipboard button <i class="fa-solid fa-clipboard" aria-label="clipboard"></i></p>
+</div>
+</div>
+</div>
+</div>
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="02" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+</section>
+<section id="lets-analyze-a-bigger-csv-data-with-gemini" class="slide level2">
+<h2>Let’s analyze a bigger CSV data with Gemini</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase</span>
+<span id="cb3-2"><a></a>1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing</span>
+<span id="cb3-3"><a></a>1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing</span>
+<span id="cb3-4"><a></a>1,2025,Eden Landing,Western Sandpiper,890,48,0.4,4.0,waxing</span>
+<span id="cb3-5"><a></a>2,2025,Palo Alto Baylands,Dunlin,2890,48,1.1,3.8,full</span>
+<span id="cb3-6"><a></a>2,2025,Eden Landing,Western Sandpiper,1234,47,1.2,3.7,full</span>
+<span id="cb3-7"><a></a>2,2025,Don Edwards NWR,Least Sandpiper,445,46,1.3,3.6,full</span>
+<span id="cb3-8"><a></a>3,2025,Palo Alto Baylands,Least Sandpiper,678,45,2.3,3.2,waning</span>
+<span id="cb3-9"><a></a>3,2025,Don Edwards NWR,Dunlin,2345,44,2.4,3.1,waning</span>
+<span id="cb3-10"><a></a>3,2025,Eden Landing,Western Sandpiper,1567,45,2.2,3.3,waning</span>
+<span id="cb3-11"><a></a>4,2025,Eden Landing,Dunlin,1456,49,0.1,4.4,new</span>
+<span id="cb3-12"><a></a>4,2025,Palo Alto Baylands,Western Sandpiper,1123,50,0.0,4.5,new</span>
+<span id="cb3-13"><a></a>4,2025,Don Edwards NWR,Least Sandpiper,534,49,0.1,4.4,new</span>
+<span id="cb3-14"><a></a>5,2025,Palo Alto Baylands,Western Sandpiper,1987,53,0.0,4.8,waxing</span>
+<span id="cb3-15"><a></a>5,2025,Don Edwards NWR,Dunlin,1789,52,0.1,4.7,waxing</span>
+<span id="cb3-16"><a></a>5,2025,Eden Landing,Least Sandpiper,623,51,0.2,4.6,waxing</span>
+<span id="cb3-17"><a></a>6,2025,Palo Alto Baylands,Dunlin,3120,55,0.0,5.0,full</span>
+<span id="cb3-18"><a></a>6,2025,Eden Landing,Western Sandpiper,2345,54,0.0,4.9,full</span>
+<span id="cb3-19"><a></a>6,2025,Don Edwards NWR,Dunlin,1987,53,0.1,4.8,full</span>
+<span id="cb3-20"><a></a>7,2025,Palo Alto Baylands,Least Sandpiper,789,58,0.0,5.2,waning</span>
+<span id="cb3-21"><a></a>7,2025,Don Edwards NWR,Western Sandpiper,1456,57,0.0,5.1,waning</span>
+<span id="cb3-22"><a></a>7,2025,Eden Landing,Dunlin,1234,56,0.1,5.0,waning</span>
+<span id="cb3-23"><a></a>8,2025,Palo Alto Baylands,Dunlin,3567,62,0.0,5.5,new</span>
+<span id="cb3-24"><a></a>8,2025,Eden Landing,Western Sandpiper,2890,61,0.0,5.4,new</span>
+<span id="cb3-25"><a></a>8,2025,Don Edwards NWR,Least Sandpiper,678,60,0.0,5.3,new</span>
+<span id="cb3-26"><a></a>9,2025,Palo Alto Baylands,Western Sandpiper,2567,65,0.0,5.8,waxing</span>
+<span id="cb3-27"><a></a>9,2025,Don Edwards NWR,Dunlin,1456,64,0.0,5.7,waxing</span>
+<span id="cb3-28"><a></a>9,2025,Eden Landing,Least Sandpiper,534,63,0.1,5.6,waxing</span>
+<span id="cb3-29"><a></a>10,2025,Palo Alto Baylands,Dunlin,2890,68,0.0,6.0,full</span>
+<span id="cb3-30"><a></a>10,2025,Eden Landing,Western Sandpiper,3120,67,0.0,5.9,full</span>
+<span id="cb3-31"><a></a>10,2025,Don Edwards NWR,Dunlin,1234,66,0.1,5.8,full</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<blockquote>
+<p>Ask Gemini to analyze this bird count data</p>
+</blockquote>
+</div>
+</section>
+<section id="improving-prompting-skills" class="slide level2 center">
+<h2>Improving prompting skills</h2>
+<div class="fragment">
+<p>“Analyze bird count data.” <i class="fa-solid fa-xmark" aria-label="xmark"></i> Too vague!</p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment">What role should Gemini play?</li>
+<li class="fragment">What exactly should it analyze?</li>
+<li class="fragment">What format should the output be in?</li>
+</ul>
+</div>
+</section>
+<section id="what-makes-a-good-prompt" class="slide level2">
+<h2>What makes a good prompt?</h2>
+<p>Good prompts include:</p>
+<div class="fragment">
+<ul>
+<li class="fragment"><p><i class="fa-solid fa-user-tag" aria-label="user-tag"></i> <strong>Role</strong> — who the model is</p></li>
+<li class="fragment"><p><i class="fa-solid fa-tasks" aria-label="tasks"></i> <strong>Task</strong> — what to do</p></li>
+<li class="fragment"><p><i class="fa-solid fa-database" aria-label="database"></i> <strong>Data</strong> — input</p></li>
+<li class="fragment"><p><i class="fa-solid fa-ruler" aria-label="ruler"></i> <strong>Constraints</strong> — format, length, method</p></li>
+<li class="fragment"><p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Examples</strong> — optional but powerful</p></li>
+</ul>
+</div>
+</section>
+<section id="try-this-template" class="slide level2">
+<h2>Try this template</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>## Role</span>
+<span id="cb4-2"><a></a>You are an ornithological data analyst specializing in shorebird migration patterns and wetland ecology.</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a>## Task</span>
+<span id="cb4-5"><a></a>Analyze the provided 10-week bird survey dataset from three San Francisco Bay sites (Palo Alto Baylands, Don Edwards NWR, Eden Landing) and identify:</span>
+<span id="cb4-6"><a></a></span>
+<span id="cb4-7"><a></a>1. **Temporal Trends**: How do species counts change across weeks? Are there any peak migration periods?</span>
+<span id="cb4-8"><a></a>2. **Site Preferences**: Which species prefer which sites? Calculate total counts and averages per site-species combination.</span>
+<span id="cb4-9"><a></a>3. **Environmental Correlations**: </span>
+<span id="cb4-10"><a></a>   - Is there a relationship between temperature and bird counts?</span>
+<span id="cb4-11"><a></a>   - Do tide heights affect species presence?</span>
+<span id="cb4-12"><a></a>   - Does moon phase correlate with observation frequency?</span>
+<span id="cb4-13"><a></a>4. **Species Dominance**: Rank species by total abundance and identify the most/least common.</span>
+<span id="cb4-14"><a></a></span>
+<span id="cb4-15"><a></a>## Data</span>
+<span id="cb4-16"><a></a>&lt;copy the CSV data here&gt;</span>
+<span id="cb4-17"><a></a></span>
+<span id="cb4-18"><a></a>## Constraints</span>
+<span id="cb4-19"><a></a>- Provide specific numbers and percentages to support your findings</span>
+<span id="cb4-20"><a></a>- Format output with clear headers and bullet points</span>
+<span id="cb4-21"><a></a>- Highlight any surprising or counter-intuitive patterns</span>
+<span id="cb4-22"><a></a>- Keep the analysis concise (under 300 words)</span>
+<span id="cb4-23"><a></a></span>
+<span id="cb4-24"><a></a>## Examples</span>
+<span id="cb4-25"><a></a>Good insight format: "Dunlin counts peaked in Week 6 at Palo Alto Baylands (3,120 birds), coinciding with the highest tide (5.0 ft) and full moon phase."</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i> <i class="fa-solid fa-thumbs-down" aria-label="thumbs-down"></i></p>
+</div>
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="04" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+</section>
+<section id="using-ai-for-exploratory-data-analysis" class="slide level2">
+<h2>Using AI for Exploratory Data Analysis</h2>
+<p>Tasks AI can help with your data analysis:</p>
+<ul>
+<li class="fragment"><p><i class="fa-solid fa-question-circle" aria-label="question-circle"></i> Missing value analysis (incomplete surveys)</p></li>
+<li class="fragment"><p><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Outlier detection (unusual counts, rare species)</p></li>
+<li class="fragment"><p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hypothesis generation (population trends, habitat preferences)</p></li>
+<li class="fragment"><p><i class="fa-solid fa-code" aria-label="code"></i> Code generation (data cleaning, visualization)</p></li>
+<li class="fragment"><p><i class="fa-solid fa-file-export" aria-label="file-export"></i> Report writing (summarizing findings)</p></li>
+</ul>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207175657374696f6e2d636972636c65203e7d7d--dataset-1-missing-value-analysis" class="slide level2">
+<h2><i class="fa-solid fa-question-circle" aria-label="question-circle"></i> Dataset 1: Missing Value Analysis</h2>
+<p><countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer> <strong>Scenario:</strong> Some survey entries have incomplete data. Use AI to identify patterns in missing values.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>survey_id,date,site,species,count,observer,weather,notes</span>
+<span id="cb5-2"><a></a>S001,2025-01-15,Palo Alto Baylands,Dunlin,2340,J. Smith,sunny,</span>
+<span id="cb5-3"><a></a>S002,2025-01-15,Don Edwards NWR,Dunlin,,M. Chen,cloudy,early morning</span>
+<span id="cb5-4"><a></a>S003,2025-01-16,Eden Landing,Western Sandpiper,890,J. Smith,,foggy conditions</span>
+<span id="cb5-5"><a></a>S004,2025-01-17,Palo Alto Baylands,Least Sandpiper,678,,sunny,</span>
+<span id="cb5-6"><a></a>S005,2025-01-18,Don Edwards NWR,Dunlin,1567,M. Chen,rainy,light rain</span>
+<span id="cb5-7"><a></a>S006,2025-01-19,Eden Landing,Dunlin,,J. Smith,sunny,</span>
+<span id="cb5-8"><a></a>S007,2025-01-20,Palo Alto Baylands,Western Sandpiper,1987,M. Chen,cloudy,</span>
+<span id="cb5-9"><a></a>S008,2025-01-21,Don Edwards NWR,Least Sandpiper,445,J. Smith,sunny,high tide</span>
+<span id="cb5-10"><a></a>S009,2025-01-22,Eden Landing,Dunlin,1234,,cloudy,</span>
+<span id="cb5-11"><a></a>S010,2025-01-23,Palo Alto Baylands,Dunlin,2890,M. Chen,sunny,</span>
+<span id="cb5-12"><a></a>S011,2025-01-24,Don Edwards NWR,Western Sandpiper,,J. Smith,rainy,heavy rain</span>
+<span id="cb5-13"><a></a>S012,2025-01-25,Eden Landing,Least Sandpiper,534,M. Chen,,</span>
+<span id="cb5-14"><a></a>S013,2025-01-26,Palo Alto Baylands,Dunlin,3120,J. Smith,sunny,midday count</span>
+<span id="cb5-15"><a></a>S014,2025-01-27,Don Edwards NWR,Dunlin,1987,M. Chen,cloudy,</span>
+<span id="cb5-16"><a></a>S015,2025-01-28,Eden Landing,Western Sandpiper,2345,J. Smith,sunny,</span>
+<span id="cb5-17"><a></a>S016,2025-01-29,Palo Alto Baylands,Least Sandpiper,,M. Chen,foggy,</span>
+<span id="cb5-18"><a></a>S017,2025-01-30,Don Edwards NWR,Dunlin,1456,J. Smith,,windy</span>
+<span id="cb5-19"><a></a>S018,2025-01-31,Eden Landing,Dunlin,2890,M. Chen,sunny,</span>
+<span id="cb5-20"><a></a>S019,2025-02-01,Palo Alto Baylands,Western Sandpiper,2567,J. Smith,cloudy,</span>
+<span id="cb5-21"><a></a>S020,2025-02-02,Don Edwards NWR,Least Sandpiper,678,M. Chen,sunny,low tide</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612063686172742d6c696e65203e7d7d--dataset-2-outlier-detection" class="slide level2">
+<h2><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Dataset 2: Outlier Detection</h2>
+<p><countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer> <strong>Scenario:</strong> Unusual counts were recorded. Use AI to detect potential outliers and data entry errors.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>week,site,species,count,tide_height_ft,wind_speed_mph,temperature_f</span>
+<span id="cb6-2"><a></a>1,Palo Alto Baylands,Dunlin,2340,4.2,12,52</span>
+<span id="cb6-3"><a></a>1,Don Edwards NWR,Dunlin,1567,4.1,8,51</span>
+<span id="cb6-4"><a></a>1,Eden Landing,Western Sandpiper,890,4.0,15,48</span>
+<span id="cb6-5"><a></a>2,Palo Alto Baylands,Dunlin,2890,3.8,10,48</span>
+<span id="cb6-6"><a></a>2,Don Edwards NWR,Dunlin,45,3.7,9,47</span>
+<span id="cb6-7"><a></a>2,Eden Landing,Western Sandpiper,1234,3.6,14,47</span>
+<span id="cb6-8"><a></a>3,Palo Alto Baylands,Least Sandpiper,678,3.2,11,45</span>
+<span id="cb6-9"><a></a>3,Don Edwards NWR,Dunlin,2345,3.1,7,44</span>
+<span id="cb6-10"><a></a>3,Eden Landing,Western Sandpiper,1567,3.3,16,45</span>
+<span id="cb6-11"><a></a>4,Palo Alto Baylands,Dunlin,1456,4.4,13,49</span>
+<span id="cb6-12"><a></a>4,Don Edwards NWR,Least Sandpiper,534,4.4,9,49</span>
+<span id="cb6-13"><a></a>4,Eden Landing,Dunlin,9876,4.3,12,48</span>
+<span id="cb6-14"><a></a>5,Palo Alto Baylands,Western Sandpiper,1987,4.8,8,53</span>
+<span id="cb6-15"><a></a>5,Don Edwards NWR,Dunlin,1789,4.7,10,52</span>
+<span id="cb6-16"><a></a>5,Eden Landing,Least Sandpiper,623,4.6,14,51</span>
+<span id="cb6-17"><a></a>6,Palo Alto Baylands,Dunlin,3120,5.0,11,55</span>
+<span id="cb6-18"><a></a>6,Don Edwards NWR,Dunlin,1987,4.8,9,53</span>
+<span id="cb6-19"><a></a>6,Eden Landing,Western Sandpiper,2345,4.9,13,54</span>
+<span id="cb6-20"><a></a>7,Palo Alto Baylands,Least Sandpiper,789,5.2,7,58</span>
+<span id="cb6-21"><a></a>7,Don Edwards NWR,Western Sandpiper,3,5.1,8,57</span>
+<span id="cb6-22"><a></a>7,Eden Landing,Dunlin,1234,5.0,15,56</span>
+<span id="cb6-23"><a></a>8,Palo Alto Baylands,Dunlin,3567,5.5,10,62</span>
+<span id="cb6-24"><a></a>8,Don Edwards NWR,Least Sandpiper,678,5.3,9,60</span>
+<span id="cb6-25"><a></a>8,Eden Landing,Western Sandpiper,2890,5.4,12,61</span>
+<span id="cb6-26"><a></a>9,Palo Alto Baylands,Western Sandpiper,2567,5.8,8,65</span>
+<span id="cb6-27"><a></a>9,Don Edwards NWR,Dunlin,1456,5.7,11,64</span>
+<span id="cb6-28"><a></a>9,Eden Landing,Least Sandpiper,15000,5.6,14,63</span>
+<span id="cb6-29"><a></a>10,Palo Alto Baylands,Dunlin,2890,6.0,9,68</span>
+<span id="cb6-30"><a></a>10,Don Edwards NWR,Dunlin,1234,5.8,10,66</span>
+<span id="cb6-31"><a></a>10,Eden Landing,Western Sandpiper,3120,5.9,13,67</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206c6967687462756c62203e7d7d--dataset-3-hypothesis-generation" class="slide level2">
+<h2><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Dataset 3: Hypothesis Generation</h2>
+<p><countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer> <strong>Scenario:</strong> Explore population trends and habitat preferences to generate research hypotheses.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>month,year,site,species,count,habitat_type,water_depth_cm,vegetation_cover_pct</span>
+<span id="cb7-2"><a></a>1,2024,Palo Alto Baylands,Dunlin,5234,mudflat,15,10</span>
+<span id="cb7-3"><a></a>1,2024,Don Edwards NWR,Dunlin,3456,salt marsh,8,45</span>
+<span id="cb7-4"><a></a>1,2024,Eden Landing,Dunlin,2890,mudflat,12,15</span>
+<span id="cb7-5"><a></a>4,2024,Palo Alto Baylands,Western Sandpiper,4567,mudflat,18,8</span>
+<span id="cb7-6"><a></a>4,2024,Don Edwards NWR,Western Sandpiper,2345,salt marsh,10,50</span>
+<span id="cb7-7"><a></a>4,2024,Eden Landing,Western Sandpiper,5678,mudflat,20,12</span>
+<span id="cb7-8"><a></a>7,2024,Palo Alto Baylands,Least Sandpiper,1234,mudflat,5,20</span>
+<span id="cb7-9"><a></a>7,2024,Don Edwards NWR,Least Sandpiper,3456,salt marsh,6,60</span>
+<span id="cb7-10"><a></a>7,2024,Eden Landing,Least Sandpiper,1890,mudflat,8,25</span>
+<span id="cb7-11"><a></a>10,2024,Palo Alto Baylands,Dunlin,6789,mudflat,22,5</span>
+<span id="cb7-12"><a></a>10,2024,Don Edwards NWR,Dunlin,4567,salt marsh,12,40</span>
+<span id="cb7-13"><a></a>10,2024,Eden Landing,Dunlin,5432,mudflat,19,10</span>
+<span id="cb7-14"><a></a>1,2025,Palo Alto Baylands,Dunlin,4890,mudflat,14,12</span>
+<span id="cb7-15"><a></a>1,2025,Don Edwards NWR,Dunlin,3234,salt marsh,7,48</span>
+<span id="cb7-16"><a></a>1,2025,Eden Landing,Dunlin,2678,mudflat,11,18</span>
+<span id="cb7-17"><a></a>4,2025,Palo Alto Baylands,Western Sandpiper,4234,mudflat,17,10</span>
+<span id="cb7-18"><a></a>4,2025,Don Edwards NWR,Western Sandpiper,2123,salt marsh,9,52</span>
+<span id="cb7-19"><a></a>4,2025,Eden Landing,Western Sandpiper,5345,mudflat,19,15</span>
+<span id="cb7-20"><a></a>7,2025,Palo Alto Baylands,Least Sandpiper,1456,mudflat,6,22</span>
+<span id="cb7-21"><a></a>7,2025,Don Edwards NWR,Least Sandpiper,3789,salt marsh,7,58</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636f6465203e7d7d--dataset-4-data-cleaning-and-visualization" class="slide level2">
+<h2><i class="fa-solid fa-code" aria-label="code"></i> Dataset 4: Data cleaning and Visualization</h2>
+<p><countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer> <strong>Scenario:</strong> Raw field data needs cleaning and visualization. Use AI to generate graphs.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>SurveyDate,Location,SpeciesName,IndividualCount,Temp_F,WindMPH,ObserverNotes</span>
+<span id="cb8-2"><a></a>01/15/2025,Palo Alto Baylands,Dunlin,2340,52,12,High tide good viewing</span>
+<span id="cb8-3"><a></a>01/15/2025,Don Edwards NWR,dunlin,1567,51,8,Early morning count</span>
+<span id="cb8-4"><a></a>01/16/2025,Eden Landing,Western Sandpiper,890,48,15,Foggy conditions</span>
+<span id="cb8-5"><a></a>01/17/2025,Palo Alto Baylands,Least sandpiper,678,45,11,Sunny day</span>
+<span id="cb8-6"><a></a>01/18/2025,Don Edwards NWR,DUNLIN,1567,49,9,Light rain</span>
+<span id="cb8-7"><a></a>01/19/2025,Eden Landing,dunlin,,50,10,Count incomplete</span>
+<span id="cb8-8"><a></a>01/20/2025,Palo Alto Baylands,Western Sandpiper,1987,53,8,Clear skies</span>
+<span id="cb8-9"><a></a>01/21/2025,Don Edwards NWR,Least Sandpiper,445,49,9,High tide</span>
+<span id="cb8-10"><a></a>01/22/2025,Eden Landing,Dunlin,1234,52,15,Windy afternoon</span>
+<span id="cb8-11"><a></a>01/23/2025,Palo Alto Baylands,Dunlin,2890,55,10,Midday count</span>
+<span id="cb8-12"><a></a>01/24/2025,Don Edwards NWR,Western Sandpiper,,54,14,Heavy rain</span>
+<span id="cb8-13"><a></a>01/25/2025,Eden Landing,Least sandpiper,534,51,12,Overcast</span>
+<span id="cb8-14"><a></a>01/26/2025,Palo Alto Baylands,Dunlin,3120,58,11,Excellent visibility</span>
+<span id="cb8-15"><a></a>01/27/2025,Don Edwards NWR,Dunlin,1987,57,9,Cloudy morning</span>
+<span id="cb8-16"><a></a>01/28/2025,Eden Landing,Western Sandpiper,2345,56,13,Sunny</span>
+<span id="cb8-17"><a></a>01/29/2025,Palo Alto Baylands,Least Sandpiper,789,62,7,Fog clearing</span>
+<span id="cb8-18"><a></a>01/30/2025,Don Edwards NWR,Dunlin,1456,60,10,Windy conditions</span>
+<span id="cb8-19"><a></a>01/31/2025,Eden Landing,Dunlin,2890,61,12,Clear day</span>
+<span id="cb8-20"><a></a>02/01/2025,Palo Alto Baylands,Western Sandpiper,2567,65,8,Low tide</span>
+<span id="cb8-21"><a></a>02/02/2025,Don Edwards NWR,Least Sandpiper,678,66,9,Sunny morning</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612066696c652d6578706f7274203e7d7d--dataset-5-report-writing" class="slide level2">
+<h2><i class="fa-solid fa-file-export" aria-label="file-export"></i> Dataset 5: Report Writing</h2>
+<p><countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer> <strong>Scenario:</strong> Summarize a full season of survey data for a stakeholder report.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>week,site,species,total_count,avg_per_survey,surveys_conducted,peak_count_date,conservation_status</span>
+<span id="cb9-2"><a></a>1,Palo Alto Baylands,Dunlin,5234,2617,2,2025-01-16,Least Concern</span>
+<span id="cb9-3"><a></a>1,Don Edwards NWR,Dunlin,3456,1728,2,2025-01-15,Least Concern</span>
+<span id="cb9-4"><a></a>1,Eden Landing,Dunlin,2890,1445,2,2025-01-16,Least Concern</span>
+<span id="cb9-5"><a></a>2,Palo Alto Baylands,Western Sandpiper,4567,2283,2,2025-01-23,Least Concern</span>
+<span id="cb9-6"><a></a>2,Don Edwards NWR,Western Sandpiper,2345,1172,2,2025-01-22,Least Concern</span>
+<span id="cb9-7"><a></a>2,Eden Landing,Western Sandpiper,5678,2839,2,2025-01-23,Least Concern</span>
+<span id="cb9-8"><a></a>3,Palo Alto Baylands,Least Sandpiper,1234,617,2,2025-01-30,Near Threatened</span>
+<span id="cb9-9"><a></a>3,Don Edwards NWR,Least Sandpiper,3456,1728,2,2025-01-29,Near Threatened</span>
+<span id="cb9-10"><a></a>3,Eden Landing,Least Sandpiper,1890,945,2,2025-01-30,Near Threatened</span>
+<span id="cb9-11"><a></a>4,Palo Alto Baylands,Snowy Plover,45,22,2,2025-02-06,Threatened</span>
+<span id="cb9-12"><a></a>4,Don Edwards NWR,Snowy Plover,67,33,2,2025-02-05,Threatened</span>
+<span id="cb9-13"><a></a>4,Eden Landing,Snowy Plover,23,11,2,2025-02-06,Threatened</span>
+<span id="cb9-14"><a></a>5,Palo Alto Baylands,Black-bellied Plover,890,445,2,2025-02-13,Least Concern</span>
+<span id="cb9-15"><a></a>5,Don Edwards NWR,Black-bellied Plover,1234,617,2,2025-02-12,Least Concern</span>
+<span id="cb9-16"><a></a>5,Eden Landing,Black-bellied Plover,567,283,2,2025-02-13,Least Concern</span>
+<span id="cb9-17"><a></a>6,Palo Alto Baylands,Willet,456,228,2,2025-02-20,Least Concern</span>
+<span id="cb9-18"><a></a>6,Don Edwards NWR,Willet,789,394,2,2025-02-19,Least Concern</span>
+<span id="cb9-19"><a></a>6,Eden Landing,Willet,345,172,2,2025-02-20,Least Concern</span>
+<span id="cb9-20"><a></a>7,Palo Alto Baylands,Marbled Godwit,234,117,2,2025-02-27,Least Concern</span>
+<span id="cb9-21"><a></a>7,Don Edwards NWR,Marbled Godwit,567,283,2,2025-02-26,Least Concern</span>
+<span id="cb9-22"><a></a>7,Eden Landing,Marbled Godwit,123,61,2,2025-02-27,Least Concern</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612063686172742d6c696e65203e7d7d--visualization-best-practices" class="slide level2">
+<h2><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Visualization Best Practices</h2>
+<p>When asking AI to create visualizations, be specific about:</p>
+<div class="fragment">
+<p><strong>Chart Design</strong></p>
+<ul>
+<li class="fragment">Chart type (bar, line, scatter, heatmap)</li>
+<li class="fragment">Why this chart fits your data story</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Data Mapping</strong></p>
+<ul>
+<li class="fragment">X-axis: what variable goes horizontal</li>
+<li class="fragment">Y-axis: what variable goes vertical</li>
+<li class="fragment">Color: what dimension to encode with color</li>
+</ul>
+</div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612070656e2d72756c6572203e7d7d--example-crafting-a-visualization-prompt" class="slide level2">
+<h2><i class="fa-solid fa-pen-ruler" aria-label="pen-ruler"></i> Example: Crafting a Visualization Prompt</h2>
+<p><strong>Dataset:</strong> Weekly bird counts across three sites</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>week,site,species,count</span>
+<span id="cb10-2"><a></a>1,Palo Alto Baylands,Dunlin,2340</span>
+<span id="cb10-3"><a></a>1,Don Edwards NWR,Dunlin,1567</span>
+<span id="cb10-4"><a></a>1,Eden Landing,Dunlin,890</span>
+<span id="cb10-5"><a></a>2,Palo Alto Baylands,Dunlin,2890</span>
+<span id="cb10-6"><a></a>2,Don Edwards NWR,Dunlin,1789</span>
+<span id="cb10-7"><a></a>2,Eden Landing,Dunlin,1234</span>
+<span id="cb10-8"><a></a>3,Palo Alto Baylands,Dunlin,3120</span>
+<span id="cb10-9"><a></a>3,Don Edwards NWR,Dunlin,1987</span>
+<span id="cb10-10"><a></a>3,Eden Landing,Dunlin,1456</span>
+<span id="cb10-11"><a></a>4,Palo Alto Baylands,Dunlin,3567</span>
+<span id="cb10-12"><a></a>4,Don Edwards NWR,Dunlin,2345</span>
+<span id="cb10-13"><a></a>4,Eden Landing,Dunlin,1890</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p><strong>Weak prompt:</strong> “Make a chart of this data” <i class="fa-solid fa-xmark" aria-label="xmark"></i></p>
+</div>
+<div class="fragment">
+<p><strong>Strong prompt:</strong> <i class="fa-solid fa-check" aria-label="check"></i></p>
+</div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636865636b203e7d7d--strong-visualization-prompt-example" class="slide level2">
+<h2><i class="fa-solid fa-check" aria-label="check"></i> Strong Visualization Prompt Example</h2>
+<pre><code>## Role
+You are a data visualization specialist for bird conservation non-profit.
+
+## Task
+Create a line chart showing Dunlin population trends across three 
+San Francisco Bay sites over 4 weeks.
+
+## Data
+&lt;paste CSV here&gt;
+
+## Visualization Specifications
+- Chart type: Line chart with points marked at each data point
+- X-axis: Week (1-4)
+- Y-axis: Bird count (scale from 0 to 4000)
+- Color: One color per site (Palo Alto=blue, Don Edwards=green, Eden=pink)
+- Style: Clean, publication-ready style with grid lines
+
+## Annotations
+- Add a title: "Dunlin Population Trends by Site (Weeks 1-4)"
+- Label each line directly or use a legend
+- Highlight the highest count with an annotation
+- Add subtle grid lines for readability
+
+## Output
+Provide chart with these specifications.</code></pre>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612068616e64732d636c617070696e67203e7d7d--your-turn-craft-a-visualization-prompt" class="slide level2">
+<h2><i class="fa-solid fa-hands-clapping" aria-label="hands-clapping"></i> Your Turn: Craft a Visualization Prompt</h2>
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p><strong>Choose one of your datasets from earlier and write a detailed prompt for creating a visualization.</strong></p>
+<p>Include:</p>
+<ol type="1">
+<li class="fragment"><strong>Chart type</strong> — What best shows your data’s story?</li>
+<li class="fragment"><strong>Axes</strong> — What maps to X and Y?</li>
+<li class="fragment"><strong>Color</strong> — What dimension should be color-coded?</li>
+<li class="fragment"><strong>Annotations</strong> — What labels or highlights are needed?</li>
+</ol>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d75672d686f74203e7d7d--break-time" class="slide level2 center">
+<h2><i class="fa-solid fa-mug-hot" aria-label="mug-hot"></i> Break Time!</h2>
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261636b77617264203e7d7d--recap" class="slide level2 center">
+<h2><i class="fa-solid fa-backward" aria-label="backward"></i> Recap</h2>
+<ul>
+<li class="fragment">Good prompts are specific about roles, tasks, data, constraints, and examples.</li>
+<li class="fragment">AI can assist with various data analysis tasks, from cleaning to report writing.</li>
+<li class="fragment">Clear visualization prompts lead to better graphical outputs.</li>
+</ul>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120626f6f6b2d6f70656e203e7d7d--introducing-notebooklm" class="slide level2 center">
+<h2><i class="fa-solid fa-book-open" aria-label="book-open"></i> Introducing NotebookLM</h2>
+<p><strong>NotebookLM</strong> is Google’s AI-first notebook that becomes an expert on <em>your</em> documents.</p>
+<div class="fragment">
+<p><strong>What makes it different?</strong></p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment"><i class="fa-solid fa-database" aria-label="database"></i> <strong>Grounded in YOUR sources</strong> — Unlike ChatGPT, it only uses your uploaded documents</li>
+<li class="fragment"><i class="fa-solid fa-headphones" aria-label="headphones"></i> <strong>Audio Overview</strong> — Generates podcasts with two AI voices discussing your content</li>
+<li class="fragment"><i class="fa-solid fa-quote-right" aria-label="quote-right"></i> <strong>Citations</strong> — Every answer includes source references you can verify</li>
+<li class="fragment"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> <strong>Structured outputs</strong> — FAQs, study guides, briefing docs, timelines</li>
+</ul>
+</div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612075706c6f6164203e7d7d--getting-started-with-notebooklm" class="slide level2">
+<h2><i class="fa-solid fa-upload" aria-label="upload"></i> Getting Started with NotebookLM</h2>
+<p><strong>Go to <a href="https://notebooklm.google.com">notebooklm.google.com</a> and sign in with your Google account.</strong></p>
+<div class="fragment">
+<p><strong>Upload your sources (up to 50 files, 500K words each):</strong></p>
+</div>
+<div class="fragment">
+<ol type="1">
+<li class="fragment"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDFs from your computer</li>
+<li class="fragment"><i class="fa-solid fa-link" aria-label="link"></i> Website URLs</li>
+<li class="fragment"><i class="fa-solid fa-copy" aria-label="copy"></i> Copy-paste text directly</li>
+<li class="fragment"><i class="fa-brands fa-google-drive" aria-label="google-drive"></i> Google Docs</li>
+<li class="fragment"><i class="fa-brands fa-google-drive" aria-label="google-drive"></i> Google Slides</li>
+</ol>
+</div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636f6d70617373203e7d7d--the-notebook-guide-chat" class="slide level2">
+<h2><i class="fa-solid fa-compass" aria-label="compass"></i> The Notebook Guide &amp; Chat</h2>
+<p><strong>Once you upload documents, NotebookLM creates a dashboard with:</strong></p>
+<div class="fragment">
+<ul>
+<li class="fragment"><strong>Auto-generated summary</strong> of all your sources</li>
+<li class="fragment"><strong>Suggested questions</strong> tailored to your content</li>
+<li class="fragment"><strong>Quick actions</strong> for briefing docs, FAQs, study guides</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Every answer includes citations</strong></p>
+<p>— click the numbered references to see exactly where the information came from in your documents.</p>
+</div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261736562616c6c2d6261742d62616c6c203e7d7d--hands-on-exercise" class="slide level2">
+<h2><i class="fa-solid fa-baseball-bat-ball" aria-label="baseball-bat-ball"></i> Hands-on exercise</h2>
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<ul>
+<li class="fragment">Upload this scientific paper to your NotebookLM account: <a href="https://drive.google.com/file/d/1-WqbyrUZUbuZgMlMsM4mETDQay1cEVGV/view?usp=sharing">Scientific mumbo-jumbo paper link</a></li>
+<li class="fragment">Click on the suggested questions to explore the content.</li>
+<li class="fragment">Try asking your own questions about the paper!</li>
+</ul>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261736562616c6c2d6261742d62616c6c203e7d7d--hands-on-exercise-1" class="slide level2">
+<h2><i class="fa-solid fa-baseball-bat-ball" aria-label="baseball-bat-ball"></i> Hands-on exercise</h2>
+
+<img data-src="assets/notebooklm_autopopulate.png" class="r-stretch"></section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206865616470686f6e6573203e7d7d--the-podcast-feature" class="slide level2">
+<h2><i class="fa-solid fa-headphones" aria-label="headphones"></i> The Podcast Feature</h2>
+<p><strong>Turn dense documents into engaging audio conversations!</strong></p>
+<div class="fragment">
+<p>Two AI hosts discuss your content in a natural podcast format:</p>
+<ul>
+<li class="fragment">Summarize key points</li>
+<li class="fragment">Highlight surprising findings</li>
+<li class="fragment">Connect ideas across multiple documents</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-note callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Podcasts are 6-15 minutes. Download them for offline listening!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="audio-overview-hands-on-exercise" class="slide level2">
+<h2>Audio Overview Hands-on exercise</h2>
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p>Click on the Audio Overview tab (will take ~10 minutes).</p>
+
+<img data-src="assets/audio_overview_option.png" class="r-stretch"></section>
+<section id="infographic-overview-hands-on-exercise" class="slide level2">
+<h2>Infographic Overview Hands-on exercise</h2>
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p>Click on the Infographic Overview tab (will take ~10 minutes).</p>
+
+<img data-src="assets/infographic_overview.png" class="r-stretch"></section>
+<section id="slide-deck-overview-hands-on-exercise" class="slide level2">
+<h2>Slide Deck Overview Hands-on exercise</h2>
+<countdown-timer id="timer_40cc51eb80e585be1d99216244cf9c3b07392de6" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p>Click on the Slide Deck Overview tab (will take ~10 minutes). <img data-src="assets/slide_deck_overview.png"></p>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636c6970626f6172642d636865636b203e7d7d--notebooklm-best-practices" class="slide level2">
+<h2><i class="fa-solid fa-clipboard-check" aria-label="clipboard-check"></i> NotebookLM Best Practices</h2>
+<p><strong>Get the most out of your AI research assistant:</strong></p>
+<div class="fragment">
+<p><strong>1. Choose relevant sources</strong> - Quality in = quality out - Mix of protocols, data reports, and research papers</p>
+</div>
+<div class="fragment">
+<p><strong>2. Ask clear, specific questions</strong> - Weak: “Tell me about birds” - Strong: “What monitoring protocols does SFBBO use for Snowy Plovers?”</p>
+</div>
+<div class="fragment">
+<p><strong>3. Always verify</strong> - AI is an assistant, not a replacement for human judgment (yet!) - Check citations before using in official reports</p>
+</div>
+</section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207175657374696f6e2d636972636c65203e7d7d--questions" class="slide level2">
+<h2><i class="fa-solid fa-question-circle" aria-label="question-circle"></i> Questions?</h2>
 
 
 </section>

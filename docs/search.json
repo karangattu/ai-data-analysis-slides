@@ -88,7 +88,7 @@
     "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120686561642d736964652d636f756768203e7d7d-why-doesnt-the-ai-give-the-same-answer-every-time",
     "title": "AI for Data Analysis",
     "section": "Why doesn’t the AI give the same answer every time?",
-    "text": "Why doesn’t the AI give the same answer every time?\n\nBecause of a setting called Temperature.\n\n\n\nLow Temperature (0.1 - 0.3): The AI always picks the #1 most likely word. It’s very logical but boring.\n\n\n\n\nHigh Temperature (0.7 - 1.0): The AI is allowed to pick the 3rd or 10th most likely word. This is where “creativity” comes from."
+    "text": "Why doesn’t the AI give the same answer every time?\n\nBecause of a setting called Temperature.\n\n\n\nLow Temperature (0.1 - 0.3): The AI always picks the #1 most likely word. It’s very logical but boring.\nHigh Temperature (0.7 - 1.0): The AI is allowed to pick the 3rd or 10th most likely word. This is where “creativity” comes from."
   },
   {
     "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120736b756c6c203e7d7d--extreme-improv-aka-hallucinations",
@@ -151,7 +151,7 @@
     "href": "slides.html#lets-take-it-for-a-spin",
     "title": "AI for Data Analysis",
     "section": "Let’s take it for a spin!",
-    "text": "Let’s take it for a spin!\n\n \n\n\nUsing the Tool selector as Create images and the Model picker as Fast, type the following prompt:\n\n\n\n\nGenerate a photo of a Snowy Plover nesting on human plastic wrappers with the text as “Stop Pollution”."
+    "text": "Let’s take it for a spin!\n\n \n\nUsing the Tool selector as Create images and the Model picker as Fast, type the following prompt:\n\n\n\nGenerate a photo of a Snowy Plover nesting on human plastic wrappers with the text as “Stop Pollution”."
   },
   {
     "objectID": "slides.html#change-the-model-to-a-pro-model",
@@ -207,6 +207,230 @@
     "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636972636c652d7175657374696f6e203e7d7d--what-do-you-think-will-happen-if-you-ask-the-following-question-to-gemini",
     "title": "AI for Data Analysis",
     "section": " What do you think will happen if you ask the following question to Gemini?",
-    "text": "What do you think will happen if you ask the following question to Gemini?\n\n\nGive me the key trends or insights from SFBBO’s 2023 bird survey data."
+    "text": "What do you think will happen if you ask the following question to Gemini?\n\n\nGive me the key trends or insights from SFBBO’s 2025 bird banding data or Snowy Plover banding data."
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612062616e203e7d7d--ai-does-not-have-access-to-your-data-by-default",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612062616e203e7d7d--ai-does-not-have-access-to-your-data-by-default",
+    "title": "AI for Data Analysis",
+    "section": " AI does not have access to your data (by default)",
+    "text": "AI does not have access to your data (by default)\n\n It can help if you provide the data in the prompt.\n\n\nYou can upload files in Gemini and reference them in your prompts.\n\n\n Or paste the data directly into the prompt."
+  },
+  {
+    "objectID": "slides.html#recommended-data-formats-when-uploading-to-gemini",
+    "href": "slides.html#recommended-data-formats-when-uploading-to-gemini",
+    "title": "AI for Data Analysis",
+    "section": "Recommended data formats when uploading to Gemini",
+    "text": "Recommended data formats when uploading to Gemini\nA CSV (Comma separated Values) file is the gold standard for making tabular data accessible to AI models.\n\nWhat is a CSV file?\n\n\nA CSV is basically a spreadsheet stripped away all of all the colorful borders, the bold fonts, and the complex formulas."
+  },
+  {
+    "objectID": "slides.html#csv-format",
+    "href": "slides.html#csv-format",
+    "title": "AI for Data Analysis",
+    "section": "CSV format",
+    "text": "CSV format\n\n\n\n\nItem\nQuantity\nPrice\n\n\n\n\nApples\n6\n$3.00\n\n\nMilk\n1\n$4.50\n\n\n\n\n\nCSV looks like this:\nItem, Quantity, Price\nApples, 6, $3.00\nMilk, 1, $4.50\n\n\n\n\n\n\n\n\n The first line is the “Header”, and every line after that is a “Row”."
+  },
+  {
+    "objectID": "slides.html#why-is-csv-the-gold-tier-format-for-ai",
+    "href": "slides.html#why-is-csv-the-gold-tier-format-for-ai",
+    "title": "AI for Data Analysis",
+    "section": "Why is CSV the “Gold Tier” format for AI?",
+    "text": "Why is CSV the “Gold Tier” format for AI?\n\nSince CSV is raw data, they are the most token efficient.\nEvery computer on Earth, understands CSV files.\nProgramming languages have built-in functions to read and write CSV files.\n\n\n\n\n\n\n\n\n By giving the AI a CSV, you are handing a carpenter a perfectly cut piece of wood instead of a whole tree."
+  },
+  {
+    "objectID": "slides.html#lets-analyze-this-csv-data-with-gemini",
+    "href": "slides.html#lets-analyze-this-csv-data-with-gemini",
+    "title": "AI for Data Analysis",
+    "section": "Let’s analyze this CSV data with Gemini",
+    "text": "Let’s analyze this CSV data with Gemini\nweek,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase\n1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing\n1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing\n2,2025,Palo Alto Baylands,Dunlin,2890,48,1.1,3.8,full\n2,2025,Eden Landing,Western Sandpiper,890,47,1.2,3.7,full\n3,2025,Palo Alto Baylands,Least Sandpiper,678,45,2.3,3.2,waning\n3,2025,Don Edwards NWR,Dunlin,2345,44,2.4,3.1,waning\n4,2025,Eden Landing,Dunlin,1456,49,0.1,4.4,new\n5,2025,Palo Alto Baylands,Western Sandpiper,1987,53,0.0,4.8,waxing\n\n\nAsk Gemini to analyze the above CSV data and provide what is most frequently observed species across all sites in the first 5 weeks of 2025.\n\n\n\n\n\n\n\n\n\nUse the Copy to Clipboard button"
+  },
+  {
+    "objectID": "slides.html#lets-analyze-a-bigger-csv-data-with-gemini",
+    "href": "slides.html#lets-analyze-a-bigger-csv-data-with-gemini",
+    "title": "AI for Data Analysis",
+    "section": "Let’s analyze a bigger CSV data with Gemini",
+    "text": "Let’s analyze a bigger CSV data with Gemini\nweek,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase\n1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing\n1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing\n1,2025,Eden Landing,Western Sandpiper,890,48,0.4,4.0,waxing\n2,2025,Palo Alto Baylands,Dunlin,2890,48,1.1,3.8,full\n2,2025,Eden Landing,Western Sandpiper,1234,47,1.2,3.7,full\n2,2025,Don Edwards NWR,Least Sandpiper,445,46,1.3,3.6,full\n3,2025,Palo Alto Baylands,Least Sandpiper,678,45,2.3,3.2,waning\n3,2025,Don Edwards NWR,Dunlin,2345,44,2.4,3.1,waning\n3,2025,Eden Landing,Western Sandpiper,1567,45,2.2,3.3,waning\n4,2025,Eden Landing,Dunlin,1456,49,0.1,4.4,new\n4,2025,Palo Alto Baylands,Western Sandpiper,1123,50,0.0,4.5,new\n4,2025,Don Edwards NWR,Least Sandpiper,534,49,0.1,4.4,new\n5,2025,Palo Alto Baylands,Western Sandpiper,1987,53,0.0,4.8,waxing\n5,2025,Don Edwards NWR,Dunlin,1789,52,0.1,4.7,waxing\n5,2025,Eden Landing,Least Sandpiper,623,51,0.2,4.6,waxing\n6,2025,Palo Alto Baylands,Dunlin,3120,55,0.0,5.0,full\n6,2025,Eden Landing,Western Sandpiper,2345,54,0.0,4.9,full\n6,2025,Don Edwards NWR,Dunlin,1987,53,0.1,4.8,full\n7,2025,Palo Alto Baylands,Least Sandpiper,789,58,0.0,5.2,waning\n7,2025,Don Edwards NWR,Western Sandpiper,1456,57,0.0,5.1,waning\n7,2025,Eden Landing,Dunlin,1234,56,0.1,5.0,waning\n8,2025,Palo Alto Baylands,Dunlin,3567,62,0.0,5.5,new\n8,2025,Eden Landing,Western Sandpiper,2890,61,0.0,5.4,new\n8,2025,Don Edwards NWR,Least Sandpiper,678,60,0.0,5.3,new\n9,2025,Palo Alto Baylands,Western Sandpiper,2567,65,0.0,5.8,waxing\n9,2025,Don Edwards NWR,Dunlin,1456,64,0.0,5.7,waxing\n9,2025,Eden Landing,Least Sandpiper,534,63,0.1,5.6,waxing\n10,2025,Palo Alto Baylands,Dunlin,2890,68,0.0,6.0,full\n10,2025,Eden Landing,Western Sandpiper,3120,67,0.0,5.9,full\n10,2025,Don Edwards NWR,Dunlin,1234,66,0.1,5.8,full\n\n\nAsk Gemini to analyze this bird count data"
+  },
+  {
+    "objectID": "slides.html#improving-prompting-skills",
+    "href": "slides.html#improving-prompting-skills",
+    "title": "AI for Data Analysis",
+    "section": "Improving prompting skills",
+    "text": "Improving prompting skills\n\n“Analyze bird count data.”  Too vague!\n\n\n\nWhat role should Gemini play?\nWhat exactly should it analyze?\nWhat format should the output be in?"
+  },
+  {
+    "objectID": "slides.html#what-makes-a-good-prompt",
+    "href": "slides.html#what-makes-a-good-prompt",
+    "title": "AI for Data Analysis",
+    "section": "What makes a good prompt?",
+    "text": "What makes a good prompt?\nGood prompts include:\n\n\n Role — who the model is\n Task — what to do\n Data — input\n Constraints — format, length, method\n Examples — optional but powerful"
+  },
+  {
+    "objectID": "slides.html#try-this-template",
+    "href": "slides.html#try-this-template",
+    "title": "AI for Data Analysis",
+    "section": "Try this template",
+    "text": "Try this template\n## Role\nYou are an ornithological data analyst specializing in shorebird migration patterns and wetland ecology.\n\n## Task\nAnalyze the provided 10-week bird survey dataset from three San Francisco Bay sites (Palo Alto Baylands, Don Edwards NWR, Eden Landing) and identify:\n\n1. **Temporal Trends**: How do species counts change across weeks? Are there any peak migration periods?\n2. **Site Preferences**: Which species prefer which sites? Calculate total counts and averages per site-species combination.\n3. **Environmental Correlations**: \n   - Is there a relationship between temperature and bird counts?\n   - Do tide heights affect species presence?\n   - Does moon phase correlate with observation frequency?\n4. **Species Dominance**: Rank species by total abundance and identify the most/least common.\n\n## Data\n&lt;copy the CSV data here&gt;\n\n## Constraints\n- Provide specific numbers and percentages to support your findings\n- Format output with clear headers and bullet points\n- Highlight any surprising or counter-intuitive patterns\n- Keep the analysis concise (under 300 words)\n\n## Examples\nGood insight format: \"Dunlin counts peaked in Week 6 at Palo Alto Baylands (3,120 birds), coinciding with the highest tide (5.0 ft) and full moon phase.\""
+  },
+  {
+    "objectID": "slides.html#using-ai-for-exploratory-data-analysis",
+    "href": "slides.html#using-ai-for-exploratory-data-analysis",
+    "title": "AI for Data Analysis",
+    "section": "Using AI for Exploratory Data Analysis",
+    "text": "Using AI for Exploratory Data Analysis\nTasks AI can help with your data analysis:\n\n Missing value analysis (incomplete surveys)\n Outlier detection (unusual counts, rare species)\n Hypothesis generation (population trends, habitat preferences)\n Code generation (data cleaning, visualization)\n Report writing (summarizing findings)"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207175657374696f6e2d636972636c65203e7d7d--dataset-1-missing-value-analysis",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207175657374696f6e2d636972636c65203e7d7d--dataset-1-missing-value-analysis",
+    "title": "AI for Data Analysis",
+    "section": " Dataset 1: Missing Value Analysis",
+    "text": "Dataset 1: Missing Value Analysis\n\n  Scenario: Some survey entries have incomplete data. Use AI to identify patterns in missing values.\nsurvey_id,date,site,species,count,observer,weather,notes\nS001,2025-01-15,Palo Alto Baylands,Dunlin,2340,J. Smith,sunny,\nS002,2025-01-15,Don Edwards NWR,Dunlin,,M. Chen,cloudy,early morning\nS003,2025-01-16,Eden Landing,Western Sandpiper,890,J. Smith,,foggy conditions\nS004,2025-01-17,Palo Alto Baylands,Least Sandpiper,678,,sunny,\nS005,2025-01-18,Don Edwards NWR,Dunlin,1567,M. Chen,rainy,light rain\nS006,2025-01-19,Eden Landing,Dunlin,,J. Smith,sunny,\nS007,2025-01-20,Palo Alto Baylands,Western Sandpiper,1987,M. Chen,cloudy,\nS008,2025-01-21,Don Edwards NWR,Least Sandpiper,445,J. Smith,sunny,high tide\nS009,2025-01-22,Eden Landing,Dunlin,1234,,cloudy,\nS010,2025-01-23,Palo Alto Baylands,Dunlin,2890,M. Chen,sunny,\nS011,2025-01-24,Don Edwards NWR,Western Sandpiper,,J. Smith,rainy,heavy rain\nS012,2025-01-25,Eden Landing,Least Sandpiper,534,M. Chen,,\nS013,2025-01-26,Palo Alto Baylands,Dunlin,3120,J. Smith,sunny,midday count\nS014,2025-01-27,Don Edwards NWR,Dunlin,1987,M. Chen,cloudy,\nS015,2025-01-28,Eden Landing,Western Sandpiper,2345,J. Smith,sunny,\nS016,2025-01-29,Palo Alto Baylands,Least Sandpiper,,M. Chen,foggy,\nS017,2025-01-30,Don Edwards NWR,Dunlin,1456,J. Smith,,windy\nS018,2025-01-31,Eden Landing,Dunlin,2890,M. Chen,sunny,\nS019,2025-02-01,Palo Alto Baylands,Western Sandpiper,2567,J. Smith,cloudy,\nS020,2025-02-02,Don Edwards NWR,Least Sandpiper,678,M. Chen,sunny,low tide"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612063686172742d6c696e65203e7d7d--dataset-2-outlier-detection",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612063686172742d6c696e65203e7d7d--dataset-2-outlier-detection",
+    "title": "AI for Data Analysis",
+    "section": " Dataset 2: Outlier Detection",
+    "text": "Dataset 2: Outlier Detection\n\n  Scenario: Unusual counts were recorded. Use AI to detect potential outliers and data entry errors.\nweek,site,species,count,tide_height_ft,wind_speed_mph,temperature_f\n1,Palo Alto Baylands,Dunlin,2340,4.2,12,52\n1,Don Edwards NWR,Dunlin,1567,4.1,8,51\n1,Eden Landing,Western Sandpiper,890,4.0,15,48\n2,Palo Alto Baylands,Dunlin,2890,3.8,10,48\n2,Don Edwards NWR,Dunlin,45,3.7,9,47\n2,Eden Landing,Western Sandpiper,1234,3.6,14,47\n3,Palo Alto Baylands,Least Sandpiper,678,3.2,11,45\n3,Don Edwards NWR,Dunlin,2345,3.1,7,44\n3,Eden Landing,Western Sandpiper,1567,3.3,16,45\n4,Palo Alto Baylands,Dunlin,1456,4.4,13,49\n4,Don Edwards NWR,Least Sandpiper,534,4.4,9,49\n4,Eden Landing,Dunlin,9876,4.3,12,48\n5,Palo Alto Baylands,Western Sandpiper,1987,4.8,8,53\n5,Don Edwards NWR,Dunlin,1789,4.7,10,52\n5,Eden Landing,Least Sandpiper,623,4.6,14,51\n6,Palo Alto Baylands,Dunlin,3120,5.0,11,55\n6,Don Edwards NWR,Dunlin,1987,4.8,9,53\n6,Eden Landing,Western Sandpiper,2345,4.9,13,54\n7,Palo Alto Baylands,Least Sandpiper,789,5.2,7,58\n7,Don Edwards NWR,Western Sandpiper,3,5.1,8,57\n7,Eden Landing,Dunlin,1234,5.0,15,56\n8,Palo Alto Baylands,Dunlin,3567,5.5,10,62\n8,Don Edwards NWR,Least Sandpiper,678,5.3,9,60\n8,Eden Landing,Western Sandpiper,2890,5.4,12,61\n9,Palo Alto Baylands,Western Sandpiper,2567,5.8,8,65\n9,Don Edwards NWR,Dunlin,1456,5.7,11,64\n9,Eden Landing,Least Sandpiper,15000,5.6,14,63\n10,Palo Alto Baylands,Dunlin,2890,6.0,9,68\n10,Don Edwards NWR,Dunlin,1234,5.8,10,66\n10,Eden Landing,Western Sandpiper,3120,5.9,13,67"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206c6967687462756c62203e7d7d--dataset-3-hypothesis-generation",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206c6967687462756c62203e7d7d--dataset-3-hypothesis-generation",
+    "title": "AI for Data Analysis",
+    "section": " Dataset 3: Hypothesis Generation",
+    "text": "Dataset 3: Hypothesis Generation\n\n  Scenario: Explore population trends and habitat preferences to generate research hypotheses.\nmonth,year,site,species,count,habitat_type,water_depth_cm,vegetation_cover_pct\n1,2024,Palo Alto Baylands,Dunlin,5234,mudflat,15,10\n1,2024,Don Edwards NWR,Dunlin,3456,salt marsh,8,45\n1,2024,Eden Landing,Dunlin,2890,mudflat,12,15\n4,2024,Palo Alto Baylands,Western Sandpiper,4567,mudflat,18,8\n4,2024,Don Edwards NWR,Western Sandpiper,2345,salt marsh,10,50\n4,2024,Eden Landing,Western Sandpiper,5678,mudflat,20,12\n7,2024,Palo Alto Baylands,Least Sandpiper,1234,mudflat,5,20\n7,2024,Don Edwards NWR,Least Sandpiper,3456,salt marsh,6,60\n7,2024,Eden Landing,Least Sandpiper,1890,mudflat,8,25\n10,2024,Palo Alto Baylands,Dunlin,6789,mudflat,22,5\n10,2024,Don Edwards NWR,Dunlin,4567,salt marsh,12,40\n10,2024,Eden Landing,Dunlin,5432,mudflat,19,10\n1,2025,Palo Alto Baylands,Dunlin,4890,mudflat,14,12\n1,2025,Don Edwards NWR,Dunlin,3234,salt marsh,7,48\n1,2025,Eden Landing,Dunlin,2678,mudflat,11,18\n4,2025,Palo Alto Baylands,Western Sandpiper,4234,mudflat,17,10\n4,2025,Don Edwards NWR,Western Sandpiper,2123,salt marsh,9,52\n4,2025,Eden Landing,Western Sandpiper,5345,mudflat,19,15\n7,2025,Palo Alto Baylands,Least Sandpiper,1456,mudflat,6,22\n7,2025,Don Edwards NWR,Least Sandpiper,3789,salt marsh,7,58"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636f6465203e7d7d--dataset-4-data-cleaning-and-visualization",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636f6465203e7d7d--dataset-4-data-cleaning-and-visualization",
+    "title": "AI for Data Analysis",
+    "section": " Dataset 4: Data cleaning and Visualization",
+    "text": "Dataset 4: Data cleaning and Visualization\n\n  Scenario: Raw field data needs cleaning and visualization. Use AI to generate graphs.\nSurveyDate,Location,SpeciesName,IndividualCount,Temp_F,WindMPH,ObserverNotes\n01/15/2025,Palo Alto Baylands,Dunlin,2340,52,12,High tide good viewing\n01/15/2025,Don Edwards NWR,dunlin,1567,51,8,Early morning count\n01/16/2025,Eden Landing,Western Sandpiper,890,48,15,Foggy conditions\n01/17/2025,Palo Alto Baylands,Least sandpiper,678,45,11,Sunny day\n01/18/2025,Don Edwards NWR,DUNLIN,1567,49,9,Light rain\n01/19/2025,Eden Landing,dunlin,,50,10,Count incomplete\n01/20/2025,Palo Alto Baylands,Western Sandpiper,1987,53,8,Clear skies\n01/21/2025,Don Edwards NWR,Least Sandpiper,445,49,9,High tide\n01/22/2025,Eden Landing,Dunlin,1234,52,15,Windy afternoon\n01/23/2025,Palo Alto Baylands,Dunlin,2890,55,10,Midday count\n01/24/2025,Don Edwards NWR,Western Sandpiper,,54,14,Heavy rain\n01/25/2025,Eden Landing,Least sandpiper,534,51,12,Overcast\n01/26/2025,Palo Alto Baylands,Dunlin,3120,58,11,Excellent visibility\n01/27/2025,Don Edwards NWR,Dunlin,1987,57,9,Cloudy morning\n01/28/2025,Eden Landing,Western Sandpiper,2345,56,13,Sunny\n01/29/2025,Palo Alto Baylands,Least Sandpiper,789,62,7,Fog clearing\n01/30/2025,Don Edwards NWR,Dunlin,1456,60,10,Windy conditions\n01/31/2025,Eden Landing,Dunlin,2890,61,12,Clear day\n02/01/2025,Palo Alto Baylands,Western Sandpiper,2567,65,8,Low tide\n02/02/2025,Don Edwards NWR,Least Sandpiper,678,66,9,Sunny morning"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612066696c652d6578706f7274203e7d7d--dataset-5-report-writing",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612066696c652d6578706f7274203e7d7d--dataset-5-report-writing",
+    "title": "AI for Data Analysis",
+    "section": " Dataset 5: Report Writing",
+    "text": "Dataset 5: Report Writing\n\n  Scenario: Summarize a full season of survey data for a stakeholder report.\nweek,site,species,total_count,avg_per_survey,surveys_conducted,peak_count_date,conservation_status\n1,Palo Alto Baylands,Dunlin,5234,2617,2,2025-01-16,Least Concern\n1,Don Edwards NWR,Dunlin,3456,1728,2,2025-01-15,Least Concern\n1,Eden Landing,Dunlin,2890,1445,2,2025-01-16,Least Concern\n2,Palo Alto Baylands,Western Sandpiper,4567,2283,2,2025-01-23,Least Concern\n2,Don Edwards NWR,Western Sandpiper,2345,1172,2,2025-01-22,Least Concern\n2,Eden Landing,Western Sandpiper,5678,2839,2,2025-01-23,Least Concern\n3,Palo Alto Baylands,Least Sandpiper,1234,617,2,2025-01-30,Near Threatened\n3,Don Edwards NWR,Least Sandpiper,3456,1728,2,2025-01-29,Near Threatened\n3,Eden Landing,Least Sandpiper,1890,945,2,2025-01-30,Near Threatened\n4,Palo Alto Baylands,Snowy Plover,45,22,2,2025-02-06,Threatened\n4,Don Edwards NWR,Snowy Plover,67,33,2,2025-02-05,Threatened\n4,Eden Landing,Snowy Plover,23,11,2,2025-02-06,Threatened\n5,Palo Alto Baylands,Black-bellied Plover,890,445,2,2025-02-13,Least Concern\n5,Don Edwards NWR,Black-bellied Plover,1234,617,2,2025-02-12,Least Concern\n5,Eden Landing,Black-bellied Plover,567,283,2,2025-02-13,Least Concern\n6,Palo Alto Baylands,Willet,456,228,2,2025-02-20,Least Concern\n6,Don Edwards NWR,Willet,789,394,2,2025-02-19,Least Concern\n6,Eden Landing,Willet,345,172,2,2025-02-20,Least Concern\n7,Palo Alto Baylands,Marbled Godwit,234,117,2,2025-02-27,Least Concern\n7,Don Edwards NWR,Marbled Godwit,567,283,2,2025-02-26,Least Concern\n7,Eden Landing,Marbled Godwit,123,61,2,2025-02-27,Least Concern"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612063686172742d6c696e65203e7d7d--visualization-best-practices",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612063686172742d6c696e65203e7d7d--visualization-best-practices",
+    "title": "AI for Data Analysis",
+    "section": " Visualization Best Practices",
+    "text": "Visualization Best Practices\nWhen asking AI to create visualizations, be specific about:\n\nChart Design\n\nChart type (bar, line, scatter, heatmap)\nWhy this chart fits your data story\n\n\n\nData Mapping\n\nX-axis: what variable goes horizontal\nY-axis: what variable goes vertical\nColor: what dimension to encode with color"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612070656e2d72756c6572203e7d7d--example-crafting-a-visualization-prompt",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612070656e2d72756c6572203e7d7d--example-crafting-a-visualization-prompt",
+    "title": "AI for Data Analysis",
+    "section": " Example: Crafting a Visualization Prompt",
+    "text": "Example: Crafting a Visualization Prompt\nDataset: Weekly bird counts across three sites\nweek,site,species,count\n1,Palo Alto Baylands,Dunlin,2340\n1,Don Edwards NWR,Dunlin,1567\n1,Eden Landing,Dunlin,890\n2,Palo Alto Baylands,Dunlin,2890\n2,Don Edwards NWR,Dunlin,1789\n2,Eden Landing,Dunlin,1234\n3,Palo Alto Baylands,Dunlin,3120\n3,Don Edwards NWR,Dunlin,1987\n3,Eden Landing,Dunlin,1456\n4,Palo Alto Baylands,Dunlin,3567\n4,Don Edwards NWR,Dunlin,2345\n4,Eden Landing,Dunlin,1890\n\nWeak prompt: “Make a chart of this data” \n\n\nStrong prompt:"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636865636b203e7d7d--strong-visualization-prompt-example",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636865636b203e7d7d--strong-visualization-prompt-example",
+    "title": "AI for Data Analysis",
+    "section": " Strong Visualization Prompt Example",
+    "text": "Strong Visualization Prompt Example\n## Role\nYou are a data visualization specialist for bird conservation non-profit.\n\n## Task\nCreate a line chart showing Dunlin population trends across three \nSan Francisco Bay sites over 4 weeks.\n\n## Data\n&lt;paste CSV here&gt;\n\n## Visualization Specifications\n- Chart type: Line chart with points marked at each data point\n- X-axis: Week (1-4)\n- Y-axis: Bird count (scale from 0 to 4000)\n- Color: One color per site (Palo Alto=blue, Don Edwards=green, Eden=pink)\n- Style: Clean, publication-ready style with grid lines\n\n## Annotations\n- Add a title: \"Dunlin Population Trends by Site (Weeks 1-4)\"\n- Label each line directly or use a legend\n- Highlight the highest count with an annotation\n- Add subtle grid lines for readability\n\n## Output\nProvide chart with these specifications."
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612068616e64732d636c617070696e67203e7d7d--your-turn-craft-a-visualization-prompt",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612068616e64732d636c617070696e67203e7d7d--your-turn-craft-a-visualization-prompt",
+    "title": "AI for Data Analysis",
+    "section": " Your Turn: Craft a Visualization Prompt",
+    "text": "Your Turn: Craft a Visualization Prompt\n\n \nChoose one of your datasets from earlier and write a detailed prompt for creating a visualization.\nInclude:\n\nChart type — What best shows your data’s story?\nAxes — What maps to X and Y?\nColor — What dimension should be color-coded?\nAnnotations — What labels or highlights are needed?"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d75672d686f74203e7d7d--break-time",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206d75672d686f74203e7d7d--break-time",
+    "title": "AI for Data Analysis",
+    "section": " Break Time!",
+    "text": "Break Time!"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261636b77617264203e7d7d--recap",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261636b77617264203e7d7d--recap",
+    "title": "AI for Data Analysis",
+    "section": " Recap",
+    "text": "Recap\n\nGood prompts are specific about roles, tasks, data, constraints, and examples.\nAI can assist with various data analysis tasks, from cleaning to report writing.\nClear visualization prompts lead to better graphical outputs."
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120626f6f6b2d6f70656e203e7d7d--introducing-notebooklm",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120626f6f6b2d6f70656e203e7d7d--introducing-notebooklm",
+    "title": "AI for Data Analysis",
+    "section": " Introducing NotebookLM",
+    "text": "Introducing NotebookLM\nNotebookLM is Google’s AI-first notebook that becomes an expert on your documents.\n\nWhat makes it different?\n\n\n\n Grounded in YOUR sources — Unlike ChatGPT, it only uses your uploaded documents\n Audio Overview — Generates podcasts with two AI voices discussing your content\n Citations — Every answer includes source references you can verify\n Structured outputs — FAQs, study guides, briefing docs, timelines"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612075706c6f6164203e7d7d--getting-started-with-notebooklm",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c2066612075706c6f6164203e7d7d--getting-started-with-notebooklm",
+    "title": "AI for Data Analysis",
+    "section": " Getting Started with NotebookLM",
+    "text": "Getting Started with NotebookLM\nGo to notebooklm.google.com and sign in with your Google account.\n\nUpload your sources (up to 50 files, 500K words each):\n\n\n\n PDFs from your computer\n Website URLs\n Copy-paste text directly\n Google Docs\n Google Slides"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636f6d70617373203e7d7d--the-notebook-guide-chat",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636f6d70617373203e7d7d--the-notebook-guide-chat",
+    "title": "AI for Data Analysis",
+    "section": " The Notebook Guide & Chat",
+    "text": "The Notebook Guide & Chat\nOnce you upload documents, NotebookLM creates a dashboard with:\n\n\nAuto-generated summary of all your sources\nSuggested questions tailored to your content\nQuick actions for briefing docs, FAQs, study guides\n\n\n\nEvery answer includes citations\n— click the numbered references to see exactly where the information came from in your documents."
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261736562616c6c2d6261742d62616c6c203e7d7d--hands-on-exercise",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261736562616c6c2d6261742d62616c6c203e7d7d--hands-on-exercise",
+    "title": "AI for Data Analysis",
+    "section": " Hands-on exercise",
+    "text": "Hands-on exercise\n\n \n\nUpload this scientific paper to your NotebookLM account: Scientific mumbo-jumbo paper link\nClick on the suggested questions to explore the content.\nTry asking your own questions about the paper!"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261736562616c6c2d6261742d62616c6c203e7d7d--hands-on-exercise-1",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206261736562616c6c2d6261742d62616c6c203e7d7d--hands-on-exercise-1",
+    "title": "AI for Data Analysis",
+    "section": " Hands-on exercise",
+    "text": "Hands-on exercise"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206865616470686f6e6573203e7d7d--the-podcast-feature",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661206865616470686f6e6573203e7d7d--the-podcast-feature",
+    "title": "AI for Data Analysis",
+    "section": " The Podcast Feature",
+    "text": "The Podcast Feature\nTurn dense documents into engaging audio conversations!\n\nTwo AI hosts discuss your content in a natural podcast format:\n\nSummarize key points\nHighlight surprising findings\nConnect ideas across multiple documents\n\n\n\n\n\n\n\n\n\nPodcasts are 6-15 minutes. Download them for offline listening!"
+  },
+  {
+    "objectID": "slides.html#audio-overview-hands-on-exercise",
+    "href": "slides.html#audio-overview-hands-on-exercise",
+    "title": "AI for Data Analysis",
+    "section": "Audio Overview Hands-on exercise",
+    "text": "Audio Overview Hands-on exercise\n\n \nClick on the Audio Overview tab (will take ~10 minutes)."
+  },
+  {
+    "objectID": "slides.html#infographic-overview-hands-on-exercise",
+    "href": "slides.html#infographic-overview-hands-on-exercise",
+    "title": "AI for Data Analysis",
+    "section": "Infographic Overview Hands-on exercise",
+    "text": "Infographic Overview Hands-on exercise\n\n \nClick on the Infographic Overview tab (will take ~10 minutes)."
+  },
+  {
+    "objectID": "slides.html#slide-deck-overview-hands-on-exercise",
+    "href": "slides.html#slide-deck-overview-hands-on-exercise",
+    "title": "AI for Data Analysis",
+    "section": "Slide Deck Overview Hands-on exercise",
+    "text": "Slide Deck Overview Hands-on exercise\n\n \nClick on the Slide Deck Overview tab (will take ~10 minutes)."
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636c6970626f6172642d636865636b203e7d7d--notebooklm-best-practices",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c20666120636c6970626f6172642d636865636b203e7d7d--notebooklm-best-practices",
+    "title": "AI for Data Analysis",
+    "section": " NotebookLM Best Practices",
+    "text": "NotebookLM Best Practices\nGet the most out of your AI research assistant:\n\n1. Choose relevant sources - Quality in = quality out - Mix of protocols, data reports, and research papers\n\n\n2. Ask clear, specific questions - Weak: “Tell me about birds” - Strong: “What monitoring protocols does SFBBO use for Snowy Plovers?”\n\n\n3. Always verify - AI is an assistant, not a replacement for human judgment (yet!) - Check citations before using in official reports"
+  },
+  {
+    "objectID": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207175657374696f6e2d636972636c65203e7d7d--questions",
+    "href": "slides.html#b58fc729-690b-4000-b19f-365a4093b2ff-7b7b3c206661207175657374696f6e2d636972636c65203e7d7d--questions",
+    "title": "AI for Data Analysis",
+    "section": " Questions?",
+    "text": "Questions?"
   }
 ]
