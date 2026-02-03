@@ -518,7 +518,8 @@ week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
 3,2025,Don Edwards NWR,Dunlin,2345,44,2.4,3.1,waning
 4,2025,Eden Landing,Dunlin,1456,49,0.1,4.4,new
 5,2025,Palo Alto Baylands,Western Sandpiper,1987,53,0.0,4.8,waxing
-````
+```
+{{< countdown "2:00" >}}
 
 ::: fragment
 > Ask Gemini to analyze the above CSV data and provide what is most frequently observed species across all sites in the first 5 weeks of 2025.
@@ -529,7 +530,6 @@ week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
 Use the Copy to Clipboard button {{< fa clipboard >}}
 :::
 :::
-{{< countdown "2:00" >}}
 
 ## Let's analyze a bigger CSV data with Gemini
 
@@ -566,10 +566,6 @@ week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
 10,2025,Eden Landing,Western Sandpiper,3120,67,0.0,5.9,full
 10,2025,Don Edwards NWR,Dunlin,1234,66,0.1,5.8,full
 ```
-
-::: fragment
-> Ask Gemini to analyze this bird count data
-:::
 
 ## Improving prompting skills {.center}
 
