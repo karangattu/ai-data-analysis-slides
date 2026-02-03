@@ -4,9 +4,8 @@ project:
 
 format:
   revealjs:
-    theme: night
+    theme: solarized
     highlight-style: monokai
-    transition: convex
     background-transition: slide
     slide-number: true
     incremental: true
@@ -18,5 +17,5 @@ format:
     css: styles.css
     title-slide-attributes:
       data-background-color: "#1a1a2e"
-      data-background-image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      data-background-image: "assets/Splash_page.png"
       data-background-opacity: "0.7"
