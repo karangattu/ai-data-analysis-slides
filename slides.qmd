@@ -62,13 +62,13 @@ include-in-header:
 
 **What we'll do in the workshop:**
 
-- {{< fa brain >}} Explore the foundations of how AI works.
+-   {{< fa brain >}} Explore the foundations of how AI works.
 
-- {{< fa tools >}} Learn to integrate Gemini into your daily workflows.
+-   {{< fa tools >}} Learn to integrate Gemini into your daily workflows.
 
-- {{< fa pen >}} Review best practices for getting the best AI outputs.
+-   {{< fa pen >}} Review best practices for getting the best AI outputs.
 
-- {{< fa crow >}} Practice with real-world scenarios using fictional SFBBO survey data.
+-   {{< fa crow >}} Practice with real-world scenarios using fictional SFBBO survey data.
 
 ------------------------------------------------------------------------
 
@@ -96,8 +96,8 @@ Raise your hand if you fall in the following group:
 
 **Turn to a neighbor and share (2 min):**
 
-- A time AI helped you in unexpected ways
-- Or a time AI let you down
+-   A time AI helped you in unexpected ways
+-   Or a time AI let you down
 
 ------------------------------------------------------------------------
 
@@ -181,9 +181,9 @@ Catch poachers in the dark
 
 Imagine you’re playing a video game where you have to create a character. You have sliders for different traits:
 
-- Strength: 10
-- Magic: 2
-- Speed: 8
+-   Strength: 10
+-   Magic: 2
+-   Speed: 8
 
 ::: fragment
 That list of numbers *(10, 2, 8)* is a vector.
@@ -194,10 +194,10 @@ That list of numbers *(10, 2, 8)* is a vector.
 ::: fragment
 For the word "Apple," the sliders might look like:
 
-- Is it Food?: 0.98 (Very high)
-- Is it Tech?: 0.85 (Pretty high)
-- Is it Red?: 0.90 (Very high)
-- Is it a Planet?: 0.01 (Almost zero)
+-   Is it Food?: 0.98 (Very high)
+-   Is it Tech?: 0.85 (Pretty high)
+-   Is it Red?: 0.90 (Very high)
+-   Is it a Planet?: 0.01 (Almost zero)
 :::
 
 ::: fragment
@@ -263,8 +263,8 @@ Because of a setting called *Temperature*.
 :::
 
 ::: fragment
-- **Low Temperature (0.1 - 0.3):** The AI always picks the #1 most likely word. It’s very logical but boring.
-- **High Temperature (0.7 - 1.0):** The AI is allowed to pick the 3rd or 10th most likely word. This is where "creativity" comes from.
+-   **Low Temperature (0.1 - 0.3):** The AI always picks the #1 most likely word. It’s very logical but boring.
+-   **High Temperature (0.7 - 1.0):** The AI is allowed to pick the 3rd or 10th most likely word. This is where "creativity" comes from.
 :::
 
 ## {{< fa skull >}} Extreme Improv aka Hallucinations
@@ -309,7 +309,7 @@ Think of *tokens* as Lego blocks of language. If you give a child a Lego set, th
 
 ## Context Length
 
-- Context length is the amount of info the AI can *hold in its head* to answer your specific question.
+-   Context length is the amount of info the AI can *hold in its head* to answer your specific question.
 
 :::: fragment
 ::: callout-note
@@ -336,10 +336,10 @@ Most modern AI models can handle between **200,000** and **1,000,000** tokens of
 ::: fragment
 **What's special about Gemini?**
 
-- {{< fa handshake-angle >}} Built to handle **extremely long context lengths** (up to 1 million tokens!)
-- {{< fa book-atlas >}} Designed to be more **reliable and factual**
-- {{< fa brain >}} Can **reason** through complex problems better than previous models
-- {{< fa gift >}} You get a free subscription of Gemini with your Google Workspace account!
+-   {{< fa handshake-angle >}} Built to handle **extremely long context lengths** (up to 1 million tokens!)
+-   {{< fa book-atlas >}} Designed to be more **reliable and factual**
+-   {{< fa brain >}} Can **reason** through complex problems better than previous models
+-   {{< fa gift >}} You get a free subscription of Gemini with your Google Workspace account!
 :::
 
 ## Gemini comes in 2 flavors {.center}
@@ -430,9 +430,9 @@ Download the paper using File \> Download
 
 ## {{< fa backward >}} Recap so far {.center}
 
-- AI models are trained on massive text datasets to predict the next word.
-- Modern AI uses attention mechanisms to understand context.
-- Gemini offers advanced capabilities with long context lengths and improved reasoning.
+-   AI models are trained on massive text datasets to predict the next word.
+-   Modern AI uses attention mechanisms to understand context.
+-   Gemini offers advanced capabilities with long context lengths and improved reasoning.
 
 ## {{< fa circle-question >}} What do you think will happen if you ask the following question to Gemini?
 
@@ -487,28 +487,27 @@ Milk, 1, $4.50
 ```
 :::
 
-::: fragment
+:::: fragment
 ::: callout-tip
 {{< fa file-csv >}} The first line is the "Header", and every line after that is a "Row".
 :::
-:::
+::::
 
 ## Why is CSV the "Gold Tier" format for AI?
 
-- Since CSV is raw data, they are the most token efficient.
-- Every computer on Earth, understands CSV files.
-- Programming languages have built-in functions to read and write CSV files.
+-   Since CSV is raw data, they are the most token efficient.
+-   Every computer on Earth, understands CSV files.
+-   Programming languages have built-in functions to read and write CSV files.
 
-
-::: fragment
+:::: fragment
 ::: callout-tip
 {{< fa code >}} By giving the AI a CSV, you are handing a carpenter a perfectly cut piece of wood instead of a whole tree.
 :::
-:::
+::::
 
 ## Let's analyze this CSV data with Gemini
 
-```csv
+``` csv
 week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
 1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing
 1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing
@@ -519,21 +518,22 @@ week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
 4,2025,Eden Landing,Dunlin,1456,49,0.1,4.4,new
 5,2025,Palo Alto Baylands,Western Sandpiper,1987,53,0.0,4.8,waxing
 ```
+
 {{< countdown "2:00" >}}
 
 ::: fragment
 > Ask Gemini to analyze the above CSV data and provide what is most frequently observed species across all sites in the first 5 weeks of 2025.
 :::
 
-::: fragment
+:::: fragment
 ::: callout-tip
 Use the Copy to Clipboard button {{< fa clipboard >}}
 :::
-:::
+::::
 
 ## Let's analyze a bigger CSV data with Gemini
 
-```csv
+``` csv
 week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
 1,2025,Palo Alto Baylands,Dunlin,2340,52,0.2,4.2,waxing
 1,2025,Don Edwards NWR,Dunlin,1567,51,0.3,4.1,waxing
@@ -574,31 +574,30 @@ week,year,site,species,count,avg_temp_f,precip_in,tide_height_ft,moon_phase
 :::
 
 ::: fragment
-- What role should Gemini play?
-- What exactly should it analyze?
-- What format should the output be in?
+-   What role should Gemini play?
+-   What exactly should it analyze?
+-   What format should the output be in?
 :::
-
 
 ## What makes a good prompt?
 
 Good prompts include:
 
 ::: fragment
-- {{< fa user-tag >}} **Role** — who the model is
+-   {{< fa user-tag >}} **Role** — who the model is
 
-- {{< fa tasks >}} **Task** — what to do
+-   {{< fa tasks >}} **Task** — what to do
 
-- {{< fa database >}} **Data** — input
+-   {{< fa database >}} **Data** — input
 
-- {{< fa ruler >}} **Constraints** — format, length, method
+-   {{< fa ruler >}} **Constraints** — format, length, method
 
-- {{< fa lightbulb >}} **Examples** — optional but powerful
+-   {{< fa lightbulb >}} **Examples** — optional but powerful
 :::
 
 ## Try this template
 
-```csv
+``` csv
 ## Role
 You are an ornithological data analyst specializing in shorebird migration patterns and wetland ecology.
 
@@ -632,28 +631,27 @@ Good insight format: "Dunlin counts peaked in Week 6 at Palo Alto Baylands (3,12
 
 {{< countdown "04:00" >}}
 
-
 ## Using AI for Exploratory Data Analysis
 
 Tasks AI can help with your data analysis:
 
-- {{< fa question-circle >}} Missing value analysis (incomplete surveys)
+-   {{< fa question-circle >}} Missing value analysis (incomplete surveys)
 
-- {{< fa chart-line >}} Outlier detection (unusual counts, rare species)
+-   {{< fa chart-line >}} Outlier detection (unusual counts, rare species)
 
-- {{< fa lightbulb >}} Hypothesis generation (population trends, habitat preferences)
+-   {{< fa lightbulb >}} Hypothesis generation (population trends, habitat preferences)
 
-- {{< fa code >}} Code generation (data cleaning, visualization)
+-   {{< fa code >}} Code generation (data cleaning, visualization)
 
-- {{< fa file-export >}} Report writing (summarizing findings)
+-   {{< fa file-export >}} Report writing (summarizing findings)
 
 ------------------------------------------------------------------------
 
 ## {{< fa question-circle >}} Dataset 1: Missing Value Analysis
-{{< countdown "05:00" >}}
-**Scenario:** Some survey entries have incomplete data. Use AI to identify patterns in missing values.
 
-```csv
+{{< countdown "05:00" >}} **Scenario:** Some survey entries have incomplete data. Use AI to identify patterns in missing values.
+
+``` csv
 survey_id,date,site,species,count,observer,weather,notes
 S001,2025-01-15,Palo Alto Baylands,Dunlin,2340,J. Smith,sunny,
 S002,2025-01-15,Don Edwards NWR,Dunlin,,M. Chen,cloudy,early morning
@@ -677,12 +675,11 @@ S019,2025-02-01,Palo Alto Baylands,Western Sandpiper,2567,J. Smith,cloudy,
 S020,2025-02-02,Don Edwards NWR,Least Sandpiper,678,M. Chen,sunny,low tide
 ```
 
-
 ## {{< fa chart-line >}} Dataset 2: Outlier Detection
-{{< countdown "05:00" >}}
-**Scenario:** Unusual counts were recorded. Use AI to detect potential outliers and data entry errors.
 
-```csv
+{{< countdown "05:00" >}} **Scenario:** Unusual counts were recorded. Use AI to detect potential outliers and data entry errors.
+
+``` csv
 week,site,species,count,tide_height_ft,wind_speed_mph,temperature_f
 1,Palo Alto Baylands,Dunlin,2340,4.2,12,52
 1,Don Edwards NWR,Dunlin,1567,4.1,8,51
@@ -716,12 +713,11 @@ week,site,species,count,tide_height_ft,wind_speed_mph,temperature_f
 10,Eden Landing,Western Sandpiper,3120,5.9,13,67
 ```
 
-
 ## {{< fa lightbulb >}} Dataset 3: Hypothesis Generation
-{{< countdown "05:00" >}}
-**Scenario:** Explore population trends and habitat preferences to generate research hypotheses.
 
-```csv
+{{< countdown "05:00" >}} **Scenario:** Explore population trends and habitat preferences to generate research hypotheses.
+
+``` csv
 month,year,site,species,count,habitat_type,water_depth_cm,vegetation_cover_pct
 1,2024,Palo Alto Baylands,Dunlin,5234,mudflat,15,10
 1,2024,Don Edwards NWR,Dunlin,3456,salt marsh,8,45
@@ -746,10 +742,10 @@ month,year,site,species,count,habitat_type,water_depth_cm,vegetation_cover_pct
 ```
 
 ## {{< fa code >}} Dataset 4: Data cleaning and Visualization
-{{< countdown "05:00" >}}
-**Scenario:** Raw field data needs cleaning and visualization. Use AI to generate graphs.
 
-```csv
+{{< countdown "05:00" >}} **Scenario:** Raw field data needs cleaning and visualization. Use AI to generate graphs.
+
+``` csv
 SurveyDate,Location,SpeciesName,IndividualCount,Temp_F,WindMPH,ObserverNotes
 01/15/2025,Palo Alto Baylands,Dunlin,2340,52,12,High tide good viewing
 01/15/2025,Don Edwards NWR,dunlin,1567,51,8,Early morning count
@@ -773,12 +769,11 @@ SurveyDate,Location,SpeciesName,IndividualCount,Temp_F,WindMPH,ObserverNotes
 02/02/2025,Don Edwards NWR,Least Sandpiper,678,66,9,Sunny morning
 ```
 
-
 ## {{< fa file-export >}} Dataset 5: Report Writing
-{{< countdown "05:00" >}}
-**Scenario:** Summarize a full season of survey data for a stakeholder report.
 
-```csv
+{{< countdown "05:00" >}} **Scenario:** Summarize a full season of survey data for a stakeholder report.
+
+``` csv
 week,site,species,total_count,avg_per_survey,surveys_conducted,peak_count_date,conservation_status
 1,Palo Alto Baylands,Dunlin,5234,2617,2,2025-01-16,Least Concern
 1,Don Edwards NWR,Dunlin,3456,1728,2,2025-01-15,Least Concern
@@ -807,28 +802,26 @@ week,site,species,total_count,avg_per_survey,surveys_conducted,peak_count_date,c
 
 When asking AI to create visualizations, be specific about:
 
-::: {.fragment}
+::: fragment
 **Chart Design**
 
-- Chart type (bar, line, scatter, heatmap)
-- Why this chart fits your data story
+-   Chart type (bar, line, scatter, heatmap)
+-   Why this chart fits your data story
 :::
 
-::: {.fragment}
+::: fragment
 **Data Mapping**
 
-- X-axis: what variable goes horizontal
-- Y-axis: what variable goes vertical
-- Color: what dimension to encode with color
+-   X-axis: what variable goes horizontal
+-   Y-axis: what variable goes vertical
+-   Color: what dimension to encode with color
 :::
-
-
 
 ## {{< fa pen-ruler >}} Example: Crafting a Visualization Prompt
 
 **Dataset:** Weekly bird counts across three sites
 
-```csv
+``` csv
 week,site,species,count
 1,Palo Alto Baylands,Dunlin,2340
 1,Don Edwards NWR,Dunlin,1567
@@ -850,7 +843,7 @@ week,site,species,count
 
 ## {{< fa check >}} Strong Visualization Prompt Example
 
-```
+```         
 ## Role
 You are a data visualization specialist for bird conservation non-profit.
 
@@ -886,10 +879,10 @@ Provide chart with these specifications.
 
 Include:
 
-1. **Chart type** — What best shows your data's story?
-2. **Axes** — What maps to X and Y?
-3. **Color** — What dimension should be color-coded?
-4. **Annotations** — What labels or highlights are needed?
+1.  **Chart type** — What best shows your data's story?
+2.  **Axes** — What maps to X and Y?
+3.  **Color** — What dimension should be color-coded?
+4.  **Annotations** — What labels or highlights are needed?
 
 ## {{< fa mug-hot >}} Break Time! {.center}
 
@@ -897,24 +890,24 @@ Include:
 
 ## {{< fa backward >}} Recap {.center}
 
-- Good prompts are specific about roles, tasks, data, constraints, and examples.
-- AI can assist with various data analysis tasks, from cleaning to report writing.
-- Clear visualization prompts lead to better graphical outputs.
+-   Good prompts are specific about roles, tasks, data, constraints, and examples.
+-   AI can assist with various data analysis tasks, from cleaning to report writing.
+-   Clear visualization prompts lead to better graphical outputs.
 
 ## {{< fa book-open >}} Introducing NotebookLM {.center}
 
 **NotebookLM** is Google's AI-first notebook that becomes an expert on *your* documents.
 
-::: {.fragment}
-- {{< fa database >}} **Grounded in YOUR sources** — Unlike ChatGPT, it only uses your uploaded documents
-- {{< fa headphones >}} **Audio Overview** — Generates podcasts with two AI voices discussing your content
-- {{< fa quote-right >}} **Citations** — Every answer includes source references you can verify
-- {{< fa file-lines >}} **Structured outputs** — FAQs, study guides, briefing docs, timelines
+::: fragment
+-   {{< fa database >}} **Grounded in YOUR sources** — Unlike ChatGPT, it only uses your uploaded documents
+-   {{< fa headphones >}} **Audio Overview** — Generates podcasts with two AI voices discussing your content
+-   {{< fa quote-right >}} **Citations** — Every answer includes source references you can verify
+-   {{< fa file-lines >}} **Structured outputs** — FAQs, study guides, briefing docs, timelines
 :::
 
 ## {{< fa book-open >}} Citations in NotebookLM
 
-::: {.fragment}
+::: fragment
 ![](assets/citations.gif)
 :::
 
@@ -922,76 +915,75 @@ Include:
 
 **Go to [notebooklm.google.com](https://notebooklm.google.com) and sign in with your Google account.**
 
-::: {.fragment}
+::: fragment
 **Upload your sources (up to 50 files, 500K words each):**
 :::
 
-::: {.fragment}
-1. {{< fa file-pdf >}} PDFs from your computer
-2. {{< fa link >}} Website URLs
-3. {{< fa copy >}} Copy-paste text directly
-4. {{< fa brands google-drive >}} Google Docs
-5. {{< fa brands google-drive >}} Google Slides
+::: fragment
+1.  {{< fa file-pdf >}} PDFs from your computer
+2.  {{< fa link >}} Website URLs
+3.  {{< fa copy >}} Copy-paste text directly
+4.  {{< fa brands google-drive >}} Google Docs
+5.  {{< fa brands google-drive >}} Google Slides
 :::
 
 ## {{< fa compass >}} The Notebook Guide & Chat
 
 **Once you upload documents, NotebookLM creates a dashboard with:**
 
-::: {.fragment}
-- **Auto-generated summary** of all your sources
-- **Suggested questions** tailored to your content
-- **Quick actions** for briefing docs, FAQs, study guides
+::: fragment
+-   **Auto-generated summary** of all your sources
+-   **Suggested questions** tailored to your content
+-   **Quick actions** for briefing docs, FAQs, study guides
 :::
 
-::: {.fragment}
-**Every answer includes citations** 
+::: fragment
+**Every answer includes citations**
 
 — click the numbered references to see exactly where the information came from in your documents.
 :::
-
 
 ## {{< fa baseball-bat-ball >}} Hands-on exercise
 
 {{< countdown "05:00" >}}
 
-- Upload this scientific paper to your NotebookLM account:
-[Scientific mumbo-jumbo paper link](https://drive.google.com/file/d/1-WqbyrUZUbuZgMlMsM4mETDQay1cEVGV/view?usp=sharing)
-- Click on the suggested questions to explore the content.
-- Try asking your own questions about the paper!
-  
--  [Another Scientific Paper 1](https://drive.google.com/file/d/1qZ2Y2K5IdXK2OpbGdSGxKY7bupn32Mb1/view?usp=sharing)
--  [And another Scientific Paper 2](https://drive.google.com/file/d/1fbkIwlKPXTEJIvPLcpJUvYPF-K1gC0U9/view?usp=sharing)
+-   Upload this scientific paper to your NotebookLM account: [Scientific mumbo-jumbo paper link](https://drive.google.com/file/d/1-WqbyrUZUbuZgMlMsM4mETDQay1cEVGV/view?usp=sharing)
 
+-   Click on the suggested questions to explore the content.
+
+-   Try asking your own questions about the paper!
+
+-   [Another Scientific Paper 1](https://drive.google.com/file/d/1qZ2Y2K5IdXK2OpbGdSGxKY7bupn32Mb1/view?usp=sharing)
+
+-   [And another Scientific Paper 2](https://drive.google.com/file/d/1fbkIwlKPXTEJIvPLcpJUvYPF-K1gC0U9/view?usp=sharing)
 
 ## {{< fa baseball-bat-ball >}} Hands-on exercise
 
 ![](assets/notebooklm_autopopulate.png)
 
-
 ## {{< fa headphones >}} The Podcast Feature
 
 **Turn dense documents into engaging audio conversations!**
 
-::: {.fragment}
+::: fragment
 Two AI hosts discuss your content in a natural podcast format:
 
-- Summarize key points
-- Highlight surprising findings
-- Connect ideas across multiple documents
+-   Summarize key points
+-   Highlight surprising findings
+-   Connect ideas across multiple documents
 :::
 
-::: {.fragment}
+:::: fragment
 ::: callout-note
 Podcasts are 6-15 minutes. Download them for offline listening!
 :::
-:::
+::::
 
 ## Audio Overview Hands-on exercise
 
 {{< countdown "10:00" >}}
 
-Click on the Audio Overview tab (will take ~10 minutes).
+Click on the Audio Overview tab (will take \~10 minutes).
 
 ![](assets/audio_overview_option.png)
 
@@ -999,7 +991,7 @@ Click on the Audio Overview tab (will take ~10 minutes).
 
 {{< countdown "10:00" >}}
 
-Click on the Infographic Overview tab (will take ~10 minutes).
+Click on the Infographic Overview tab (will take \~10 minutes).
 
 ![](assets/infographic_overview.png)
 
@@ -1007,126 +999,116 @@ Click on the Infographic Overview tab (will take ~10 minutes).
 
 {{< countdown "10:00" >}}
 
-Click on the Slide Deck Overview tab (will take ~10 minutes).
-![](assets/slide_deck_overview.png)
-
+Click on the Slide Deck Overview tab (will take \~10 minutes). ![](assets/slide_deck_overview.png)
 
 ## {{< fa triangle-exclamation >}} Data Privacy & Security Risks {.center}
 
 **Before sharing data with AI, understand the risks:**
 
-::: {.fragment}
-{{< fa building >}} **Organizational Data**
-- Grant proposals, budgets, donor information
-- Unpublished research findings
+::: fragment
+{{< fa building >}} **Organizational Data** - Grant proposals, budgets, donor information - Unpublished research findings
 :::
 
-::: {.fragment}
-{{< fa location-dot >}} **Sensitive Location Data**
-- Exact nesting sites of endangered species
+::: fragment
+{{< fa location-dot >}} **Sensitive Location Data** - Exact nesting sites of endangered species
 :::
 
-::: {.fragment}
-{{< fa user-secret >}} **Personal Information**
-- Volunteer contact details
-- Observer full names in survey data
+::: fragment
+{{< fa user-secret >}} **Personal Information** - Volunteer contact details - Observer full names in survey data
 :::
 
-::: {.fragment}
+:::: fragment
 ::: callout-warning
 **Rule of thumb:** If you wouldn't publish it on your website, think twice before uploading to AI tools!
 :::
-:::
-
+::::
 
 ## {{< fa lock >}} Best Practices for Sharing Data with AI
 
 **Protect your data while still benefiting from AI:**
 
-::: {.fragment}
+::: fragment
 **1. Anonymize First** {{< fa user-xmark >}}
 
-- Remove observer names (use codes like OBS001)
-- Strip location precision (use general regions)
-- Redact sensitive notes
+-   Remove observer names (use codes like OBS001)
+-   Strip location precision (use general regions)
+-   Redact sensitive notes
 :::
 
 ## {{< fa magnifying-glass >}} How to Validate AI Answers
 
 **AI can be confident and wrong. Here's how to check:**
 
-::: {.fragment}
+::: fragment
 **The "Smell Test"** {{< fa nose >}}
 
-- Does this answer seem too good/bad to be true?
-- Does it match your domain knowledge?
-- Are the numbers in the right ballpark?
+-   Does this answer seem too good/bad to be true?
+-   Does it match your domain knowledge?
+-   Are the numbers in the right ballpark?
 :::
 
-::: {.fragment}
+::: fragment
 **Verify the Math** {{< fa calculator >}}
 
-- Recalculate key statistics independently
-- Check if percentages add up correctly
-- Spot-check a few data points manually
+-   Recalculate key statistics independently
+-   Check if percentages add up correctly
+-   Spot-check a few data points manually
 :::
 
 ## {{< fa magnifying-glass >}} How to Validate AI Answers
 
 **AI can be confident and wrong. Here's how to check:**
 
-::: {.fragment}
+::: fragment
 **Cross-Reference Sources** {{< fa book-open >}}
 
-- Does the AI's summary match the original document?
-- Are citations pointing to the right sections?
-- Can you find the quoted text in the source?
+-   Does the AI's summary match the original document?
+-   Are citations pointing to the right sections?
+-   Can you find the quoted text in the source?
 :::
 
-::: {.fragment}
+::: fragment
 **Test with Known Data** {{< fa vial >}}
 
-- Ask AI about data YOU already analyzed
-- Compare AI's findings with your own conclusions
-- If they differ significantly, investigate why
+-   Ask AI about data YOU already analyzed
+-   Compare AI's findings with your own conclusions
+-   If they differ significantly, investigate why
 :::
-
 
 ## {{< fa list-check >}} Using AI Responsibly
 
-::: {.fragment}
+:::: fragment
 ::: callout-tip
 **Remember:** AI is a tool to accelerate your work, not replace your expertise. The final responsibility for accuracy always lies with you!
 :::
-:::
-
+::::
 
 ## {{< fa scale-balanced >}} When to Use AI vs. When to Skip It
 
 **AI is great for:** {{< fa thumbs-up >}}
 
-- Drafting reports from your own clean data
-- Brainstorming analysis approaches
-- Explaining complex papers to beginners
-- Generating code for visualization
-- Creating practice datasets for training
+-   Drafting reports from your own clean data
+-   Brainstorming analysis approaches
+-   Explaining complex papers to beginners
+-   Generating code for visualization
+-   Creating practice datasets for training
 
 ## {{< fa scale-balanced >}} When to Use AI vs. When to Skip It
-::: {.fragment}
+
+::: fragment
 **Think twice before using AI for:** {{< fa hand >}}
 
-- Final published research findings
-- Legal or regulatory compliance documents
-- Data with unredacted sensitive locations
-- Decisions affecting endangered species protections
-- Anything requiring a signature or official stamp
+-   Final published research findings
+-   Legal or regulatory compliance documents
+-   Data with unredacted sensitive locations
+-   Decisions affecting endangered species protections
+-   Anything requiring a signature or official stamp
 :::
 
-::: {.fragment}
+:::: fragment
 ::: callout-note
 **When in doubt:** Use AI for exploration and drafting, but rely on human expertise for final decisions and official communications.
 :::
-:::
-
+::::
 
 ## {{< fa question-circle >}} Questions?
